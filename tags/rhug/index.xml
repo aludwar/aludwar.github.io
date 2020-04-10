@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RHUG on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/rhug/</link>
+    <link>https://aludwar.github.io/tags/rhug/</link>
     <description>Recent content in RHUG on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 16 Sep 2016 00:17:49 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/rhug/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/rhug/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ansible at the Calgary RHUG</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
+      <link>https://aludwar.github.io/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
+      <guid>https://aludwar.github.io/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
       <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today &amp;#8211; we filled the room! Greg gave the group a high-level overview of Ansible&amp;#8217;s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
     </item>
     
     <item>
       <title>Demystifying automation and Puppet</title>
-      <link>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</link>
+      <link>https://aludwar.github.io/blog/2015/07/05/demystifying-automation-and-puppet/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
+      <guid>https://aludwar.github.io/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
       <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&amp;#8217;t seem to find a conference that doesn&amp;#8217;t have a trendy buzzword filled keynote dedicated to the topic.</description>
     </item>
     

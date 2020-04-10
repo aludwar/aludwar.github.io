@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>server provisioning on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/server-provisioning/</link>
+    <link>https://aludwar.github.io/tags/server-provisioning/</link>
     <description>Recent content in server provisioning on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jul 2019 22:52:03 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/server-provisioning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/server-provisioning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Update cobbler signatures for RHEL8</title>
-      <link>https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</link>
+      <link>https://aludwar.github.io/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</link>
       <pubDate>Wed, 03 Jul 2019 22:52:03 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</guid>
+      <guid>https://aludwar.github.io/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</guid>
       <description>Cobbler is a great tool for PXE booting, I&amp;#8217;ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler&amp;#8217;s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn&amp;#8217;t able to pull the latest signatures on its own.</description>
     </item>
     
     <item>
       <title>Ansible Workshop Materials</title>
-      <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
+      <link>https://aludwar.github.io/blog/2019/02/28/ansible-workshop-materials/</link>
       <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
+      <guid>https://aludwar.github.io/blog/2019/02/28/ansible-workshop-materials/</guid>
       <description>Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab.</description>
     </item>
     
     <item>
       <title>Using ansible to manage RHV/oVirt</title>
-      <link>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
+      <link>https://aludwar.github.io/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
       <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
+      <guid>https://aludwar.github.io/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
       <description>A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&amp;#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows.</description>
     </item>
     
     <item>
       <title>Installing OpenStack – setting up a virtual lab environment</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
+      <link>https://aludwar.github.io/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
       <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
+      <guid>https://aludwar.github.io/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
       <description>When talking TripleO, there&amp;#8217;s two concepts introduced called the &amp;#8220;undercloud&amp;#8221;, and the &amp;#8220;overcloud&amp;#8221;. These are essentially the labels for each OpenStack environment when referring to &amp;#8220;OpenStack on OpenStack&amp;#8221; (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we&amp;#8217;re after.</description>
     </item>
     
     <item>
       <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
-      <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
+      <link>https://aludwar.github.io/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
+      <guid>https://aludwar.github.io/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
       <description>Recently I&amp;#8217;ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O&amp;#8217;Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high&amp;#8230; and so far, I&amp;#8217;m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
     </item>
     
     <item>
       <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
-      <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
+      <link>https://aludwar.github.io/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
+      <guid>https://aludwar.github.io/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
       <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
     </item>
     

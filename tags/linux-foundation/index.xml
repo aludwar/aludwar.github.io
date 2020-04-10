@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux foundation on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/linux-foundation/</link>
+    <link>https://aludwar.github.io/tags/linux-foundation/</link>
     <description>Recent content in linux foundation on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 19 Feb 2015 02:28:19 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/linux-foundation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/linux-foundation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Linux Foundation – Guide to the Open Cloud</title>
-      <link>https://calgaryrhce.ca/blog/2015/02/18/the-linux-foundation-guide-to-the-open-cloud/</link>
+      <link>https://aludwar.github.io/blog/2015/02/18/the-linux-foundation-guide-to-the-open-cloud/</link>
       <pubDate>Thu, 19 Feb 2015 02:28:19 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2015/02/18/the-linux-foundation-guide-to-the-open-cloud/</guid>
+      <guid>https://aludwar.github.io/blog/2015/02/18/the-linux-foundation-guide-to-the-open-cloud/</guid>
       <description>Never before has the IT industry faced such a colossal rate of change and innovation as it does today. The pace is even more prominent in emerging technologies such as big data, the internet of things, and cloud computing. At the heart of all of these trends is open source. Open source has enabled both the mass collaboration and massive scaling that is driving cloud technologies.</description>
     </item>
     

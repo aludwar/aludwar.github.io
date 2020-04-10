@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/android/</link>
+    <link>https://aludwar.github.io/tags/android/</link>
     <description>Recent content in Android on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Sep 2015 16:29:27 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Theft/Intruder detection on Android w/ Tasker</title>
-      <link>https://calgaryrhce.ca/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/</link>
+      <link>https://aludwar.github.io/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/</link>
       <pubDate>Sun, 27 Sep 2015 16:29:27 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/</guid>
+      <guid>https://aludwar.github.io/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/</guid>
       <description>If you have a smartphone, surely you covet it&amp;#8217;s presence and usage. It probably doesn&amp;#8217;t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there&amp;#8217;s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc.</description>
     </item>
     

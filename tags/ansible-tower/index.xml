@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ansible Tower on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/ansible-tower/</link>
+    <link>https://aludwar.github.io/tags/ansible-tower/</link>
     <description>Recent content in Ansible Tower on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/ansible-tower/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/ansible-tower/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
-      <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
+      <link>https://aludwar.github.io/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
+      <guid>https://aludwar.github.io/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
       <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&amp;#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&amp;#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
     </item>
     
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
-      <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
+      <link>https://aludwar.github.io/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
+      <guid>https://aludwar.github.io/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
       <description>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself.</description>
     </item>
     
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
-      <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
+      <link>https://aludwar.github.io/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
+      <guid>https://aludwar.github.io/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
       <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
     </item>
     
     <item>
       <title>Limiting Ansible Tower inventory with Satellite host groups</title>
-      <link>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
+      <link>https://aludwar.github.io/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
+      <guid>https://aludwar.github.io/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
       <description>When thinking about ingesting systems into Ansible Tower&amp;#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&amp;#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&amp;#8217;s host grouping feature combined with Ansible Tower&amp;#8217;s Satellite 6 dynamic inventory script to apply this filtering.</description>
     </item>
     

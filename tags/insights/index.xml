@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>insights on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/insights/</link>
+    <link>https://aludwar.github.io/tags/insights/</link>
     <description>Recent content in insights on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 15:35:51 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/insights/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/insights/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
-      <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
+      <link>https://aludwar.github.io/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
+      <guid>https://aludwar.github.io/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
       <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat&amp;#8217;s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
     </item>
     

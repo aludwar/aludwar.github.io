@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>automation on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/categories/automation/</link>
+    <link>https://aludwar.github.io/categories/automation/</link>
     <description>Recent content in automation on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/categories/automation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/categories/automation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
-      <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
+      <link>https://aludwar.github.io/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
+      <guid>https://aludwar.github.io/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
       <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&amp;#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&amp;#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
     </item>
     
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
-      <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
+      <link>https://aludwar.github.io/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
+      <guid>https://aludwar.github.io/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
       <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat&amp;#8217;s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
     </item>
     

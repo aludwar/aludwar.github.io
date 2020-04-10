@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>networking on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/networking/</link>
+    <link>https://aludwar.github.io/tags/networking/</link>
     <description>Recent content in networking on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Sep 2017 18:05:48 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Home lab, CAT6 wiring, and rack</title>
-      <link>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
+      <link>https://aludwar.github.io/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
+      <guid>https://aludwar.github.io/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
       <description>Between being busy with home renovations, and writing articles for work, I haven&amp;#8217;t made much time for blogging this summer. Since it&amp;#8217;s raining today and hampering my home renos, I&amp;#8217;m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.</description>
     </item>
     
     <item>
       <title>Network teaming in RHEL7</title>
-      <link>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</link>
+      <link>https://aludwar.github.io/blog/2016/11/24/network-teaming-in-rhel7/</link>
       <pubDate>Thu, 24 Nov 2016 22:32:26 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</guid>
+      <guid>https://aludwar.github.io/blog/2016/11/24/network-teaming-in-rhel7/</guid>
       <description>If you&amp;#8217;ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
     </item>
     
     <item>
       <title>Home lab switch replacement</title>
-      <link>https://calgaryrhce.ca/blog/2016/10/30/home-lab-switch-replacement/</link>
+      <link>https://aludwar.github.io/blog/2016/10/30/home-lab-switch-replacement/</link>
       <pubDate>Sun, 30 Oct 2016 23:48:16 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2016/10/30/home-lab-switch-replacement/</guid>
+      <guid>https://aludwar.github.io/blog/2016/10/30/home-lab-switch-replacement/</guid>
       <description>A few years back, I purged nearly all of my computer components that were kicking around the house, thus essentially abandoning my home lab. I had learned what I needed to with it, and had enough equipment at work to get done what I needed, so off it went. Old PCs, switches, cables, parts, etc.</description>
     </item>
     

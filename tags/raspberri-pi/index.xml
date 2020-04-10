@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>raspberri pi on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/raspberri-pi/</link>
+    <link>https://aludwar.github.io/tags/raspberri-pi/</link>
     <description>Recent content in raspberri pi on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Jan 2019 22:58:42 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/raspberri-pi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/raspberri-pi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Retro gaming with RetroPie</title>
-      <link>https://calgaryrhce.ca/blog/2019/01/03/retro-gaming-with-retropie/</link>
+      <link>https://aludwar.github.io/blog/2019/01/03/retro-gaming-with-retropie/</link>
       <pubDate>Thu, 03 Jan 2019 22:58:42 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2019/01/03/retro-gaming-with-retropie/</guid>
+      <guid>https://aludwar.github.io/blog/2019/01/03/retro-gaming-with-retropie/</guid>
       <description>I&amp;#8217;ve been using a raspberry pi for some occasional tinkering, but have finally found it a more permanent home. I recently got an itch to play some old console games and thought I&amp;#8217;d build a RetroPie. I had all the hardware I needed, but in case you don&amp;#8217;t there are kits available that include everything one needs to get a retro gaming system going.</description>
     </item>
     

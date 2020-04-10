@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>communication on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/communication/</link>
+    <link>https://aludwar.github.io/tags/communication/</link>
     <description>Recent content in communication on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jun 2014 04:35:59 +0000</lastBuildDate>
     
-	<atom:link href="https://calgaryrhce.ca/tags/communication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aludwar.github.io/tags/communication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Effective communication</title>
-      <link>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</link>
+      <link>https://aludwar.github.io/blog/2014/06/19/effective-communication/</link>
       <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
       
-      <guid>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</guid>
+      <guid>https://aludwar.github.io/blog/2014/06/19/effective-communication/</guid>
       <description>As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We&amp;#8217;re IT people! If we&amp;#8217;re masters of anything, it&amp;#8217;s the technical bits in the trade!
 Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others&amp;#8217; writing (source, source).</description>
     </item>
