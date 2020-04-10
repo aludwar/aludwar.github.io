@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rhel5 on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/rhel5/</link>
+    <description>Recent content in rhel5 on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/rhel5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>32-bit application support in RHEL7</title>
+      <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</guid>
+      <description>I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
+ https://access.redhat.com/solutions/509373  Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:</description>
+    </item>
+    
+  </channel>
+</rss>

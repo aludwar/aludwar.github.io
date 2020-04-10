@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>enterprise on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/enterprise/</link>
+    <description>Recent content in enterprise on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/enterprise/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>32-bit application support in RHEL7</title>
+      <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</guid>
+      <description>I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
+ https://access.redhat.com/solutions/509373  Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:</description>
+    </item>
+    
+    <item>
+      <title>Effective communication</title>
+      <link>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</link>
+      <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</guid>
+      <description>As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We&amp;#8217;re IT people! If we&amp;#8217;re masters of anything, it&amp;#8217;s the technical bits in the trade!
+Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others&amp;#8217; writing (source, source).</description>
+    </item>
+    
+  </channel>
+</rss>

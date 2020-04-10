@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>InSync Google Drive client in Fedora 30 &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="InSync Google Drive client in Fedora 30"/>
+  <meta property="og:description" content="After dropbox ended its support for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-06-22T16:09:45Z"/>
+  <meta property="article:modified_time" content="2019-06-22T16:09:45Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "InSync Google Drive client in Fedora 30",
+    "headline": "InSync Google Drive client in Fedora 30",
+    "datePublished": "2019-06-22T16:09:45Z",
+    "dateModified": "2019-06-22T16:09:45Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/",
+    "description": "After dropbox ended its support for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>InSync Google Drive client in Fedora 30</h1>
+
+  <div class="post-date">
+    <time datetime="2019-06-22T16:09:45Z">Jun 22, 2019</time> · 2 min read
+  </div>
+
+  <p>After dropbox <a href="https://linux.slashdot.org/story/18/08/10/2120248/dropbox-is-dropping-support-for-all-linux-file-systems-except-unencrypted-ext4">ended its support</a> for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems. I ended up with <a href="https://www.insynchq.com/">InSync</a>, and am really enjoying this new setup.</p>
+
+<p>After upgrading all my systems to Fedora 30 (1 workstation, 2 laptops), I had trouble starting the InSync client on my Fedora 30 workstation. I reached out to InSync support, and in a few days had a resource reply with a fix. I wanted to document the fix here in case this helps others with a similar issue.</p>
+
+<p>For starters, the InSync team is still populating a Fedora 30 repo but you can use the Fedora 29 repo to install/update the client. Just change the $releasever variable in the repo file to be hardcoded for the 29 release.</p>
+
+<p>So this:</p>
+
+<pre class="lang:sh decode:true ">$ cat /etc/yum.repos.d/insync.repo
+[insync]
+name=insync repo
+baseurl=http://yum.insynchq.com/fedora/$releasever/
+gpgcheck=1
+gpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
+enabled=1
+metadata_expire=120m
+</pre>
+
+<p>Becomes this:</p>
+
+<pre class="lang:sh decode:true ">$ cat /etc/yum.repos.d/insync.repo 
+[insync]
+name=insync repo
+baseurl=http://yum.insynchq.com/fedora/29/
+gpgcheck=1
+gpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
+enabled=1
+metadata_expire=120m
+</pre>
+
+<p>My error was the InSync client was not starting up at all, it was core dumping even with a &#8211;no-daemon flag passed. I&#8217;m running my desktop session in Wayland as opposed to X11:</p>
+
+<pre class="lang:sh decode:true">$ insync start --no-daemon
+qt.qpa.plugin: Could not load the Qt platform plugin "wayland" in "" even though it was found.
+libGL error: MESA-LOADER: failed to open radeonsi (search paths /usr/lib64/dri)
+libGL error: failed to load driver: radeonsi
+libGL error: MESA-LOADER: failed to open swrast (search paths /usr/lib64/dri)
+libGL error: failed to load driver: swrast
+Segmentation fault (core dumped)</pre>
+
+<p>So the fix for me, as suggested by InSync support was to remove this library file. I renamed it to accomplish the same thing:</p>
+
+<pre class="lang:sh decode:true ">$ sudo mv /usr/lib/insync/libstdc++.so.6 /usr/lib/insync/libstdc++.so.6.rm.bak</pre>
+
+<p>&nbsp;</p>
+
+<p>After that, the InSync client was able to start.</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

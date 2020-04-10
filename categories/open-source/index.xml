@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>open source on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/categories/open-source/</link>
+    <description>Recent content in open source on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Feb 2020 23:52:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Moving from Fedora Atomic to Fedora CoreOS</title>
+      <link>https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/</link>
+      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/</guid>
+      <description>Recently the merging of Fedora Atomic and CoreOS Container Linux into what is now known as Fedora CoreOS has moved out of preview and is ready for prime time use. I&amp;#8217;ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS.</description>
+    </item>
+    
+    <item>
+      <title>Enabling nested virtualization with RHV 4.3</title>
+      <link>https://calgaryrhce.ca/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</link>
+      <pubDate>Fri, 08 Nov 2019 16:08:08 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</guid>
+      <description>To enable nested virtualization within a Red Hat Virtualization 4.3 environment, you will need to do two things. First, make sure the &amp;#8220;vdsm-hook-nestedvt&amp;#8221; package is present on the host hypervisor. You&amp;#8217;ll need to restart vdsmd as well after installing.
+Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the virtual machine settings (under the host section).</description>
+    </item>
+    
+    <item>
+      <title>CI/CD with Ansible Tower and GitHub</title>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
+      <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
+      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&amp;#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&amp;#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
+    </item>
+    
+    <item>
+      <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
+      <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
+      <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat&amp;#8217;s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
+    </item>
+    
+    <item>
+      <title>Creating custom credentials in Ansible Tower</title>
+      <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
+      <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
+      <description>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself.</description>
+    </item>
+    
+    <item>
+      <title>Adding python virtual environments (venvs) to Ansible Tower</title>
+      <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
+      <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
+      <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+    </item>
+    
+    <item>
+      <title>Update cobbler signatures for RHEL8</title>
+      <link>https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</link>
+      <pubDate>Wed, 03 Jul 2019 22:52:03 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</guid>
+      <description>Cobbler is a great tool for PXE booting, I&amp;#8217;ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler&amp;#8217;s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn&amp;#8217;t able to pull the latest signatures on its own.</description>
+    </item>
+    
+    <item>
+      <title>InSync Google Drive client in Fedora 30</title>
+      <link>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
+      <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</guid>
+      <description>After dropbox ended its support for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems.</description>
+    </item>
+    
+    <item>
+      <title>Limiting Ansible Tower inventory with Satellite host groups</title>
+      <link>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
+      <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
+      <description>When thinking about ingesting systems into Ansible Tower&amp;#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&amp;#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&amp;#8217;s host grouping feature combined with Ansible Tower&amp;#8217;s Satellite 6 dynamic inventory script to apply this filtering.</description>
+    </item>
+    
+    <item>
+      <title>32-bit application support in RHEL7</title>
+      <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</guid>
+      <description>I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
+ https://access.redhat.com/solutions/509373  Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:</description>
+    </item>
+    
+    <item>
+      <title>Connecting Ansible Tower to Team Foundation Server</title>
+      <link>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
+      <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
+      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here&amp;#8217;s how I got it working:</description>
+    </item>
+    
+    <item>
+      <title>The Cloud is Just Another Sun</title>
+      <link>https://calgaryrhce.ca/blog/2019/03/21/the-cloud-is-just-another-sun/</link>
+      <pubDate>Thu, 21 Mar 2019 15:46:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/03/21/the-cloud-is-just-another-sun/</guid>
+      <description>I&amp;#8217;ve enjoyed Kyle Rankin&amp;#8217;s writing for the Linux Journal for several years now. Recently, he presented a topic at FOSDEM 2019 covering the current risk of cloud provider lock in where he draws comparison to the proprietary UNIX wars of the 90s and 00s. He highlights linux and open source software&amp;#8217;s immense success during this time, and how everyone benefit from relief of costly proprietary vendor lock-in.</description>
+    </item>
+    
+    <item>
+      <title>Ansible Workshop Materials</title>
+      <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
+      <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
+      <description>Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab.</description>
+    </item>
+    
+    <item>
+      <title>Testing the ODROID-HC2 with Open Media Vault</title>
+      <link>https://calgaryrhce.ca/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</link>
+      <pubDate>Mon, 04 Feb 2019 22:59:18 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</guid>
+      <description>I&amp;#8217;ve recently been tinkering with a few small Raspberry Pi-like boards. I&amp;#8217;m anxious to get my hands on hardkernel&amp;#8217;s ODROID-H2 x86 board, I think they might have hit a sweet spot for a decently spec&amp;#8217;d, low TDP board with a decent amount of RAM and NVMe storage options. I like the NUC platform, but the H2 might be a less expensive &amp;amp; more capable option.</description>
+    </item>
+    
+    <item>
+      <title>Retro gaming with RetroPie</title>
+      <link>https://calgaryrhce.ca/blog/2019/01/03/retro-gaming-with-retropie/</link>
+      <pubDate>Thu, 03 Jan 2019 22:58:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/01/03/retro-gaming-with-retropie/</guid>
+      <description>I&amp;#8217;ve been using a raspberry pi for some occasional tinkering, but have finally found it a more permanent home. I recently got an itch to play some old console games and thought I&amp;#8217;d build a RetroPie. I had all the hardware I needed, but in case you don&amp;#8217;t there are kits available that include everything one needs to get a retro gaming system going.</description>
+    </item>
+    
+    <item>
+      <title>Create Azure VM with Ansible</title>
+      <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
+      <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
+      <description>With a little googling this task isn&amp;#8217;t very complex, however, for those wanting to consume this information easily &amp;#8211; this post is for you.
+There&amp;#8217;s a lot of cloud provisioning tools out there; if you&amp;#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+    </item>
+    
+    <item>
+      <title>Google location history heatmap</title>
+      <link>https://calgaryrhce.ca/blog/2018/11/06/google-location-history-heatmap/</link>
+      <pubDate>Tue, 06 Nov 2018 14:55:28 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2018/11/06/google-location-history-heatmap/</guid>
+      <description>Okay, I give. I found this tool way too cool not to blog about it. Definitely the most interesting post by Lifehacker in a while. Someone has developed a tool that creates a heat map of your Google location history. Download your data from Google in JSON format, and upload to the tool.</description>
+    </item>
+    
+    <item>
+      <title>Using ansible to manage RHV/oVirt</title>
+      <link>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
+      <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
+      <description>A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&amp;#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows.</description>
+    </item>
+    
+    <item>
+      <title>Importing VMs into RHV from KVM</title>
+      <link>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</link>
+      <pubDate>Tue, 23 Oct 2018 16:13:33 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</guid>
+      <description>To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you&amp;#8217;re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting performance of VDO and NFS</title>
+      <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
+      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
+      <description>In setting up a local virtualization environment a little while back, I thought I&amp;#8217;d try the recently GA&amp;#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&amp;#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+    </item>
+    
+    <item>
+      <title>Migrating RHEV storage domains</title>
+      <link>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</link>
+      <pubDate>Fri, 19 Oct 2018 21:20:50 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
+      <description>Recently, I&amp;#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&amp;#8217;t performed this kind of activity before, but found it to be quite easy.</description>
+    </item>
+    
+    <item>
+      <title>Getting the most performance out of Openstack, and NFV</title>
+      <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
+      <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
+      <description>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We&amp;#8217;ve moved past the installer race, the fragmentation of &amp;#8220;as-a-service&amp;#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack &amp;#8220;boring&amp;#8220;.</description>
+    </item>
+    
+    <item>
+      <title>Home lab, CAT6 wiring, and rack</title>
+      <link>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
+      <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
+      <description>Between being busy with home renovations, and writing articles for work, I haven&amp;#8217;t made much time for blogging this summer. Since it&amp;#8217;s raining today and hampering my home renos, I&amp;#8217;m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.</description>
+    </item>
+    
+    <item>
+      <title>Calgary OpenStack and other Meetup.com groups</title>
+      <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
+      <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
+      <description>I&amp;#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&amp;#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+    </item>
+    
+    <item>
+      <title>Grafana, InfluxDB, and collectd for systems monitoring and dashboarding</title>
+      <link>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</link>
+      <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</guid>
+      <description>I&amp;#8217;ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.</description>
+    </item>
+    
+    <item>
+      <title>Network teaming in RHEL7</title>
+      <link>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</link>
+      <pubDate>Thu, 24 Nov 2016 22:32:26 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</guid>
+      <description>If you&amp;#8217;ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
+    </item>
+    
+    <item>
+      <title>Another flawless Fedora upgrade experience</title>
+      <link>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</link>
+      <pubDate>Tue, 22 Nov 2016 22:04:10 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</guid>
+      <description>Today is Fedora 25 official release day. There are a few notable new additions for this release, I&amp;#8217;m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack deployment troubles? Enter a couple validation tools</title>
+      <link>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
+      <pubDate>Fri, 28 Oct 2016 00:34:47 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
+      <description>Whether you&amp;#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading from Fedora 23 to Fedora 24</title>
+      <link>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
+      <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
+      <description>For my main workstation, I&amp;#8217;ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I&amp;#8217;ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+    </item>
+    
+    <item>
+      <title>Deploying an OpenStack cluster in a virtual lab environment</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
+      <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
+      <description>Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I&amp;#8217;ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.</description>
+    </item>
+    
+    <item>
+      <title>Ansible at the Calgary RHUG</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
+      <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
+      <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today &amp;#8211; we filled the room! Greg gave the group a high-level overview of Ansible&amp;#8217;s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
+    </item>
+    
+    <item>
+      <title>Making email a little more secure</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/11/making-email-a-little-more-secure/</link>
+      <pubDate>Mon, 12 Sep 2016 03:52:31 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/11/making-email-a-little-more-secure/</guid>
+      <description>Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I&amp;#8217;ve been wanting a more secure solution to webmail for the longest time, but knew I didn&amp;#8217;t have many options if I enjoyed using webmail clients.</description>
+    </item>
+    
+    <item>
+      <title>Filesystem benchmarking</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/</link>
+      <pubDate>Mon, 12 Sep 2016 02:51:38 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/</guid>
+      <description>Once in a while I need to do some I/O benchmarking. Either when creating a baseline for a before and after performance tuning comparison, or just because I want to see how fast my new SSD/M.2 really is. The tool I find myself going to over the years has been iozone.</description>
+    </item>
+    
+    <item>
+      <title>Installing OpenStack – setting up a virtual lab environment</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
+      <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
+      <description>When talking TripleO, there&amp;#8217;s two concepts introduced called the &amp;#8220;undercloud&amp;#8221;, and the &amp;#8220;overcloud&amp;#8221;. These are essentially the labels for each OpenStack environment when referring to &amp;#8220;OpenStack on OpenStack&amp;#8221; (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we&amp;#8217;re after.</description>
+    </item>
+    
+    <item>
+      <title>Comparing OpenStack installers</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
+      <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
+      <description>Building on a previous post, I promised I&amp;#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&amp;#8217;s purpose and intended result, it would be wise to align your needs with the installers&amp;#8217; capabilities and limitations.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with OpenStack</title>
+      <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
+      <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
+      <description>So you&amp;#8217;d like to get started with OpenStack eh? (Sorry, that&amp;#8217;s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
+    </item>
+    
+    <item>
+      <title>Deploying ownCloud 9 on Fedora 23</title>
+      <link>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</link>
+      <pubDate>Wed, 16 Mar 2016 23:14:21 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</guid>
+      <description>I&amp;#8217;ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.</description>
+    </item>
+    
+    <item>
+      <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
+      <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
+      <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
+      <description>Recently I&amp;#8217;ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O&amp;#8217;Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high&amp;#8230; and so far, I&amp;#8217;m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
+    </item>
+    
+    <item>
+      <title>How open source strikes the right balance between social and market norms</title>
+      <link>https://calgaryrhce.ca/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</link>
+      <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</guid>
+      <description>Lately, I&amp;#8217;ve been knocking off a few books that have accumulated on my &amp;#8220;must-read&amp;#8221; list. One of my favourites came recommended by my technical sales professor at SAIT, &amp;#8220;Predictably Irrational, by Dan Ariely. It&amp;#8217;s a New York Times bestseller. It was recommended based on its insights around behavioural science, specifically what factors influence a buyer&amp;#8217;s decision making.</description>
+    </item>
+    
+    <item>
+      <title>Monitor uptime with SmokePing</title>
+      <link>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
+      <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
+      <description>If you&amp;#8217;re a linux enthusiast and you don&amp;#8217;t currently read the LinuxJournal, I suggest you have a look. They&amp;#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.</description>
+    </item>
+    
+    <item>
+      <title>Motivating Employees and Strategies of Influence</title>
+      <link>https://calgaryrhce.ca/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</link>
+      <pubDate>Sun, 29 Nov 2015 22:20:05 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</guid>
+      <description>I know, I know. Another management topic. Haven&amp;#8217;t we heard enough leadership buzzwords? Seen enough trendy motivational topics? Like probably most of you, I dread the elevator pitch of anyone about to give me a spiel on the latest and greatest industry buzzword topic. Especially if all they did was read an article on LinkedIn.</description>
+    </item>
+    
+    <item>
+      <title>Theft/Intruder detection on Android w/ Tasker</title>
+      <link>https://calgaryrhce.ca/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/</link>
+      <pubDate>Sun, 27 Sep 2015 16:29:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/</guid>
+      <description>If you have a smartphone, surely you covet it&amp;#8217;s presence and usage. It probably doesn&amp;#8217;t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there&amp;#8217;s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc.</description>
+    </item>
+    
+    <item>
+      <title>Motivation – Autonomy, Mastery, Purpose; &amp; The Open Organization</title>
+      <link>https://calgaryrhce.ca/blog/2015/08/09/motivation-autonomy-mastery-purpose-the-open-organization/</link>
+      <pubDate>Sun, 09 Aug 2015 19:57:26 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/08/09/motivation-autonomy-mastery-purpose-the-open-organization/</guid>
+      <description>If you&amp;#8217;ve been paying attention to the open source community lately, or are keen to keeping abreast of the latest trends in corporate leadership or management, you may have heard of Jim Whitehurst&amp;#8217;s new book titled The Open Organization. The book compares and contrasts leadership styles and engagement strategies in the modern corporate world.</description>
+    </item>
+    
+    <item>
+      <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
+      <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
+      <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
+      <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying automation and Puppet</title>
+      <link>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</link>
+      <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
+      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&amp;#8217;t seem to find a conference that doesn&amp;#8217;t have a trendy buzzword filled keynote dedicated to the topic.</description>
+    </item>
+    
+    <item>
+      <title>The Linux Foundation – Guide to the Open Cloud</title>
+      <link>https://calgaryrhce.ca/blog/2015/02/18/the-linux-foundation-guide-to-the-open-cloud/</link>
+      <pubDate>Thu, 19 Feb 2015 02:28:19 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/02/18/the-linux-foundation-guide-to-the-open-cloud/</guid>
+      <description>Never before has the IT industry faced such a colossal rate of change and innovation as it does today. The pace is even more prominent in emerging technologies such as big data, the internet of things, and cloud computing. At the heart of all of these trends is open source. Open source has enabled both the mass collaboration and massive scaling that is driving cloud technologies.</description>
+    </item>
+    
+    <item>
+      <title>Managing Configuration Management w/ Puppet</title>
+      <link>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
+      <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
+      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It&amp;#8217;s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
+    </item>
+    
+    <item>
+      <title>Reliable, resilient storage with GlusterFS</title>
+      <link>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
+      <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
+      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&amp;#8217;t terribly expensive, which Gluster caters to quite well.</description>
+    </item>
+    
+    <item>
+      <title>Performance Tweaking – SSDs, I/O Scheduler, Virtual Memory, Browser Cache</title>
+      <link>https://calgaryrhce.ca/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</link>
+      <pubDate>Sun, 13 Jul 2014 22:15:31 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</guid>
+      <description>Having recently been exposed to some SSD tweaking at work, I thought I&amp;#8217;d do the same with my home PCs. Prior to this weekend, I&amp;#8217;ve just had four 1TB SATA drives in a RAID 5 configuration for a disk setup. Performance has always been satisfactory, but with recent SSD prices coming down quite a bit, my late 2008 MacBook Pro feeling it&amp;#8217;s age, it was time for an upgrade.</description>
+    </item>
+    
+    <item>
+      <title>Google Chrome on RHEL/CentOS 6&#43;</title>
+      <link>https://calgaryrhce.ca/blog/2014/06/01/google-chrome-on-rhelcentos-6/</link>
+      <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/06/01/google-chrome-on-rhelcentos-6/</guid>
+      <description>So if you&amp;#8217;re like me and like to run the same OS on your desktop that is in your data centre, you might have come across the problem of Google Chrome support being discontinued for Red Hat 6+ and its clones. Thankfully there&amp;#8217;s a script developed by Richard Lloyd that will automatically download and install the latest Google Chrome browser for you.</description>
+    </item>
+    
+    <item>
+      <title>Become a contributor!</title>
+      <link>https://calgaryrhce.ca/blog/2014/05/04/become-a-contributor/</link>
+      <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/05/04/become-a-contributor/</guid>
+      <description>As my career has evolved over the past 10 years, I’ve come to appreciate the value of collaborative ideas and solutions more than ever. From my early days in software development and QA, into helpdesk, administrator, and architect roles, I’ve seen the best results in every field when we’ve worked closely together to solve problems.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Theft/Intruder detection on Android w/ Tasker &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Theft/Intruder detection on Android w/ Tasker"/>
+  <meta property="og:description" content="If you have a smartphone, surely you covet it&#8217;s presence and usage. It probably doesn&#8217;t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there&#8217;s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2015-09-27T16:29:27Z"/>
+  <meta property="article:modified_time" content="2015-09-27T16:29:27Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Theft\/Intruder detection on Android w\/ Tasker",
+    "headline": "Theft\/Intruder detection on Android w\/ Tasker",
+    "datePublished": "2015-09-27T16:29:27Z",
+    "dateModified": "2015-09-27T16:29:27Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2015/09/27/theftintruder-detection-on-android-w-tasker/",
+    "description": "If you have a smartphone, surely you covet it\x26#8217;s presence and usage. It probably doesn\x26#8217;t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there\x26#8217;s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Theft/Intruder detection on Android w/ Tasker</h1>
+
+  <div class="post-date">
+    <time datetime="2015-09-27T16:29:27Z">Sep 27, 2015</time> · 3 min read
+  </div>
+
+  <p>If you have a smartphone, surely you covet it&#8217;s presence and usage. It probably doesn&#8217;t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there&#8217;s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc. in case this happens. I&#8217;m going to highlight one more tool available to you in your smartphone arsenal that can help you keep tabs on your device. Also, this tool can be used for quite a bit more than security. Since this is a linux blog, of course I&#8217;m going to be talking about the android platform 🙂 .</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=en" target="_blank">Tasker</a> is an automation application that&#8217;s available for Android. Think of it as an automation language for your smartphone. From settings to states and events, Tasker allows you to setup rules and logic to handle common tasks that you may want to automate, or integrate together. If you&#8217;re familiar with <a href="https://ifttt.com/" target="_blank">IFTTT</a> think of it as IFTTT for your phone. One of the recipes I&#8217;ve been meaning to setup for a while (a recipe or profile is the term used to group rules and logic together) is to detect when someone enters my PIN or PATTERN code incorrectly, have a photo of them taken discreetly, and then email it to me with the phone&#8217;s GPS location. This gives me a picture of the potential thief, as well as the location of my phone should I ever lose it. This is something I could provide to authorities to help recover the device, or at least see which friend/child has &#8220;borrowed&#8221; my phone for mischief. 🙂</p>
+
+<p>I have a Samsung Galaxy S4 running <a href="https://wiki.cyanogenmod.org/w/Jflte_Info" target="_blank">CyanogenMod11</a>, which is Android KitKat v 4.4.4. You&#8217;ll need to install <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm&hl=en" target="_blank">Tasker</a>, add the <a href="https://play.google.com/store/apps/details?id=com.intangibleobject.securesettings.plugin&hl=en" target="_blank">Secure Settings plugin</a> to Android, install <a href="http://www.calgaryrhce.ca/wp-content/uploads/2015/09/sl4a_r6.apk" target="_blank">SL4A (Scripting Layer for Android)</a>, install <a href="http://www.calgaryrhce.ca/wp-content/uploads/2015/09/PythonForAndroid_r5.apk" target="_blank">Python</a>, and have <a href="http://www.calgaryrhce.ca/wp-content/uploads/2015/09/sendemailA.py" target="_blank">this script</a> in your /sdcard/sl4a/scripts/ directory. Tasker has a <a href="http://tasker.wikidot.com/userguide-en">wiki</a> and <a href="http://tasker.wikidot.com/automatically-take-and-email-your-photo" target="_blank">further details</a> on how to do this if you have questions. I had some troubles locating these .apk files as the SL4A project has recently moved from Google Code. I&#8217;ve linked them here for your convenience, but you could download from a more *trusted* source if you&#8217;d rather 🙂 . Once those items are installed from Google Play, you&#8217;ll want to open Python and follow the prompts to complete installing the modules. You should end up being able to run SL4A and see a few scripts in it&#8217;s list, one of them being sendemailA.py:<figure id="attachment_215" aria-describedby="caption-attachment-215" style="width: 200px" class="wp-caption alignnone"></p>
+
+<p><a href="http://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-09-37-09.png"><img class=" wp-image-215" src="http://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-09-37-09-576x1024.png" alt="SL4A and Python" width="200" height="356" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-09-37-09-576x1024.png 576w, https://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-09-37-09-169x300.png 169w, https://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-09-37-09.png 1080w" sizes="(max-width: 200px) 100vw, 200px" /></a><figcaption id="caption-attachment-215" class="wp-caption-text">SL4A and Python</figcaption></figure></p>
+
+<p>From here, you&#8217;re ready to open Tasker, and create the profile. The Tasker wiki has pre-built profiles you can either use directly, or slightly modify for your own use. I used both of these profiles to create mine. The first, <a href="http://tasker.wikidot.com/failedloginphoto" target="_blank">failed login photo</a>, and the second, <a href="http://tasker.wikidot.com/automatically-take-and-email-your-photo" target="_blank">automatically take and email your photo</a>. At this point, you&#8217;ll be creating your first Tasker profile, associating Actions with it, and creating/setting a few variables. Don&#8217;t worry, this is pretty easy to do, you don&#8217;t need any programming experience. Here is what my Tasker profile looks like. I&#8217;ve removed my personal values in the variables, these will be substituted for your own:<figure id="attachment_218" aria-describedby="caption-attachment-218" style="width: 201px" class="wp-caption alignnone"></p>
+
+<p><a href="http://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-08-48-34.png"><img class=" wp-image-218" src="http://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-08-48-34-576x1024.png" alt="Tasker Profile" width="201" height="358" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-08-48-34-576x1024.png 576w, https://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-08-48-34-169x300.png 169w, https://calgaryrhce.ca/wp-content/uploads/2015/09/Screenshot_2015-09-27-08-48-34.png 1080w" sizes="(max-width: 201px) 100vw, 201px" /></a><figcaption id="caption-attachment-218" class="wp-caption-text">Tasker Profile</figcaption></figure></p>
+
+<p>You can hit the play button at the bottom left to test your recipe. This is what my final product looks like&#8230; After 3 failed login attempts, I&#8217;m emailed a photo of the intruder (me in this case!), with a link to my phone&#8217;s GPS location transposed onto Google Maps:<figure id="attachment_220" aria-describedby="caption-attachment-220" style="width: 365px" class="wp-caption alignnone"></p>
+
+<p><a href="http://calgaryrhce.ca/wp-content/uploads/2015/09/Tasker-Email1.png"><img class=" wp-image-220" src="http://calgaryrhce.ca/wp-content/uploads/2015/09/Tasker-Email1.png" alt="Tasker Email" width="365" height="258" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/09/Tasker-Email1.png 712w, https://calgaryrhce.ca/wp-content/uploads/2015/09/Tasker-Email1-300x212.png 300w" sizes="(max-width: 365px) 100vw, 365px" /></a><figcaption id="caption-attachment-220" class="wp-caption-text">Tasker Email</figcaption></figure></p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>contribute on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/contribute/</link>
+    <description>Recent content in contribute on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 May 2014 22:29:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/contribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Become a contributor!</title>
+      <link>https://calgaryrhce.ca/blog/2014/05/04/become-a-contributor/</link>
+      <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/05/04/become-a-contributor/</guid>
+      <description>As my career has evolved over the past 10 years, I’ve come to appreciate the value of collaborative ideas and solutions more than ever. From my early days in software development and QA, into helpdesk, administrator, and architect roles, I’ve seen the best results in every field when we’ve worked closely together to solve problems.</description>
+    </item>
+    
+  </channel>
+</rss>

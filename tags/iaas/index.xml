@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iaas on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/iaas/</link>
+    <description>Recent content in Iaas on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jul 2015 23:29:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/iaas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
+      <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
+      <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
+      <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>I/O on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/i/o/</link>
+    <description>Recent content in I/O on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Oct 2018 17:43:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/i/o/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Troubleshooting performance of VDO and NFS</title>
+      <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
+      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
+      <description>In setting up a local virtualization environment a little while back, I thought I&amp;#8217;d try the recently GA&amp;#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&amp;#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+    </item>
+    
+    <item>
+      <title>Filesystem benchmarking</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/</link>
+      <pubDate>Mon, 12 Sep 2016 02:51:38 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/</guid>
+      <description>Once in a while I need to do some I/O benchmarking. Either when creating a baseline for a before and after performance tuning comparison, or just because I want to see how fast my new SSD/M.2 really is. The tool I find myself going to over the years has been iozone.</description>
+    </item>
+    
+    <item>
+      <title>Performance Tweaking – SSDs, I/O Scheduler, Virtual Memory, Browser Cache</title>
+      <link>https://calgaryrhce.ca/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</link>
+      <pubDate>Sun, 13 Jul 2014 22:15:31 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</guid>
+      <description>Having recently been exposed to some SSD tweaking at work, I thought I&amp;#8217;d do the same with my home PCs. Prior to this weekend, I&amp;#8217;ve just had four 1TB SATA drives in a RAID 5 configuration for a disk setup. Performance has always been satisfactory, but with recent SSD prices coming down quite a bit, my late 2008 MacBook Pro feeling it&amp;#8217;s age, it was time for an upgrade.</description>
+    </item>
+    
+  </channel>
+</rss>

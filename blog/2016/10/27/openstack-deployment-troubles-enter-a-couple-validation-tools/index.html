@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>OpenStack deployment troubles? Enter a couple validation tools &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="OpenStack deployment troubles? Enter a couple validation tools"/>
+  <meta property="og:description" content="Whether you&#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2016-10-28T00:34:47Z"/>
+  <meta property="article:modified_time" content="2016-10-28T00:34:47Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "OpenStack deployment troubles? Enter a couple validation tools",
+    "headline": "OpenStack deployment troubles? Enter a couple validation tools",
+    "datePublished": "2016-10-28T00:34:47Z",
+    "dateModified": "2016-10-28T00:34:47Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/",
+    "description": "Whether you\x26#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>OpenStack deployment troubles? Enter a couple validation tools</h1>
+
+  <div class="post-date">
+    <time datetime="2016-10-28T00:34:47Z">Oct 28, 2016</time> · 2 min read
+  </div>
+
+  <p>Whether you&#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.</p>
+
+<p>Firstly: the <a href="https://github.com/cybertron/tripleo-scripts#net-iso-genpy">network template generator</a>. If you&#8217;ve read through any of the heat templates, or perused some of the upstream docs, you&#8217;ll know that configuring the networks you want in your OpenStack environment is a big part of the architecture. It&#8217;s also not easy to make changes to that once the environment is deployed. Typically, these configuration parameters are held in the network-environment.yaml template, as well as the nic-configs/<hostname>.yaml templates. To save on confusion and syntax mistakes in manual editing, Ben Nemec has created a GUI tool that creates these templates for you after running through a network creation wizard. With it, you can configure bonding, LACP, VLANs, bridges, etc. all on a per-node basis to satisfy your OpenStack environment needs. Ben publishes a <a href="https://www.youtube.com/watch?v=k2ZBkkHdeEM&amp;feature=youtu.be">video guide</a> on the tool, as well as a <a href="http://blog.nemebean.com/content/tripleo-network-isolation-template-generator">blog</a> on it&#8217;s use.</p>
+
+<p>Secondly: <a href="https://github.com/rthallisey/clapper">clapper</a>. It&#8217;s a suite of ansible playbooks that run both prior to and post deployment to validate the configuration of the environment. Within the tool are prepackaged validations (ansible playbooks) submitted by community members to check for things like adequate file descriptors, open file limits, network gateways, disk space, ip ranges, network templates, detecting rogue DHCP servers, and many more. You can git clone this tool to your undercloud server and run validations at any stage of your deployment. It&#8217;s handy in helping you implement best practices that come straight from the experience of the OpenStack community.</p>
+
+<p>Got another tool to share? I&#8217;d love to hear from you. One that&#8217;s been picking up traction lately for ease of cloud deployments is the <a href="http://rhelblog.redhat.com/2016/09/14/your-cloud-installed-before-lunch-with-quickstart-cloud-installer-1-0/">quickstart cloud installer.</a> When I get some time, I&#8217;ll try it out and post a review.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

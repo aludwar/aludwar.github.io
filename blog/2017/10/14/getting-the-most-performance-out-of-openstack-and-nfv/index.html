@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Getting the most performance out of Openstack, and NFV &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Getting the most performance out of Openstack, and NFV"/>
+  <meta property="og:description" content="By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We&#8217;ve moved past the installer race, the fragmentation of &#8220;as-a-service&#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack &#8220;boring&#8220;."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2017-10-14T17:33:55Z"/>
+  <meta property="article:modified_time" content="2017-10-14T17:33:55Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Getting the most performance out of Openstack, and NFV",
+    "headline": "Getting the most performance out of Openstack, and NFV",
+    "datePublished": "2017-10-14T17:33:55Z",
+    "dateModified": "2017-10-14T17:33:55Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/",
+    "description": "By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We\x26#8217;ve moved past the installer race, the fragmentation of \x26#8220;as-a-service\x26#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack \x26#8220;boring\x26#8220;."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Getting the most performance out of Openstack, and NFV</h1>
+
+  <div class="post-date">
+    <time datetime="2017-10-14T17:33:55Z">Oct 14, 2017</time> · 3 min read
+  </div>
+
+  <p>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We&#8217;ve moved past the installer race, the fragmentation of &#8220;as-a-service&#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack &#8220;<a href="https://major.io/2017/02/24/openstack-isnt-dead-its-boring-thats-a-good-thing/" target="_blank">boring</a>&#8220;. <strong>Don&#8217;t be fooled, all of these are good things.</strong> They&#8217;re a product of fast-paced innovation seeing a settling of opinions and decision making. OpenStack has reached a maturity point that Linux also hit earlier on in its journey. As linux was (and still is) an incredibly capable and cost-effective option for an OS, OpenStack is also an incredibly capable and cost-effective option for private or public cloud. But now what? What&#8217;s next? The answer is deeper and more efficient capability, addressing more edge use-cases, and general polish and integration of all the development that&#8217;s happened to date. The low-hanging-fruit development is over, we&#8217;re deeper into the less exciting and less headline grabbing work; maximizing the assets as much as we can.</p>
+
+<p>There&#8217;s been a lot of blog traffic regarding tips and tricks, technologies to consider for different use-cases, etc. Given the recent explosion in NFV development and adoption, I&#8217;ll highlight the ones that I think provide the most benefit in the area to try and cut down on the amount of reading needing to be done. Here we go:</p>
+
+<ol>
+<li><a href="http://redhatstackblog.redhat.com/2017/01/18/9-tips-to-properly-configure-your-openstack-instance/" target="_blank">Getting the most out of your instances.</a> This is a great summary on the options available to maximize function and performance of OpenStack instances.</li>
+<li><a href="http://chrisj.cloud/?q=node/1" target="_blank">Helpful deployment and operations management tips</a>. These are great suggestions on working smartly with new deployments, and maintaining them throughout the lifecycle.</li>
+<li><a href="https://jaormx.github.io/2017/run-ansible-playbook-on-tripleo-nodes/" target="_blank">Operations must-have: dynamic ansible inventory for TripleO</a>. If you&#8217;re doing ad-hoc maintenance on your cloud outside of tripleo, you&#8217;d be silly to not use ansible and its dynamic inventory.</li>
+</ol>
+
+<p>NFV specific material:</p>
+
+<ol>
+<li>What OSP technologies should I look at to help scale and tune for network intensive workloads?
+
+<ul>
+<li><a href="http://verticalindustriesblog.redhat.com/scaling-virtual-machine-network-performance-for-network-intensive-workloads/" target="_blank">Scaling virtual machine network performance for network intensive workloads</a></li>
+<li><a href="http://redhatstackblog.redhat.com/2016/02/10/boosting-the-nfv-datapath-with-rhel-openstack-platform/" target="_blank">Boosting the NFV datapath</a></li>
+</ul></li>
+<li>Now that we know what technologies are available, if I have &#8220;x&#8221; workload, which options should I tune?
+
+<ul>
+<li><a href="https://access.redhat.com/documentation/en-us/reference_architectures/2017/html/deploying_mobile_networks_using_network_functions_virtualization/performance_and_optimization" target="_blank">Reference Architecture: Mobile Networks and NFV performance and optimization</a></li>
+</ul></li>
+<li>OVS-DPDK with multi-queue, and further NFV performance tuning:
+
+<ul>
+<li><a href="https://access.redhat.com/solutions/3215141" target="_blank">How to enable nova multi queue support with and without OVS-DPDK in Red Hat OpenStack Platform 10</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/10/html/network_functions_virtualization_configuration_guide/" target="_blank">OSP Newton NFV Configuration Guide</a></li>
+</ul></li>
+<li>Tuning for zero packet loss in Red Hat OpenStack Platform, 3 part series:
+
+<ul>
+<li><a href="http://redhatstackblog.redhat.com/2017/07/11/tuning-for-zero-packet-loss-in-red-hat-openstack-platform-part-1/" target="_blank">Tuning for Zero Packet Loss in Red Hat OpenStack Platform &#8211; Part 1</a></li>
+<li><a href="http://redhatstackblog.redhat.com/2017/07/13/tuning-for-zero-packet-loss-in-red-hat-openstack-platform-part-2/" target="_blank">Tuning for Zero Packet Loss in Red Hat OpenStack Platform &#8211; Part 2</a></li>
+<li><a href="http://redhatstackblog.redhat.com/2017/07/18/tuning-for-zero-packet-loss-in-red-hat-openstack-platform-part-3/" target="_blank">Tuning for Zero Packet Loss in Red Hat OpenStack Platform &#8211; Part 3</a></li>
+</ul></li>
+</ol>
+
+<p>If you have any questions, or come across anything else that you think should be added &#8211; let me know! Happy management and tuning.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

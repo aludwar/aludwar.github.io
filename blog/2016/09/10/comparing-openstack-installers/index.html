@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Comparing OpenStack installers &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Comparing OpenStack installers"/>
+  <meta property="og:description" content="Building on a previous post, I promised I&#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&#8217;s purpose and intended result, it would be wise to align your needs with the installers&#8217; capabilities and limitations."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2016-09-10T22:12:03Z"/>
+  <meta property="article:modified_time" content="2016-09-10T22:12:03Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Comparing OpenStack installers",
+    "headline": "Comparing OpenStack installers",
+    "datePublished": "2016-09-10T22:12:03Z",
+    "dateModified": "2016-09-10T22:12:03Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/",
+    "description": "Building on a previous post, I promised I\x26#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment\x26#8217;s purpose and intended result, it would be wise to align your needs with the installers\x26#8217; capabilities and limitations."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Comparing OpenStack installers</h1>
+
+  <div class="post-date">
+    <time datetime="2016-09-10T22:12:03Z">Sep 10, 2016</time> · 3 min read
+  </div>
+
+  <p>Building on a <a href="https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/">previous post</a>, I promised I&#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&#8217;s purpose and intended result, it would be wise to align your needs with the installers&#8217; capabilities and limitations. Here they are:</p>
+
+<p>[table id=1 /]</p>
+
+<p>Now of course, this is just one man&#8217;s opinion, and this comparison may be outdated a week after it&#8217;s posted. But, generally speaking, these are the installers to look at and align your requirements with when you&#8217;re considering an install. For my OpenStack needs, my requirements can be summarized in one statement, while my use-cases can be summarized in two:</p>
+
+<ul>
+<li><p><strong>Requirement:</strong> My installer needs to have a strong community surrounding it. Both to anticipate and deliver the features my customers want, but also to continue to maximize the value of my OpenStack investment throughout its lifecycle and be supportive and responsive to my needs (which may or may not be the next <em>cool and shiny</em> thing to work on).</p></li>
+
+<li><p><strong>Use Case 1:</strong> Brainless, quick and easy installation to get OpenStack up and running in the shortest amount of time possible, with the least amount of resources required.</p></li>
+
+<li><p><strong>Use Case 2:</strong> Highly capable, fully featured deployment options, and long-term lifecycle management to manage clouds for years to come.</p></li>
+</ul>
+
+<p>For use case #1, it doesn&#8217;t get any more brainless than packstack. Packstack is my installer of choice when doing basic proof of concepts or demos. I only need one host, or possibly two if I want to add another compute node. After doing a standard OS installation, a <a href="https://access.redhat.com/articles/1127153">packstack all-in-one deployment</a> is literally one command and I&#8217;m off and running 20 minutes later. I don&#8217;t need to know jack squat about OpenStack, or what my needs are, or setup and configure any other infrastructure or software.</p>
+
+<p>For use case #2, my installer of choice is TripleO. The complexity is a concern, but that&#8217;s not an uncommon trait for software that&#8217;s highly innovative and one which incorporates changes frequently. I&#8217;m going to need to learn about OpenStack to understand how to manage it, there&#8217;s no avoiding that piece, it might as well start at installation time. Also, TripleO is appealing because it&#8217;s OpenStack on OpenStack (OOO). The project value is multiplied by the existing innovation rate of OpenStack and also by not being tied to any one vendor. TripleO will be around long after the vendor wars are settled, because it&#8217;s lifecycle is directly tied to OpenStack itself.</p>
+
+<p>Because packstack is so easy, I&#8217;ll let you run with that one on your own. For the next part in this series, I&#8217;ll show a virtual home lab environment for an OpenStack installation, and do an install of TripleO. Lastly, and finally, I&#8217;ll show an example 9 node HA deployment with Ceph.</p>
+
+<p>For Red Hat customers, Red Hat publishes a comprehensive <a href="https://access.redhat.com/articles/2477851" target="_blank">installer best practices and supportability matrix</a> to help you decide.</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hybrid cloud on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/hybrid-cloud/</link>
+    <description>Recent content in hybrid cloud on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Mar 2017 23:33:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/hybrid-cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Calgary OpenStack and other Meetup.com groups</title>
+      <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
+      <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
+      <description>I&amp;#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&amp;#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+    </item>
+    
+  </channel>
+</rss>

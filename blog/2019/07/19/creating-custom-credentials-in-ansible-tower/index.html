@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Creating custom credentials in Ansible Tower &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Creating custom credentials in Ansible Tower"/>
+  <meta property="og:description" content="As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-07-19T22:20:23Z"/>
+  <meta property="article:modified_time" content="2019-07-19T22:20:23Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Creating custom credentials in Ansible Tower",
+    "headline": "Creating custom credentials in Ansible Tower",
+    "datePublished": "2019-07-19T22:20:23Z",
+    "dateModified": "2019-07-19T22:20:23Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/",
+    "description": "As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Creating custom credentials in Ansible Tower</h1>
+
+  <div class="post-date">
+    <time datetime="2019-07-19T22:20:23Z">Jul 19, 2019</time> · 4 min read
+  </div>
+
+  <p>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself. What if we need to extract these from the eyes of others, or make them easily reused across the organization? Can I use Ansible Tower to manage and abstract custom credentials like it does for machine, github, or cloud account types? The answer is yes.</p>
+
+<p>So let&#8217;s look at moving a custom credential into Tower. I&#8217;m going to use Red Hat Subscription Manager credentials as an example, this is the Customer Portal account username and password that&#8217;s used to register a RHEL system. This credential is obviously private and sensitive in nature and I&#8217;d like to make this easily usable across my organization, but I don&#8217;t want it to be stored in plain-text or easily accessible by the wrong eyes.</p>
+
+<p>I have an example playbook that registers a host using the subscription-manager utility. Currently I store my username and password in an environment variable that&#8217;s private to my workstation and user login session:</p>
+
+<pre class=""># export SMUSERNAME=andrew.ludwar
+# export SMPASSWORD=secretpassword
+
+# cat playbook.yml
+---
+- name: Deploy a VM
+  hosts: all
+  become: true
+  vars:
+    # Fetch subscription-manager credentials
+    subs_mgr_username: "{{ lookup('env', 'SMUSERNAME') }}"
+    subs_mgr_password: "{{ lookup('env', 'SMPASSWORD') }}"
+
+  tasks:
+    - name: Register host with subscription-manager
+      redhat_subscription:
+        state: present
+        username: "{{ subs_mgr_username }}"
+        password: "{{ subs_mgr_password }}"
+        auto_attach: true</pre>
+
+<p>Now this works great, but it&#8217;s limited to my specific workstation and login session. What if I wanted others to be able to register systems using these credentials? Or, what if I wanted these to be easily passed into playbooks run via Tower in a workflow? Enter custom credentials.</p>
+
+<p>In Ansible Tower, we have a concept of Credential Types. We can define a credential type that&#8217;s different from the pre-packaged credentials, and then create a new credential using that framework. In the Ansible Tower GUI, under Administration at the left hand side, click on &#8220;Credential Types&#8221;. You should see a listing similar to this, although yours may be blank:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT.png"><img class="alignnone size-full wp-image-805" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT.png" alt="Tower Credential Type" width="900" height="440" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT-300x147.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT-768x375.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
+
+<p>Let&#8217;s define a new credential type, which Ansible Tower will abstract away from those who we don&#8217;t want to see it but will still allow us to use it easily in our playbooks.</p>
+
+<p>I&#8217;ve named this credential for the Red Hat Customer Portal, and I&#8217;ve given it some input configuration and injector configuration to define what this credential is and how we will reference it. We define the credential ID, its data type (string), label, and for the password I&#8217;ve included the secret flag to keep this hidden wherever it gets referenced.</p>
+
+<p><span style="text-decoration: underline;">Input Configuration:</span></p>
+
+<pre class="">fields:
+- id: rhnusername
+  type: string
+  label: rhnusername
+- id: rhnpassword
+  type: string
+  label: rhnpassword
+  secret: true
+required:
+- rhn-username
+- rhn-password</pre>
+
+<p>The injector configuration is basically taking over for the environmental variable structure, in that we&#8217;ll be using these as extra vars passed into playbooks, and I&#8217;m assigning these a name and a value to be referenced</p>
+
+<p><span style="text-decoration: underline;">Injector Configuration:</span></p>
+
+<pre class="">extra_vars:
+  rhnpassword: '{{rhnpassword}}'
+  rhnusername: '{{rhnusername}}'</pre>
+
+<p>Here&#8217;s what it looks like as I&#8217;ve now saved it:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT2.png"><img class="alignnone size-full wp-image-806" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT2.png" alt="Tower Credential Type Details" width="900" height="329" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT2.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT2-300x110.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT2-768x281.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
+
+<p>Now that the credential framework is there, we can use this to create a new credential for the Red Hat Customer Portal. Let&#8217;s create a new credential. When clicking on add credential, we should now see a new option for credential type named &#8220;Red Hat Customer Portal&#8221;:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT3.png"><img class="alignnone size-full wp-image-809" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT3.png" alt="New Credential Type" width="621" height="509" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT3.png 621w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT3-300x246.png 300w" sizes="(max-width: 621px) 100vw, 621px" /></a></p>
+
+<p>So we select our new credential type. Now we should see the two fields that we&#8217;ve defined previously in RHNUSERNAME and RHNPASSWORD, and also that the password field should hide our data once entered:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT4.png"><img class="alignnone size-full wp-image-808" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT4.png" alt="Credential Fields" width="900" height="240" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT4.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT4-300x80.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT4-768x205.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
+
+<p>After entering our username and password details here and saving, this is ready to be used in playbooks called with Tower.</p>
+
+<p>Remember the playbook we just used that had environment variable look ups? We&#8217;ll change that slightly to use the names defined in the injector configuration. Then we&#8217;ll add this new credential in the Job Template and Tower will pass the credential details to be used in the playbook, and the playbook will capture them by their variable names, just like if we were passing extra variables at runtime. Here&#8217;s the new playbook we&#8217;ll use:</p>
+
+<pre class="">--- 
+- name: Deploy a VM
+  hosts: all
+  become: yes 
+  vars:
+  # Fetch subscription-manager credentials
+    subs_mgr_username: "{{ rhnusername }}"
+    subs_mgr_password: "{{ rhnpassword }}"
+
+  tasks:
+  - name: Register host with subscription-manager
+    redhat_subscription:
+    state: present
+      username: "{{ subs_mgr_username }}"
+      password: "{{ subs_mgr_password }}"
+      auto_attach: true</pre>
+
+<p>And in the Job Template, we&#8217;ll simply add another credential which will get passed to and captured by the playbook to be used to register the system:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT5.png"><img class="alignnone size-full wp-image-812" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT5.png" alt="Custom Credential Job Tempalte" width="900" height="509" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT5.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT5-300x170.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT5-768x434.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
+
+<p>Which gets captured and used in our playbook results:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT6.png"><img class="alignnone size-full wp-image-814" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT6.png" alt="Tower Custom Credential Job Result" width="900" height="486" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT6.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT6-300x162.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT6-768x415.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
+
+<p>References:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT.png">1</a> <a href="https://access.redhat.com/solutions/3331011">https://access.redhat.com/solutions/3331011</a></p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/TowerCT2.png">2</a> <a href="https://docs.ansible.com/ansible-tower/latest/html/userguide/credential_types.html">https://docs.ansible.com/ansible-tower/latest/html/userguide/credential_types.html</a></p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

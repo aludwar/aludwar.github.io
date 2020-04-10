@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>release upgrades on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/release-upgrades/</link>
+    <description>Recent content in release upgrades on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Oct 2016 20:19:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/release-upgrades/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Upgrading from Fedora 23 to Fedora 24</title>
+      <link>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
+      <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
+      <description>For my main workstation, I&amp;#8217;ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I&amp;#8217;ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+    </item>
+    
+  </channel>
+</rss>

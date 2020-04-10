@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/</link>
+    <description>Recent content in Tags on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Feb 2020 23:52:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>containers</title>
+      <link>https://calgaryrhce.ca/tags/containers/</link>
+      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/containers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fedora coreos</title>
+      <link>https://calgaryrhce.ca/tags/fedora-coreos/</link>
+      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/fedora-coreos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ignition</title>
+      <link>https://calgaryrhce.ca/tags/ignition/</link>
+      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/ignition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open source</title>
+      <link>https://calgaryrhce.ca/tags/open-source/</link>
+      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualization</title>
+      <link>https://calgaryrhce.ca/tags/virtualization/</link>
+      <pubDate>Fri, 08 Nov 2019 16:08:08 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ansible</title>
+      <link>https://calgaryrhce.ca/tags/ansible/</link>
+      <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ansible Tower</title>
+      <link>https://calgaryrhce.ca/tags/ansible-tower/</link>
+      <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/ansible-tower/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CICD</title>
+      <link>https://calgaryrhce.ca/tags/cicd/</link>
+      <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/cicd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://calgaryrhce.ca/tags/github/</link>
+      <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://calgaryrhce.ca/tags/automation/</link>
+      <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>insights</title>
+      <link>https://calgaryrhce.ca/tags/insights/</link>
+      <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/insights/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>remediation</title>
+      <link>https://calgaryrhce.ca/tags/remediation/</link>
+      <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/remediation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration management</title>
+      <link>https://calgaryrhce.ca/tags/configuration-management/</link>
+      <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/configuration-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://calgaryrhce.ca/tags/devops/</link>
+      <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://calgaryrhce.ca/tags/linux/</link>
+      <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server provisioning</title>
+      <link>https://calgaryrhce.ca/tags/server-provisioning/</link>
+      <pubDate>Wed, 03 Jul 2019 22:52:03 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/server-provisioning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>https://calgaryrhce.ca/tags/cloud/</link>
+      <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fedora</title>
+      <link>https://calgaryrhce.ca/tags/fedora/</link>
+      <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/fedora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>storage</title>
+      <link>https://calgaryrhce.ca/tags/storage/</link>
+      <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Satellite 6</title>
+      <link>https://calgaryrhce.ca/tags/satellite-6/</link>
+      <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/satellite-6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>enterprise</title>
+      <link>https://calgaryrhce.ca/tags/enterprise/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/enterprise/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux kernel</title>
+      <link>https://calgaryrhce.ca/tags/linux-kernel/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/linux-kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rhel5</title>
+      <link>https://calgaryrhce.ca/tags/rhel5/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/rhel5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rhel6</title>
+      <link>https://calgaryrhce.ca/tags/rhel6/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/rhel6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rhel7</title>
+      <link>https://calgaryrhce.ca/tags/rhel7/</link>
+      <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/rhel7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open cloud</title>
+      <link>https://calgaryrhce.ca/tags/open-cloud/</link>
+      <pubDate>Thu, 21 Mar 2019 15:46:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/open-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://calgaryrhce.ca/tags/hardware/</link>
+      <pubDate>Mon, 04 Feb 2019 22:59:18 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberri pi</title>
+      <link>https://calgaryrhce.ca/tags/raspberri-pi/</link>
+      <pubDate>Thu, 03 Jan 2019 22:58:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/raspberri-pi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>https://calgaryrhce.ca/tags/azure/</link>
+      <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>public cloud</title>
+      <link>https://calgaryrhce.ca/tags/public-cloud/</link>
+      <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/public-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://calgaryrhce.ca/tags/security/</link>
+      <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>private cloud</title>
+      <link>https://calgaryrhce.ca/tags/private-cloud/</link>
+      <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/private-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I/O</title>
+      <link>https://calgaryrhce.ca/tags/i/o/</link>
+      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/i/o/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance tuning</title>
+      <link>https://calgaryrhce.ca/tags/performance-tuning/</link>
+      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/performance-tuning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software defined storage</title>
+      <link>https://calgaryrhce.ca/tags/software-defined-storage/</link>
+      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/software-defined-storage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSD</title>
+      <link>https://calgaryrhce.ca/tags/ssd/</link>
+      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/ssd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openstack</title>
+      <link>https://calgaryrhce.ca/tags/openstack/</link>
+      <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/openstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homelab</title>
+      <link>https://calgaryrhce.ca/tags/homelab/</link>
+      <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networking</title>
+      <link>https://calgaryrhce.ca/tags/networking/</link>
+      <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hybrid cloud</title>
+      <link>https://calgaryrhce.ca/tags/hybrid-cloud/</link>
+      <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/hybrid-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>environment management</title>
+      <link>https://calgaryrhce.ca/tags/environment-management/</link>
+      <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/environment-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>smoke ping</title>
+      <link>https://calgaryrhce.ca/tags/smoke-ping/</link>
+      <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/smoke-ping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>release upgrades</title>
+      <link>https://calgaryrhce.ca/tags/release-upgrades/</link>
+      <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/release-upgrades/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>upgrade</title>
+      <link>https://calgaryrhce.ca/tags/upgrade/</link>
+      <pubDate>Thu, 29 Sep 2016 01:54:01 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/upgrade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RHUG</title>
+      <link>https://calgaryrhce.ca/tags/rhug/</link>
+      <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/rhug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kickstart</title>
+      <link>https://calgaryrhce.ca/tags/kickstart/</link>
+      <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/kickstart/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>market norms</title>
+      <link>https://calgaryrhce.ca/tags/market-norms/</link>
+      <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/market-norms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social motivation</title>
+      <link>https://calgaryrhce.ca/tags/social-motivation/</link>
+      <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/social-motivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social norms</title>
+      <link>https://calgaryrhce.ca/tags/social-norms/</link>
+      <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/social-norms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://calgaryrhce.ca/tags/monitoring/</link>
+      <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>workplace culture</title>
+      <link>https://calgaryrhce.ca/tags/workplace-culture/</link>
+      <pubDate>Sun, 29 Nov 2015 22:20:05 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/workplace-culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>https://calgaryrhce.ca/tags/android/</link>
+      <pubDate>Sun, 27 Sep 2015 16:29:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tasker</title>
+      <link>https://calgaryrhce.ca/tags/tasker/</link>
+      <pubDate>Sun, 27 Sep 2015 16:29:27 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/tasker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudforms</title>
+      <link>https://calgaryrhce.ca/tags/cloudforms/</link>
+      <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/cloudforms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iaas</title>
+      <link>https://calgaryrhce.ca/tags/iaas/</link>
+      <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/iaas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>private hybric cloud</title>
+      <link>https://calgaryrhce.ca/tags/private-hybric-cloud/</link>
+      <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/private-hybric-cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puppet</title>
+      <link>https://calgaryrhce.ca/tags/puppet/</link>
+      <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/puppet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux foundation</title>
+      <link>https://calgaryrhce.ca/tags/linux-foundation/</link>
+      <pubDate>Thu, 19 Feb 2015 02:28:19 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/linux-foundation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lacp</title>
+      <link>https://calgaryrhce.ca/tags/lacp/</link>
+      <pubDate>Mon, 15 Sep 2014 19:14:00 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/lacp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redundancy</title>
+      <link>https://calgaryrhce.ca/tags/redundancy/</link>
+      <pubDate>Mon, 15 Sep 2014 19:14:00 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/redundancy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gluster</title>
+      <link>https://calgaryrhce.ca/tags/gluster/</link>
+      <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/gluster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>custom iso</title>
+      <link>https://calgaryrhce.ca/tags/custom-iso/</link>
+      <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/custom-iso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>business</title>
+      <link>https://calgaryrhce.ca/tags/business/</link>
+      <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/business/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>communication</title>
+      <link>https://calgaryrhce.ca/tags/communication/</link>
+      <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/communication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>centos6</title>
+      <link>https://calgaryrhce.ca/tags/centos6/</link>
+      <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/centos6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://calgaryrhce.ca/tags/chrome/</link>
+      <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web browser</title>
+      <link>https://calgaryrhce.ca/tags/web-browser/</link>
+      <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/web-browser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>collaboration</title>
+      <link>https://calgaryrhce.ca/tags/collaboration/</link>
+      <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/collaboration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>contribute</title>
+      <link>https://calgaryrhce.ca/tags/contribute/</link>
+      <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/contribute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>resources</title>
+      <link>https://calgaryrhce.ca/tags/resources/</link>
+      <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/resources/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Demystifying automation and Puppet &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Demystifying automation and Puppet"/>
+  <meta property="og:description" content="Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&#8217;t seem to find a conference that doesn&#8217;t have a trendy buzzword filled keynote dedicated to the topic."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2015-07-05T19:46:06Z"/>
+  <meta property="article:modified_time" content="2015-07-05T19:46:06Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Demystifying automation and Puppet",
+    "headline": "Demystifying automation and Puppet",
+    "datePublished": "2015-07-05T19:46:06Z",
+    "dateModified": "2015-07-05T19:46:06Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/",
+    "description": "Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can\x26#8217;t seem to find a conference that doesn\x26#8217;t have a trendy buzzword filled keynote dedicated to the topic."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Demystifying automation and Puppet</h1>
+
+  <div class="post-date">
+    <time datetime="2015-07-05T19:46:06Z">Jul 5, 2015</time> · 2 min read
+  </div>
+
+  <p>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&#8217;t seem to find a conference that doesn&#8217;t have a trendy buzzword filled keynote dedicated to the topic. Oh how far we&#8217;ve come! What IT person or company isn&#8217;t looking at automation these days?</p>
+
+<p>But with all the trendiness and hype comes a lot of opinion and confusion. Marketing and business development departments muddy the technical details. Software developers consume it differently than sys-admins. Automation requires more business process change than technology change, management wants it implemented yesterday, and the technology feature-set is evolving at a massive rate. How&#8217;s one expected to keep up with it all? Hopefully this post can help you do that. (I realise the hypocrisy in presenting an opinion on other opinions 😉 )</p>
+
+<p>One of the leaders in the IT automation market is Puppet Labs and their configuration management language, Puppet. I&#8217;ve put together a slide-deck and most recently presented at our local Red Hat User Group meeting (<a href="http://www.meetup.com/Calgary-Red-Hat-Users-Group-RHUG-Meetup/">meetup.com</a>, <a href="https://www.linkedin.com/grp/home?gid=6591615">LinkedIn</a>) on the subject. Specifically, <em>&#8220;What is Puppet? And challenges/gotchas experienced with real-world implementations&#8221;</em>. I&#8217;ll take you through where I believe Puppet fits in in the enterprise, what it will and will not do for you, and some things to consider when adopting it yourself. This knowledge has been gathered from my past experience adopting it for previous and current employers. Included in this presentation is a slide on making the transition from traditional IT to private cloud server provisioning. I&#8217;ll dig into this deeper in another post.</p>
+
+<p>For now, <a href="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-Puppet-Path-To-Hybrid-Cloud.pdf" target="_blank">here you go</a>. I&#8217;d welcome any feedback or comments you may have!<figure id="attachment_202" aria-describedby="caption-attachment-202" style="width: 436px" class="wp-caption alignnone"></p>
+
+<p><a href="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-Puppet-Path-To-Hybrid-Cloud.pdf"><img class=" wp-image-202" src="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-TitleSlide.001-1024x768.jpg" alt="RHUG Puppet Path To Private Hybrid Cloud" width="436" height="327" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-TitleSlide.001.jpg 1024w, https://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-TitleSlide.001-300x225.jpg 300w" sizes="(max-width: 436px) 100vw, 436px" /></a><figcaption id="caption-attachment-202" class="wp-caption-text">RHUG Puppet Path To Private Hybrid Cloud</figcaption></figure></p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

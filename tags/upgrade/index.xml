@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>upgrade on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/upgrade/</link>
+    <description>Recent content in upgrade on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Sep 2016 01:54:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding RAM to an old macbook pro</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</link>
+      <pubDate>Thu, 29 Sep 2016 01:54:01 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</guid>
+      <description>I&amp;#8217;ve got an old 17&amp;#8243; Macbook Pro from late 2008 that&amp;#8217;s still kicking. It&amp;#8217;s served me a lot of good years filled with studying, scripting, exams, etc. and I&amp;#8217;ve never had a problem with it. I mostly keep it around for testing OSX related things, and as a backup. Last year I replaced the aging 512GB HDD with a 256GB SSD which did wonders to speed it up.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>CI/CD with Ansible Tower and GitHub &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="CI/CD with Ansible Tower and GitHub"/>
+  <meta property="og:description" content="Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-09-20T15:54:42Z"/>
+  <meta property="article:modified_time" content="2019-09-20T15:54:42Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "CI\/CD with Ansible Tower and GitHub",
+    "headline": "CI\/CD with Ansible Tower and GitHub",
+    "datePublished": "2019-09-20T15:54:42Z",
+    "dateModified": "2019-09-20T15:54:42Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/",
+    "description": "Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven\x26#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He\x26#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI\/CD can be accomplished using Ansible without the need for a formal CI\/CD pipeline toolset like Jenkins."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>CI/CD with Ansible Tower and GitHub</h1>
+
+  <div class="post-date">
+    <time datetime="2019-09-20T15:54:42Z">Sep 20, 2019</time> · 2 min read
+  </div>
+
+  <p>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&#8217;s put together a really interesting <a href="https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/">demo of Ansible Tower</a> connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.</p>
+
+<p>I&#8217;ve adapted his work to use Azure instead of OpenStack, but the concepts remain the same. He&#8217;s got some detail in his blog about how to setup the environment and connect services together, so I&#8217;ll let his work there speak for itself on how to get it setup. The changes I&#8217;ve made can be found in a couple of playbooks that provision infrastructure in Azure:</p>
+
+<ul>
+<li><a href="https://github.com/aludwar/ansible/tree/master/azure">https://github.com/aludwar/ansible/tree/master/azure</a>
+
+<ul>
+<li>create-app-vm.yml</li>
+<li>deploy-app.yml</li>
+<li>teardown-app.yml</li>
+</ul></li>
+</ul>
+
+<p>Then I use a webservice called <a href="http://ultrahook.com">ultrahook.com</a> to bridge the GitHub events to my homelab of Ansible Tower. You may not need this if your Ansible Tower server lives in the cloud. The high level architecture and workflow looks like this:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD.png"><img class="size-large wp-image-822" src="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-1024x570.png" alt="" width="1024" height="570" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-1024x570.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-300x167.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-768x427.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD.png 1361w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>Lastly, I&#8217;ve <a href="https://www.youtube.com/watch?v=_AumRi6GTUM">recorded a demo of what this looks like</a>. Similar to Keith, showcasing the developer workflow of checking in code, Tower building infrastructure and running the unit testing, then finally updating GitHub with the result. Then highlighting what a maintainer might see when they&#8217;re doing to merge the new code into the project.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

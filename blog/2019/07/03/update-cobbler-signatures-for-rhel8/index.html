@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Update cobbler signatures for RHEL8 &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Update cobbler signatures for RHEL8"/>
+  <meta property="og:description" content="Cobbler is a great tool for PXE booting, I&#8217;ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler&#8217;s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn&#8217;t able to pull the latest signatures on its own."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-07-03T22:52:03Z"/>
+  <meta property="article:modified_time" content="2019-07-03T22:52:03Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Update cobbler signatures for RHEL8",
+    "headline": "Update cobbler signatures for RHEL8",
+    "datePublished": "2019-07-03T22:52:03Z",
+    "dateModified": "2019-07-03T22:52:03Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/",
+    "description": "Cobbler is a great tool for PXE booting, I\x26#8217;ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler\x26#8217;s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn\x26#8217;t able to pull the latest signatures on its own."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Update cobbler signatures for RHEL8</h1>
+
+  <div class="post-date">
+    <time datetime="2019-07-03T22:52:03Z">Jul 3, 2019</time> · 3 min read
+  </div>
+
+  <p>Cobbler is a great tool for PXE booting, I&#8217;ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler&#8217;s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn&#8217;t able to pull the latest signatures on its own.</p>
+
+<p>I know lots of us are booting OS&#8217;s these days from QCOW images in a cloud, but I still find PXE booting very useful. I&#8217;ve built up quite a few custom kickstart files over the years, including some that <a href="https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/">provision automatically with Ansible</a>, so I still find myself building a quick kickstart file to automate a few of my server builds. Recently, I was building a RHEL8 host via PXE and realised I needed to update my cobbler server to include the new distro:</p>
+
+<pre class="">$ sudo mount rhel-8.0-x86_64-dvd.iso /mnt/
+$ sudo cobbler import --name=RHEL-8.0 --arch=x86_64 --path=/mnt
+task started: 2019-07-03_162132_import
+task started (id=Media import, time=Wed Jul 3 16:21:32 2019)
+No signature matched in /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64
+!!! TASK FAILED !!!
+$ sudo cobbler signature report
+Currently loaded signatures:
+debian:
+    jessie
+    squeeze
+    stretch
+    wheezy
+...
+redhat:
+..
+    fedora28
+    fedora29
+    rhel4
+    rhel5
+    rhel6
+    rhel7
+...
+11 breeds with 82 total signatures loaded</pre>
+
+<p>Oh yea&#8230; no rhel8 listed&#8230; time to update. Cobbler provides a method to do this, but YMMV depending if the cobbler community has updated their <a href="https://cobbler.github.io/signatures/2.8.x/latest.json">github.io signature file</a>. I did the update below, but noticed rhel8 still isn&#8217;t in this latest.json file:</p>
+
+<pre class="">$ sudo cobbler signature update
+task started: 2019-07-03_162517_sigupdate
+task started (id=Updating Signatures, time=Wed Jul 3 16:25:17 2019)
+Successfully got file from https://cobbler.github.io/signatures/2.8.x/latest.json
+*** TASK COMPLETE ***</pre>
+
+<p>Thankfully, there&#8217;s not a ton of magic to this signature file, and it&#8217;s available on the cobbler <a href="https://github.com/cobbler/cobbler/blob/master/config/cobbler/distro_signatures.json">github</a> project page. So I grabbed it directly, restarted cobbler, and I was able to see rhel8 included in the signature listing.</p>
+
+<pre class="">$ sudo wget https://raw.githubusercontent.com/cobbler/cobbler/master/config/cobbler/distro_signatures.json -O distro_signatures.json
+--2019-07-03 16:25:48-- https://raw.githubusercontent.com/cobbler/cobbler/master/config/cobbler/distro_signatures.json
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.52.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.52.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 52085 (51K) [text/plain]
+Saving to: ‘distro_signatures.json’
+
+distro_signatures.json 100%[=========================================================================================================================================&gt;] 50.86K --.-KB/s in 0.05s
+
+2019-07-03 16:25:48 (978 KB/s) - ‘distro_signatures.json’ saved [52085/52085]
+
+$ sudo systemctl restart cobblerd
+$ sudo cobbler signature report
+Currently loaded signatures:
+debian:
+    buster
+    jessie
+    squeeze
+    stretch
+    wheezy
+...
+redhat:
+...
+    fedora28
+    fedora29
+    fedora30
+    ovz7
+    rhel4
+    rhel5
+    rhel6
+    rhel7
+    rhel8
+11 breeds with 95 total signatures loaded</pre>
+
+<p>Sweet. So I was able to import a RHEL8 ISO DVD into cobbler for use in my PXE booting.</p>
+
+<pre class="">$ sudo cobbler import --name=RHEL-8.0 --arch=x86_64 --path=/mnt
+task started: 2019-07-03_162628_import
+task started (id=Media import, time=Wed Jul 3 16:26:28 2019)
+Found a candidate signature: breed=suse, version=sles15generic
+Found a candidate signature: breed=redhat, version=rhel8
+Found a matching signature: breed=redhat, version=rhel8
+Adding distros from path /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64:
+creating new distro: RHEL-8.0-x86_64
+trying symlink: /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64 -&gt; /export/www/cobbler/links/RHEL-8.0-x86_64
+creating new profile: RHEL-8.0-x86_64
+associating repos
+checking for rsync repo(s)
+checking for rhn repo(s)
+checking for yum repo(s)
+starting descent into /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64 for RHEL-8.0-x86_64
+processing repo at : /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/AppStream
+need to process repo/comps: /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/AppStream
+looking for /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/AppStream/repodata/*comps*.xml
+Keeping repodata as-is :/export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/AppStream/repodata
+processing repo at : /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/BaseOS
+need to process repo/comps: /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/BaseOS
+looking for /export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/BaseOS/repodata/*comps*.xml
+Keeping repodata as-is :/export/www/cobbler/ks_mirror/RHEL-8.0-x86_64/BaseOS/repodata
+*** TASK COMPLETE ***</pre>
+
+<p>Happy PXE booting.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

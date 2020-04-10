@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Migrating RHEV storage domains &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Migrating RHEV storage domains"/>
+  <meta property="og:description" content="Recently, I&#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&#8217;t performed this kind of activity before, but found it to be quite easy."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2018-10-19T21:20:50Z"/>
+  <meta property="article:modified_time" content="2018-10-19T21:20:50Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Migrating RHEV storage domains",
+    "headline": "Migrating RHEV storage domains",
+    "datePublished": "2018-10-19T21:20:50Z",
+    "dateModified": "2018-10-19T21:20:50Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/",
+    "description": "Recently, I\x26#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn\x26#8217;t performed this kind of activity before, but found it to be quite easy."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Migrating RHEV storage domains</h1>
+
+  <div class="post-date">
+    <time datetime="2018-10-19T21:20:50Z">Oct 19, 2018</time> · 1 min read
+  </div>
+
+  <p>Recently, I&#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&#8217;t performed this kind of activity before, but found it to be quite easy. I quickly built an additional NFS server, added it into RHV, and migrated the VM disks to it with just a few clicks and some waiting for the copying to be complete. <a href="https://access.redhat.com/solutions/736513">This article</a> was basic, but helpful.</p>
+
+<p>I selected all my VM disks on the original NFS data store and clicked &#8220;Move&#8221;. Since I only had two data stores, the other was auto-selected and I just had to hit &#8220;OK&#8221;.</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move.png"><img class="alignnone size-large wp-image-673" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-1024x475.png" alt="RHEV-move" width="1024" height="475" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-1024x475.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-300x139.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-768x357.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>They slowly started moving over:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2.png"><img class="alignnone size-large wp-image-671" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-1024x482.png" alt="RHEV Copying" width="1024" height="482" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-1024x482.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-300x141.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-768x361.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2.png 1902w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>After a little while, I saw my previous NFS data store to be depleted, and the new store now containing all the VM disks:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains.png"><img class="alignnone size-large wp-image-674" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-1024x252.png" alt="RHEV Domains" width="1024" height="252" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-1024x252.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-300x74.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-768x189.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak.png"><img class="alignnone size-large wp-image-675" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-1024x276.png" alt="RHEV VMs" width="1024" height="276" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-1024x276.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-300x81.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-768x207.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak.png 1911w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>Next up, I&#8217;ll elaborate on why I&#8217;m doing this troubleshooting :).</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

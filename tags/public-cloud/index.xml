@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>public cloud on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/public-cloud/</link>
+    <description>Recent content in public cloud on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Jan 2019 21:55:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/public-cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Azure VM with Ansible</title>
+      <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
+      <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
+      <description>With a little googling this task isn&amp;#8217;t very complex, however, for those wanting to consume this information easily &amp;#8211; this post is for you.
+There&amp;#8217;s a lot of cloud provisioning tools out there; if you&amp;#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+    </item>
+    
+    <item>
+      <title>Calgary OpenStack and other Meetup.com groups</title>
+      <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
+      <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
+      <description>I&amp;#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&amp;#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+    </item>
+    
+    <item>
+      <title>OpenStack deployment troubles? Enter a couple validation tools</title>
+      <link>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
+      <pubDate>Fri, 28 Oct 2016 00:34:47 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
+      <description>Whether you&amp;#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.</description>
+    </item>
+    
+    <item>
+      <title>Deploying an OpenStack cluster in a virtual lab environment</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
+      <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
+      <description>Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I&amp;#8217;ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.</description>
+    </item>
+    
+    <item>
+      <title>Installing OpenStack – setting up a virtual lab environment</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
+      <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
+      <description>When talking TripleO, there&amp;#8217;s two concepts introduced called the &amp;#8220;undercloud&amp;#8221;, and the &amp;#8220;overcloud&amp;#8221;. These are essentially the labels for each OpenStack environment when referring to &amp;#8220;OpenStack on OpenStack&amp;#8221; (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we&amp;#8217;re after.</description>
+    </item>
+    
+    <item>
+      <title>Comparing OpenStack installers</title>
+      <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
+      <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
+      <description>Building on a previous post, I promised I&amp;#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&amp;#8217;s purpose and intended result, it would be wise to align your needs with the installers&amp;#8217; capabilities and limitations.</description>
+    </item>
+    
+    <item>
+      <title>Getting started with OpenStack</title>
+      <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
+      <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
+      <description>So you&amp;#8217;d like to get started with OpenStack eh? (Sorry, that&amp;#8217;s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
+    </item>
+    
+    <item>
+      <title>Deploying ownCloud 9 on Fedora 23</title>
+      <link>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</link>
+      <pubDate>Wed, 16 Mar 2016 23:14:21 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</guid>
+      <description>I&amp;#8217;ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.</description>
+    </item>
+    
+    <item>
+      <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
+      <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
+      <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
+      <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

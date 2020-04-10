@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lacp on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/lacp/</link>
+    <description>Recent content in lacp on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Sep 2014 19:14:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/lacp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Link Aggregation w/ LACP</title>
+      <link>https://calgaryrhce.ca/blog/2014/09/15/link-aggregation-w-lacp/</link>
+      <pubDate>Mon, 15 Sep 2014 19:14:00 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/09/15/link-aggregation-w-lacp/</guid>
+      <description>Link aggregation is not a new concept, yet I still see a lot of folks who don&amp;#8217;t make regular use of it. With regard to server networking architecture, especially in heavily virtualized or highly available environments, it&amp;#8217;s a crucial tool that provides redundancy, and slightly increased throughput. For how simple it is to implement, it is a no-brainer to consider for physical server networking.</description>
+    </item>
+    
+  </channel>
+</rss>

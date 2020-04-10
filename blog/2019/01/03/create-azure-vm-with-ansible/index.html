@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Create Azure VM with Ansible &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Create Azure VM with Ansible"/>
+  <meta property="og:description" content="With a little googling this task isn&#8217;t very complex, however, for those wanting to consume this information easily &#8211; this post is for you.
+There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-01-03T21:55:28Z"/>
+  <meta property="article:modified_time" content="2019-01-03T21:55:28Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Create Azure VM with Ansible",
+    "headline": "Create Azure VM with Ansible",
+    "datePublished": "2019-01-03T21:55:28Z",
+    "dateModified": "2019-01-03T21:55:28Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/",
+    "description": "With a little googling this task isn\x26#8217;t very complex, however, for those wanting to consume this information easily \x26#8211; this post is for you.\nThere\x26#8217;s a lot of cloud provisioning tools out there; if you\x26#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Create Azure VM with Ansible</h1>
+
+  <div class="post-date">
+    <time datetime="2019-01-03T21:55:28Z">Jan 3, 2019</time> · 4 min read
+  </div>
+
+  <p>With a little googling this task isn&#8217;t very complex, however, for those wanting to consume this information easily &#8211; this post is for you.</p>
+
+<p>There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense. I already know Ansible, why not leverage it to create my infrastructure as well as manage it post-creation.</p>
+
+<p>First, in your Azure account you will want to create a service principal. This is basically an authentication token that Ansible will use to access the Azure API. Using the Azure Active Directory component for identity management, Microsoft has a good <a href="https://docs.microsoft.com/en-ca/azure/active-directory/develop/howto-create-service-principal-portal">how-to article guiding you through creating this service principal</a>. In Azure the terminology gets a little confusing as this technically gets created as an &#8220;application&#8221;, but really what we&#8217;re doing here is creating a service account identity to use with the Azure API via Ansible modules.</p>
+
+<p>Once you&#8217;ve got this service principal created, I prefer to create a <strong>~/.azure/credentials</strong> file to store the identity information. This keeps the private auth details out of any public Ansible git repositories I may create and share with others. Microsoft publishes another good article on how to install Ansible and <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ansible-install-configure">how-to create the Ansible credentials file</a>.</p>
+
+<p>I like to use python virtual environments to keep any installed python libraries from overwriting the ones that come with my linux distro (Fedora 29). So here I create a python virtual environment where I can install the Ansible Azure packages:</p>
+
+<pre class="lang:sh decode:true ">$ python3 -m virtualenv azure
+Using base prefix '/usr'
+New python executable in /home/aludwar/code/azure/bin/python3
+Also creating executable in /home/aludwar/code/azure/bin/python
+Installing setuptools, pip, wheel...done.
+
+$ source azure/bin/activate
+
+(azure) $ which python
+/home/aludwar/code/azure/bin/python
+
+(azure) $ pip install 'ansible[azure]'
+Collecting ansible[azure]
+  Downloading https://files.pythonhosted.org/packages/56/fb/b661ae256c5e4a5c42859860f59f9a1a0b82fbc481306b30e3c5159d519d/ansible-2.7.5.tar.gz (11.8MB)
+    100% |████████████████████████████████| 11.8MB 2.6MB/s 
+Collecting jinja2 (from ansible[azure])
+  Downloading https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl (126kB)
+    100% |████████████████████████████████| 133kB 14.3MB/s 
+...
+&lt;snip&gt;
+...
+
+  Stored in directory: /home/aludwar/.cache/pip/wheels/f2/9a/90/de94f8556265ddc9d9c8b271b0f63e57b26fb1d67a45564511
+Successfully built ansible PyYAML tabulate pycparser
+Installing collected packages: MarkupSafe, jinja2, PyYAML, pyasn1, pycparser, cffi, idna, asn1crypto, six, cryptography, pynacl, bcrypt, paramiko, pyparsing, packaging, chardet, certifi, urllib3, pyOpenSSL, requests, applicationinsights, azure-nspkg, azure-cli-nspkg, pygments, argcomplete, humanfriendly, colorama, entrypoints, jeepney, secretstorage, keyring, isodate, oauthlib, requests-oauthlib, msrest, python-dateutil, PyJWT, adal, msrestazure, jmespath, wheel, tabulate, knack, azure-cli-core, azure-common, azure-mgmt-nspkg, azure-mgmt-batch, azure-mgmt-compute, azure-mgmt-containerinstance, azure-mgmt-containerregistry, azure-mgmt-containerservice, azure-mgmt-dns, azure-mgmt-keyvault, azure-mgmt-marketplaceordering, azure-mgmt-monitor, azure-mgmt-network, azure-mgmt-rdbms, azure-mgmt-resource, azure-mgmt-sql, azure-mgmt-storage, azure-mgmt-trafficmanager, azure-mgmt-web, azure-storage, azure-keyvault, azure-graphrbac, ansible
+  Found existing installation: wheel 0.32.3
+    Uninstalling wheel-0.32.3:
+      Successfully uninstalled wheel-0.32.3
+Successfully installed MarkupSafe-1.1.0 PyJWT-1.7.1 PyYAML-3.13 adal-1.2.0 ansible-2.7.5 applicationinsights-0.11.7 argcomplete-1.9.4 asn1crypto-0.24.0 azure-cli-core-2.0.35 azure-cli-nspkg-3.0.2 azure-common-1.1.11 azure-graphrbac-0.40.0 azure-keyvault-1.0.0a1 azure-mgmt-batch-4.1.0 azure-mgmt-compute-2.1.0 azure-mgmt-containerinstance-0.4.0 azure-mgmt-containerregistry-2.0.0 azure-mgmt-containerservice-3.0.1 azure-mgmt-dns-1.2.0 azure-mgmt-keyvault-0.40.0 azure-mgmt-marketplaceordering-0.1.0 azure-mgmt-monitor-0.5.2 azure-mgmt-network-1.7.1 azure-mgmt-nspkg-2.0.0 azure-mgmt-rdbms-1.2.0 azure-mgmt-resource-1.2.2 azure-mgmt-sql-0.7.1 azure-mgmt-storage-1.5.0 azure-mgmt-trafficmanager-0.50.0 azure-mgmt-web-0.32.0 azure-nspkg-2.0.0 azure-storage-0.35.1 bcrypt-3.1.5 certifi-2018.11.29 cffi-1.11.5 chardet-3.0.4 colorama-0.4.1 cryptography-2.4.2 entrypoints-0.2.3 humanfriendly-4.17 idna-2.8 isodate-0.6.0 jeepney-0.4 jinja2-2.10 jmespath-0.9.3 keyring-17.1.1 knack-0.3.3 msrest-0.4.29 msrestazure-0.4.31 oauthlib-2.1.0 packaging-18.0 paramiko-2.4.2 pyOpenSSL-18.0.0 pyasn1-0.4.5 pycparser-2.19 pygments-2.3.1 pynacl-1.3.0 pyparsing-2.3.0 python-dateutil-2.7.5 requests-2.21.0 requests-oauthlib-1.0.0 secretstorage-3.1.0 six-1.12.0 tabulate-0.8.2 urllib3-1.24.1 wheel-0.30.0</pre>
+
+<p>Now with the Azure dependencies for Ansible installed, and my <strong>~/.azure/credentials</strong> file created, I can start writing a playbook to create a new virtual machine. I&#8217;ve previously created some virtual networks, security groups, and public IP addresses, etc. so I&#8217;m going to reference those in my playbook. If you don&#8217;t have these, you can create them in the playbook as well. The <a href="https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html#creating-virtual-machines">Ansible docs guide for Azure gives a good example playbook</a> to do this.</p>
+
+<p>Here&#8217;s my playbook:</p>
+
+<pre class="lang:yaml decode:true">(azure) $ cat create-vm-azure.yml 
+---
+- name: Create Azure VM
+  hosts: localhost
+  connection: local
+  tasks:
+
+  - name: Create VM
+    azure_rm_virtualmachine:
+      profile: default
+      resource_group: rgDefault
+      name: tower
+      vm_size: Standard_B1s
+      admin_username: aludwar
+      ssh_password_enabled: false
+      ssh_public_keys:
+        - path: /home/aludwar/.ssh/authorized_keys
+          key_data: &lt;public SSH key&gt;
+      network_interfaces: nicTest
+      image:
+        offer: CentOS
+        publisher: OpenLogic
+        sku: '7.5'
+        version: latest
+</pre>
+
+<p>So with that created, let&#8217;s run it:</p>
+
+<pre class="lang:sh decode:true ">(azure) $ ansible-playbook create-vm-azure.yml
+ [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+
+PLAY [Create Azure VM] ********************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [Create VM] **************************************************************************************************************************************************************************************************
+changed: [localhost]
+
+PLAY RECAP ********************************************************************************************************************************************************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+
+(azure) $</pre>
+
+<p>Alright, that looks to have been successful. Let&#8217;s check the Azure Portal:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/01/azure.png"><img class="alignnone size-large wp-image-721" src="https://calgaryrhce.ca/wp-content/uploads/2019/01/azure-1024x396.png" alt="Azure VM" width="1024" height="396" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/01/azure-1024x396.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/01/azure-300x116.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/01/azure-768x297.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/01/azure.png 1891w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>Nice. It&#8217;s showing my VM as created and now running. Let&#8217;s test a login:</p>
+
+<pre class="lang:sh decode:true ">(azure) $ ssh 13.88.235.189
+Warning: Permanently added '13.88.235.189' (ECDSA) to the list of known hosts.
+[aludwar@tower ~]$ hostname
+tower
+[aludwar@tower ~]$ exit
+logout
+Connection to 13.88.235.189 closed.
+</pre>
+
+<p>There we have it! Note, you&#8217;ll of course need to make sure your security group allows inbound SSH.</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Using ansible to manage RHV/oVirt &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Using ansible to manage RHV/oVirt"/>
+  <meta property="og:description" content="A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2018-10-23T21:09:32Z"/>
+  <meta property="article:modified_time" content="2018-10-23T21:09:32Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Using ansible to manage RHV\/oVirt",
+    "headline": "Using ansible to manage RHV\/oVirt",
+    "datePublished": "2018-10-23T21:09:32Z",
+    "dateModified": "2018-10-23T21:09:32Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/",
+    "description": "A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching\/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible\x26#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Using ansible to manage RHV/oVirt</h1>
+
+  <div class="post-date">
+    <time datetime="2018-10-23T21:09:32Z">Oct 23, 2018</time> · 2 min read
+  </div>
+
+  <p>A common task most virtualization administrators will perform is <a href="https://access.redhat.com/solutions/261763">installing the guest agent(s) among their guest VMs</a>. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&#8217;s management of Windows devices and it makes it fairly trivial to automate a mass <a href="https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html/virtual_machine_management_guide/sect-updating_virtual_machine_guest_agents_and_drivers#Updating_the_Guest_Agents_and_Drivers_on_Windows">installation of guest agents in windows</a>.</p>
+
+<p>To get started with this, <a href="https://access.redhat.com/solutions/331133">upload the relevant tools ISO to RHV</a>:</p>
+
+<pre class=""># ovirt-iso-uploader upload rhv-tools-setup.iso --iso-domain=ISO
+Please provide the REST API password for the admin@internal oVirt Engine user (CTRL+D to abort): 
+Uploading, please wait...
+INFO: Start uploading rhv-tools-setup.iso 
+Uploading: [########################################] 100%
+INFO: rhv-tools-setup.iso uploaded successfully</pre>
+
+<p>Once this ISO is present, we can <a href="https://docs.ansible.com/ansible/2.6/modules/ovirt_vms_module.html">use the ovirt_vms ansible module</a> to manipulate the VMs in RHV, saving lots of manual clicking. I wrote a couple <a href="https://github.com/aludwar/ansible/tree/master/rhv">basic playbooks and inventory file</a> for reference, just change the authentication items username/password, RHV-M hostname, and inventory to suit your environment.  From here, you can extend this and use a WinRM specific playbook to auto-install the tools by running the specific EXE file mounted on the CDROM device.</p>
+
+<pre class="">$ ansible-playbook attach-win-guest-agent.yml -i inventory -u root
+
+PLAY [rhevm] ******************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca]
+
+TASK [Authenticate to RHV] ****************************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca]
+
+TASK [Attach ISO to Windows VMs] **********************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca] =&gt; (item=ad.ludwar.ca)
+changed: [rhevm.ludwar.ca] =&gt; (item=windows1.ludwar.ca)
+[DEPRECATION WARNING]: The 'ovirt_vms' module is being renamed 'ovirt_vm'. This feature will be removed in version 2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+
+TASK [Revoke SSO token after use] *********************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca]
+
+PLAY RECAP ********************************************************************************************************************************************************************************************************
+rhevm.ludwar.ca : ok=4 changed=1 unreachable=0 failed=0</pre>
+
+<p>Here we have the CDROM mounted among all the Windows guests, easy to install the tooling:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools.png"><img class="alignnone size-large wp-image-696" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-1024x429.png" alt="RHV guest agent tools install" width="1024" height="429" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-1024x429.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-300x126.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-768x322.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>And detach from the environment once we&#8217;re done:</p>
+
+<pre class="">$ ansible-playbook detach-win-guest-agent.yml -i inventory -u root
+
+PLAY [rhevm] ******************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca]
+
+TASK [Authenticate to RHV] ****************************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca]
+
+TASK [Detach ISO to Windows VMs] **********************************************************************************************************************************************************************************
+changed: [rhevm.ludwar.ca] =&gt; (item=ad.ludwar.ca)
+changed: [rhevm.ludwar.ca] =&gt; (item=windows1.ludwar.ca)
+[DEPRECATION WARNING]: The 'ovirt_vms' module is being renamed 'ovirt_vm'. This feature will be removed in version 2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+
+TASK [Revoke SSO token after use] *********************************************************************************************************************************************************************************
+ok: [rhevm.ludwar.ca]
+
+PLAY RECAP ********************************************************************************************************************************************************************************************************
+rhevm.ludwar.ca : ok=4 changed=1 unreachable=0 failed=0</pre>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>custom iso on Calgary RHCE</title>
+    <link>https://calgaryrhce.ca/tags/custom-iso/</link>
+    <description>Recent content in custom iso on Calgary RHCE</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Jun 2014 20:56:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://calgaryrhce.ca/tags/custom-iso/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Integrating kickstart w/ CentOS 6 DVD ISO installation</title>
+      <link>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
+      <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
+      <description>In our DevOps environment, we&amp;#8217;ve got a lot of developers who regularly build VMs. Sometimes they&amp;#8217;re built locally on their workstations, or sometimes in the data center when they&amp;#8217;re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.</description>
+    </item>
+    
+  </channel>
+</rss>

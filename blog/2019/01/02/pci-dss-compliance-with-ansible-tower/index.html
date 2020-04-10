@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>PCI-DSS Compliance with Ansible Tower &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="PCI-DSS Compliance with Ansible Tower"/>
+  <meta property="og:description" content="Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there&#8217;s been some significant investment in developing ansible roles for security and compliance. I&#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2019-01-02T17:14:25Z"/>
+  <meta property="article:modified_time" content="2019-01-02T17:14:25Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "PCI-DSS Compliance with Ansible Tower",
+    "headline": "PCI-DSS Compliance with Ansible Tower",
+    "datePublished": "2019-01-02T17:14:25Z",
+    "dateModified": "2019-01-02T17:14:25Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/",
+    "description": "Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there\x26#8217;s been some significant investment in developing ansible roles for security and compliance. I\x26#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>PCI-DSS Compliance with Ansible Tower</h1>
+
+  <div class="post-date">
+    <time datetime="2019-01-02T17:14:25Z">Jan 2, 2019</time> · 1 min read
+  </div>
+
+  <p>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there&#8217;s been some significant investment in developing <a href="https://galaxy.ansible.com/Ansible-Security-Compliance">ansible roles for security and compliance</a>. I&#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower.</p>
+
+<p>First off, you can view the available security roles. Here we&#8217;ll use the rhel7-role-pci-dss role:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/01/Ansible-security-compliance.png"><img class="alignnone size-large wp-image-710" src="https://calgaryrhce.ca/wp-content/uploads/2019/01/Ansible-security-compliance-1024x453.png" alt="Ansible security compliance" width="1024" height="453" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/01/Ansible-security-compliance-1024x453.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/01/Ansible-security-compliance-300x133.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/01/Ansible-security-compliance-768x340.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/01/Ansible-security-compliance.png 1890w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>On the Tower host, let&#8217;s download and install this role using ansible-galaxy:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-1.png"><img class="alignnone size-large wp-image-709" src="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-1-1024x135.png" alt="Download and install" width="1024" height="135" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-1-1024x135.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-1-300x40.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-1-768x101.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-1.png 1253w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>Create a playbook that makes use of this role, <a href="https://github.com/aludwar/ansible/blob/master/pci-compliance.yml">here&#8217;s an example</a> you can use and then modify to your liking:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-2.png"><img class="alignnone size-large wp-image-708" src="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-2-1024x414.png" alt="github repo" width="1024" height="414" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-2-1024x414.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-2-300x121.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-2-768x311.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-2.png 1055w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>I&#8217;ve created a job template in Ansible Tower to then run this playbook via a github project integration in Tower. A user can then just click launch:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-3.png"><img class="alignnone size-large wp-image-707" src="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-3-1024x425.png" alt="Launch via Tower" width="1024" height="425" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-3-1024x425.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-3-300x125.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-3-768x319.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-3.png 1898w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>Finally, we see the PCI-DSS compliance role run on the example host, and apply all the remediations contained in the role:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-4.png"><img class="alignnone size-large wp-image-706" src="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-4-1024x503.png" alt="Compliance result" width="1024" height="503" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-4-1024x503.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-4-300x147.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-4-768x377.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/01/PCI-4.png 1903w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

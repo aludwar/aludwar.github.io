@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Monitor uptime with SmokePing &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Monitor uptime with SmokePing"/>
+  <meta property="og:description" content="If you&#8217;re a linux enthusiast and you don&#8217;t currently read the LinuxJournal, I suggest you have a look. They&#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2015-12-01T00:45:57Z"/>
+  <meta property="article:modified_time" content="2015-12-01T00:45:57Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Monitor uptime with SmokePing",
+    "headline": "Monitor uptime with SmokePing",
+    "datePublished": "2015-12-01T00:45:57Z",
+    "dateModified": "2015-12-01T00:45:57Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/",
+    "description": "If you\x26#8217;re a linux enthusiast and you don\x26#8217;t currently read the LinuxJournal, I suggest you have a look. They\x26#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips \x26amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Monitor uptime with SmokePing</h1>
+
+  <div class="post-date">
+    <time datetime="2015-12-01T00:45:57Z">Dec 1, 2015</time> · 2 min read
+  </div>
+
+  <p>If you&#8217;re a linux enthusiast and you don&#8217;t currently read the <a href="http://www.linuxjournal.com/">LinuxJournal</a>, I suggest you have a look. They&#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp; tricks. They <a href="http://www.linuxjournal.com/content/linux-journal-goes-100-digital">publish digitally</a> now over a <a href="http://www.linuxjournal.com/digital-faq">variety of formats</a>, which makes reading very convenient on any device you may have.</p>
+
+<p>One of the articles I found particularly useful was on setting up <a href="http://oss.oetiker.ch/smokeping/">SmokePing</a>, an uptime and latency tracking project based on FastCGI, and RRDTool. <a href="http://www.linuxjournal.com/users/shawn-powers">Shawn Powers</a> highlights its details and <a href="http://www.linuxjournal.com/content/fight-good-fight-smokeping">how-to set it up</a>. You can go directly to the project&#8217;s site for the code and installation documentation, however if you&#8217;re a Fedora user, SmokePing is already packaged up in the <a href="https://fedoraproject.org/wiki/Repositories#The_fedora_repository">fedora repo</a>.  I&#8217;ve had some availability trouble with a couple addon domains lately, so I&#8217;m going to track a couple public URLs for my blogsite. I&#8217;m starting with a fresh install of Fedora 23:</p>
+
+<p>Install smokeping:</p>
+
+<pre> dnf install smokeping</pre>
+
+<p>You&#8217;ll need sendmail for notifications, or just to satisfy binary checks in smokeping&#8217;s config:</p>
+
+<pre>dnf install sendmail</pre>
+
+<p>Add your IPs/hostnames to the config smokeping will check (optionally add owner/notification info):</p>
+
+<pre>vi /etc/smokeping/config
+...
+owner    = Andrew
+contact  = email.address@domain.com
+...
+*** Alerts ***
+to = email.address@domain.com
+from = root@monitor-f23
+...
+menu = Top
+title = RHCE Blog Site Monitor
+remark = Tracking uptime since the beginning of time.
+
++ RHCEBlogSite
+menu= RHCE Blog Site
+title= RHCE Blog Site
+
+++ calgaryrhce
+host = calgaryrhce.ca
+
+++ rhce
+host = rhce.ca
+
+++ torontorhce
+host = torontorhce.ca
+</pre>
+
+<p>Smokeping adds an httpd conf file module in its install, which I&#8217;m going to modify to allow from all IPs:</p>
+
+<pre>vi /etc/httpd/conf.d/smokeping.conf
+...
+&lt;Directory "/usr/share/smokeping" &gt;
+  Require all granted                   // adding in this line
+  # Require ip 2.5.6.8                  // comment out this
+  # Require host example.org
+
+
+&lt;Directory "/var/lib/smokeping" &gt;
+  Require all granted                   // adding in this line
+  # Require ip 2.5.6.8                  // comment out this
+  # Require host example.org
+
+</pre>
+
+<p>Now enable and start both smokeping and httpd:</p>
+
+<pre>systemctl enable httpd
+systemctl enable smokeping
+
+systemctl start httpd
+systemctl start smokeping
+</pre>
+
+<p>Now, browsing to my Fedora 23 host&#8217;s SmokePing URL,    <strong><em><a href="http://monitor-f23/smokeping/sm.cgi">http://monitor-f23/smokeping/sm.cgi</a></em></strong>    shows me this: (I&#8217;ve let it run for a few days now, giving it time to gather enough data for interesting graphing)<figure id="attachment_251" aria-describedby="caption-attachment-251" style="width: 900px" class="wp-caption alignnone"></p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping.png"><img class="wp-image-251 size-full" src="https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping.png" alt="RHCE Blog Site" width="900" height="725" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping.png 900w, https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping-300x242.png 300w" sizes="(max-width: 900px) 100vw, 900px" /></a><figcaption id="caption-attachment-251" class="wp-caption-text">RHCE Blog Site</figcaption></figure></p>
+
+<p>If I click one of the graphs, I get a more detailed view of the data:<figure id="attachment_252" aria-describedby="caption-attachment-252" style="width: 895px" class="wp-caption alignnone"></p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping-detailed.png"><img class="wp-image-252 size-full" src="https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping-detailed.png" alt="RHCE Blog Site Detailed" width="895" height="1001" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping-detailed.png 895w, https://calgaryrhce.ca/wp-content/uploads/2015/11/RHCE-Blogsite-smokeping-detailed-268x300.png 268w" sizes="(max-width: 895px) 100vw, 895px" /></a><figcaption id="caption-attachment-252" class="wp-caption-text">RHCE Blog Site Detailed</figcaption></figure></p>
+
+<p>&nbsp;</p>
+
+<p>Happy monitoring! My complete config files for smokeping and apache are located at my <a href="https://github.com/aludwar/configs/tree/master/smokeping">github</a>.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

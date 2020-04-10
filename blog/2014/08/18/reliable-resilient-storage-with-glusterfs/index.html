@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Reliable, resilient storage with GlusterFS &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Reliable, resilient storage with GlusterFS"/>
+  <meta property="og:description" content="A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&#8217;t terribly expensive, which Gluster caters to quite well."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2014-08-19T05:42:26Z"/>
+  <meta property="article:modified_time" content="2014-08-19T05:42:26Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Reliable, resilient storage with GlusterFS",
+    "headline": "Reliable, resilient storage with GlusterFS",
+    "datePublished": "2014-08-19T05:42:26Z",
+    "dateModified": "2014-08-19T05:42:26Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/",
+    "description": "A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn\x26#8217;t terribly expensive, which Gluster caters to quite well."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Reliable, resilient storage with GlusterFS</h1>
+
+  <div class="post-date">
+    <time datetime="2014-08-19T05:42:26Z">Aug 19, 2014</time> · 4 min read
+  </div>
+
+  <p>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres.  Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&#8217;t terribly expensive, which Gluster caters to quite well.  Typically we would purchase a SAN technology for this, but recently having some discussions on cost and business agility, we decided against that and opted to try a popular open source alternative that&#8217;s been gaining both momentum and adoption at the enterprise level.</p>
+
+<p>I began researching the latest best-practise architecture for GlusterFS.  It&#8217;s been about a year since I&#8217;ve given it a deep investigation, so I started re-reading their documentation.  I was pleasantly surprised to see that quite a bit more work had been done on the documentation since I last checked-in with the project.  They&#8217;ve recently moved a lot of documentation into <a href="http://github.com">github</a>, and redesigned their <a href="http://gluster.org">website</a> as well.  I found some good information on their website <a href="http://gluster.org/documentation/">here</a>, but found the most useful information in github <a href="https://github.com/gluster/glusterfs/tree/master/doc/admin-guide/en-US/markdown">here</a>.</p>
+
+<p>Our storage needs for this project were very simple.  We need resilient, highly available storage that can expand quickly, but don&#8217;t need a ton of IOPs.  Databases and other intense I/O applications are out of scope of this project, so what we&#8217;re mostly looking for out of this architecture is basic file storage for things like:</p>
+
+<ul>
+<li>ISOs</li>
+<li>Config file backups</li>
+<li>Restored file location</li>
+<li>Static web files</li>
+<li>FTP/Dropbox/OwnCloud file storage</li>
+</ul>
+
+<p>After perusing through <a href="http://gluster.org">Gluster.org</a>&#8216;s documentation, I came across the architecture that would best suit our needs.  <a href="https://github.com/gluster/glusterfs/blob/master/doc/admin-guide/en-US/markdown/admin_setting_volumes.md#creating-distributed-replicated-volumes">Distributed replicated volumes</a>.  We wanted two servers in each datacentre to have a local copy of this data, and also have two copies stored in another datacentre for resiliency.  This way we can suffer a server loss, a server loss in each datacentre, or an entire datacentre loss and still have our data available.  The documentation even gives you the command syntax to create this architecture; perfect!  I wanted to change the architecture slightly, but that wasn&#8217;t a big deal.  There&#8217;s enough detail in the documentation that I was able to understand how to do this.</p>
+
+<ol>
+<li>I racked 2 CentOS 6.5 servers in each datacentre (for a total of 4. I had four Dell R420s that were decomissioned from another project &#8211; commodity hardware)</li>
+<li>Installed gluster-server on them all via the <a href="http://download.gluster.org/pub/gluster/glusterfs/LATEST/CentOS/glusterfs-epel.repo">glusterfs-repo</a></li>
+<li>Made sure their DNS was resolvable for both forward and reverse</li>
+<li>Chopped up their RAID10 1TB hard disk with LVM leaving approx 80GB for the OS, and the rest for /gfs/brick1</li>
+</ol>
+
+<p>&#8230;and I was ready to run their provided command &#8211; slightly modified of course.  Since I wanted the data to essentially be replicated across all 4 nodes, I changed the replica count from 2 to 4.  This means if I ever need to expand, I&#8217;ll need to do it 4 nodes at a time.  I then ran this command on one of the cluster members to create the gluster volume named &#8216;gfs&#8217;:</p>
+
+<pre>gluster volume create gfs replica 4 transport tcp server1:/gfs/brick1 server2:/gfs/brick1 server3:/gfs/brick1 server4:/gfs/brick1</pre>
+
+<p>For a visual reference, this is what this architecture looks like:<figure id="attachment_117" aria-describedby="caption-attachment-117" style="width: 720px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://calgaryrhce.ca/wp-content/uploads/2014/08/GlusterFS.png"><img class="wp-image-117 size-large" src="http://calgaryrhce.ca/wp-content/uploads/2014/08/GlusterFS-1024x685.png" alt="GlusterFS - Distributed Replicated Volume" width="720" height="481" srcset="https://calgaryrhce.ca/wp-content/uploads/2014/08/GlusterFS-1024x685.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2014/08/GlusterFS-300x200.png 300w, https://calgaryrhce.ca/wp-content/uploads/2014/08/GlusterFS-272x182.png 272w, https://calgaryrhce.ca/wp-content/uploads/2014/08/GlusterFS.png 1153w" sizes="(max-width: 720px) 100vw, 720px" /></a><figcaption id="caption-attachment-117" class="wp-caption-text">GlusterFS &#8211; Distributed Replicated Volume</figcaption></figure></p>
+
+<p>That&#8217;s it! I could now install the glusterfs and glusterfs-fuse client software on any node that needed to access this volume, and mount it with</p>
+
+<pre>mount -t glusterfs server1:/gfs /mnt</pre>
+
+<p>After succesfully mounting the volume, I did a few file writing tests with bash for loops, and dd, just to test the speed and see that any created files were replicating.  I then did a few failover tests by shutting down an interface on a node, rebooting a node completely, and shutting down two nodes in a datacentre.  Since I am using the native glusterfs client to connect to the volume, the failover and self-healing features are automatically handled unbeknownst to the user.  After the 42 second timeout, services failed over nicely, and files were replicated across active hosts.  When the downed nodes came back up and joined the volume again, the files they missed were automatically copied over.  Perfect!  And just like that &#8211; I was done.</p>
+
+<p>I was surprised at how simple this was to architect and setup.  When I need additional disk space, I&#8217;ll rack another 4 nodes into the architecture, and expand it by using the gluster volume add-brick command documented <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.1/html/Administration_Guide/sect-User_Guide-Managing_Volumes-Expanding.html">here</a>.</p>
+
+<p>In another article, I plan to do some tweaking to the 42 second TCP timeout &#8211; Gluster provides documentation on all the <a href="https://github.com/gluster/glusterfs/blob/master/doc/admin-guide/en-US/markdown/admin_managing_volumes.md">options and tuneables</a> you can set.  It&#8217;s also worth looking at using an IP-based load balancing technology.  (Either an F5, or CTDB).  This should increase the service availability even further.  In yet another article, I would also like to explore the new <a href="https://github.com/gluster/glusterfs/blob/master/doc/admin-guide/en-US/markdown/admin_geo-replication.md">geo-replication</a> technology that spans WANs and the internet.  For now, I have a 1TB highly available and resilient file storage volume to play with.</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

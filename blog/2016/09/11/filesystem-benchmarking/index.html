@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Filesystem benchmarking &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Filesystem benchmarking"/>
+  <meta property="og:description" content="Once in a while I need to do some I/O benchmarking. Either when creating a baseline for a before and after performance tuning comparison, or just because I want to see how fast my new SSD/M.2 really is. The tool I find myself going to over the years has been iozone."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2016-09-12T02:51:38Z"/>
+  <meta property="article:modified_time" content="2016-09-12T02:51:38Z"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca",
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Filesystem benchmarking",
+    "headline": "Filesystem benchmarking",
+    "datePublished": "2016-09-12T02:51:38Z",
+    "dateModified": "2016-09-12T02:51:38Z",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca"
+    },
+    "image": "https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/",
+    "description": "Once in a while I need to do some I\/O benchmarking. Either when creating a baseline for a before and after performance tuning comparison, or just because I want to see how fast my new SSD\/M.2 really is. The tool I find myself going to over the years has been iozone."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.cacss/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.cawp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Filesystem benchmarking</h1>
+
+  <div class="post-date">
+    <time datetime="2016-09-12T02:51:38Z">Sep 12, 2016</time> · 3 min read
+  </div>
+
+  <p>Once in a while I need to do some I/O benchmarking. Either when creating a baseline for a before and after performance tuning comparison, or just because I want to see how fast my new SSD/M.2 really is. The tool I find myself going to over the years has been <a href="http://iozone.org/">iozone</a>. I like it because it easily does a myriad of tests that I don&#8217;t need to create or think about how to simulate myself, and it&#8217;s easily installed on any linux distro. It also outputs the test data into a format that is easily imported into a spreadsheet. I recently added a <a href="http://www.newegg.ca/Product/Product.aspx?Item=N82E16820147373">couple SSD</a>s to my workstation, and finally got around to benchmarking them.</p>
+
+<p>IOzone has a slew of pre-built tests you can run, but I typically just do 5 (read, random read, write, random write, and stride read). From the iozone help:</p>
+
+<pre class="">          -i #  Test to run (0=write/rewrite, 1=read/re-read, 2=random-read/write
+                 3=Read-backwards, 4=Re-write-record, 5=stride-read, 6=fwrite/re-fwrite
+                 7=fread/Re-fread, 8=random_mix, 9=pwrite/Re-pwrite, 10=pread/Re-pread
+                 11=pwritev/Re-pwritev, 12=preadv/Re-preadv)</pre>
+
+<p>Within each test you can also specify the record size, and file size to be written. This is my usual test syntax:</p>
+
+<pre class="">$ /opt/iozone/bin/iozone  -a -b benchmark.xls -R -i 0 -i 1 -i 2 -i 5 -i 8 -f /export/testfile
+    Iozone: Performance Test of File I/O
+            Version $Revision: 3.452 $
+        Compiled for 32 bit mode.
+        Build: linux 
+
+    Contributors:William Norcott, Don Capps, Isom Crawford, Kirby Collins
+                 Al Slater, Scott Rhine, Mike Wisner, Ken Goss
+                 Steve Landherr, Brad Smith, Mark Kelly, Dr. Alain CYR,
+                 Randy Dunlap, Mark Montague, Dan Million, Gavin Brebner,
+                 Jean-Marc Zucconi, Jeff Blomberg, Benny Halevy, Dave Boone,
+                 Erik Habbinga, Kris Strecker, Walter Wong, Joshua Root,
+                 Fabrice Bacchella, Zhenghua Xue, Qin Li, Darren Sawyer,
+                 Vangel Bojaxhi, Ben England, Vikentsi Lapa,
+                 Alexey Skidanov.
+
+    Run began: Sun Sep 11 20:17:18 2016
+
+    Auto Mode
+    Excel chart generation enabled
+    Command line used: /opt/iozone/bin/iozone -a -b benchmark.xls -R -i 0 -i 1 -i 2 -i 5 -i 8 -f /export/testfile
+    Output is in kBytes/sec
+    Time Resolution = 0.000001 seconds.
+    Processor cache size set to 1024 kBytes.
+    Processor cache line size set to 32 bytes.
+    File stride size set to 17 * record size.
+                                                              random    random     bkwd    record    stride                                    
+              kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread
+              64       4   888413   953673  4297180  3033971  2786676  1120480                      2463305                                   
+              64       8   744494  1232721  3551002  4261142  3047037  1422167                      2553108                                   
+              64      16   864466  1560183  4958872  5328791  3356712  1778661                      2277099                                   
+              64      32  1182756  1335389  8051483  6329941  7985638  1783120                      2914882                                   
+              64      64  1453111  1598043  7075540 12653171  4552275  1887599                      2207552                                   
+             128       4   999800  1195499  3375208  4131854  3648013  1855621                      2783700                                   
+             128       8  1164348  1487891  4404899  5328896  3660474  1706333                      5548323                                   
+             128      16  1348377  1704441  4738496  4003638  5355501  2459229                      3883374                                   
+             128      32  1437115  1704867  5318585  4721384  5144080  2243177                      4142611                                   
+             128      64  1049847  1523170  7979556  6401923  4269068  2067294                      4409651                                   
+..</pre>
+
+<p>&#8230; and so on as it goes through all of the test scenarios. At the end, I&#8217;m given a nicely formatted spreadsheet that&#8217;s easy to make graphs from:</p>
+
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/iozone-example.png"><img class="size-large wp-image-435" src="https://calgaryrhce.ca/wp-content/uploads/2016/09/iozone-example-1024x867.png" alt="iozone graph output" width="1024" height="867" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/09/iozone-example-1024x867.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2016/09/iozone-example-300x254.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/09/iozone-example-768x650.png 768w, https://calgaryrhce.ca/wp-content/uploads/2016/09/iozone-example.png 1285w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+
+<p>Looking at my read stats, at the peak, I&#8217;m getting just over 20 GB/sec. However, the average seems to be about 12-14 GB/sec. Not too shabby! (I&#8217;ve got a few SSDs in a RAID1 array). Full test details are in a <a href="https://github.com/aludwar/scripts/blob/master/iozone/workstation.odc">spreadsheet</a> on github.</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
