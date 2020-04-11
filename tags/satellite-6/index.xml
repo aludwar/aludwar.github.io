@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Satellite 6 on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/satellite-6/</link>
+    <link>https://calgaryrhce.ca/tags/satellite-6/</link>
     <description>Recent content in Satellite 6 on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Jun 2019 15:44:07 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/satellite-6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/satellite-6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Limiting Ansible Tower inventory with Satellite host groups</title>
-      <link>https://aludwar.github.io/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
+      <link>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
       <description>When thinking about ingesting systems into Ansible Tower&amp;#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&amp;#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&amp;#8217;s host grouping feature combined with Ansible Tower&amp;#8217;s Satellite 6 dynamic inventory script to apply this filtering.</description>
     </item>
     

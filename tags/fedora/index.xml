@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fedora on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/fedora/</link>
+    <link>https://calgaryrhce.ca/tags/fedora/</link>
     <description>Recent content in fedora on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Jun 2019 16:09:45 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>InSync Google Drive client in Fedora 30</title>
-      <link>https://aludwar.github.io/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
+      <link>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</guid>
       <description>After dropbox ended its support for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems.</description>
     </item>
     
     <item>
       <title>Another flawless Fedora upgrade experience</title>
-      <link>https://aludwar.github.io/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</link>
+      <link>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</link>
       <pubDate>Tue, 22 Nov 2016 22:04:10 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</guid>
       <description>Today is Fedora 25 official release day. There are a few notable new additions for this release, I&amp;#8217;m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.</description>
     </item>
     
     <item>
       <title>Upgrading from Fedora 23 to Fedora 24</title>
-      <link>https://aludwar.github.io/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
+      <link>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
       <description>For my main workstation, I&amp;#8217;ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I&amp;#8217;ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
     </item>
     
     <item>
       <title>Monitor uptime with SmokePing</title>
-      <link>https://aludwar.github.io/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
+      <link>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
       <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
+      <guid>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
       <description>If you&amp;#8217;re a linux enthusiast and you don&amp;#8217;t currently read the LinuxJournal, I suggest you have a look. They&amp;#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.</description>
     </item>
     

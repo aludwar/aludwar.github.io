@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>centos6 on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/centos6/</link>
+    <link>https://calgaryrhce.ca/tags/centos6/</link>
     <description>Recent content in centos6 on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 02 Jun 2014 03:14:17 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/centos6/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/centos6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Google Chrome on RHEL/CentOS 6&#43;</title>
-      <link>https://aludwar.github.io/blog/2014/06/01/google-chrome-on-rhelcentos-6/</link>
+      <link>https://calgaryrhce.ca/blog/2014/06/01/google-chrome-on-rhelcentos-6/</link>
       <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2014/06/01/google-chrome-on-rhelcentos-6/</guid>
+      <guid>https://calgaryrhce.ca/blog/2014/06/01/google-chrome-on-rhelcentos-6/</guid>
       <description>So if you&amp;#8217;re like me and like to run the same OS on your desktop that is in your data centre, you might have come across the problem of Google Chrome support being discontinued for Red Hat 6+ and its clones. Thankfully there&amp;#8217;s a script developed by Richard Lloyd that will automatically download and install the latest Google Chrome browser for you.</description>
     </item>
     

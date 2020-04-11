@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OpenStack on Calgary RHCE</title>
-    <link>https://aludwar.github.io/categories/openstack/</link>
+    <link>https://calgaryrhce.ca/categories/openstack/</link>
     <description>Recent content in OpenStack on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Oct 2017 17:33:55 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/categories/openstack/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/categories/openstack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting the most performance out of Openstack, and NFV</title>
-      <link>https://aludwar.github.io/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
+      <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
+      <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
       <description>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We&amp;#8217;ve moved past the installer race, the fragmentation of &amp;#8220;as-a-service&amp;#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack &amp;#8220;boring&amp;#8220;.</description>
     </item>
     
     <item>
       <title>Home lab, CAT6 wiring, and rack</title>
-      <link>https://aludwar.github.io/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
+      <link>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
+      <guid>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
       <description>Between being busy with home renovations, and writing articles for work, I haven&amp;#8217;t made much time for blogging this summer. Since it&amp;#8217;s raining today and hampering my home renos, I&amp;#8217;m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.</description>
     </item>
     
     <item>
       <title>Calgary OpenStack and other Meetup.com groups</title>
-      <link>https://aludwar.github.io/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
+      <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
+      <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
       <description>I&amp;#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&amp;#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
     </item>
     
     <item>
       <title>OpenStack deployment troubles? Enter a couple validation tools</title>
-      <link>https://aludwar.github.io/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
+      <link>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
       <pubDate>Fri, 28 Oct 2016 00:34:47 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
       <description>Whether you&amp;#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.</description>
     </item>
     
     <item>
       <title>Deploying an OpenStack cluster in a virtual lab environment</title>
-      <link>https://aludwar.github.io/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
       <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
       <description>Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I&amp;#8217;ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.</description>
     </item>
     
     <item>
       <title>Comparing OpenStack installers</title>
-      <link>https://aludwar.github.io/blog/2016/09/10/comparing-openstack-installers/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
       <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/10/comparing-openstack-installers/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
       <description>Building on a previous post, I promised I&amp;#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&amp;#8217;s purpose and intended result, it would be wise to align your needs with the installers&amp;#8217; capabilities and limitations.</description>
     </item>
     
     <item>
       <title>Getting started with OpenStack</title>
-      <link>https://aludwar.github.io/blog/2016/08/21/getting-started-with-openstack/</link>
+      <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
       <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/08/21/getting-started-with-openstack/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
       <description>So you&amp;#8217;d like to get started with OpenStack eh? (Sorry, that&amp;#8217;s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
     </item>
     

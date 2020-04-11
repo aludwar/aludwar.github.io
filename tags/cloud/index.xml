@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cloud on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/cloud/</link>
+    <link>https://calgaryrhce.ca/tags/cloud/</link>
     <description>Recent content in cloud on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Jun 2019 16:09:45 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>InSync Google Drive client in Fedora 30</title>
-      <link>https://aludwar.github.io/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
+      <link>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</guid>
       <description>After dropbox ended its support for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems.</description>
     </item>
     

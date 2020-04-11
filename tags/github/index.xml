@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/github/</link>
+    <link>https://calgaryrhce.ca/tags/github/</link>
     <description>Recent content in github on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
-      <link>https://aludwar.github.io/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
       <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&amp;#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&amp;#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
     </item>
     

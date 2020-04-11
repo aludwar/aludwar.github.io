@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hardware on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/hardware/</link>
+    <link>https://calgaryrhce.ca/tags/hardware/</link>
     <description>Recent content in hardware on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 04 Feb 2019 22:59:18 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testing the ODROID-HC2 with Open Media Vault</title>
-      <link>https://aludwar.github.io/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</link>
+      <link>https://calgaryrhce.ca/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</link>
       <pubDate>Mon, 04 Feb 2019 22:59:18 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</guid>
       <description>I&amp;#8217;ve recently been tinkering with a few small Raspberry Pi-like boards. I&amp;#8217;m anxious to get my hands on hardkernel&amp;#8217;s ODROID-H2 x86 board, I think they might have hit a sweet spot for a decently spec&amp;#8217;d, low TDP board with a decent amount of RAM and NVMe storage options. I like the NUC platform, but the H2 might be a less expensive &amp;amp; more capable option.</description>
     </item>
     
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
-      <link>https://aludwar.github.io/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
+      <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
+      <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
       <description>In setting up a local virtualization environment a little while back, I thought I&amp;#8217;d try the recently GA&amp;#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&amp;#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
     </item>
     
     <item>
       <title>Migrating RHEV storage domains</title>
-      <link>https://aludwar.github.io/blog/2018/10/19/migrating-rhev-storage-domains/</link>
+      <link>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</link>
       <pubDate>Fri, 19 Oct 2018 21:20:50 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
+      <guid>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
       <description>Recently, I&amp;#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&amp;#8217;t performed this kind of activity before, but found it to be quite easy.</description>
     </item>
     
     <item>
       <title>Home lab switch replacement</title>
-      <link>https://aludwar.github.io/blog/2016/10/30/home-lab-switch-replacement/</link>
+      <link>https://calgaryrhce.ca/blog/2016/10/30/home-lab-switch-replacement/</link>
       <pubDate>Sun, 30 Oct 2016 23:48:16 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/10/30/home-lab-switch-replacement/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/10/30/home-lab-switch-replacement/</guid>
       <description>A few years back, I purged nearly all of my computer components that were kicking around the house, thus essentially abandoning my home lab. I had learned what I needed to with it, and had enough equipment at work to get done what I needed, so off it went. Old PCs, switches, cables, parts, etc.</description>
     </item>
     
     <item>
       <title>Adding RAM to an old macbook pro</title>
-      <link>https://aludwar.github.io/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</link>
       <pubDate>Thu, 29 Sep 2016 01:54:01 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</guid>
       <description>I&amp;#8217;ve got an old 17&amp;#8243; Macbook Pro from late 2008 that&amp;#8217;s still kicking. It&amp;#8217;s served me a lot of good years filled with studying, scripting, exams, etc. and I&amp;#8217;ve never had a problem with it. I mostly keep it around for testing OSX related things, and as a backup. Last year I replaced the aging 512GB HDD with a 256GB SSD which did wonders to speed it up.</description>
     </item>
     

@@ -2,175 +2,175 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>devops on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/devops/</link>
+    <link>https://calgaryrhce.ca/tags/devops/</link>
     <description>Recent content in devops on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Jul 2019 22:20:23 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
-      <link>https://aludwar.github.io/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
+      <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
       <description>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself.</description>
     </item>
     
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
-      <link>https://aludwar.github.io/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
+      <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
       <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
     </item>
     
     <item>
       <title>Connecting Ansible Tower to Team Foundation Server</title>
-      <link>https://aludwar.github.io/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
+      <link>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
       <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
       <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here&amp;#8217;s how I got it working:</description>
     </item>
     
     <item>
       <title>Ansible Workshop Materials</title>
-      <link>https://aludwar.github.io/blog/2019/02/28/ansible-workshop-materials/</link>
+      <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
       <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/02/28/ansible-workshop-materials/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
       <description>Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab.</description>
     </item>
     
     <item>
       <title>Create Azure VM with Ansible</title>
-      <link>https://aludwar.github.io/blog/2019/01/03/create-azure-vm-with-ansible/</link>
+      <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
       <description>With a little googling this task isn&amp;#8217;t very complex, however, for those wanting to consume this information easily &amp;#8211; this post is for you.
 There&amp;#8217;s a lot of cloud provisioning tools out there; if you&amp;#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
     </item>
     
     <item>
       <title>PCI-DSS Compliance with Ansible Tower</title>
-      <link>https://aludwar.github.io/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</link>
+      <link>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
       <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there&amp;#8217;s been some significant investment in developing ansible roles for security and compliance. I&amp;#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
     </item>
     
     <item>
       <title>Getting the most performance out of Openstack, and NFV</title>
-      <link>https://aludwar.github.io/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
+      <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
+      <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
       <description>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We&amp;#8217;ve moved past the installer race, the fragmentation of &amp;#8220;as-a-service&amp;#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack &amp;#8220;boring&amp;#8220;.</description>
     </item>
     
     <item>
       <title>Calgary OpenStack and other Meetup.com groups</title>
-      <link>https://aludwar.github.io/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
+      <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
+      <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
       <description>I&amp;#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&amp;#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
     </item>
     
     <item>
       <title>Deploying an OpenStack cluster in a virtual lab environment</title>
-      <link>https://aludwar.github.io/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
       <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
       <description>Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I&amp;#8217;ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.</description>
     </item>
     
     <item>
       <title>Ansible at the Calgary RHUG</title>
-      <link>https://aludwar.github.io/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
       <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today &amp;#8211; we filled the room! Greg gave the group a high-level overview of Ansible&amp;#8217;s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
     </item>
     
     <item>
       <title>Installing OpenStack – setting up a virtual lab environment</title>
-      <link>https://aludwar.github.io/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
       <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
       <description>When talking TripleO, there&amp;#8217;s two concepts introduced called the &amp;#8220;undercloud&amp;#8221;, and the &amp;#8220;overcloud&amp;#8221;. These are essentially the labels for each OpenStack environment when referring to &amp;#8220;OpenStack on OpenStack&amp;#8221; (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we&amp;#8217;re after.</description>
     </item>
     
     <item>
       <title>Comparing OpenStack installers</title>
-      <link>https://aludwar.github.io/blog/2016/09/10/comparing-openstack-installers/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
       <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/09/10/comparing-openstack-installers/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
       <description>Building on a previous post, I promised I&amp;#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&amp;#8217;s purpose and intended result, it would be wise to align your needs with the installers&amp;#8217; capabilities and limitations.</description>
     </item>
     
     <item>
       <title>Getting started with OpenStack</title>
-      <link>https://aludwar.github.io/blog/2016/08/21/getting-started-with-openstack/</link>
+      <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
       <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/08/21/getting-started-with-openstack/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
       <description>So you&amp;#8217;d like to get started with OpenStack eh? (Sorry, that&amp;#8217;s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
     </item>
     
     <item>
       <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
-      <link>https://aludwar.github.io/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
+      <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
       <description>Recently I&amp;#8217;ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O&amp;#8217;Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high&amp;#8230; and so far, I&amp;#8217;m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
     </item>
     
     <item>
       <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
-      <link>https://aludwar.github.io/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
+      <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
+      <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
       <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
     </item>
     
     <item>
       <title>Managing Configuration Management w/ Puppet</title>
-      <link>https://aludwar.github.io/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
+      <link>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
       <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
+      <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
       <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It&amp;#8217;s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
     </item>
     
     <item>
       <title>Reliable, resilient storage with GlusterFS</title>
-      <link>https://aludwar.github.io/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
+      <link>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
+      <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
       <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&amp;#8217;t terribly expensive, which Gluster caters to quite well.</description>
     </item>
     
     <item>
       <title>Integrating kickstart w/ CentOS 6 DVD ISO installation</title>
-      <link>https://aludwar.github.io/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
+      <link>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
       <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
+      <guid>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
       <description>In our DevOps environment, we&amp;#8217;ve got a lot of developers who regularly build VMs. Sometimes they&amp;#8217;re built locally on their workstations, or sometimes in the data center when they&amp;#8217;re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.</description>
     </item>
     

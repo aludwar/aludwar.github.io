@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gluster on Calgary RHCE</title>
-    <link>https://aludwar.github.io/tags/gluster/</link>
+    <link>https://calgaryrhce.ca/tags/gluster/</link>
     <description>Recent content in gluster on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Aug 2014 05:42:26 +0000</lastBuildDate>
     
-	<atom:link href="https://aludwar.github.io/tags/gluster/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://calgaryrhce.ca/tags/gluster/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reliable, resilient storage with GlusterFS</title>
-      <link>https://aludwar.github.io/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
+      <link>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
       
-      <guid>https://aludwar.github.io/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
+      <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
       <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&amp;#8217;t terribly expensive, which Gluster caters to quite well.</description>
     </item>
     
