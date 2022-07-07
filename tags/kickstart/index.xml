@@ -6,18 +6,14 @@
     <description>Recent content in kickstart on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Feb 2016 20:55:56 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/kickstart/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 03 Feb 2016 20:55:56 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/kickstart/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
       <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
-      <description>Recently I&amp;#8217;ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O&amp;#8217;Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high&amp;#8230; and so far, I&amp;#8217;m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
+      <description>Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O’Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
-      <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+      <description>In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
-      <description>In our DevOps environment, we&amp;#8217;ve got a lot of developers who regularly build VMs. Sometimes they&amp;#8217;re built locally on their workstations, or sometimes in the data center when they&amp;#8217;re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.</description>
+      <description>In our DevOps environment, we’ve got a lot of developers who regularly build VMs. Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.</description>
     </item>
     
   </channel>

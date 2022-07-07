@@ -6,18 +6,14 @@
     <description>Recent content in puppet on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2015 19:46:06 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 05 Jul 2015 19:46:06 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demystifying automation and Puppet</title>
       <link>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
-      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&amp;#8217;t seem to find a conference that doesn&amp;#8217;t have a trendy buzzword filled keynote dedicated to the topic.</description>
+      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic.</description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
-      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It&amp;#8217;s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
+      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
     </item>
     
   </channel>

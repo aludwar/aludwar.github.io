@@ -6,11 +6,7 @@
     <description>Recent content in rhel7 on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/rhel7/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/rhel7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>32-bit application support in RHEL7</title>
       <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>

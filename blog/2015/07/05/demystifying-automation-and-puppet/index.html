@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Demystifying automation and Puppet &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Demystifying automation and Puppet"/>
-  <meta property="og:description" content="Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&#8217;t seem to find a conference that doesn&#8217;t have a trendy buzzword filled keynote dedicated to the topic."/>
+  <meta property="og:description" content="Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2015-07-05T19:46:06Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/",
-    "description": "Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can\x26#8217;t seem to find a conference that doesn\x26#8217;t have a trendy buzzword filled keynote dedicated to the topic."
+    "description": "Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic."
   }
   </script>
   
@@ -170,15 +170,11 @@
     <time datetime="2015-07-05T19:46:06Z">Jul 5, 2015</time> · 2 min read
   </div>
 
-  <p>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&#8217;t seem to find a conference that doesn&#8217;t have a trendy buzzword filled keynote dedicated to the topic. Oh how far we&#8217;ve come! What IT person or company isn&#8217;t looking at automation these days?</p>
-
-<p>But with all the trendiness and hype comes a lot of opinion and confusion. Marketing and business development departments muddy the technical details. Software developers consume it differently than sys-admins. Automation requires more business process change than technology change, management wants it implemented yesterday, and the technology feature-set is evolving at a massive rate. How&#8217;s one expected to keep up with it all? Hopefully this post can help you do that. (I realise the hypocrisy in presenting an opinion on other opinions 😉 )</p>
-
-<p>One of the leaders in the IT automation market is Puppet Labs and their configuration management language, Puppet. I&#8217;ve put together a slide-deck and most recently presented at our local Red Hat User Group meeting (<a href="http://www.meetup.com/Calgary-Red-Hat-Users-Group-RHUG-Meetup/">meetup.com</a>, <a href="https://www.linkedin.com/grp/home?gid=6591615">LinkedIn</a>) on the subject. Specifically, <em>&#8220;What is Puppet? And challenges/gotchas experienced with real-world implementations&#8221;</em>. I&#8217;ll take you through where I believe Puppet fits in in the enterprise, what it will and will not do for you, and some things to consider when adopting it yourself. This knowledge has been gathered from my past experience adopting it for previous and current employers. Included in this presentation is a slide on making the transition from traditional IT to private cloud server provisioning. I&#8217;ll dig into this deeper in another post.</p>
-
-<p>For now, <a href="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-Puppet-Path-To-Hybrid-Cloud.pdf" target="_blank">here you go</a>. I&#8217;d welcome any feedback or comments you may have!<figure id="attachment_202" aria-describedby="caption-attachment-202" style="width: 436px" class="wp-caption alignnone"></p>
-
-<p><a href="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-Puppet-Path-To-Hybrid-Cloud.pdf"><img class=" wp-image-202" src="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-TitleSlide.001-1024x768.jpg" alt="RHUG Puppet Path To Private Hybrid Cloud" width="436" height="327" srcset="https://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-TitleSlide.001.jpg 1024w, https://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-TitleSlide.001-300x225.jpg 300w" sizes="(max-width: 436px) 100vw, 436px" /></a><figcaption id="caption-attachment-202" class="wp-caption-text">RHUG Puppet Path To Private Hybrid Cloud</figcaption></figure></p>
+  <p>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic. Oh how far we’ve come! What IT person or company isn’t looking at automation these days?</p>
+<p>But with all the trendiness and hype comes a lot of opinion and confusion. Marketing and business development departments muddy the technical details. Software developers consume it differently than sys-admins. Automation requires more business process change than technology change, management wants it implemented yesterday, and the technology feature-set is evolving at a massive rate. How’s one expected to keep up with it all? Hopefully this post can help you do that. (I realise the hypocrisy in presenting an opinion on other opinions 😉 )</p>
+<p>One of the leaders in the IT automation market is Puppet Labs and their configuration management language, Puppet. I’ve put together a slide-deck and most recently presented at our local Red Hat User Group meeting (<a href="http://www.meetup.com/Calgary-Red-Hat-Users-Group-RHUG-Meetup/">meetup.com</a>, <a href="https://www.linkedin.com/grp/home?gid=6591615">LinkedIn</a>) on the subject. Specifically, <em>“What is Puppet? And challenges/gotchas experienced with real-world implementations”</em>. I’ll take you through where I believe Puppet fits in in the enterprise, what it will and will not do for you, and some things to consider when adopting it yourself. This knowledge has been gathered from my past experience adopting it for previous and current employers. Included in this presentation is a slide on making the transition from traditional IT to private cloud server provisioning. I’ll dig into this deeper in another post.</p>
+<p>For now, <!-- raw HTML omitted -->here you go<!-- raw HTML omitted -->. I’d welcome any feedback or comments you may have!<!-- raw HTML omitted --></p>
+<p><a href="http://calgaryrhce.ca/wp-content/uploads/2015/07/RHUG-Puppet-Path-To-Hybrid-Cloud.pdf"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->RHUG Puppet Path To Private Hybrid Cloud<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 
 </div>
 
@@ -187,7 +183,7 @@
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

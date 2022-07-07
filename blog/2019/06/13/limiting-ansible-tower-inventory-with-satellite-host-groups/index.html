@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Limiting Ansible Tower inventory with Satellite host groups &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Limiting Ansible Tower inventory with Satellite host groups"/>
-  <meta property="og:description" content="When thinking about ingesting systems into Ansible Tower&#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&#8217;s host grouping feature combined with Ansible Tower&#8217;s Satellite 6 dynamic inventory script to apply this filtering."/>
+  <meta property="og:description" content="When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2019-06-13T15:44:07Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/",
-    "description": "When thinking about ingesting systems into Ansible Tower\x26#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we\x26#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite\x26#8217;s host grouping feature combined with Ansible Tower\x26#8217;s Satellite 6 dynamic inventory script to apply this filtering."
+    "description": "When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering."
   }
   </script>
   
@@ -170,44 +170,25 @@
     <time datetime="2019-06-13T15:44:07Z">Jun 13, 2019</time> · 2 min read
   </div>
 
-  <p>When thinking about ingesting systems into Ansible Tower&#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&#8217;s host grouping feature combined with Ansible Tower&#8217;s Satellite 6 dynamic inventory script to apply this filtering.</p>
-
-<p>In Satellite, I&#8217;ve created two host groups, &#8220;rhv_hypervisors&#8221; and &#8220;prod_web_servers&#8221;:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups.png"><img class="alignnone size-large wp-image-771" src="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups-1024x400.png" alt="SatelliteHostGroups" width="1024" height="400" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups-1024x400.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups-300x117.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups-768x300.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups.png 1915w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>I&#8217;ve got 2 hosts in the rhv_hypervisors group, and 1 in the prod_web_servers group:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership.png"><img class="alignnone size-large wp-image-769" src="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership-1024x399.png" alt="SatelliteHostGroupMembership" width="1024" height="399" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership-1024x399.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership-300x117.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership-768x299.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership.png 1905w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>In my case, I only want to import the &#8220;prod_web_servers&#8221; hosts into Ansible Tower inventory, and not the rest of the Satellite inventory. So, I setup the Ansible Tower inventory source to be Satellite 6, however I will also include the &#8220;host_filters&#8221; attribute in the source variables section. Here I&#8217;ll use the &#8220;hostgroup_title&#8221; key/value to limit the hosts that will get imported to Satellite. I could use any other host variable that Satellite advertises to Tower however, such as &#8220;foreman_location_calgary&#8221; perhaps if I wanted to ingest only the hosts in that Satellite location:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables.png"><img class="alignnone size-large wp-image-772" src="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables-1024x528.png" alt="AnsibleTowerHostVariables" width="1024" height="528" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables-1024x528.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables-300x155.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables-768x396.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter.png"><img class="alignnone size-large wp-image-770" src="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter-1024x556.png" alt="AnsibleTowerInventoryHostFilter" width="1024" height="556" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter-1024x556.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter-300x163.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter-768x417.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter.png 1897w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>With the host filter in place, I will save the inventory source, and run a sync. After the sync, the result is just the one prod web server in &#8220;prod_web_servers&#8221; host group has been added to the Ansible Tower inventory:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList.png"><img class="alignnone size-large wp-image-768" src="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList-1024x459.png" alt="AnsibleTowerHostList" width="1024" height="459" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList-1024x459.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList-300x135.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList-768x344.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList.png 1902w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>&nbsp;</p>
-
+  <p>When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.</p>
+<p>In Satellite, I’ve created two host groups, “rhv_hypervisors” and “prod_web_servers”:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups.png"><!-- raw HTML omitted --></a></p>
+<p>I’ve got 2 hosts in the rhv_hypervisors group, and 1 in the prod_web_servers group:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership.png"><!-- raw HTML omitted --></a></p>
+<p>In my case, I only want to import the “prod_web_servers” hosts into Ansible Tower inventory, and not the rest of the Satellite inventory. So, I setup the Ansible Tower inventory source to be Satellite 6, however I will also include the “host_filters” attribute in the source variables section. Here I’ll use the “hostgroup_title” key/value to limit the hosts that will get imported to Satellite. I could use any other host variable that Satellite advertises to Tower however, such as “foreman_location_calgary” perhaps if I wanted to ingest only the hosts in that Satellite location:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerInventoryHostFilter.png"><!-- raw HTML omitted --></a></p>
+<p>With the host filter in place, I will save the inventory source, and run a sync. After the sync, the result is just the one prod web server in “prod_web_servers” host group has been added to the Ansible Tower inventory:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostList.png"><!-- raw HTML omitted --></a></p>
+<p> </p>
 <p>This will help keep Ansible Tower inventory purposeful, and can help reduce the managed nodes counting against the Ansible Tower license.</p>
-
 <p>To make the classification of Satellite hosts a little easier, we can also automate the membership of hosts and host groups with the hammer CLI:</p>
-
-<pre class="">[root@satellite ~]# hammer host update --hostgroup prod_web_servers --name web1.dev.ludwar.ca
-Host updated.
-[root@satellite ~]#</pre>
-
-<p>&nbsp;</p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p> </p>
 <p>References:</p>
-
-<p>[1] <a href="https://access.redhat.com/documentation/en-us/red_hat_satellite/6.2/html/architecture_guide/chap-red_hat_satellite-architecture_guide-host_grouping_concepts">https://access.redhat.com/documentation/en-us/red_hat_satellite/6.2/html/architecture_guide/chap-red_hat_satellite-architecture_guide-host_grouping_concepts</a></p>
-
-<p>[2] <a href="https://access.redhat.com/documentation/en-us/red_hat_satellite/6.5/html-single/managing_hosts/index#sect-Red_Hat_Satellite-Managing_Hosts-Changing_the_Group_of_a_Host">https://access.redhat.com/documentation/en-us/red_hat_satellite/6.5/html-single/managing_hosts/index#sect-Red_Hat_Satellite-Managing_Hosts-Changing_the_Group_of_a_Host</a></p>
-
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroups.png">1</a> <a href="https://access.redhat.com/documentation/en-us/red_hat_satellite/6.2/html/architecture_guide/chap-red_hat_satellite-architecture_guide-host_grouping_concepts">https://access.redhat.com/documentation/en-us/red_hat_satellite/6.2/html/architecture_guide/chap-red_hat_satellite-architecture_guide-host_grouping_concepts</a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/SatelliteHostGroupMembership.png">2</a> <a href="https://access.redhat.com/documentation/en-us/red_hat_satellite/6.5/html-single/managing_hosts/index#sect-Red_Hat_Satellite-Managing_Hosts-Changing_the_Group_of_a_Host">https://access.redhat.com/documentation/en-us/red_hat_satellite/6.5/html-single/managing_hosts/index#sect-Red_Hat_Satellite-Managing_Hosts-Changing_the_Group_of_a_Host</a></p>
 <p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/06/AnsibleTowerHostVariables.png">3</a> <a href="https://access.redhat.com/solutions/2777811">https://access.redhat.com/solutions/2777811</a></p>
 
 </div>
@@ -217,7 +198,7 @@ Host updated.
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

@@ -6,18 +6,14 @@
     <description>Recent content in linux on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 18:06:55 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 19 Jul 2019 18:06:55 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
     </item>
     
     <item>
@@ -36,7 +32,7 @@
       <pubDate>Mon, 04 Feb 2019 22:59:18 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/02/04/testing-the-odroid-hc2-with-open-media-vault/</guid>
-      <description>I&amp;#8217;ve recently been tinkering with a few small Raspberry Pi-like boards. I&amp;#8217;m anxious to get my hands on hardkernel&amp;#8217;s ODROID-H2 x86 board, I think they might have hit a sweet spot for a decently spec&amp;#8217;d, low TDP board with a decent amount of RAM and NVMe storage options. I like the NUC platform, but the H2 might be a less expensive &amp;amp; more capable option.</description>
+      <description>I’ve recently been tinkering with a few small Raspberry Pi-like boards. I’m anxious to get my hands on hardkernel’s ODROID-H2 x86 board, I think they might have hit a sweet spot for a decently spec’d, low TDP board with a decent amount of RAM and NVMe storage options. I like the NUC platform, but the H2 might be a less expensive &amp;amp; more capable option.</description>
     </item>
     
     <item>
@@ -45,7 +41,7 @@
       <pubDate>Thu, 24 Nov 2016 22:32:26 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</guid>
-      <description>If you&amp;#8217;ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
+      <description>If you’ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
     </item>
     
     <item>
@@ -54,7 +50,7 @@
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
-      <description>For my main workstation, I&amp;#8217;ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I&amp;#8217;ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+      <description>For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
     </item>
     
     <item>
@@ -63,7 +59,7 @@
       <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/05/04/become-a-contributor/</guid>
-      <description>As my career has evolved over the past 10 years, I’ve come to appreciate the value of collaborative ideas and solutions more than ever. From my early days in software development and QA, into helpdesk, administrator, and architect roles, I’ve seen the best results in every field when we’ve worked closely together to solve problems.</description>
+      <description></description>
     </item>
     
   </channel>

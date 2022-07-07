@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Adding python virtual environments (venvs) to Ansible Tower &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Adding python virtual environments (venvs) to Ansible Tower"/>
-  <meta property="og:description" content="As you&#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level."/>
+  <meta property="og:description" content="As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2019-07-19T18:06:55Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/",
-    "description": "As you\x26#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we\x26#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level."
+    "description": "As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level."
   }
   </script>
   
@@ -170,69 +170,43 @@
     <time datetime="2019-07-19T18:06:55Z">Jul 19, 2019</time> · 3 min read
   </div>
 
-  <p>As you&#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level. Let me show you how this works.</p>
-
-<p>Ansible Tower uses two different python virtual environments by default, one for ansible named &#8216;ansible&#8217;, and one for Tower named &#8216;awx&#8217;. This allows Tower to run in a stable environment, while allowing users to add or update modules to the Ansible python environment as needed to run playbooks. We can install new python modules within the &#8216;ansible&#8217; venv, however it&#8217;s strongly recommended to create a brand new directory and install them there.</p>
-
+  <p>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level. Let me show you how this works.</p>
+<p>Ansible Tower uses two different python virtual environments by default, one for ansible named ‘ansible’, and one for Tower named ‘awx’. This allows Tower to run in a stable environment, while allowing users to add or update modules to the Ansible python environment as needed to run playbooks. We can install new python modules within the ‘ansible’ venv, however it’s strongly recommended to create a brand new directory and install them there.</p>
 <ol>
 <li>Create a new directory for the new python virtual environments:</li>
 </ol>
-
-<pre class=""># mkdir /opt/venvs</pre>
-
-<ol>
+<!-- raw HTML omitted -->
+<ol start="2">
 <li>Give the directory appropriate write and execution permissions:</li>
 </ol>
-
-<pre class=""># chmod 0755 /opt/venvs</pre>
-
-<ol>
-<li>Modify Tower&#8217;s configuration for which directory&#8217;s to look for custom venvs using CUSTOM_VENV_PATHS variable. Be sure to change your username/password/Tower URL in the below command:</li>
+<!-- raw HTML omitted -->
+<ol start="3">
+<li>Modify Tower’s configuration for which directory’s to look for custom venvs using CUSTOM_VENV_PATHS variable. Be sure to change your username/password/Tower URL in the below command:</li>
 </ol>
-
-<pre class=""># curl -X PATCH 'https://username:password@tower.example.com/api/v2/settings/system/' -d '{"CUSTOM_VENV_PATHS": ["/opt/venvs/"]}'  -H 'Content-Type:application/json'</pre>
-
-<ol>
-<li>Now that the dir and Tower are setup, create a virtual environment in that location. I&#8217;m going to install &#8216;ansible[azure]&#8217; for use in interacting with Azure Resource Manager modules:</li>
+<!-- raw HTML omitted -->
+<ol start="4">
+<li>Now that the dir and Tower are setup, create a virtual environment in that location. I’m going to install ‘ansible[azure]’ for use in interacting with Azure Resource Manager modules:</li>
 </ol>
-
-<pre class=""># virtualenv /opt/venvz/azure</pre>
-
-<ol>
+<!-- raw HTML omitted -->
+<ol start="5">
 <li>Install some base dependences in the new venv needed to properly run playbooks:</li>
 </ol>
-
-<pre class=""># cd /opt/venvs/azure
-# source bin/activate
-# pip install psutil
-# pip install ansible[azure]</pre>
-
-<p>You may need to install gcc on the Tower host depending on the modules you&#8217;re bringing in.</p>
-
-<p>Now that we&#8217;ve got Ansible&#8217;s Azure modules on the Tower server, we need to decide at what level will we apply the custom virtual environment. I&#8217;m going to apply the least needed privilege philosophy and change an existing Job Template I have to use this python virtual environment. We could change it at an organization level, or a project level, but I don&#8217;t want to interfere with anything at that broad a level. So I&#8217;m going to update a Job Template.</p>
-
-<p>I&#8217;m running Ansible Tower 3.5, but noticed I didn&#8217;t get an option to specify the Ansible Environment field in my Job Template edit GUI. I may chase this down later, but for now I&#8217;ll just use the Tower API to update it. I take the job template URL, which has the job template ID:</p>
-
-<ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>You may need to install gcc on the Tower host depending on the modules you’re bringing in.</p>
+<p>Now that we’ve got Ansible’s Azure modules on the Tower server, we need to decide at what level will we apply the custom virtual environment. I’m going to apply the least needed privilege philosophy and change an existing Job Template I have to use this python virtual environment. We could change it at an organization level, or a project level, but I don’t want to interfere with anything at that broad a level. So I’m going to update a Job Template.</p>
+<p>I’m running Ansible Tower 3.5, but noticed I didn’t get an option to specify the Ansible Environment field in my Job Template edit GUI. I may chase this down later, but for now I’ll just use the Tower API to update it. I take the job template URL, which has the job template ID:</p>
+<ol start="6">
 <li>Update Job Template 14:</li>
 </ol>
-
-<pre class=""># curl -k -X PATCH 'https://username:password@tower.example.com/api/v2/job_templates/14/'  -d '{"CUSTOM_VIRTUALENV": ["/opt/venvs/azure"]}'  -H 'Content-Type:application/json'</pre>
-
-<p>Now this field has shown up for me in the Tower GUI, and we can see that instead of the default /var/lib/awx/venv/ansible environment, it&#8217;s using the new /opt/venvs/azure environment:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png"><img class="alignnone size-full wp-image-796" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png" alt="Tower Ansible Environment" width="900" height="398" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e-300x133.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e-768x340.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
-
-<p>And as the job runs, we&#8217;ll now see the environment it run under in the job activity details:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png"><img class="alignnone size-full wp-image-797" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png" alt="Ansible Tower Environment Job Run" width="900" height="460" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e-300x153.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e-768x393.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
-
-<p>Now we can see that the Azure Resource Manager modules I&#8217;m using in this playbook are working. The playbook can now successfully create resources in Azure.</p>
-
+<!-- raw HTML omitted -->
+<p>Now this field has shown up for me in the Tower GUI, and we can see that instead of the default /var/lib/awx/venv/ansible environment, it’s using the new /opt/venvs/azure environment:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png"><!-- raw HTML omitted --></a></p>
+<p>And as the job runs, we’ll now see the environment it run under in the job activity details:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png"><!-- raw HTML omitted --></a></p>
+<p>Now we can see that the Azure Resource Manager modules I’m using in this playbook are working. The playbook can now successfully create resources in Azure.</p>
 <p>Additional References:</p>
-
 <p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png">1</a> <a href="https://access.redhat.com/solutions/3062141">https://access.redhat.com/solutions/3062141</a></p>
-
 <p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png">2</a> <a href="https://docs.ansible.com/ansible-tower/latest/html/upgrade-migration-guide/virtualenv.html">https://docs.ansible.com/ansible-tower/latest/html/upgrade-migration-guide/virtualenv.html</a></p>
 
 </div>
@@ -242,7 +216,7 @@
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

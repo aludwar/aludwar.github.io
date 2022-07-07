@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>CI/CD with Ansible Tower and GitHub &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="CI/CD with Ansible Tower and GitHub"/>
-  <meta property="og:description" content="Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins."/>
+  <meta property="og:description" content="Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2019-09-20T15:54:42Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/",
-    "description": "Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven\x26#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He\x26#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI\/CD can be accomplished using Ansible without the need for a formal CI\/CD pipeline toolset like Jenkins."
+    "description": "Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI\/CD can be accomplished using Ansible without the need for a formal CI\/CD pipeline toolset like Jenkins."
   }
   </script>
   
@@ -170,25 +170,20 @@
     <time datetime="2019-09-20T15:54:42Z">Sep 20, 2019</time> · 2 min read
   </div>
 
-  <p>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&#8217;s put together a really interesting <a href="https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/">demo of Ansible Tower</a> connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.</p>
-
-<p>I&#8217;ve adapted his work to use Azure instead of OpenStack, but the concepts remain the same. He&#8217;s got some detail in his blog about how to setup the environment and connect services together, so I&#8217;ll let his work there speak for itself on how to get it setup. The changes I&#8217;ve made can be found in a couple of playbooks that provision infrastructure in Azure:</p>
-
+  <p>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting <a href="https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/">demo of Ansible Tower</a> connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.</p>
+<p>I’ve adapted his work to use Azure instead of OpenStack, but the concepts remain the same. He’s got some detail in his blog about how to setup the environment and connect services together, so I’ll let his work there speak for itself on how to get it setup. The changes I’ve made can be found in a couple of playbooks that provision infrastructure in Azure:</p>
 <ul>
 <li><a href="https://github.com/aludwar/ansible/tree/master/azure">https://github.com/aludwar/ansible/tree/master/azure</a>
-
 <ul>
 <li>create-app-vm.yml</li>
 <li>deploy-app.yml</li>
 <li>teardown-app.yml</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>Then I use a webservice called <a href="http://ultrahook.com">ultrahook.com</a> to bridge the GitHub events to my homelab of Ansible Tower. You may not need this if your Ansible Tower server lives in the cloud. The high level architecture and workflow looks like this:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD.png"><img class="size-large wp-image-822" src="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-1024x570.png" alt="" width="1024" height="570" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-1024x570.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-300x167.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD-768x427.png 768w, https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD.png 1361w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>Lastly, I&#8217;ve <a href="https://www.youtube.com/watch?v=_AumRi6GTUM">recorded a demo of what this looks like</a>. Similar to Keith, showcasing the developer workflow of checking in code, Tower building infrastructure and running the unit testing, then finally updating GitHub with the result. Then highlighting what a maintainer might see when they&#8217;re doing to merge the new code into the project.</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/09/TowerCICD.png"><!-- raw HTML omitted --></a></p>
+<p>Lastly, I’ve <a href="https://www.youtube.com/watch?v=_AumRi6GTUM">recorded a demo of what this looks like</a>. Similar to Keith, showcasing the developer workflow of checking in code, Tower building infrastructure and running the unit testing, then finally updating GitHub with the result. Then highlighting what a maintainer might see when they’re doing to merge the new code into the project.</p>
 
 </div>
 
@@ -197,7 +192,7 @@
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

@@ -6,19 +6,15 @@
     <description>Recent content in enterprise on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Nov 2019 16:08:08 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/categories/enterprise/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 08 Nov 2019 16:08:08 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/enterprise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enabling nested virtualization with RHV 4.3</title>
       <link>https://calgaryrhce.ca/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</link>
       <pubDate>Fri, 08 Nov 2019 16:08:08 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</guid>
-      <description>To enable nested virtualization within a Red Hat Virtualization 4.3 environment, you will need to do two things. First, make sure the &amp;#8220;vdsm-hook-nestedvt&amp;#8221; package is present on the host hypervisor. You&amp;#8217;ll need to restart vdsmd as well after installing.
-Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the virtual machine settings (under the host section).</description>
+      <description>To enable nested virtualization within a Red Hat Virtualization 4.3 environment, you will need to do two things. First, make sure the “vdsm-hook-nestedvt” package is present on the host hypervisor. You’ll need to restart vdsmd as well after installing.
+Second, you’ll need to enable the Pass-Through Host CPU option in the virtual machine settings (under the host section).</description>
     </item>
     
     <item>
@@ -46,7 +42,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Tue, 23 Oct 2018 16:13:33 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</guid>
-      <description>To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you&amp;#8217;re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:</description>
+      <description>To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you’re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:</description>
     </item>
     
     <item>
@@ -55,7 +51,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
-      <description>In setting up a local virtualization environment a little while back, I thought I&amp;#8217;d try the recently GA&amp;#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&amp;#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+      <description>In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
     </item>
     
     <item>
@@ -64,7 +60,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
-      <description>I&amp;#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&amp;#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+      <description>I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
     </item>
     
     <item>
@@ -73,7 +69,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Thu, 24 Nov 2016 22:32:26 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</guid>
-      <description>If you&amp;#8217;ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
+      <description>If you’ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
     </item>
     
     <item>
@@ -91,7 +87,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Sun, 29 Nov 2015 22:20:05 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</guid>
-      <description>I know, I know. Another management topic. Haven&amp;#8217;t we heard enough leadership buzzwords? Seen enough trendy motivational topics? Like probably most of you, I dread the elevator pitch of anyone about to give me a spiel on the latest and greatest industry buzzword topic. Especially if all they did was read an article on LinkedIn.</description>
+      <description>I know, I know. Another management topic. Haven’t we heard enough leadership buzzwords? Seen enough trendy motivational topics? Like probably most of you, I dread the elevator pitch of anyone about to give me a spiel on the latest and greatest industry buzzword topic. Especially if all they did was read an article on LinkedIn.</description>
     </item>
     
     <item>
@@ -100,7 +96,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
-      <description>In every place I&amp;#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&amp;#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&amp;#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+      <description>In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
     </item>
     
     <item>
@@ -109,7 +105,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
-      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&amp;#8217;t seem to find a conference that doesn&amp;#8217;t have a trendy buzzword filled keynote dedicated to the topic.</description>
+      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic.</description>
     </item>
     
     <item>
@@ -127,7 +123,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Mon, 15 Sep 2014 19:14:00 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/09/15/link-aggregation-w-lacp/</guid>
-      <description>Link aggregation is not a new concept, yet I still see a lot of folks who don&amp;#8217;t make regular use of it. With regard to server networking architecture, especially in heavily virtualized or highly available environments, it&amp;#8217;s a crucial tool that provides redundancy, and slightly increased throughput. For how simple it is to implement, it is a no-brainer to consider for physical server networking.</description>
+      <description>Link aggregation is not a new concept, yet I still see a lot of folks who don’t make regular use of it. With regard to server networking architecture, especially in heavily virtualized or highly available environments, it’s a crucial tool that provides redundancy, and slightly increased throughput. For how simple it is to implement, it is a no-brainer to consider for physical server networking.</description>
     </item>
     
     <item>
@@ -136,7 +132,7 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
-      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&amp;#8217;t terribly expensive, which Gluster caters to quite well.</description>
+      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.</description>
     </item>
     
     <item>
@@ -145,8 +141,8 @@ Second, you&amp;#8217;ll need to enable the Pass-Through Host CPU option in the 
       <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</guid>
-      <description>As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We&amp;#8217;re IT people! If we&amp;#8217;re masters of anything, it&amp;#8217;s the technical bits in the trade!
-Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others&amp;#8217; writing (source, source).</description>
+      <description>As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We’re IT people! If we’re masters of anything, it’s the technical bits in the trade!
+Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others’ writing (source, source).</description>
     </item>
     
   </channel>

@@ -6,18 +6,14 @@
     <description>Recent content in ansible on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
-      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&amp;#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&amp;#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
+      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
-      <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat&amp;#8217;s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
+      <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
     </item>
     
     <item>
@@ -44,7 +40,7 @@
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
     </item>
     
     <item>
@@ -53,7 +49,7 @@
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
-      <description>When thinking about ingesting systems into Ansible Tower&amp;#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&amp;#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&amp;#8217;s host grouping feature combined with Ansible Tower&amp;#8217;s Satellite 6 dynamic inventory script to apply this filtering.</description>
+      <description>When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.</description>
     </item>
     
     <item>
@@ -62,7 +58,7 @@
       <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
-      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here&amp;#8217;s how I got it working:</description>
+      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:</description>
     </item>
     
     <item>
@@ -80,8 +76,8 @@
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
-      <description>With a little googling this task isn&amp;#8217;t very complex, however, for those wanting to consume this information easily &amp;#8211; this post is for you.
-There&amp;#8217;s a lot of cloud provisioning tools out there; if you&amp;#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+      <description>With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.
+There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
     </item>
     
     <item>
@@ -90,7 +86,7 @@ There&amp;#8217;s a lot of cloud provisioning tools out there; if you&amp;#8217;
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
-      <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today &amp;#8211; we filled the room! Greg gave the group a high-level overview of Ansible&amp;#8217;s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
+      <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today – we filled the room! Greg gave the group a high-level overview of Ansible’s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
     </item>
     
   </channel>

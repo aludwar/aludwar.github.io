@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Using ansible to manage RHV/oVirt &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Using ansible to manage RHV/oVirt"/>
-  <meta property="og:description" content="A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows."/>
+  <meta property="og:description" content="A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2018-10-23T21:09:32Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/",
-    "description": "A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching\/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible\x26#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows."
+    "description": "A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching\/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows."
   }
   </script>
   
@@ -167,71 +167,22 @@
   <h1>Using ansible to manage RHV/oVirt</h1>
 
   <div class="post-date">
-    <time datetime="2018-10-23T21:09:32Z">Oct 23, 2018</time> · 2 min read
+    <time datetime="2018-10-23T21:09:32Z">Oct 23, 2018</time> · 1 min read
   </div>
 
-  <p>A common task most virtualization administrators will perform is <a href="https://access.redhat.com/solutions/261763">installing the guest agent(s) among their guest VMs</a>. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&#8217;s management of Windows devices and it makes it fairly trivial to automate a mass <a href="https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html/virtual_machine_management_guide/sect-updating_virtual_machine_guest_agents_and_drivers#Updating_the_Guest_Agents_and_Drivers_on_Windows">installation of guest agents in windows</a>.</p>
-
+  <p>A common task most virtualization administrators will perform is <a href="https://access.redhat.com/solutions/261763">installing the guest agent(s) among their guest VMs</a>. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass <a href="https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html/virtual_machine_management_guide/sect-updating_virtual_machine_guest_agents_and_drivers#Updating_the_Guest_Agents_and_Drivers_on_Windows">installation of guest agents in windows</a>.</p>
 <p>To get started with this, <a href="https://access.redhat.com/solutions/331133">upload the relevant tools ISO to RHV</a>:</p>
-
-<pre class=""># ovirt-iso-uploader upload rhv-tools-setup.iso --iso-domain=ISO
-Please provide the REST API password for the admin@internal oVirt Engine user (CTRL+D to abort): 
-Uploading, please wait...
-INFO: Start uploading rhv-tools-setup.iso 
-Uploading: [########################################] 100%
-INFO: rhv-tools-setup.iso uploaded successfully</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Once this ISO is present, we can <a href="https://docs.ansible.com/ansible/2.6/modules/ovirt_vms_module.html">use the ovirt_vms ansible module</a> to manipulate the VMs in RHV, saving lots of manual clicking. I wrote a couple <a href="https://github.com/aludwar/ansible/tree/master/rhv">basic playbooks and inventory file</a> for reference, just change the authentication items username/password, RHV-M hostname, and inventory to suit your environment.  From here, you can extend this and use a WinRM specific playbook to auto-install the tools by running the specific EXE file mounted on the CDROM device.</p>
-
-<pre class="">$ ansible-playbook attach-win-guest-agent.yml -i inventory -u root
-
-PLAY [rhevm] ******************************************************************************************************************************************************************************************************
-
-TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca]
-
-TASK [Authenticate to RHV] ****************************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca]
-
-TASK [Attach ISO to Windows VMs] **********************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca] =&gt; (item=ad.ludwar.ca)
-changed: [rhevm.ludwar.ca] =&gt; (item=windows1.ludwar.ca)
-[DEPRECATION WARNING]: The 'ovirt_vms' module is being renamed 'ovirt_vm'. This feature will be removed in version 2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
-
-TASK [Revoke SSO token after use] *********************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca]
-
-PLAY RECAP ********************************************************************************************************************************************************************************************************
-rhevm.ludwar.ca : ok=4 changed=1 unreachable=0 failed=0</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Here we have the CDROM mounted among all the Windows guests, easy to install the tooling:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools.png"><img class="alignnone size-large wp-image-696" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-1024x429.png" alt="RHV guest agent tools install" width="1024" height="429" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-1024x429.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-300x126.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools-768x322.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>And detach from the environment once we&#8217;re done:</p>
-
-<pre class="">$ ansible-playbook detach-win-guest-agent.yml -i inventory -u root
-
-PLAY [rhevm] ******************************************************************************************************************************************************************************************************
-
-TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca]
-
-TASK [Authenticate to RHV] ****************************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca]
-
-TASK [Detach ISO to Windows VMs] **********************************************************************************************************************************************************************************
-changed: [rhevm.ludwar.ca] =&gt; (item=ad.ludwar.ca)
-changed: [rhevm.ludwar.ca] =&gt; (item=windows1.ludwar.ca)
-[DEPRECATION WARNING]: The 'ovirt_vms' module is being renamed 'ovirt_vm'. This feature will be removed in version 2.8. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
-
-TASK [Revoke SSO token after use] *********************************************************************************************************************************************************************************
-ok: [rhevm.ludwar.ca]
-
-PLAY RECAP ********************************************************************************************************************************************************************************************************
-rhevm.ludwar.ca : ok=4 changed=1 unreachable=0 failed=0</pre>
-
-<p>&nbsp;</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-tools.png"><!-- raw HTML omitted --></a></p>
+<p>And detach from the environment once we’re done:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p> </p>
 
 </div>
 
@@ -240,7 +191,7 @@ rhevm.ludwar.ca : ok=4 changed=1 unreachable=0 failed=0</pre>
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

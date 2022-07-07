@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.93.3" />
+
+  <title>Fully Autonomous Containerized Deployment &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Fully Autonomous Containerized Deployment"/>
+  <meta property="og:description" content="After a pandemic hiatus, I&rsquo;m back with some renewed vigor to blogging. Over the past two years, I&rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-07-07T11:36:33-0600"/>
+  <meta property="article:modified_time" content="2022-07-07T11:36:33-0600"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Fully Autonomous Containerized Deployment",
+    "headline": "Fully Autonomous Containerized Deployment",
+    "datePublished": "2022-07-07T11:36:33-0600",
+    "dateModified": "2022-07-07T11:36:33-0600",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca/"
+    },
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/",
+    "description": "After a pandemic hiatus, I\u0026rsquo;m back with some renewed vigor to blogging. Over the past two years, I\u0026rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I\u0026rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Fully Autonomous Containerized Deployment</h1>
+
+  <div class="post-date">
+    <time datetime="2022-07-07T11:36:33-0600">Jul 7, 2022</time> · 3 min read
+  </div>
+
+  <p>After a pandemic hiatus, I&rsquo;m back with some renewed vigor to blogging. Over the past two years, I&rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news. Either way, there should be some new and interesting content coming out of the backlog.</p>
+<p>The first topic I&rsquo;d like to cover is expanding on the changes and maturity we&rsquo;ve seen over the last few years in container technology. We&rsquo;ve seen A LOT of k8s content but not very much container OS content. Yes it&rsquo;s the attractive thing to learn these days, but k8s is complex! What if we have simpler needs or a desire to start somewhere that avoids adding unnecessary complexity?</p>
+<p>What if we had a way to add some k8s orchestration and management like capbilities to containerized app deployment without all the k8s complexity? This is what I&rsquo;m going to address in this first topic, divided into a multi-part series:</p>
+<ol>
+<li>Deploying a self-managing container OS based on Fedora CoreOS
+<ul>
+<li>Are you aware Fedora CoreOS can be configured to automatically update itself?</li>
+<li>Did you know we can also setup intelligent health checks and automated rollbacks for any failed updates?</li>
+</ul>
+</li>
+<li>Deploying a secure, self-healing and auto-updating containerized application with podman and systemd
+<ul>
+<li>Exploring rootless containers with Fedora CoreOS and podman</li>
+<li>Have you seen systemd&rsquo;s capability to auto-start individual containers or a container pod?</li>
+<li>What about systemd and podman&rsquo;s ability to update containers automatically?</li>
+</ul>
+</li>
+<li>Adding a GitOps workflow for managing all of this with code
+<ul>
+<li>Integration with Ansible for automated initial deployment and future release management</li>
+</ul>
+</li>
+</ol>
+<p>First, let&rsquo;s start with a baseline configuration to deploy Fedora CoreOS that will serve as the foundation for this deployment. And if you&rsquo;re wondering, yes the <a href="https://www.redhat.com/rhdc/managed-files/li-why-the-os-matters-ebook-f29731wg-202108-en.pdf">OS still matters</a>. (All applications, inclusive of containerized applications, <a href="https://www.redhat.com/en/blog/architecting-containers-part-1-why-understanding-user-space-vs-kernel-space-matters">rely on the underlying kernel</a>.)</p>
+<p>Fedora CoreOS has matured quite a bit over the past 2-3 years since the move from Fedora Atomic. If you&rsquo;ve read a <a href="https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/">previous article</a> of mine you might already be familiar with the move from Fedora Atomic to Fedora CoreOS. I&rsquo;ll re-use some of what was built before but modified slightly to adapt to the new changes. Particularly around Butane tooling for producing an Ingition configuration file. These technology pieces allow us to define a configuration artifact that Fedora CoreOS will use at deployment time to configure the OS. We can store all OS customization in this configuration for easy re-deployment or scaling up of the OS.</p>
+<p>After <a href="https://getfedora.org/en/coreos/download?tab=metal_virtualized&amp;stream=stable&amp;arch=x86_64">downloading the Fedora CoreOS qcow2 image</a>, I&rsquo;ve built a YAML formatted Butane file and shell script to deploy locally to libvirt. After we get the foundational concepts understood here, I&rsquo;ll later adapt this deployment for cloud in AWS.</p>
+<p>The Butane file is YAML, so we&rsquo;ll declare all of our configuration pieces in this file. We&rsquo;ll convert it to an Ignition file, which is JSON formatted, for passing to libvirt at VM creation time. The <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/getting-started/">Fedora documentation</a> for Butane and Ignition is pretty good. For additional details on configuration examples, head over there. I&rsquo;ve done some basic things for my file:</p>
+<ul>
+<li>Specified the root filesystem disk size of 10 GB (Needs to be at least 8 GB)</li>
+<li>Set the hostname, static IP networking with DNS details</li>
+<li>Configured two files that <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/auto-updates/">setup automatic updating</a> of the OS</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>From there, we convert the Butane file into an Ignition file (you may need to install the Butane utility on your machine, or just pull the container for it):</p>
+<!-- raw HTML omitted -->
+<p>And lastly, a virt-install script that will pass the Ignition configuration, Fedora CoreOS qcow2 image, and other parameters to the VM for creation:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2022 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

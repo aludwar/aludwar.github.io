@@ -6,18 +6,14 @@
     <description>Recent content in environment management on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Dec 2016 22:48:42 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/environment-management/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 11 Dec 2016 22:48:42 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/environment-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grafana, InfluxDB, and collectd for systems monitoring and dashboarding</title>
       <link>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</link>
       <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</guid>
-      <description>I&amp;#8217;ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.</description>
+      <description>I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.</description>
     </item>
     
   </channel>

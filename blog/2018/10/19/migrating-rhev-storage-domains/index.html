@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Migrating RHEV storage domains &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Migrating RHEV storage domains"/>
-  <meta property="og:description" content="Recently, I&#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&#8217;t performed this kind of activity before, but found it to be quite easy."/>
+  <meta property="og:description" content="Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2018-10-19T21:20:50Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/",
-    "description": "Recently, I\x26#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn\x26#8217;t performed this kind of activity before, but found it to be quite easy."
+    "description": "Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy."
   }
   </script>
   
@@ -170,23 +170,15 @@
     <time datetime="2018-10-19T21:20:50Z">Oct 19, 2018</time> · 1 min read
   </div>
 
-  <p>Recently, I&#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&#8217;t performed this kind of activity before, but found it to be quite easy. I quickly built an additional NFS server, added it into RHV, and migrated the VM disks to it with just a few clicks and some waiting for the copying to be complete. <a href="https://access.redhat.com/solutions/736513">This article</a> was basic, but helpful.</p>
-
-<p>I selected all my VM disks on the original NFS data store and clicked &#8220;Move&#8221;. Since I only had two data stores, the other was auto-selected and I just had to hit &#8220;OK&#8221;.</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move.png"><img class="alignnone size-large wp-image-673" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-1024x475.png" alt="RHEV-move" width="1024" height="475" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-1024x475.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-300x139.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move-768x357.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
+  <p>Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy. I quickly built an additional NFS server, added it into RHV, and migrated the VM disks to it with just a few clicks and some waiting for the copying to be complete. <a href="https://access.redhat.com/solutions/736513">This article</a> was basic, but helpful.</p>
+<p>I selected all my VM disks on the original NFS data store and clicked “Move”. Since I only had two data stores, the other was auto-selected and I just had to hit “OK”.</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-move.png"><!-- raw HTML omitted --></a></p>
 <p>They slowly started moving over:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2.png"><img class="alignnone size-large wp-image-671" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-1024x482.png" alt="RHEV Copying" width="1024" height="482" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-1024x482.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-300x141.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2-768x361.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2.png 1902w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-moving2.png"><!-- raw HTML omitted --></a></p>
 <p>After a little while, I saw my previous NFS data store to be depleted, and the new store now containing all the VM disks:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains.png"><img class="alignnone size-large wp-image-674" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-1024x252.png" alt="RHEV Domains" width="1024" height="252" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-1024x252.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-300x74.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains-768x189.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak.png"><img class="alignnone size-large wp-image-675" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-1024x276.png" alt="RHEV VMs" width="1024" height="276" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-1024x276.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-300x81.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak-768x207.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak.png 1911w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
-
-<p>Next up, I&#8217;ll elaborate on why I&#8217;m doing this troubleshooting :).</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-domains.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHEV-nfs_bak.png"><!-- raw HTML omitted --></a></p>
+<p>Next up, I’ll elaborate on why I’m doing this troubleshooting :).</p>
 
 </div>
 
@@ -195,7 +187,7 @@
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

@@ -6,18 +6,14 @@
     <description>Recent content in security on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Jan 2019 17:14:25 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/categories/security/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 02 Jan 2019 17:14:25 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PCI-DSS Compliance with Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
-      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there&amp;#8217;s been some significant investment in developing ansible roles for security and compliance. I&amp;#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
+      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing ansible roles for security and compliance. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Mon, 12 Sep 2016 03:52:31 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/09/11/making-email-a-little-more-secure/</guid>
-      <description>Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I&amp;#8217;ve been wanting a more secure solution to webmail for the longest time, but knew I didn&amp;#8217;t have many options if I enjoyed using webmail clients.</description>
+      <description>Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I’ve been wanting a more secure solution to webmail for the longest time, but knew I didn’t have many options if I enjoyed using webmail clients.</description>
     </item>
     
   </channel>

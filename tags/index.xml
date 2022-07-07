@@ -6,15 +6,11 @@
     <description>Recent content in Tags on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Feb 2020 23:52:59 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 07 Jul 2022 11:36:33 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>containers</title>
       <link>https://calgaryrhce.ca/tags/containers/</link>
-      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      <pubDate>Thu, 07 Jul 2022 11:36:33 -0600</pubDate>
       
       <guid>https://calgaryrhce.ca/tags/containers/</guid>
       <description></description>
@@ -23,7 +19,7 @@
     <item>
       <title>fedora coreos</title>
       <link>https://calgaryrhce.ca/tags/fedora-coreos/</link>
-      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      <pubDate>Thu, 07 Jul 2022 11:36:33 -0600</pubDate>
       
       <guid>https://calgaryrhce.ca/tags/fedora-coreos/</guid>
       <description></description>
@@ -32,7 +28,7 @@
     <item>
       <title>ignition</title>
       <link>https://calgaryrhce.ca/tags/ignition/</link>
-      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      <pubDate>Thu, 07 Jul 2022 11:36:33 -0600</pubDate>
       
       <guid>https://calgaryrhce.ca/tags/ignition/</guid>
       <description></description>
@@ -41,7 +37,7 @@
     <item>
       <title>open source</title>
       <link>https://calgaryrhce.ca/tags/open-source/</link>
-      <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
+      <pubDate>Thu, 07 Jul 2022 11:36:33 -0600</pubDate>
       
       <guid>https://calgaryrhce.ca/tags/open-source/</guid>
       <description></description>
@@ -296,15 +292,6 @@
       <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/tags/private-cloud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>I/O</title>
-      <link>https://calgaryrhce.ca/tags/i/o/</link>
-      <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      
-      <guid>https://calgaryrhce.ca/tags/i/o/</guid>
       <description></description>
     </item>
     
@@ -638,6 +625,15 @@
       <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/tags/resources/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I/O</title>
+      <link>https://calgaryrhce.ca/tags/i/o/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://calgaryrhce.ca/tags/i/o/</guid>
       <description></description>
     </item>
     

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Calgary RHCE</title>
 
@@ -142,15 +142,33 @@
   <div class="posts">
   <article class="post">
       <h1 class="post-title">
+        <a href="https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/">Fully Autonomous Containerized Deployment</a>
+      </h1>
+
+      <div class="post-date">
+        <time datetime="2022-07-07T11:36:33-0600">Jul 7, 2022</time> · 3 min read
+      </div>
+
+      
+        After a pandemic hiatus, I&rsquo;m back with some renewed vigor to blogging. Over the past two years, I&rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news.
+      
+
+      
+      <div class="read-more-link">
+        <a href="/posts/2022-07-07-fully-autonomous-containerized-deployment/">Read More</a>
+      </div>
+      
+    </article><article class="post">
+      <h1 class="post-title">
         <a href="https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/">Moving from Fedora Atomic to Fedora CoreOS</a>
       </h1>
 
       <div class="post-date">
-        <time datetime="2020-02-24T23:52:59Z">Feb 24, 2020</time> · 3 min read
+        <time datetime="2020-02-24T23:52:59Z">Feb 24, 2020</time> · 2 min read
       </div>
 
       
-        Recently the merging of Fedora Atomic and CoreOS Container Linux into what is now known as Fedora CoreOS has moved out of preview and is ready for prime time use. I&#8217;ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS.
+        Recently the merging of Fedora Atomic and CoreOS Container Linux into what is now known as Fedora CoreOS has moved out of preview and is ready for prime time use. I’ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS.
       
 
       
@@ -168,8 +186,8 @@
       </div>
 
       
-        To enable nested virtualization within a Red Hat Virtualization 4.3 environment, you will need to do two things. First, make sure the &#8220;vdsm-hook-nestedvt&#8221; package is present on the host hypervisor. You&#8217;ll need to restart vdsmd as well after installing.
-Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virtual machine settings (under the host section).
+        To enable nested virtualization within a Red Hat Virtualization 4.3 environment, you will need to do two things. First, make sure the “vdsm-hook-nestedvt” package is present on the host hypervisor. You’ll need to restart vdsmd as well after installing.
+Second, you’ll need to enable the Pass-Through Host CPU option in the virtual machine settings (under the host section).
       
 
       
@@ -187,7 +205,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.
+        Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.
       
 
       
@@ -205,7 +223,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        Something Engineering has been working hard on over the past couple of years is connecting Red Hat&#8217;s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.
+        Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.
       
 
       
@@ -241,7 +259,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        As you&#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.
+        As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.
       
 
       
@@ -255,11 +273,11 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </h1>
 
       <div class="post-date">
-        <time datetime="2019-07-03T22:52:03Z">Jul 3, 2019</time> · 3 min read
+        <time datetime="2019-07-03T22:52:03Z">Jul 3, 2019</time> · 2 min read
       </div>
 
       
-        Cobbler is a great tool for PXE booting, I&#8217;ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler&#8217;s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn&#8217;t able to pull the latest signatures on its own.
+        Cobbler is a great tool for PXE booting, I’ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler’s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn’t able to pull the latest signatures on its own.
       
 
       
@@ -295,7 +313,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        When thinking about ingesting systems into Ansible Tower&#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&#8217;s host grouping feature combined with Ansible Tower&#8217;s Satellite 6 dynamic inventory script to apply this filtering.
+        When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.
       
 
       
@@ -332,7 +350,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here&#8217;s how I got it working:
+        Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:
       
 
       
@@ -350,7 +368,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        I&#8217;ve enjoyed Kyle Rankin&#8217;s writing for the Linux Journal for several years now. Recently, he presented a topic at FOSDEM 2019 covering the current risk of cloud provider lock in where he draws comparison to the proprietary UNIX wars of the 90s and 00s. He highlights linux and open source software&#8217;s immense success during this time, and how everyone benefit from relief of costly proprietary vendor lock-in.
+        I’ve enjoyed Kyle Rankin’s writing for the Linux Journal for several years now. Recently, he presented a topic at FOSDEM 2019 covering the current risk of cloud provider lock in where he draws comparison to the proprietary UNIX wars of the 90s and 00s. He highlights linux and open source software’s immense success during this time, and how everyone benefit from relief of costly proprietary vendor lock-in.
       
 
       
@@ -386,7 +404,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        I&#8217;ve recently been tinkering with a few small Raspberry Pi-like boards. I&#8217;m anxious to get my hands on hardkernel&#8217;s ODROID-H2 x86 board, I think they might have hit a sweet spot for a decently spec&#8217;d, low TDP board with a decent amount of RAM and NVMe storage options. I like the NUC platform, but the H2 might be a less expensive &amp; more capable option.
+        I’ve recently been tinkering with a few small Raspberry Pi-like boards. I’m anxious to get my hands on hardkernel’s ODROID-H2 x86 board, I think they might have hit a sweet spot for a decently spec’d, low TDP board with a decent amount of RAM and NVMe storage options. I like the NUC platform, but the H2 might be a less expensive &amp; more capable option.
       
 
       
@@ -404,7 +422,7 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </div>
 
       
-        I&#8217;ve been using a raspberry pi for some occasional tinkering, but have finally found it a more permanent home. I recently got an itch to play some old console games and thought I&#8217;d build a RetroPie. I had all the hardware I needed, but in case you don&#8217;t there are kits available that include everything one needs to get a retro gaming system going.
+        I’ve been using a raspberry pi for some occasional tinkering, but have finally found it a more permanent home. I recently got an itch to play some old console games and thought I’d build a RetroPie. I had all the hardware I needed, but in case you don’t there are kits available that include everything one needs to get a retro gaming system going.
       
 
       
@@ -418,12 +436,12 @@ Second, you&#8217;ll need to enable the Pass-Through Host CPU option in the virt
       </h1>
 
       <div class="post-date">
-        <time datetime="2019-01-03T21:55:28Z">Jan 3, 2019</time> · 4 min read
+        <time datetime="2019-01-03T21:55:28Z">Jan 3, 2019</time> · 2 min read
       </div>
 
       
-        With a little googling this task isn&#8217;t very complex, however, for those wanting to consume this information easily &#8211; this post is for you.
-There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.
+        With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.
+There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.
       
 
       
@@ -441,7 +459,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there&#8217;s been some significant investment in developing ansible roles for security and compliance. I&#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower.
+        Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing ansible roles for security and compliance. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.
       
 
       
@@ -473,11 +491,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2018-10-23T21:09:32Z">Oct 23, 2018</time> · 2 min read
+        <time datetime="2018-10-23T21:09:32Z">Oct 23, 2018</time> · 1 min read
       </div>
 
       
-        A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible&#8217;s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows.
+        A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows.
       
 
       
@@ -495,7 +513,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you&#8217;re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:
+        To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you’re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:
       
 
       
@@ -509,11 +527,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2018-10-20T17:43:07Z">Oct 20, 2018</time> · 7 min read
+        <time datetime="2018-10-20T17:43:07Z">Oct 20, 2018</time> · 5 min read
       </div>
 
       
-        In setting up a local virtualization environment a little while back, I thought I&#8217;d try the recently GA&#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .
+        In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .
       
 
       
@@ -531,7 +549,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Recently, I&#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&#8217;t performed this kind of activity before, but found it to be quite easy.
+        Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy.
       
 
       
@@ -549,7 +567,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We&#8217;ve moved past the installer race, the fragmentation of &#8220;as-a-service&#8221; components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack &#8220;boring&#8220;.
+        By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “boring“.
       
 
       
@@ -567,7 +585,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Between being busy with home renovations, and writing articles for work, I haven&#8217;t made much time for blogging this summer. Since it&#8217;s raining today and hampering my home renos, I&#8217;m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.
+        Between being busy with home renovations, and writing articles for work, I haven’t made much time for blogging this summer. Since it’s raining today and hampering my home renos, I’m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.
       
 
       
@@ -585,7 +603,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        I&#8217;m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO&#8217;s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.
+        I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.
       
 
       
@@ -603,7 +621,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        I&#8217;ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.
+        I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.
       
 
       
@@ -617,11 +635,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-11-24T22:32:26Z">Nov 24, 2016</time> · 4 min read
+        <time datetime="2016-11-24T22:32:26Z">Nov 24, 2016</time> · 3 min read
       </div>
 
       
-        If you&#8217;ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.
+        If you’ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.
       
 
       
@@ -639,7 +657,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Today is Fedora 25 official release day. There are a few notable new additions for this release, I&#8217;m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.
+        Today is Fedora 25 official release day. There are a few notable new additions for this release, I’m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.
       
 
       
@@ -675,7 +693,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Whether you&#8217;re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.
+        Whether you’re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.
       
 
       
@@ -693,7 +711,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        For my main workstation, I&#8217;ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I&#8217;ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.
+        For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.
       
 
       
@@ -711,7 +729,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        I&#8217;ve got an old 17&#8243; Macbook Pro from late 2008 that&#8217;s still kicking. It&#8217;s served me a lot of good years filled with studying, scripting, exams, etc. and I&#8217;ve never had a problem with it. I mostly keep it around for testing OSX related things, and as a backup. Last year I replaced the aging 512GB HDD with a 256GB SSD which did wonders to speed it up.
+        I’ve got an old 17″ Macbook Pro from late 2008 that’s still kicking. It’s served me a lot of good years filled with studying, scripting, exams, etc. and I’ve never had a problem with it. I mostly keep it around for testing OSX related things, and as a backup. Last year I replaced the aging 512GB HDD with a 256GB SSD which did wonders to speed it up.
       
 
       
@@ -725,11 +743,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-09-24T21:20:21Z">Sep 24, 2016</time> · 19 min read
+        <time datetime="2016-09-24T21:20:21Z">Sep 24, 2016</time> · 13 min read
       </div>
 
       
-        Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I&#8217;ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.
+        Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I’ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.
       
 
       
@@ -747,7 +765,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today &#8211; we filled the room! Greg gave the group a high-level overview of Ansible&#8217;s feature set, along with what the open source community has been seeing for use-cases, and adoption.
+        Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today – we filled the room! Greg gave the group a high-level overview of Ansible’s feature set, along with what the open source community has been seeing for use-cases, and adoption.
       
 
       
@@ -765,7 +783,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I&#8217;ve been wanting a more secure solution to webmail for the longest time, but knew I didn&#8217;t have many options if I enjoyed using webmail clients.
+        Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I’ve been wanting a more secure solution to webmail for the longest time, but knew I didn’t have many options if I enjoyed using webmail clients.
       
 
       
@@ -779,7 +797,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-09-12T02:51:38Z">Sep 12, 2016</time> · 3 min read
+        <time datetime="2016-09-12T02:51:38Z">Sep 12, 2016</time> · 2 min read
       </div>
 
       
@@ -797,11 +815,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-09-11T22:16:08Z">Sep 11, 2016</time> · 6 min read
+        <time datetime="2016-09-11T22:16:08Z">Sep 11, 2016</time> · 4 min read
       </div>
 
       
-        When talking TripleO, there&#8217;s two concepts introduced called the &#8220;undercloud&#8221;, and the &#8220;overcloud&#8221;. These are essentially the labels for each OpenStack environment when referring to &#8220;OpenStack on OpenStack&#8221; (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we&#8217;re after.
+        When talking TripleO, there’s two concepts introduced called the “undercloud”, and the “overcloud”. These are essentially the labels for each OpenStack environment when referring to “OpenStack on OpenStack” (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we’re after.
       
 
       
@@ -819,7 +837,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Building on a previous post, I promised I&#8217;d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment&#8217;s purpose and intended result, it would be wise to align your needs with the installers&#8217; capabilities and limitations.
+        Building on a previous post, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations.
       
 
       
@@ -837,7 +855,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        So you&#8217;d like to get started with OpenStack eh? (Sorry, that&#8217;s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.
+        So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.
       
 
       
@@ -851,11 +869,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-03-16T23:14:21Z">Mar 16, 2016</time> · 6 min read
+        <time datetime="2016-03-16T23:14:21Z">Mar 16, 2016</time> · 5 min read
       </div>
 
       
-        I&#8217;ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.
+        I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.
       
 
       
@@ -869,11 +887,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-02-03T20:55:56Z">Feb 3, 2016</time> · 7 min read
+        <time datetime="2016-02-03T20:55:56Z">Feb 3, 2016</time> · 5 min read
       </div>
 
       
-        Recently I&#8217;ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O&#8217;Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high&#8230; and so far, I&#8217;m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.
+        Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O’Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.
       
 
       
@@ -887,11 +905,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2016-01-07T20:54:27Z">Jan 7, 2016</time> · 6 min read
+        <time datetime="2016-01-07T20:54:27Z">Jan 7, 2016</time> · 5 min read
       </div>
 
       
-        Lately, I&#8217;ve been knocking off a few books that have accumulated on my &#8220;must-read&#8221; list. One of my favourites came recommended by my technical sales professor at SAIT, &#8220;Predictably Irrational, by Dan Ariely. It&#8217;s a New York Times bestseller. It was recommended based on its insights around behavioural science, specifically what factors influence a buyer&#8217;s decision making.
+        Lately, I’ve been knocking off a few books that have accumulated on my “must-read” list. One of my favourites came recommended by my technical sales professor at SAIT, “Predictably Irrational, by Dan Ariely. It’s a New York Times bestseller. It was recommended based on its insights around behavioural science, specifically what factors influence a buyer’s decision making.
       
 
       
@@ -909,7 +927,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        If you&#8217;re a linux enthusiast and you don&#8217;t currently read the LinuxJournal, I suggest you have a look. They&#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.
+        If you’re a linux enthusiast and you don’t currently read the LinuxJournal, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.
       
 
       
@@ -927,7 +945,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        I know, I know. Another management topic. Haven&#8217;t we heard enough leadership buzzwords? Seen enough trendy motivational topics? Like probably most of you, I dread the elevator pitch of anyone about to give me a spiel on the latest and greatest industry buzzword topic. Especially if all they did was read an article on LinkedIn.
+        I know, I know. Another management topic. Haven’t we heard enough leadership buzzwords? Seen enough trendy motivational topics? Like probably most of you, I dread the elevator pitch of anyone about to give me a spiel on the latest and greatest industry buzzword topic. Especially if all they did was read an article on LinkedIn.
       
 
       
@@ -945,7 +963,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        If you have a smartphone, surely you covet it&#8217;s presence and usage. It probably doesn&#8217;t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there&#8217;s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc.
+        If you have a smartphone, surely you covet it’s presence and usage. It probably doesn’t leave your sight very often, and losing it would be a huge inconvenience to you, perhaps almost disastrous. Thankfully, there’s a slew of services out there that help you locate your lost or stolen device, remote wipe it, etc.
       
 
       
@@ -963,7 +981,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        If you&#8217;ve been paying attention to the open source community lately, or are keen to keeping abreast of the latest trends in corporate leadership or management, you may have heard of Jim Whitehurst&#8217;s new book titled The Open Organization. The book compares and contrasts leadership styles and engagement strategies in the modern corporate world.
+        If you’ve been paying attention to the open source community lately, or are keen to keeping abreast of the latest trends in corporate leadership or management, you may have heard of Jim Whitehurst’s new book titled The Open Organization. The book compares and contrasts leadership styles and engagement strategies in the modern corporate world.
       
 
       
@@ -981,7 +999,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        In every place I&#8217;ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer&#8217;s server provisioning artifacts are made up of the same components. To provision a host, you&#8217;ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.
+        In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.
       
 
       
@@ -999,7 +1017,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can&#8217;t seem to find a conference that doesn&#8217;t have a trendy buzzword filled keynote dedicated to the topic.
+        Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic.
       
 
       
@@ -1035,7 +1053,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It&#8217;s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.
+        Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.
       
 
       
@@ -1053,7 +1071,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        Link aggregation is not a new concept, yet I still see a lot of folks who don&#8217;t make regular use of it. With regard to server networking architecture, especially in heavily virtualized or highly available environments, it&#8217;s a crucial tool that provides redundancy, and slightly increased throughput. For how simple it is to implement, it is a no-brainer to consider for physical server networking.
+        Link aggregation is not a new concept, yet I still see a lot of folks who don’t make regular use of it. With regard to server networking architecture, especially in heavily virtualized or highly available environments, it’s a crucial tool that provides redundancy, and slightly increased throughput. For how simple it is to implement, it is a no-brainer to consider for physical server networking.
       
 
       
@@ -1071,7 +1089,7 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&#8217;t terribly expensive, which Gluster caters to quite well.
+        A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.
       
 
       
@@ -1085,11 +1103,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2014-07-13T22:15:31Z">Jul 13, 2014</time> · 6 min read
+        <time datetime="2014-07-13T22:15:31Z">Jul 13, 2014</time> · 5 min read
       </div>
 
       
-        Having recently been exposed to some SSD tweaking at work, I thought I&#8217;d do the same with my home PCs. Prior to this weekend, I&#8217;ve just had four 1TB SATA drives in a RAID 5 configuration for a disk setup. Performance has always been satisfactory, but with recent SSD prices coming down quite a bit, my late 2008 MacBook Pro feeling it&#8217;s age, it was time for an upgrade.
+        Having recently been exposed to some SSD tweaking at work, I thought I’d do the same with my home PCs. Prior to this weekend, I’ve just had four 1TB SATA drives in a RAID 5 configuration for a disk setup. Performance has always been satisfactory, but with recent SSD prices coming down quite a bit, my late 2008 MacBook Pro feeling it’s age, it was time for an upgrade.
       
 
       
@@ -1103,11 +1121,11 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </h1>
 
       <div class="post-date">
-        <time datetime="2014-06-21T20:56:38Z">Jun 21, 2014</time> · 5 min read
+        <time datetime="2014-06-21T20:56:38Z">Jun 21, 2014</time> · 4 min read
       </div>
 
       
-        In our DevOps environment, we&#8217;ve got a lot of developers who regularly build VMs. Sometimes they&#8217;re built locally on their workstations, or sometimes in the data center when they&#8217;re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.
+        In our DevOps environment, we’ve got a lot of developers who regularly build VMs. Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.
       
 
       
@@ -1125,8 +1143,8 @@ There&#8217;s a lot of cloud provisioning tools out there; if you&#8217;re like 
       </div>
 
       
-        As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We&#8217;re IT people! If we&#8217;re masters of anything, it&#8217;s the technical bits in the trade!
-Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others&#8217; writing (source, source).
+        As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We’re IT people! If we’re masters of anything, it’s the technical bits in the trade!
+Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others’ writing (source, source).
       
 
       
@@ -1144,7 +1162,7 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
       </div>
 
       
-        So if you&#8217;re like me and like to run the same OS on your desktop that is in your data centre, you might have come across the problem of Google Chrome support being discontinued for Red Hat 6+ and its clones. Thankfully there&#8217;s a script developed by Richard Lloyd that will automatically download and install the latest Google Chrome browser for you.
+        So if you’re like me and like to run the same OS on your desktop that is in your data centre, you might have come across the problem of Google Chrome support being discontinued for Red Hat 6+ and its clones. Thankfully there’s a script developed by Richard Lloyd that will automatically download and install the latest Google Chrome browser for you.
       
 
       
@@ -1158,17 +1176,13 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
       </h1>
 
       <div class="post-date">
-        <time datetime="2014-05-04T22:29:33Z">May 4, 2014</time> · 2 min read
+        <time datetime="2014-05-04T22:29:33Z">May 4, 2014</time> · 0 min read
       </div>
 
       
-        As my career has evolved over the past 10 years, I’ve come to appreciate the value of collaborative ideas and solutions more than ever. From my early days in software development and QA, into helpdesk, administrator, and architect roles, I’ve seen the best results in every field when we’ve worked closely together to solve problems.
+        
       
 
-      
-      <div class="read-more-link">
-        <a href="/blog/2014/05/04/become-a-contributor/">Read More</a>
-      </div>
       
     </article>
 </div>
@@ -1176,7 +1190,7 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

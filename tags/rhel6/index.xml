@@ -6,11 +6,7 @@
     <description>Recent content in rhel6 on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/rhel6/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/rhel6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>32-bit application support in RHEL7</title>
       <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>
@@ -27,7 +23,7 @@
       <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/06/01/google-chrome-on-rhelcentos-6/</guid>
-      <description>So if you&amp;#8217;re like me and like to run the same OS on your desktop that is in your data centre, you might have come across the problem of Google Chrome support being discontinued for Red Hat 6+ and its clones. Thankfully there&amp;#8217;s a script developed by Richard Lloyd that will automatically download and install the latest Google Chrome browser for you.</description>
+      <description>So if you’re like me and like to run the same OS on your desktop that is in your data centre, you might have come across the problem of Google Chrome support being discontinued for Red Hat 6+ and its clones. Thankfully there’s a script developed by Richard Lloyd that will automatically download and install the latest Google Chrome browser for you.</description>
     </item>
     
   </channel>

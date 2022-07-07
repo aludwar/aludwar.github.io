@@ -6,18 +6,14 @@
     <description>Recent content in networking on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Oct 2018 17:43:07 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/categories/networking/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 20 Oct 2018 17:43:07 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
       <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
-      <description>In setting up a local virtualization environment a little while back, I thought I&amp;#8217;d try the recently GA&amp;#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&amp;#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+      <description>In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
-      <description>Between being busy with home renovations, and writing articles for work, I haven&amp;#8217;t made much time for blogging this summer. Since it&amp;#8217;s raining today and hampering my home renos, I&amp;#8217;m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.</description>
+      <description>Between being busy with home renovations, and writing articles for work, I haven’t made much time for blogging this summer. Since it’s raining today and hampering my home renos, I’m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement.</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Thu, 24 Nov 2016 22:32:26 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</guid>
-      <description>If you&amp;#8217;ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
+      <description>If you’ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.</description>
     </item>
     
     <item>

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   <title>Making email a little more secure &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Making email a little more secure"/>
-  <meta property="og:description" content="Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I&#8217;ve been wanting a more secure solution to webmail for the longest time, but knew I didn&#8217;t have many options if I enjoyed using webmail clients."/>
+  <meta property="og:description" content="Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I’ve been wanting a more secure solution to webmail for the longest time, but knew I didn’t have many options if I enjoyed using webmail clients."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2016/09/11/making-email-a-little-more-secure/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2016-09-12T03:52:31Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2016/09/11/making-email-a-little-more-secure/",
-    "description": "Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I\x26#8217;ve been wanting a more secure solution to webmail for the longest time, but knew I didn\x26#8217;t have many options if I enjoyed using webmail clients."
+    "description": "Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a notable CVE bulletin, or hear of the latest hack. I’ve been wanting a more secure solution to webmail for the longest time, but knew I didn’t have many options if I enjoyed using webmail clients."
   }
   </script>
   
@@ -170,20 +170,13 @@
     <time datetime="2016-09-12T03:52:31Z">Sep 12, 2016</time> · 2 min read
   </div>
 
-  <p>Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a <a href="http://heartbleed.com/">notable</a> <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160">CVE bulletin</a>, or hear of the <a href="http://motherboard.vice.com/read/another-day-another-hack-117-million-linkedin-emails-and-password">latest hack</a>. I&#8217;ve been wanting a more secure solution to webmail for the longest time, but knew I didn&#8217;t have many options if I enjoyed using webmail clients. They&#8217;re just so darn convenient. After enabling <a href="https://www.google.ca/landing/2step/">two-factor authentication</a> on everything I could, I still was looking for a better solution for encrypted email. I like the project <a href="https://www.mailpile.is/">mailpile</a>, but they&#8217;re not as far along yet in features for my needs. (Consider donating if you value secure email!) I ended up going back to a local mail client (Thunderbird), which I&#8217;ve connected to my webmail accounts, and downloaded the <a href="https://addons.mozilla.org/en-US/thunderbird/addon/enigmail/">Enigmail add-on</a> for OpenPGP encryption and digital signing.</p>
-
-<p>Once I installed the add-on, it was pretty easy to get started. There&#8217;s a setup wizard that will either create you a new PGP/GPG2 key, or you can select to use an existing key already:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-wizard.png"><img class="alignnone size-full wp-image-443" src="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-wizard.png" alt="enigmail-wizard" width="766" height="688" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-wizard.png 766w, https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-wizard-300x269.png 300w" sizes="(max-width: 766px) 100vw, 766px" /></a></p>
-
-<p>I selected advanced, and picked an existing GPG2 key I have already. It imported it in one step, and I was ready to go. Next, a test email to myself to test enabling a digital signature (I had to manually accept my own key as &#8220;trusted&#8221; once I received the mail):</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-signature-1.png"><img class="alignnone wp-image-446 size-full" src="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-signature-1.png" width="801" height="444" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-signature-1.png 801w, https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-signature-1-300x166.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-signature-1-768x426.png 768w" sizes="(max-width: 801px) 100vw, 801px" /></a></p>
-
+  <p>Every so often I try to make an effort to increase the security surrounding the technology I use. Its usually after I read a <a href="http://heartbleed.com/">notable</a> <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160">CVE bulletin</a>, or hear of the <a href="http://motherboard.vice.com/read/another-day-another-hack-117-million-linkedin-emails-and-password">latest hack</a>. I’ve been wanting a more secure solution to webmail for the longest time, but knew I didn’t have many options if I enjoyed using webmail clients. They’re just so darn convenient. After enabling <a href="https://www.google.ca/landing/2step/">two-factor authentication</a> on everything I could, I still was looking for a better solution for encrypted email. I like the project <a href="https://www.mailpile.is/">mailpile</a>, but they’re not as far along yet in features for my needs. (Consider donating if you value secure email!) I ended up going back to a local mail client (Thunderbird), which I’ve connected to my webmail accounts, and downloaded the <a href="https://addons.mozilla.org/en-US/thunderbird/addon/enigmail/">Enigmail add-on</a> for OpenPGP encryption and digital signing.</p>
+<p>Once I installed the add-on, it was pretty easy to get started. There’s a setup wizard that will either create you a new PGP/GPG2 key, or you can select to use an existing key already:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-wizard.png"><!-- raw HTML omitted --></a></p>
+<p>I selected advanced, and picked an existing GPG2 key I have already. It imported it in one step, and I was ready to go. Next, a test email to myself to test enabling a digital signature (I had to manually accept my own key as “trusted” once I received the mail):</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-signature-1.png"><!-- raw HTML omitted --></a></p>
 <p>And writing an encrypted mail was just as easy:</p>
-
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-encrypted-mail-1.png"><img class="alignnone wp-image-445 size-full" src="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-encrypted-mail-1.png" width="962" height="470" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-encrypted-mail-1.png 962w, https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-encrypted-mail-1-300x147.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-encrypted-mail-1-768x375.png 768w" sizes="(max-width: 962px) 100vw, 962px" /></a></p>
-
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/09/enigmail-encrypted-mail-1.png"><!-- raw HTML omitted --></a></p>
 <p>The Enigmail plugin makes it easy to add others to your GPG circle of trust, and GPG2 encrypted email is a now click away.</p>
 
 </div>
@@ -193,7 +186,7 @@
 
   <footer>
   <div class="copyright">
-    &copy;  2020 · 
+    &copy;  2022 · 
   </div>
 </footer>
 

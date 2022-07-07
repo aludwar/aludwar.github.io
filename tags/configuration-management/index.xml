@@ -6,11 +6,7 @@
     <description>Recent content in configuration management on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 22:20:23 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/configuration-management/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 19 Jul 2019 22:20:23 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/configuration-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
@@ -26,7 +22,7 @@
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
-      <description>When thinking about ingesting systems into Ansible Tower&amp;#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&amp;#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&amp;#8217;s host grouping feature combined with Ansible Tower&amp;#8217;s Satellite 6 dynamic inventory script to apply this filtering.</description>
+      <description>When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.</description>
     </item>
     
     <item>
@@ -44,7 +40,7 @@
       <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
-      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here&amp;#8217;s how I got it working:</description>
+      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:</description>
     </item>
     
     <item>
@@ -62,7 +58,7 @@
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
-      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there&amp;#8217;s been some significant investment in developing ansible roles for security and compliance. I&amp;#8217;ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
+      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing ansible roles for security and compliance. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
     </item>
     
     <item>
@@ -71,7 +67,7 @@
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
-      <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today &amp;#8211; we filled the room! Greg gave the group a high-level overview of Ansible&amp;#8217;s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
+      <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today – we filled the room! Greg gave the group a high-level overview of Ansible’s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
     </item>
     
     <item>
@@ -80,7 +76,7 @@
       <pubDate>Wed, 16 Mar 2016 23:14:21 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</guid>
-      <description>I&amp;#8217;ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.</description>
+      <description>I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.</description>
     </item>
     
     <item>
@@ -89,7 +85,7 @@
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
-      <description>Recently I&amp;#8217;ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O&amp;#8217;Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high&amp;#8230; and so far, I&amp;#8217;m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
+      <description>Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O’Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
     </item>
     
     <item>
@@ -98,7 +94,7 @@
       <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
-      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It&amp;#8217;s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
+      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
     </item>
     
   </channel>

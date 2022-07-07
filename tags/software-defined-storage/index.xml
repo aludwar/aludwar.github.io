@@ -6,18 +6,14 @@
     <description>Recent content in software defined storage on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Oct 2018 17:43:07 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/software-defined-storage/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 20 Oct 2018 17:43:07 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/software-defined-storage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
       <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
-      <description>In setting up a local virtualization environment a little while back, I thought I&amp;#8217;d try the recently GA&amp;#8217;d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat&amp;#8217;s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+      <description>In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
     </item>
     
     <item>
@@ -26,7 +22,7 @@
       <pubDate>Fri, 19 Oct 2018 21:20:50 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
-      <description>Recently, I&amp;#8217;ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn&amp;#8217;t performed this kind of activity before, but found it to be quite easy.</description>
+      <description>Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy.</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
-      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn&amp;#8217;t terribly expensive, which Gluster caters to quite well.</description>
+      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.</description>
     </item>
     
   </channel>

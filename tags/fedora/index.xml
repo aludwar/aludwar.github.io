@@ -6,11 +6,7 @@
     <description>Recent content in fedora on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2019 16:09:45 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 22 Jun 2019 16:09:45 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>InSync Google Drive client in Fedora 30</title>
       <link>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
@@ -26,7 +22,7 @@
       <pubDate>Tue, 22 Nov 2016 22:04:10 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</guid>
-      <description>Today is Fedora 25 official release day. There are a few notable new additions for this release, I&amp;#8217;m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.</description>
+      <description>Today is Fedora 25 official release day. There are a few notable new additions for this release, I’m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
-      <description>For my main workstation, I&amp;#8217;ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I&amp;#8217;ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+      <description>For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
     </item>
     
     <item>
@@ -44,7 +40,7 @@
       <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
-      <description>If you&amp;#8217;re a linux enthusiast and you don&amp;#8217;t currently read the LinuxJournal, I suggest you have a look. They&amp;#8217;re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.</description>
+      <description>If you’re a linux enthusiast and you don’t currently read the LinuxJournal, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.</description>
     </item>
     
   </channel>

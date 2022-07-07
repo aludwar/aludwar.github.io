@@ -6,18 +6,14 @@
     <description>Recent content in Ansible Tower on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate>
-    
-	<atom:link href="https://calgaryrhce.ca/tags/ansible-tower/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/ansible-tower/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
-      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven&amp;#8217;t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He&amp;#8217;s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
+      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you&amp;#8217;re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we&amp;#8217;re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
     </item>
     
     <item>
@@ -44,7 +40,7 @@
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
-      <description>When thinking about ingesting systems into Ansible Tower&amp;#8217;s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we&amp;#8217;re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite&amp;#8217;s host grouping feature combined with Ansible Tower&amp;#8217;s Satellite 6 dynamic inventory script to apply this filtering.</description>
+      <description>When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.</description>
     </item>
     
   </channel>
