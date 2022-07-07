@@ -167,49 +167,188 @@
   <h1>Deploying ownCloud 9 on Fedora 23</h1>
 
   <div class="post-date">
-    <time datetime="2016-03-16T23:14:21Z">Mar 16, 2016</time> · 5 min read
+    <time datetime="2016-03-16T23:14:21Z">Mar 16, 2016</time> · 6 min read
   </div>
 
   <p>I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try. Digging further into its features I see that ownCloud can federate many external cloud storage solutions (Dropbox, GoogleDrive, etc.) – cool! Another useful feature is that ownCloud can enable encryption on any personal data in addition to the encryption methods used by Dropbox and Google. This will provide an additional layer of encryption in case that Dropbox or Google’s data is compromised and decrypted, my data will still be protected by my own encryption keys. That adds a nice layer of safety for my personal data, so lets do a deployment and connect ownCloud to GoogleDrive to start.</p>
 <p>The first thing I started with was a fresh install of Fedora 23 server. (I originally tried CentOS but ran into some out-of-date package issues with nss). With ownCloud 9 being so new, it’s not yet included in Fedora’s standard repos, so I did an install from source. You can download the source from <a href="https://owncloud.org/install/">owncloud.org</a>, verify with MD5/SHA256 and/or GPG, and continue with my steps below. I used the following two links to help with my install. <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/source_installation.html">Manual installation of ownCloud</a>, and <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/command_line_installation.html">ownCloud installation from the command line</a>. Firstly, ownCloud uses a web and database server on the back end. You’re free to chose your own flavours of each, for me I chose apache and mysql(mariadb). When installing from source, you’ll need to manually install your web and database server prior to ownCloud:</p>
-<!-- raw HTML omitted -->
+<pre>dnf install httpd mysql mysql-server</pre>
 <p>Also, there’s a whack of PHP modules you’ll need. I cheekily grabbed a list of these from the Fedora packaged ownCloud 8 installation – it parses all the dependencies for you. I issued a dnf install owncloud command to get all the PHP dependencies, then awk’d them out of the output. I put them in a file, and installed with a for loop:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>[root@owncloud ~]# cat /root/phprpms:
+php
+php-Assetic
+php-PHPMailer
+php-PsrLog
+php-aws-sdk
+php-bantu-ini-get-wrapper
+php-channel-dropbox-php
+php-channel-phpseclib
+php-channel-sabredav
+php-cli
+php-common
+php-doctrine-annotations
+php-doctrine-cache
+php-doctrine-collections
+php-doctrine-common
+php-doctrine-dbal
+php-doctrine-inflector
+php-doctrine-lexer
+php-dropbox-php-Dropbox
+php-gd
+php-getid3
+php-google-apiclient
+php-guzzle-Guzzle
+php-intl
+php-ircmaxell-random-lib
+php-ircmaxell-security-lib
+php-ldap
+php-lessphp
+php-mbstring
+php-mysqlnd
+php-natxet-cssmin
+php-opencloud
+php-pdo
+php-pear
+php-pear-Auth-SASL
+php-pear-Cache-Lite
+php-pear-DB
+php-pear-HTTP-OAuth
+php-pear-HTTP-Request2
+php-pear-Log
+php-pear-MDB2
+php-pear-Mail
+php-pear-Net-SMTP
+php-pear-Net-Socket
+php-pear-Net-URL2
+php-pecl-jsonc
+php-pecl-oauth
+php-pecl-zip
+php-phpseclib-crypt-aes
+php-phpseclib-crypt-base
+php-phpseclib-crypt-blowfish
+php-phpseclib-crypt-des
+php-phpseclib-crypt-hash
+php-phpseclib-crypt-random
+php-phpseclib-crypt-rc4
+php-phpseclib-crypt-rijndael
+php-phpseclib-crypt-tripledes
+php-phpseclib-crypt-twofish
+php-phpseclib-math-biginteger
+php-phpseclib-net-sftp
+php-phpseclib-net-ssh2
+php-pimple-lib
+php-process
+php-sabre-dav
+php-sabre-vobject
+php-sabredav-Sabre
+php-sabredav-Sabre_VObject
+php-scssphp
+php-symfony-browser-kit
+php-symfony-class-loader
+php-symfony-common
+php-symfony-config
+php-symfony-console
+php-symfony-css-selector
+php-symfony-debug
+php-symfony-dependency-injection
+php-symfony-dom-crawler
+php-symfony-event-dispatcher
+php-symfony-expression-language
+php-symfony-filesystem
+php-symfony-finder
+php-symfony-http-foundation
+php-symfony-http-kernel
+php-symfony-process
+php-symfony-routing
+php-symfony-var-dumper
+php-symfony-yaml
+php-twig
+php-xml
+t1lib
+[root@owncloud ~]# for i in `cat /home/aludwar/phprpms`; do dnf install $i -y; done</pre>
 <p>That should take care of the prerequisites (you can compared with ownCloud’s docs, and php -m | grep ‘module’ if you like). Then I enabled and started each service:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>systemctl enable httpd
+systemctl enable mariadb
+systemctl start httpd
+systemctl start mariadb</pre>
 <p>For additional security, I’ll install SSL capability on the web server. First by installing mod_ssl, then generating a self-signed SSL certificate, and adding it to the apache config:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>dnf install mod_ssl
+cd /etc/pki/tls/certs/
+openssl req -newkey rsa:4096 -nodes -keyout owncloud.ludwar.ca.key -x509 -days 3650 -out owncloud.ludwar.ca.crt
+vi /etc/httpd/conf.d/ssl.conf
+...
+SSLCertificateFile /etc/pki/tls/certs/owncloud.ludwar.ca.crt
+...
+SSLCertificateKeyFile /etc/pki/tls/certs/owncloud.ludwar.ca.key
+
+systemctl restart httpd</pre>
 <p>Also, it’s a good idea to run the secure installation/setup of mysql(mariadb), which you can do by running this utility and following the prompts:</p>
-<!-- raw HTML omitted -->
+<pre>mysql_secure_installation</pre>
 <p>Ok! Now after a quick check of everything working, we’re ready to start installing ownCloud. To start we’ll untar the files into the default web directory, and add the owncloud config into apache:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>cp -rp owncloud-9.0.0.tar /var/www/html/
+tar -xvf owncloud-9.0.0.tar
+vi /etc/httpd/conf.d/owncloud.conf              (add in the below)
+Alias /owncloud "/var/www/html/owncloud/"
+
+&lt;Directory /var/www/html/owncloud/&gt;
+ Options +FollowSymlinks
+ AllowOverride All
+
+&lt;IfModule mod_dav.c&gt;
+ Dav off
+ &lt;/IfModule&gt;
+
+SetEnv HOME /var/www/html/owncloud
+SetEnv HTTP_HOME /var/www/html/owncloud
+
+&lt;/Directory&gt;</pre>
 <p>Then we’ll need to make some SELinux permission changes. I highly recommend you DO NOT disable SELinux. Depending on your setup, there may be <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/selinux_configuration.html">additional SELinux changes</a> you’ll need to make.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/data'
+restorecon '/var/www/html/owncloud/data'
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/config'
+restorecon '/var/www/html/owncloud/config'
+semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/owncloud/apps'
+restorecon '/var/www/html/owncloud/apps'</pre>
 <p>My data directory is on an NFS share from another computer, so I need to make an additional SELinux change:</p>
-<!-- raw HTML omitted -->
+<pre>setsebool -P httpd_use_nfs on</pre>
 <p>Now, onto the database initialization. The below install command is right out of ownCloud’s docs, make sure your default web directory is owned by the httpd daemon user, and run the install command:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre>cd /var/www/html/owncloud/
+chown -R apache:apache /var/www/html/owncloud/
+sudo -u apache php occ  maintenance:install --database "mysql" --database-name "owncloud" --database-user "root" --database-pass "password" --admin-user "admin" --admin-pass "password"
+ownCloud is not installed - only a limited number of commands are available
+ownCloud was successfully installed</pre>
 <p>Now you should be able to browse to <em>https://localhost/owncloud</em> to login! Depending on if you’re accessing the owncloud host locally or from another server, you may need to add the domain to the trusted domains list in <em>/var/www/html/owncloud/config/config.php</em>. The web GUI should alert and prompt you to do that, but if not, you can modify the file directly. Here’s my config.php file with the password data omitted:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Once in the GUI, you can enable encryption from the admin menu at the far right. Server side encryption can be enabled with a checkbox. It’s also good to enter a recovery key in the event you need to recover your encrypted data:<!-- raw HTML omitted --></p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt1.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->ownCloud encryption configuration<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>Then you need to install  the default encryption app. First at the top left, switch from files to apps, then click on not enabled, and find and enable the default encryption module. You may need to logout and back in again for the keys to initialize.<!-- raw HTML omitted --></p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->ownCloud encrypt application<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<pre>[root@owncloud conf.d]# cat /var/www/html/owncloud/config/config.php
+&lt;?php
+$CONFIG = array (
+ ...
+ 'trusted_domains' =&gt; 
+ array (
+ 0 =&gt; 'localhost',
+ 1 =&gt; '192.168.1.100',
+ 2 =&gt; 'owncloud.ludwar.ca',
+ ),
+ 'datadirectory' =&gt; '/var/www/html/owncloud/data',
+ 'overwrite.cli.url' =&gt; 'http://localhost',
+ 'dbtype' =&gt; 'mysql',
+ 'version' =&gt; '9.0.0.19',
+ 'dbname' =&gt; 'owncloud',
+ 'dbhost' =&gt; 'localhost',
+ 'dbtableprefix' =&gt; 'oc_',
+ ...);
+[root@owncloud conf.d]#</pre>
+<p>Once in the GUI, you can enable encryption from the admin menu at the far right. Server side encryption can be enabled with a checkbox. It’s also good to enter a recovery key in the event you need to recover your encrypted data:<figure id="attachment_313" aria-describedby="caption-attachment-313" style="width: 800px" class="wp-caption alignnone"></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt1.png"><img class="size-full wp-image-313" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt1.png" alt="ownCloud encryption module" width="800" height="289" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt1.png 800w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt1-300x108.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-313" class="wp-caption-text">ownCloud encryption configuration</figcaption></figure></p>
+<p>Then you need to install  the default encryption app. First at the top left, switch from files to apps, then click on not enabled, and find and enable the default encryption module. You may need to logout and back in again for the keys to initialize.<figure id="attachment_311" aria-describedby="caption-attachment-311" style="width: 800px" class="wp-caption alignnone"></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt.png"><img class="size-full wp-image-311" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt.png" alt="ownCloud encrypt application" width="800" height="429" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt.png 800w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-encrypt-300x161.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-311" class="wp-caption-text">ownCloud encrypt application</figcaption></figure></p>
 <p>Now, to add external storage from Google Drive, you’ll need to enable API access and create OAuth2 credentials in your Google account. You can do this by visiting <a href="https://console.developers.google.com/apis/credentials">https://console.developers.google.com/apis/credentials</a>, and creating a project, then creating OAuth2 credentials within that project. This will give you a ClientID and Client Secret to enter into ownCloud. ownCloud will access your Google Drive data via Google’s API. Here’s what mine looks like, and I also needed to add my domain and a redirect URI for Google to redirect the user (web browser) after authenticating:</p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console.png"><!-- raw HTML omitted --></a></p>
-<p>Google Dev Console<!-- raw HTML omitted --></p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-2.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Google Dev Console<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>In the admin section again, you can enter those Client ID and secret details, add the user you’re giving access to the storage, and click grant access:<!-- raw HTML omitted --></p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->ownCloud external storage<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>Now login as that user, and your Google Drive files will be available!<!-- raw HTML omitted --></p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage2.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->ownCloud Google Drive<!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted --><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage3.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->ownCloud Google Drive<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console.png"><img class=" wp-image-315" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-1024x226.png" alt="Google Dev Console" width="802" height="177" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-1024x226.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-300x66.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console.png 1200w" sizes="(max-width: 802px) 100vw, 802px" /></a></p>
+<p>Google Dev Console<figure id="attachment_316" aria-describedby="caption-attachment-316" style="width: 800px" class="wp-caption alignnone"></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-2.png"><img class="size-full wp-image-316" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-2.png" alt="Google Dev Console" width="800" height="529" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-2.png 800w, https://calgaryrhce.ca/wp-content/uploads/2016/03/google-dev-console-2-300x198.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></a><figcaption id="caption-attachment-316" class="wp-caption-text">Google Dev Console</figcaption></figure></p>
+<p>In the admin section again, you can enter those Client ID and secret details, add the user you’re giving access to the storage, and click grant access:<figure id="attachment_322" aria-describedby="caption-attachment-322" style="width: 806px" class="wp-caption alignnone"></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage.png"><img class=" wp-image-322" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage-1024x524.png" alt="ownCloud external storage" width="806" height="412" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage-1024x524.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage-300x154.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage.png 1200w" sizes="(max-width: 806px) 100vw, 806px" /></a><figcaption id="caption-attachment-322" class="wp-caption-text">ownCloud external storage</figcaption></figure></p>
+<p>Now login as that user, and your Google Drive files will be available!<figure id="attachment_323" aria-describedby="caption-attachment-323" style="width: 720px" class="wp-caption alignnone"></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage2.png"><img class="size-large wp-image-323" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage2-1024x274.png" alt="ownCloud Google Drive" width="720" height="193" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage2-1024x274.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage2-300x80.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage2.png 1200w" sizes="(max-width: 720px) 100vw, 720px" /></a><figcaption id="caption-attachment-323" class="wp-caption-text">ownCloud Google Drive</figcaption></figure> <figure id="attachment_324" aria-describedby="caption-attachment-324" style="width: 720px" class="wp-caption alignnone"><a href="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage3.png"><img class="size-large wp-image-324" src="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage3-1024x287.png" alt="ownCloud Google Drive" width="720" height="202" srcset="https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage3-1024x287.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage3-300x84.png 300w, https://calgaryrhce.ca/wp-content/uploads/2016/03/owncloud-extstorage3.png 1200w" sizes="(max-width: 720px) 100vw, 720px" /></a><figcaption id="caption-attachment-324" class="wp-caption-text">ownCloud Google Drive</figcaption></figure></p>
 <p>This ended up being relatively long, so I’ll cover further work in an additional post. 🙂</p>
 
 </div>

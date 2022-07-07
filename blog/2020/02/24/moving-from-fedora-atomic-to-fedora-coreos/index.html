@@ -167,7 +167,7 @@
   <h1>Moving from Fedora Atomic to Fedora CoreOS</h1>
 
   <div class="post-date">
-    <time datetime="2020-02-24T23:52:59Z">Feb 24, 2020</time> · 2 min read
+    <time datetime="2020-02-24T23:52:59Z">Feb 24, 2020</time> · 3 min read
   </div>
 
   <p>Recently the merging of <a href="https://www.projectatomic.io/">Fedora Atomic</a> and <a href="https://coreos.com/os/docs/latest/">CoreOS Container Linux</a> into what is now known as <a href="https://getfedora.org/coreos/">Fedora CoreOS</a> has <a href="https://fedoramagazine.org/fedora-coreos-out-of-preview/">moved out of preview</a> and is ready for prime time use. I’ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS. Here’s how I did this.</p>
@@ -178,17 +178,87 @@
 <li>A couple of users and their passwords &amp; SSH keys</li>
 </ul>
 <p>Here is what my config file looks like. You can use the <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/fcct-config/">FCCT spec docs</a> to add in config for storage, files, disks, etc.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="">$ cat coreos.fcc
+variant: fcos
+version: 1.0.0
+storage:
+  files:
+    - path: /etc/NetworkManager/system-connections/eth0.nmconnection
+      mode: 0600
+      overwrite: true
+      contents:
+        inline: |
+          [connection]
+          type=ethernet
+          interface-name=eth0
+
+          [ipv4]
+          method=manual
+          addresses=10.0.0.20/24
+          gateway=10.0.0.1
+          dns=10.0.0.10;10.0.0.1
+          dns-search=calgaryrhce.ca
+    - path: /etc/hostname
+      mode: 0600
+      overwrite: true
+      contents:
+        inline: |
+          coreos.calgaryrhce.ca
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - "[ public SSH key hash ]"
+    - name: aludwar
+      password_hash: "[ password hash, salted ]"
+      ssh_authorized_keys:
+        - "[ public SSH key hash ]"
+      groups: [ sudo, docker ]</pre>
 <p>I don’t have the fcct tool local on my Fedora 30 workstation, so I’ll use the podman container to convert the YAML to JSON:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="">$ podman pull quay.io/coreos/fcct:release
+$ podman run -i --rm quay.io/coreos/fcct:release --pretty --strict &lt; coreos.fcc &gt; coreos.ign</pre>
 <p>Then, with virt-install, I create a new VM referencing the QCOW2 image, and provide the coreos.ign file in the qemu command line parameter:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="">$ virt-install --connect qemu:///system -n coreos.calgaryrhce.ca --memory 1024 --vcpus 1 --network default --os-variant=fedora31 --import --graphics=none \
+--disk=/home/aludwar/VMs/fedora-coreos-31-qemu.qcow2 --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=/home/aludwar/VMs/coreos.ign"</pre>
 <p>At first boot, the VM will use DHCP for its address, but will also have the ignition configuration applied to the host. Reboot the host for the config to be applied:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="">...
+
+[ 1.573639] systemd[1]: systemd v243.5-1.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-h)
+[ 1.576925] systemd[1]: Detected virtualization kvm.
+[ 1.577759] systemd[1]: Detected architecture x86-64.
+[ 1.578555] systemd[1]: Running in initial RAM disk.
+
+Welcome to Fedora CoreOS 31.20200127.3.0 dracut-049-27.git20181204.fc31.1 (Initramfs)!
+
+[ 1.581667] systemd[1]: No hostname configured.
+[ 1.582401] systemd[1]: Set hostname to &lt;localhost&gt;.
+[ 1.583229] systemd[1]: Initializing machine ID from KVM UUID.
+[ 1.650595] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+
+...
+
+[ 3.904515] systemd[1]: Successfully loaded SELinux policy in 389.023ms.
+[ 3.943381] systemd[1]: Relabelled /dev, /dev/shm, /run, /sys/fs/cgroup in 23.715ms.
+[ 3.946100] systemd[1]: systemd v243.5-1.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-h)
+[ 3.949186] systemd[1]: Detected virtualization kvm.
+[ 3.949897] systemd[1]: Detected architecture x86-64.
+
+Welcome to Fedora CoreOS 31.20200127.3.0!
+
+[ 3.952521] systemd[1]: Set hostname to &lt;coreos.calgaryrhce.ca&gt;.
+[ 4.148591] systemd[1]: initrd-switch-root.service: Succeeded.
+
+
+[ OK ] Reached target Multi-User System.
+Starting Update UTMP about System Runlevel Changes...
+[ OK ] Started Update UTMP about System Runlevel Changes.
+[ OK ] Started RPM-OSTree System Management Daemon.
+
+Fedora CoreOS 31.20200127.3.0
+Kernel 5.4.13-201.fc31.x86_64 on an x86_64 (ttyS0)
+
+eth0: 10.0.0.20 fe80::605c:b122:5e5d:6a5f
+coreos login:</pre>
 <p>And we’re done! We now have a container specific OS that will get updates beyond Fedora Atomic &amp; CoreOS Container Linux EOL.</p>
 <p> </p>
 <p> </p>

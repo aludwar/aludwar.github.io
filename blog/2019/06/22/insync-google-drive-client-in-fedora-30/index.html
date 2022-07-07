@@ -174,16 +174,35 @@
 <p>After upgrading all my systems to Fedora 30 (1 workstation, 2 laptops), I had trouble starting the InSync client on my Fedora 30 workstation. I reached out to InSync support, and in a few days had a resource reply with a fix. I wanted to document the fix here in case this helps others with a similar issue.</p>
 <p>For starters, the InSync team is still populating a Fedora 30 repo but you can use the Fedora 29 repo to install/update the client. Just change the $releasever variable in the repo file to be hardcoded for the 29 release.</p>
 <p>So this:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:sh decode:true ">$ cat /etc/yum.repos.d/insync.repo
+[insync]
+name=insync repo
+baseurl=http://yum.insynchq.com/fedora/$releasever/
+gpgcheck=1
+gpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
+enabled=1
+metadata_expire=120m
+</pre>
 <p>Becomes this:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:sh decode:true ">$ cat /etc/yum.repos.d/insync.repo 
+[insync]
+name=insync repo
+baseurl=http://yum.insynchq.com/fedora/29/
+gpgcheck=1
+gpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
+enabled=1
+metadata_expire=120m
+</pre>
 <p>My error was the InSync client was not starting up at all, it was core dumping even with a –no-daemon flag passed. I’m running my desktop session in Wayland as opposed to X11:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="lang:sh decode:true">$ insync start --no-daemon
+qt.qpa.plugin: Could not load the Qt platform plugin "wayland" in "" even though it was found.
+libGL error: MESA-LOADER: failed to open radeonsi (search paths /usr/lib64/dri)
+libGL error: failed to load driver: radeonsi
+libGL error: MESA-LOADER: failed to open swrast (search paths /usr/lib64/dri)
+libGL error: failed to load driver: swrast
+Segmentation fault (core dumped)</pre>
 <p>So the fix for me, as suggested by InSync support was to remove this library file. I renamed it to accomplish the same thing:</p>
-<!-- raw HTML omitted -->
+<pre class="lang:sh decode:true ">$ sudo mv /usr/lib/insync/libstdc++.so.6 /usr/lib/insync/libstdc++.so.6.rm.bak</pre>
 <p> </p>
 <p>After that, the InSync client was able to start.</p>
 <p> </p>

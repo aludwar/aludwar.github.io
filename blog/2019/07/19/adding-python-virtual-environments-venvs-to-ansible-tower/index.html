@@ -175,35 +175,37 @@
 <ol>
 <li>Create a new directory for the new python virtual environments:</li>
 </ol>
-<!-- raw HTML omitted -->
+<pre class=""># mkdir /opt/venvs</pre>
 <ol start="2">
 <li>Give the directory appropriate write and execution permissions:</li>
 </ol>
-<!-- raw HTML omitted -->
+<pre class=""># chmod 0755 /opt/venvs</pre>
 <ol start="3">
 <li>Modify Tower’s configuration for which directory’s to look for custom venvs using CUSTOM_VENV_PATHS variable. Be sure to change your username/password/Tower URL in the below command:</li>
 </ol>
-<!-- raw HTML omitted -->
+<pre class=""># curl -X PATCH 'https://username:password@tower.example.com/api/v2/settings/system/' -d '{"CUSTOM_VENV_PATHS": ["/opt/venvs/"]}'  -H 'Content-Type:application/json'</pre>
 <ol start="4">
 <li>Now that the dir and Tower are setup, create a virtual environment in that location. I’m going to install ‘ansible[azure]’ for use in interacting with Azure Resource Manager modules:</li>
 </ol>
-<!-- raw HTML omitted -->
+<pre class=""># virtualenv /opt/venvz/azure</pre>
 <ol start="5">
 <li>Install some base dependences in the new venv needed to properly run playbooks:</li>
 </ol>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class=""># cd /opt/venvs/azure
+# source bin/activate
+# pip install psutil
+# pip install ansible[azure]</pre>
 <p>You may need to install gcc on the Tower host depending on the modules you’re bringing in.</p>
 <p>Now that we’ve got Ansible’s Azure modules on the Tower server, we need to decide at what level will we apply the custom virtual environment. I’m going to apply the least needed privilege philosophy and change an existing Job Template I have to use this python virtual environment. We could change it at an organization level, or a project level, but I don’t want to interfere with anything at that broad a level. So I’m going to update a Job Template.</p>
 <p>I’m running Ansible Tower 3.5, but noticed I didn’t get an option to specify the Ansible Environment field in my Job Template edit GUI. I may chase this down later, but for now I’ll just use the Tower API to update it. I take the job template URL, which has the job template ID:</p>
 <ol start="6">
 <li>Update Job Template 14:</li>
 </ol>
-<!-- raw HTML omitted -->
+<pre class=""># curl -k -X PATCH 'https://username:password@tower.example.com/api/v2/job_templates/14/'  -d '{"CUSTOM_VIRTUALENV": ["/opt/venvs/azure"]}'  -H 'Content-Type:application/json'</pre>
 <p>Now this field has shown up for me in the Tower GUI, and we can see that instead of the default /var/lib/awx/venv/ansible environment, it’s using the new /opt/venvs/azure environment:</p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png"><img class="alignnone size-full wp-image-796" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png" alt="Tower Ansible Environment" width="900" height="398" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e-300x133.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e-768x340.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
 <p>And as the job runs, we’ll now see the environment it run under in the job activity details:</p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png"><img class="alignnone size-full wp-image-797" src="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png" alt="Ansible Tower Environment Job Run" width="900" height="460" srcset="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e.png 900w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e-300x153.png 300w, https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower112e-768x393.png 768w" sizes="(max-width: 900px) 100vw, 900px" /></a></p>
 <p>Now we can see that the Azure Resource Manager modules I’m using in this playbook are working. The playbook can now successfully create resources in Azure.</p>
 <p>Additional References:</p>
 <p><a href="https://calgaryrhce.ca/wp-content/uploads/2019/07/Tower111e.png">1</a> <a href="https://access.redhat.com/solutions/3062141">https://access.redhat.com/solutions/3062141</a></p>

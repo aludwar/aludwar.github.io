@@ -466,7 +466,7 @@ There’s a lot of cloud provisioning tools out there; if you’re like me and p
       <pubDate>Tue, 30 Dec 2014 16:35:37 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/home/</guid>
-      <description></description>
+      <description>   </description>
     </item>
     
     <item>
@@ -539,7 +539,8 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
       <pubDate>Sun, 04 May 2014 22:35:11 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/about/</guid>
-      <description>I’m a linux and open source enthusiast located in Calgary, Alberta, Canada. Over the course of my career, I’ve seen a variety of opinions on open source software &amp;amp; technologies. From enthusiasts to critics, to just the business focused, to the uninformed and the misinformed. No matter your stance or line of business, it’s always worth knowing what is out there and what is available to you.</description>
+      <description>Andrew Ludwar &amp;#8211; Solutions Architect at Red Hat  
+I’m a linux and open source enthusiast located in Calgary, Alberta, Canada. Over the course of my career, I’ve seen a variety of opinions on open source software &amp;amp; technologies. From enthusiasts to critics, to just the business focused, to the uninformed and the misinformed.</description>
     </item>
     
     <item>
@@ -548,7 +549,7 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
       <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/blog/2014/05/04/become-a-contributor/</guid>
-      <description></description>
+      <description>As my career has evolved over the past 10 years, I’ve come to appreciate the value of collaborative ideas and solutions more than ever. From my early days in software development and QA, into helpdesk, administrator, and architect roles, I’ve seen the best results in every field when we’ve worked closely together to solve problems.</description>
     </item>
     
   </channel>

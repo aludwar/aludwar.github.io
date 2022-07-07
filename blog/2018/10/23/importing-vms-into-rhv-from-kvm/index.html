@@ -171,14 +171,15 @@
   </div>
 
   <p>To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you’re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class=""># sudo -u vdsm ssh-keygen
+# sudo -u vdsm ssh-copy-id root@kvmhost.example.com
+# sudo -u vdsm ssh root@kvmhost.example.com</pre>
 <p>From the RHV virtual machines section, click “Import”. You’ll get to enter the URI connection string and authentication details, clicking “Load” will make the connection and populate the VMs listing:</p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import.png"><img class="alignnone size-large wp-image-690" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import-1024x431.png" alt="RHV Import" width="1024" height="431" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import-1024x431.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import-300x126.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import-768x324.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import.png 1906w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
 <p>You can chose to directly import the VM, or clone it into the environment:</p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2.png"><img class="alignnone size-large wp-image-689" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2-1024x412.png" alt="RHV Import" width="1024" height="412" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2-1024x412.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2-300x121.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2-768x309.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-import2.png 1910w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
 <p>After a little wait for the copying and conversion, we’re done!</p>
-<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved.png"><!-- raw HTML omitted --></a></p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved.png"><img class="alignnone size-large wp-image-692" src="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved-1024x481.png" alt="RHV Moved" width="1024" height="481" srcset="https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved-1024x481.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved-300x141.png 300w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved-768x361.png 768w, https://calgaryrhce.ca/wp-content/uploads/2018/10/RHV-moved.png 1908w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
 
 </div>
 

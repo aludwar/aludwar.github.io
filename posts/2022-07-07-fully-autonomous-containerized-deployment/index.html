@@ -167,7 +167,7 @@
   <h1>Fully Autonomous Containerized Deployment</h1>
 
   <div class="post-date">
-    <time datetime="2022-07-07T11:36:33-0600">Jul 7, 2022</time> · 3 min read
+    <time datetime="2022-07-07T11:36:33-0600">Jul 7, 2022</time> · 4 min read
   </div>
 
   <p>After a pandemic hiatus, I&rsquo;m back with some renewed vigor to blogging. Over the past two years, I&rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news. Either way, there should be some new and interesting content coming out of the backlog.</p>
@@ -202,13 +202,81 @@
 <li>Set the hostname, static IP networking with DNS details</li>
 <li>Configured two files that <a href="https://docs.fedoraproject.org/en-US/fedora-coreos/auto-updates/">setup automatic updating</a> of the OS</li>
 </ul>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="">
+variant: fcos
+version: 1.4.0
+storage:
+  disks:
+    - device: /dev/vda
+      wipe_table: false
+      partitions:
+        - label: root
+          number: 4
+          size_mib: 10240
+          resize: true
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: coreos.ludwar.ca
+    - path: /etc/NetworkManager/system-connections/enp1s0.nmconnection
+      mode: 0600
+      overwrite: true
+      contents:
+        inline: |
+          [connection]
+          type=ethernet
+          interface-name=enp1s0
+
+          [ipv4]
+          method=manual
+          addresses=192.168.100.50/24
+          gateway=192.168.100.1
+          dns=192.168.100.1
+          dns-search=ludwar.ca
+    - path: /etc/zincati/config.d/51-rollout-wariness.toml
+      contents: 
+        inline: |
+          [identity]
+          rollout_wariness = 0.5
+    - path: /etc/zincati/config.d/55-updates-strategy.toml
+      contents: 
+        inline: |
+          [updates]
+          strategy = "periodic"
+          [[updates.periodic.window]]
+          days = [ "Sat", "Sun" ]
+          start_time = "22:30"
+          length_minutes = 60
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - "[ public SSH key hash ]"
+    - name: aludwar
+      password_hash: "[ password hash, salted"
+      ssh_authorized_keys:
+        - "[ publis SSH key hash ]"
+      groups: [ sudo, docker ]
+</pre>
 <p>From there, we convert the Butane file into an Ignition file (you may need to install the Butane utility on your machine, or just pull the container for it):</p>
-<!-- raw HTML omitted -->
+<pre class="">$ butane --pretty --strict fedora.coreos.bu > fedora.coreos.ign</pre>
 <p>And lastly, a virt-install script that will pass the Ignition configuration, Fedora CoreOS qcow2 image, and other parameters to the VM for creation:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre class="">$ cat create_coreos_vm.sh
+IGNITION_CONFIG="/home/aludwar/fedora.coreos.ign"
+IMAGE="/home/aludwar/fedora-coreos-36.20220618.3.1-qemu.x86_64.qcow2"
+VM_NAME="coreos.ludwar.ca"
+VCPUS="2"
+RAM_MB="2048"
+STREAM="stable"
+DISK_GB="15"
+
+virt-install --connect="qemu:///system" --name="${VM_NAME}" --vcpus="${VCPUS}" --memory="${RAM_MB}" \
+        --os-variant="fedora-coreos-$STREAM" --import --graphics=none \
+        --disk="size=${DISK_GB},backing_store=${IMAGE}" \
+        --network network=default \
+        --qemu-commandline="-fw_cfg name=opt/com.coreos/config,file=${IGNITION_CONFIG}"
+</pre>
 
 </div>
 
