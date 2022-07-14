@@ -6,7 +6,17 @@
     <description>Recent content on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Jul 2022 11:36:33 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Jul 2022 05:36:31 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fully Autonomous Containerized Deployment, part 2</title>
+      <link>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</link>
+      <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
+      
+      <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</guid>
+      <description>Building upon the previous article, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:
+ Deployed a self-managing container OS based on Fedora CoreOS  Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates    I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
+    </item>
+    
     <item>
       <title>Fully Autonomous Containerized Deployment, part 1</title>
       <link>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/</link>
