@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.93.3" />
+
+  <title>Ansible Automation Platform Notifications for package reporting &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Ansible Automation Platform Notifications for package reporting"/>
+  <meta property="og:description" content="I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-10-26T13:18:38-0600"/>
+  <meta property="article:modified_time" content="2022-10-26T13:18:38-0600"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Ansible Automation Platform Notifications for package reporting",
+    "headline": "Ansible Automation Platform Notifications for package reporting",
+    "datePublished": "2022-10-26T13:18:38-0600",
+    "dateModified": "2022-10-26T13:18:38-0600",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca/"
+    },
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/",
+    "description": "I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I\u0026rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Ansible Automation Platform Notifications for package reporting</h1>
+
+  <div class="post-date">
+    <time datetime="2022-10-26T13:18:38-0600">Oct 26, 2022</time> · 3 min read
+  </div>
+
+  <p>I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn&rsquo;t have much blog coverage on it. So here we go!</p>
+<p>There&rsquo;s a couple of ways to get this info depending on the granularity you&rsquo;re after and the problem you&rsquo;re trying to solve for. I&rsquo;ll order them in what I see folks most commonly do, that&rsquo;s also the least amount of re-work.</p>
+<ol>
+<li>Red Hat Satellite has errata reporting already built-in that will go to this granularity level of reporting packages applied, their status, on a patch cycle. It&rsquo;s located in:</li>
+</ol>
+<ul>
+<li>Monitor &ndash;&gt; Report Templates &ndash;&gt; Host - Applied Errata</li>
+</ul>
+<p>Usually folks will clone the default report template provided here, narrow down the fields/columns that they&rsquo;re after, apply a host filter, etc.  Satellite can mail this to you on a schedule.</p>
+<p>If you want to auto-generate the report every time a patch cycle is run, the best way to automate that is with the <a href="https://access.redhat.com/documentation/en-us/red_hat_satellite/6.11/html-single/managing_hosts/index#Generating_Host_Monitoring_Reports_managing-hosts">Hammer CLI</a>.</p>
+<ol start="2">
+<li>Ansible Tower / Ansible Controller has email notifications built-in and with its idempotency already tracked in job output, you don&rsquo;t have to do any extra playbook work necessarily, unless you want some extra metadata in your email body that Ansible Tower/Controller doesn&rsquo;t provide. Sending all this info can get pretty verbose with a lot of hosts &amp; package updates, I find folks don&rsquo;t find email as the best way to consume this information, Tower/Controller GUI Job status output is more nicely formatted and already built for you, but to each their own.</li>
+</ol>
+<p>Customers typically tend to default to &ldquo;only show me actionable stuff&rdquo; in any Ansible notification, so if for example a patch run that didn&rsquo;t update something is shown instead of all the things that did update successfully.</p>
+<p>Here&rsquo;s a <a href="https://github.com/aludwar/ansible/blob/master/dnf-report.yml">playbook example</a> that I mocked up and used below. The job output:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2022/10/note1.png"><img class="size-large wp-image-822" src="https://calgaryrhce.ca/wp-content/uploads/2022/10/note1.png" alt="" width="1024" height="570" srcset="https://calgaryrhce.ca/wp-content/uploads/2022/10/note1.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note1.png 300w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note1.png 768w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note1.png 1361w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>(You can see that this could get pretty verbose if we wanted to report across multiple hosts)</p>
+<p>Next, I created an email Notification that&rsquo;s associated with that Job, the notification parameters can be customized, but as I mentioned above the data available here is more specific to the job than the content results from tasks &amp; hosts.</p>
+<p>Ref: <a href="https://docs.ansible.com/automation-controller/latest/html/userguide/notifications.html">Ansible Notifications Docs</a></p>
+<p>Ref: <a href="https://docs.ansible.com/automation-controller/latest/html/userguide/notification_parameters_supported.html#ir-notifications-reference">Ansible Notifications Supported Parameters</a></p>
+<p>In the success message body below, I configure job metadata that summarizes all hosts and their results, then one that just shows job status counts, ie what changed/failed and folks can click on the job ID link to Tower GUI to dig deeper. I&rsquo;m using my ISP SMTP relay here:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png"><img class="size-large wp-image-822" src="https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png" alt="" width="1024" height="570" srcset="https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 300w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 768w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 1361w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>And here&rsquo;s what it looks like once it shows up:</p>
+<p><a href="https://calgaryrhce.ca/wp-content/uploads/2022/10/note3.png"><img class="size-large wp-image-822" src="https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png" alt="" width="1024" height="570" srcset="https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 1024w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 300w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 768w, https://calgaryrhce.ca/wp-content/uploads/2022/10/note2.png 1361w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>If you prefer different information here, using the community.general.mail module in a task can get you there.</p>
+<ol start="3">
+<li>Red Hat Insights already does all of the above here for you, auditing all systems, tracking errata, identifying vulnerabilities/CVEs that are present on systems, drift analysis, notifications &amp; webhooks, and high-level executive reporting. There&rsquo;s also an API to do some of these pieces in a programmatic fashion.</li>
+</ol>
+<p>For as granular as an email/report as we&rsquo;re after here though, it might be quicker to use one of the above options. Insights does not yet have customized reporting like Satellite does, it&rsquo;s still in RFE status. And it&rsquo;s a little more dashboard-y/GUI driven answering more high-level questions than what we&rsquo;re afterhere.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2022 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
