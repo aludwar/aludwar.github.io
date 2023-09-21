@@ -23,7 +23,7 @@
       
       <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</guid>
       <description>Building upon the previous article, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:
- Deployed a self-managing container OS based on Fedora CoreOS  Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates    I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
+Deployed a self-managing container OS based on Fedora CoreOS Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
     </item>
     
     <item>
@@ -124,7 +124,8 @@ Second, you’ll need to enable the Pass-Through Host CPU option in the virtual 
       
       <guid>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</guid>
       <description>I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
- https://access.redhat.com/solutions/509373  Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:</description>
+https://access.redhat.com/solutions/509373 Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
+# yum install glibc.</description>
     </item>
     
     <item>
@@ -485,7 +486,7 @@ There’s a lot of cloud provisioning tools out there; if you’re like me and p
       <pubDate>Tue, 30 Dec 2014 16:35:37 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/home/</guid>
-      <description>   </description>
+      <description> </description>
     </item>
     
     <item>
@@ -558,8 +559,7 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
       <pubDate>Sun, 04 May 2014 22:35:11 +0000</pubDate>
       
       <guid>https://calgaryrhce.ca/about/</guid>
-      <description>Andrew Ludwar &amp;#8211; Senior Solutions Architect at Red Hat  
-I’m a linux and open source enthusiast located in Calgary, Alberta, Canada. Over the course of my career, I’ve seen a variety of opinions on open source software &amp;amp; technologies. From enthusiasts to critics, to just the business focused, to the uninformed and the misinformed.</description>
+      <description>Andrew Ludwar &amp;#8211; Senior Solutions Architect at Red Hat I’m a linux and open source enthusiast located in Calgary, Alberta, Canada. Over the course of my career, I’ve seen a variety of opinions on open source software &amp;amp; technologies. From enthusiasts to critics, to just the business focused, to the uninformed and the misinformed.</description>
     </item>
     
     <item>

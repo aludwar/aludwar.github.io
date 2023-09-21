@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.93.3" />
+  <meta name="generator" content="Hugo 0.101.0" />
 
   <title>Calgary RHCE</title>
 
@@ -169,7 +169,7 @@
 
       
         Building upon the previous article, let&rsquo;s review what we&rsquo;ve built so far:
- Deployed a self-managing container OS based on Fedora CoreOS  Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates    I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.
+Deployed a self-managing container OS based on Fedora CoreOS Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.
       
 
       
@@ -369,7 +369,8 @@ Second, you’ll need to enable the Pass-Through Host CPU option in the virtual 
 
       
         I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
- https://access.redhat.com/solutions/509373  Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
+https://access.redhat.com/solutions/509373 Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
+# yum install glibc.
       
 
       
@@ -1231,7 +1232,7 @@ Typical studies show that we spend 70-80% of our day communicating with others, 
 
   <footer>
   <div class="copyright">
-    &copy;  2022 · 
+    &copy;  2023 · 
   </div>
 </footer>
 

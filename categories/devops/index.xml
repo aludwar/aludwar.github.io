@@ -23,7 +23,7 @@
       
       <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</guid>
       <description>Building upon the previous article, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:
- Deployed a self-managing container OS based on Fedora CoreOS  Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates    I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
+Deployed a self-managing container OS based on Fedora CoreOS Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
     </item>
     
     <item>

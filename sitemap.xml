@@ -185,10 +185,10 @@
     <loc>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</loc>
     <lastmod>2019-01-02T17:14:25+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/tags/security/</loc>
+    <loc>https://calgaryrhce.ca/categories/security/</loc>
     <lastmod>2019-01-02T17:14:25+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/categories/security/</loc>
+    <loc>https://calgaryrhce.ca/tags/security/</loc>
     <lastmod>2019-01-02T17:14:25+00:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/blog/2018/11/06/google-location-history-heatmap/</loc>
@@ -227,10 +227,10 @@
     <loc>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</loc>
     <lastmod>2017-10-14T17:33:55+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/categories/openstack/</loc>
+    <loc>https://calgaryrhce.ca/tags/openstack/</loc>
     <lastmod>2017-10-14T17:33:55+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/tags/openstack/</loc>
+    <loc>https://calgaryrhce.ca/categories/openstack/</loc>
     <lastmod>2017-10-14T17:33:55+00:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</loc>
