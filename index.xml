@@ -6,7 +6,16 @@
     <description>Recent content on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Sep 2023 09:20:21 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Sep 2023 15:28:04 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Automation Metrics</title>
+      <link>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</link>
+      <pubDate>Thu, 21 Sep 2023 15:28:04 -0600</pubDate>
+      
+      <guid>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</guid>
+      <description>Another topic that&amp;rsquo;s come up a lot over the past year or more has been around metrics. I&amp;rsquo;m sure by now you&amp;rsquo;ve heard of the Four Keys developed by Google. Now, these metrics get a lot of coverage in the spotlight, but should everyone use them? Not everyone is at Google&amp;rsquo;s level.</description>
+    </item>
+    
     <item>
       <title>Graduating with Automation Practices</title>
       <link>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</link>

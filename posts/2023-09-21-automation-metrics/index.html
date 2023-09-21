@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <title>Introduction to Automation Metrics &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Introduction to Automation Metrics"/>
+  <meta property="og:description" content="Another topic that&rsquo;s come up a lot over the past year or more has been around metrics. I&rsquo;m sure by now you&rsquo;ve heard of the Four Keys developed by Google. Now, these metrics get a lot of coverage in the spotlight, but should everyone use them? Not everyone is at Google&rsquo;s level."/>
+  <meta property="og:url" content="https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2023-09-21T15:28:04-0600"/>
+  <meta property="article:modified_time" content="2023-09-21T15:28:04-0600"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Introduction to Automation Metrics",
+    "headline": "Introduction to Automation Metrics",
+    "datePublished": "2023-09-21T15:28:04-0600",
+    "dateModified": "2023-09-21T15:28:04-0600",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca/"
+    },
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/",
+    "description": "Another topic that\u0026rsquo;s come up a lot over the past year or more has been around metrics. I\u0026rsquo;m sure by now you\u0026rsquo;ve heard of the Four Keys developed by Google. Now, these metrics get a lot of coverage in the spotlight, but should everyone use them? Not everyone is at Google\u0026rsquo;s level."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Introduction to Automation Metrics</h1>
+
+  <div class="post-date">
+    <time datetime="2023-09-21T15:28:04-0600">Sep 21, 2023</time> · 4 min read
+  </div>
+
+  <p>Another topic that&rsquo;s come up a lot over the past year or more has been around metrics. I&rsquo;m sure by now you&rsquo;ve heard of the <a href="https://github.com/dora-team/fourkeys">Four Keys</a> developed by Google. Now, these metrics get a <strong>lot</strong> of coverage in the spotlight, but should everyone use them? Not everyone is at Google&rsquo;s level. More commonly it sparks a conversation around:</p>
+<ul>
+<li><em>&ldquo;what is a good metric?&rdquo;</em></li>
+<li><em>&ldquo;what makes up a good metric?&rdquo;</em></li>
+<li><em>&ldquo;what should I focus on when deciding on my own automation/devops metric(s)?&rdquo;</em></li>
+<li><em>&ldquo;what are the best practices for metrics?&rdquo;</em></li>
+</ul>
+<p>Now, there&rsquo;s already lots of coverage around this topic so I&rsquo;m not going to reinvent the wheel. Rather the points I&rsquo;ll suggest for those starting an automation/devops journey are:</p>
+<ul>
+<li>Don&rsquo;t spend a massive amount of time trying to come up with the perfect metric</li>
+<li>Your metrics are going to evolve as you evolve, so it&rsquo;s more important to start somewhere than it is to start perfect</li>
+<li>Begin using a metric that relates to your individual organizations strategic goals</li>
+</ul>
+<p>Your metric(s) should be representative of tracking a value item or showcasing an outcome that&rsquo;s meaningful to you, your team, and your organization. Common metric categories are often related to:</p>
+<ul>
+<li>Adoption:
+<ul>
+<li>Metrics related to progress: precentage of devices under management, number of use-cases delivered, percentage of common processes that have had automation aligned to it</li>
+</ul>
+</li>
+<li>Evangelism:
+<ul>
+<li>Metrics related to onboarding: number of users/teams brought into the practice, workshops/training sessions completed, percentage of internal courses completed</li>
+</ul>
+</li>
+<li>Outcomes:
+<ul>
+<li>Metrics related to deliverables: number of self-service IT requests completed, percentage of new projects leveraging the new methods, contrasting time savings comparing old methods to new and number of times initiated</li>
+</ul>
+</li>
+<li>Value:
+<ul>
+<li>Metrics related to monetary impact: FTE hours saved, ratio of sysadmins to infrastructure size, response times to incidents (MTTR)</li>
+</ul>
+</li>
+</ul>
+<p>All of these are off the top of my head without searching while I write this. I&rsquo;m sure in a room full of brainstorming people there would be a number much greater. The important piece is to pick a few that in aggregate will help tell the story that you want to tell. Also important is not using metrics as a crutch as the only way value is being understood and measured. These metrics are complimentary to your story, not the whole story. And the story is likely to evolve, and mature, and change. This is a sign of healthy, iterative improvement.</p>
+<p>With respect to Ansible, I wanted to show an example of gathering a first metric, absent of a formal observability tool. Where the best place is to get your metrics from is another conversation altogether, but suffice to say there&rsquo;s likely going to be options and overlap and that&rsquo;s okay as well.</p>
+<p>I&rsquo;ll start with the first one mentioned, the percentage of devices under management. As one begins an automation practice, there&rsquo;s often an initial onboarding phase where we&rsquo;re connecting to all devices in our infrastructure, sorting through access patterns, networking, authentication, etc. which can take some time to sort though. Especially if other groups have responsibility over other devices and may need convincing to allow them to be onboarded.</p>
+<p>In this example, I show a basic method of performing a connectivity and authentication test against three kinds of devices:</p>
+<ol>
+<li>Linux Servers</li>
+<li>Secure Servers</li>
+<li>Windows Servers</li>
+</ol>
+<p>The reason for separating these out this way is you may have different authentication methods to them, or different infrastructure environments that they live in. You also may have thousands of them and want to structure or throttle the connection and reporting on them in different ways. Here&rsquo;s what I did:</p>
+<ul>
+<li>Leveraged the basic ping module for each device type:
+<ul>
+<li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html">ansible.builtin.ping</a> and <a href="https://docs.ansible.com/ansible/latest/collections/ansible/windows/win_ping_module.html">ansible.windows.win_ping</a></li>
+<li>this module performs this basic connectivity and authentication test out of the box, keeping my playbook complexity very low</li>
+</ul>
+</li>
+<li>Leveraged two <a href="https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html">Ansible magic variables</a>:
+<ul>
+<li>ansible_play_hosts: Lists the hosts in the current play run, excluding failed/unreachable hosts. So basically a measure of successful hosts in a play</li>
+<li>ansible_play_hosts_all: Lists all of the hosts targeted in the play</li>
+<li>These two special variables made it easy to discover and store in a fact, and perform basic math on to get a % of successfully reachable hosts</li>
+</ul>
+</li>
+<li>Leveraged a jinja2 template to write a connecvity report file</li>
+<li>Leveraged the <a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/blockinfile_module.html">ansible.builtin.blockinfile</a> module to append to the report file</li>
+</ul>
+<p>Each device type got it&rsquo;s own playbook and jinja template, and I write the file to an NFS server, here&rsquo;s how the resulting report looks:</p>
+<pre><code>Hosts Under Management Metric(s):
+
+Reachable Linux Hosts: 7 / 9  (77.78%)
+
+Reachable Secure Hosts: 2 / 2  (100.0%)
+
+Reachable Windows Hosts: 2 / 2  (100.0%)
+</code></pre>
+<p>Now this is pretty basic, but again it&rsquo;s an example of how to quickly populate a kind of metric that can help you reinforce the value of an automation practice. This result could easily be expanded to publishing the results into a webservice, time series database, or a README file in a git repo potentially accompanied by an auto-updating badge.</p>
+<p>Here&rsquo;s my github repo with all the code examples:</p>
+<p><a href="https://github.com/aludwar/ansible/tree/master/metrics">https://github.com/aludwar/ansible/tree/master/metrics</a></p>
+<p>Happy automating!</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2023 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
