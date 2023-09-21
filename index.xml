@@ -6,7 +6,16 @@
     <description>Recent content on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Oct 2022 13:18:38 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Sep 2023 09:20:21 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graduating with Automation Practices</title>
+      <link>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</link>
+      <pubDate>Thu, 21 Sep 2023 09:20:21 -0600</pubDate>
+      
+      <guid>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</guid>
+      <description>Lately I&amp;rsquo;ve been engaged in a lot of automation discussions. Particularly around governance, standards, scale, workflows, best practices, and the list goes on. My impression is that folks are looking at establishing some of the common foundations to an automation practice and are getting farther down their DevOps &amp;amp; Automation journeys.</description>
+    </item>
+    
     <item>
       <title>Ansible Automation Platform Notifications for package reporting</title>
       <link>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</link>
