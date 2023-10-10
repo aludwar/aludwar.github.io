@@ -6,7 +6,16 @@
     <description>Recent content in devops on Calgary RHCE</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Sep 2023 15:28:04 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 11:18:06 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Automation Controller API with OAUTH</title>
+      <link>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</link>
+      <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
+      
+      <guid>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</guid>
+      <description>I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&amp;rsquo;t immediately suggest the answer. So it&amp;rsquo;s time for a Solution Architect to step in! These are the common questions we&amp;rsquo;ll answer in this post:</description>
+    </item>
+    
     <item>
       <title>Introduction to Automation Metrics</title>
       <link>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</link>

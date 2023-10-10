@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  <title>Using Automation Controller API with OAUTH &middot; Calgary RHCE</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+
+  
+  <meta property="og:site_name" content="Calgary RHCE"/>
+  <meta property="og:title" content="Using Automation Controller API with OAUTH"/>
+  <meta property="og:description" content="I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&rsquo;t immediately suggest the answer. So it&rsquo;s time for a Solution Architect to step in! These are the common questions we&rsquo;ll answer in this post:"/>
+  <meta property="og:url" content="https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2023-10-10T11:18:06-0600"/>
+  <meta property="article:modified_time" content="2023-10-10T11:18:06-0600"/>
+  <meta property="article:author" content="Andrew Ludwar">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Calgary RHCE",
+    "url" : "https://calgaryrhce.ca/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "description": "A linux and open source technology blog."
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Using Automation Controller API with OAUTH",
+    "headline": "Using Automation Controller API with OAUTH",
+    "datePublished": "2023-10-10T11:18:06-0600",
+    "dateModified": "2023-10-10T11:18:06-0600",
+    "author": {
+      "@type": "Person",
+      "name": "Andrew Ludwar",
+      "url": "https://calgaryrhce.ca/"
+    },
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/",
+    "description": "I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn\u0026rsquo;t immediately suggest the answer. So it\u0026rsquo;s time for a Solution Architect to step in! These are the common questions we\u0026rsquo;ll answer in this post:"
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://calgaryrhce.ca/css/hyde.css">
+
+  
+<style type="text/css">
+  .sidebar {
+    background-color: #990000;
+  }
+
+  .read-more-link a {
+    border-color: #990000;
+  }
+
+  footer a,
+  .content a,
+  .related-posts li a:hover {
+    color: #990000;
+  }
+</style>
+
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Calgary RHCE</h1>
+
+      
+      <p class="lead">A linux and open source technology blog.</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://calgaryrhce.ca/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://ca.linkedin.com/in/andrewludwar" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/aludwar" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrewludwar" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Using Automation Controller API with OAUTH</h1>
+
+  <div class="post-date">
+    <time datetime="2023-10-10T11:18:06-0600">Oct 10, 2023</time> · 5 min read
+  </div>
+
+  <p>I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&rsquo;t immediately suggest the answer. So it&rsquo;s time for a Solution Architect to step in! These are the common questions we&rsquo;ll answer in this post:</p>
+<ol>
+<li>What&rsquo;s the proper use of OAUTH tokens when querying the Controller API?</li>
+<li>How do I use/reference this credential in a playbook?</li>
+</ol>
+<p>Notably, there&rsquo;s some confusion when searching docs.ansible.com or access.redhat.com and the OAUTH content that comes up. Let me divide this up into something that (hopefully) adds more clarity. Generally speaking, there&rsquo;s three areas of Automation Controller where you might see the term OAUTH or token:</p>
+<ol>
+<li><a href="https://docs.ansible.com/automation-controller/latest/html/administration/oauth2_token_auth.html">Administration Guide - Token-Based Authentication</a></li>
+<li><a href="https://docs.ansible.com/automation-controller/latest/html/administration/social_auth.html#google-oauth2-settings">Administration Guide - Social Authentication</a></li>
+<li><a href="https://docs.ansible.com/automation-controller/4.0.0/html/userguide/credentials.html">User Guide - Credentials</a></li>
+</ol>
+<p>Suffice to say, we&rsquo;re going to be talking about #1 here and this is also the answer to question #1. You&rsquo;ve probably seen the Credentials link in Controller GUI (#3) and saw references to Personal Access Tokens or API tokens but these are scoped to how Controller accesses other platforms or vice/versa. Or similarly in enterprise authentication when integrating with other identity providers (#2). What we&rsquo;re going to go through here is the access token that can be assigned to a user of the Ansible Automation Platform, similar to their username &amp; password. Then, using this token to authenticate to the Controller API effectively replacing logging into either the GUI or API via username &amp; password. We&rsquo;re essentially going to switch from manually going through the GUI or API, to doing this programatically&hellip; and we&rsquo;ll show the example in an Ansible playbook.</p>
+<p>Secondly, to answer question #2, if you go to your Controller API and look at /api/v2/credential_types, you will see that there is an injector field for each type. This injector field is the name of the variable you&rsquo;d use to reference it in a playbook. Notably, of the several built-in credentials, only 3 have injectors: Insights, Red Hat Virtualization, and Red Hat Ansible Automation Platform. This means that the other credentials are usable in controller but not accessible by the playbook. Now, you could go create a custom credential type for use in playbooks, but for now let&rsquo;s just use the defaults to see if this addresses your need before going down the path of creating custom credentials.</p>
+<p>The specific section of the doc you should be referencing is <a href="https://docs.ansible.com/automation-controller/latest/html/administration/oauth2_token_auth.html#using-oauth-2-token-system-for-personal-access-tokens-pat">this</a>. While there are tokens that can be assigned &amp; scoped to an application, the tokens we&rsquo;re concerned about are ones that are assigned &amp; scoped to a user and can be thought of as the same concept of a username &amp; password. These tokens are specific to the user, will have a similar lifetime as the user&rsquo;s password, and will need to be treated and stored similarly as a user&rsquo;s password.</p>
+<p>First, I&rsquo;ve got a user created in AAP Controller named &ldquo;aludwar&rdquo;. This is in the Access &ndash;&gt; Users section of the Controller GUI:</p>
+<p>![Ansible Controller Users][https://calgaryrhce.ca/wp-content/uploads/2023/10/aap-users.png]</p>
+<p>In order to <a href="https://docs.ansible.com/automation-controller/4.4/html/userguide/applications_auth.html#ug-tokens-auth-create">create a token for a user</a>, you need to be logged into AAP as that user. This is where the &ldquo;Token&rdquo; tab will show up allowing you to create a new token assigned to this user:</p>
+<p>![aludwar Token][https://calgaryrhce.ca/wp-content/uploads/2023/10/aludwar-token.png]</p>
+<p>When creating the token, you&rsquo;ll be prompted with the token value. Similar to a password, you&rsquo;ll need to save this somewhere safe like a password vault or encrypted Ansible vault file. This is what will take place of the username &amp; password authentication when we later send a query to the Controller API.</p>
+<p>![User Token Value][https://calgaryrhce.ca/wp-content/uploads/2023/10/user-token.png]</p>
+<p>Now that we have a personal access token created for the user &ldquo;aludwar&rdquo;, we&rsquo;ll write a playbook using the ansible.builtin.uri module that uses the token to query the Controller API and capture the response. Also, since we&rsquo;re handling secrets data, you should consider using the <code>no_log: true</code> attribute on the tasks or play that query the API. This can be used to keep verbose output but hide sensitive information from others, and keep the credential(s) from being leaked. Here&rsquo;s two examples below. Note, I&rsquo;m doing something incredibly insecure here in hardcoding an example token value. As mentioned previously, the right way to store this would be in an encrypted vault file or a password/secrets manager, but for the sake of simplicity I&rsquo;m showing a very rudimentary and insecure way of writing the playbook:</p>
+<pre><code>---
+- name: Query the Automation Controller API w/ User Token
+  hosts: localhost
+  gather_facts: false
+  vars:
+    token: 5qDAV0DUgwe1IcHAuUeEZnzET0Gves
+
+  tasks:
+    - name: Query Automation Controller API - Example 1
+      ansible.builtin.uri:
+        url: https://aap.ludwar.ca/api/v2/projects
+        method: GET
+        return_content: true
+        headers:
+          Content-Type: application/json
+          Authorization: Bearer 5qDAV0DUgwe1IcHAuUeEZnzET0Gves
+        validate_certs: false
+      no_log: true
+      register: projects
+
+    - name: Display query results
+      ansible.builtin.debug:
+        var: projects
+
+    - name: Query Automation Controller API - Example 2
+      ansible.builtin.uri:
+        url: https://aap.ludwar.ca/api/v2/projects
+        body_format: json
+        method: GET
+        return_content: true
+        headers:
+          Authorization: &quot;Bearer {{ token }}&quot;
+        validate_certs: false
+      no_log: true
+      register: projects2
+
+    - name: Display query results
+      ansible.builtin.debug:
+        var: projects2
+</code></pre>
+<p>And from here, the playbook output will look like this:</p>
+<pre><code>TASK [Query Automation Controller API - Example 2] ***************************************************************************************************************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [Display query results] *************************************************************************************************************************************************************************************************************************************************************************************************
+ok: [localhost] =&gt; {
+    &quot;projects2&quot;: {
+        &quot;access_control_expose_headers&quot;: &quot;X-API-Request-Id&quot;,
+        &quot;allow&quot;: &quot;GET, POST, HEAD, OPTIONS&quot;,
+        &quot;cache_control&quot;: &quot;no-cache, no-store, must-revalidate&quot;,
+        &quot;changed&quot;: false,
+        &quot;connection&quot;: &quot;close&quot;,
+        &quot;content&quot;: &quot;{\&quot;count\&quot;:3,\&quot;next\&quot;:null,\&quot;previous\&quot;:null,\&quot;results\&quot;:[{\&quot;id\&quot;:9,\&quot;type\&quot;:\&quot;project\&quot;,\&quot;url\&quot;:\&quot;/api/v2/projects/9/\&quot;,\&quot;related\&quot;:{\&quot;created_by\&quot;:\&quot;/api/v2/users/1/\&quot;,\&quot;modified_by\&quot;:\&quot;/api/v2/users/1/\&quot;,\&quot;credential\&quot;:\&quot;/api/v2/credentials/9/\&quot;,\&quot;last_job\&quot;:\&quot;/api/v2/project_updates/248/\&quot;,\&quot;teams\&quot;:\&quot;/api/v2/projects/9/teams/\&quot;,\&quot;playbooks\&quot;:\&quot;/api/v2/projects/9/playbooks/\&quot;,\&quot;inventory_files\&quot;:\&quot;/api/v2/projects/9/inventories/\&quot;,\&quot;update\&quot;:\&quot;/api/v2/projects/9/update/\&quot;,\&quot;project_updates\&quot;:\&quot;/api/v2/projects/9/project_updates/\&quot;,\&quot;scm_inventory_sources\&quot;:\&quot;/api/v2/projects/9/scm_inventory_sources/\&quot;,\&quot;schedules\&quot;:\&quot;/api/v2/projects/9/schedules
+    ...
+       },
+        &quot;msg&quot;: &quot;OK (8953 bytes)&quot;,
+        &quot;pragma&quot;: &quot;no-cache&quot;,
+        &quot;redirected&quot;: true,
+        &quot;server&quot;: &quot;nginx&quot;,
+        &quot;status&quot;: 200,
+        &quot;strict_transport_security&quot;: &quot;max-age=63072000&quot;,
+        &quot;url&quot;: &quot;https://aap.ludwar.ca/api/v2/projects/&quot;,
+        &quot;vary&quot;: &quot;Accept, Accept-Language, Origin, Cookie&quot;,
+        &quot;x_api_node&quot;: &quot;aap.ludwar.ca&quot;,
+        &quot;x_api_product_name&quot;: &quot;Red Hat Ansible Automation Platform&quot;,
+        &quot;x_api_product_version&quot;: &quot;4.4.0&quot;,
+        &quot;x_api_request_id&quot;: &quot;490ed5122b71462eaeacca2e780a6f97&quot;,
+        &quot;x_api_time&quot;: &quot;0.141s&quot;,
+        &quot;x_api_total_time&quot;: &quot;0.298s&quot;,
+        &quot;x_content_type_options&quot;: &quot;nosniff&quot;,
+        &quot;x_frame_options&quot;: &quot;DENY&quot;
+    }
+}
+
+PLAY RECAP *******************************************************************************************************************************************************************************************************************************************************************************************************************
+localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+</code></pre>
+<p><strong>Additional Resources:</strong></p>
+<p><a href="https://opensource.com/article/21/9/ansible-rest-apis">https://opensource.com/article/21/9/ansible-rest-apis</a></p>
+<p><a href="https://access.redhat.com/solutions/3125551">https://access.redhat.com/solutions/3125551</a></p>
+<p><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/uri_module.html">https://docs.ansible.com/ansible/latest/collections/ansible/builtin/uri_module.html</a></p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy;  2023 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
