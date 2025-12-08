@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>release upgrades on Calgary RHCE</title>
+    <title>Release Upgrades on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/release-upgrades/</link>
-    <description>Recent content in release upgrades on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Release Upgrades on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Oct 2016 20:19:11 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/release-upgrades/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Oct 2016 20:19:11 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/release-upgrades/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Upgrading from Fedora 23 to Fedora 24</title>
       <link>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
-      <description>For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+      <description>&lt;p&gt;For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production. Running CentOS previously worked well, but upgrading was always a bit of a risk for me. I made sure my backup-fu was strong, and spent a fair bit of time reinstalling display drivers and dealing with other upgrade nuances. During the dawn of the &lt;a href=&#34;https://fedoraproject.org/wiki/Fedora.next&#34;&gt;Fedora.next&lt;/a&gt; initiative, I made the switch to Fedora. I was thrilled, and honestly a little surprised, to be getting similar stability and predictability while being able to take advantage of the new developments in a more modern kernel. Way to go Fedora team! I’ve had a flawless experience with this distro, I can say I’m quite happy with it.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

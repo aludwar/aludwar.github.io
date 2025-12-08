@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.101.0" />
+  <meta name="generator" content="Hugo 0.147.8">
 
   <title>Ansible Automation Platform Notifications for package reporting &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Ansible Automation Platform Notifications for package reporting"/>
-  <meta property="og:description" content="I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc."/>
+  <meta property="og:description" content="I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn&rsquo;t have much blog coverage on it. So here we go!"/>
   <meta property="og:url" content="https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2022-10-26T13:18:38-0600"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/",
-    "description": "I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I\u0026rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc."
+    "description": "\u003cp\u003eI was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I\u0026rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn\u0026rsquo;t have much blog coverage on it. So here we go!\u003c\/p\u003e"
   }
   </script>
   
@@ -202,13 +202,11 @@
 <p>For as granular as an email/report as we&rsquo;re after here though, it might be quicker to use one of the above options. Insights does not yet have customized reporting like Satellite does, it&rsquo;s still in RFE status. And it&rsquo;s a little more dashboard-y/GUI driven answering more high-level questions than what we&rsquo;re afterhere.</p>
 
 </div>
-
-
   </main>
 
   <footer>
   <div class="copyright">
-    &copy;  2023 · 
+    &copy;  2025 · 
   </div>
 </footer>
 

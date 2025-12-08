@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.101.0" />
+  <meta name="generator" content="Hugo 0.147.8">
 
   <title>32-bit application support in RHEL7 &middot; Calgary RHCE</title>
 
@@ -19,8 +19,13 @@
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="32-bit application support in RHEL7"/>
   <meta property="og:description" content="I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
-https://access.redhat.com/solutions/509373 Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
-# yum install glibc."/>
+
+https://access.redhat.com/solutions/509373
+
+Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
+# yum install glibc.i686
+
+ "/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2019-05-07T16:17:02Z"/>
@@ -57,7 +62,7 @@ https://access.redhat.com/solutions/509373 Additionally, with the multilib toolc
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/",
-    "description": "I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:\nhttps:\/\/access.redhat.com\/solutions\/509373 Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:\n# yum install glibc."
+    "description": "\u003cp\u003eI recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:\u003c\/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\u0022https:\/\/access.redhat.com\/solutions\/509373\u0022\u003ehttps:\/\/access.redhat.com\/solutions\/509373\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003eAdditionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:\u003c\/p\u003e\n\u003cpre\u003e\u003ccode\u003e# yum install glibc.i686\n\u003c\/code\u003e\u003c\/pre\u003e\n\u003cp\u003e \u003c\/p\u003e"
   }
   </script>
   
@@ -186,13 +191,11 @@ https://access.redhat.com/solutions/509373 Additionally, with the multilib toolc
 </ul>
 
 </div>
-
-
   </main>
 
   <footer>
   <div class="copyright">
-    &copy;  2023 · 
+    &copy;  2025 · 
   </div>
 </footer>
 

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.101.0" />
+  <meta name="generator" content="Hugo 0.147.8">
 
   <title>Troubleshooting performance of VDO and NFS &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Troubleshooting performance of VDO and NFS"/>
-  <meta property="og:description" content="In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 ."/>
+  <meta property="og:description" content="In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 . I was also curious to see what the extra overhead was like (if any), and understand the general performance characteristics of VDO."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2018-10-20T17:43:07Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/",
-    "description": "In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 ."
+    "description": "\u003cp\u003eIn setting up a local virtualization environment a little while back, I thought I’d try the \u003ca href=\u0022https:\/\/www.redhat.com\/en\/blog\/look-vdo-new-linux-compression-layer\u0022\u003erecently GA’d VDO capabilities\u003c\/a\u003e in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 . I was also curious to see what the extra overhead was like (if any), and understand the general performance characteristics of VDO.\u003c\/p\u003e"
   }
   </script>
   
@@ -268,13 +268,11 @@ RPCNFSDCOUNT=20</pre>
 <p>While I learned a bit about VDO and NFS performance tuning, it looks like I might need to spend that 10G networking budget on new SSDs instead. There’s diminishing life left in these.</p>
 
 </div>
-
-
   </main>
 
   <footer>
   <div class="copyright">
-    &copy;  2023 · 
+    &copy;  2025 · 
   </div>
 </footer>
 

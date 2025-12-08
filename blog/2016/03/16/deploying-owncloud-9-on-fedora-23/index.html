@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.101.0" />
+  <meta name="generator" content="Hugo 0.147.8">
 
   <title>Deploying ownCloud 9 on Fedora 23 &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Deploying ownCloud 9 on Fedora 23"/>
-  <meta property="og:description" content="I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try."/>
+  <meta property="og:description" content="I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try. Digging further into its features I see that ownCloud can federate many external cloud storage solutions (Dropbox, GoogleDrive, etc.) – cool! Another useful feature is that ownCloud can enable encryption on any personal data in addition to the encryption methods used by Dropbox and Google. This will provide an additional layer of encryption in case that Dropbox or Google’s data is compromised and decrypted, my data will still be protected by my own encryption keys. That adds a nice layer of safety for my personal data, so lets do a deployment and connect ownCloud to GoogleDrive to start."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2016-03-16T23:14:21Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/",
-    "description": "I’ve been playing around with server\/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try."
+    "description": "\u003cp\u003eI’ve been playing around with server\/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try. Digging further into its features I see that ownCloud can federate many external cloud storage solutions (Dropbox, GoogleDrive, etc.) – cool! Another useful feature is that ownCloud can enable encryption on any personal data in addition to the encryption methods used by Dropbox and Google. This will provide an additional layer of encryption in case that Dropbox or Google’s data is compromised and decrypted, my data will still be protected by my own encryption keys. That adds a nice layer of safety for my personal data, so lets do a deployment and connect ownCloud to GoogleDrive to start.\u003c\/p\u003e"
   }
   </script>
   
@@ -352,13 +352,11 @@ $CONFIG = array (
 <p>This ended up being relatively long, so I’ll cover further work in an additional post. 🙂</p>
 
 </div>
-
-
   </main>
 
   <footer>
   <div class="copyright">
-    &copy;  2023 · 
+    &copy;  2025 · 
   </div>
 </footer>
 

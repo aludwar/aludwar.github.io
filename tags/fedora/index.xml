@@ -1,47 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fedora on Calgary RHCE</title>
+    <title>Fedora on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/fedora/</link>
-    <description>Recent content in fedora on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Fedora on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2019 16:09:45 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Jun 2019 16:09:45 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>InSync Google Drive client in Fedora 30</title>
       <link>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</guid>
-      <description>After dropbox ended its support for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems.</description>
+      <description>&lt;p&gt;After dropbox &lt;a href=&#34;https://linux.slashdot.org/story/18/08/10/2120248/dropbox-is-dropping-support-for-all-linux-file-systems-except-unencrypted-ext4&#34;&gt;ended its support&lt;/a&gt; for linux clients, I went looking for a different cloud storage solution to sync data between my linux systems. I ended up purchasing 100GB with Google Drive (now Google One) and also purchasing a linux client that would connect to Google Drive and sync data between the cloud and my linux systems. I ended up with &lt;a href=&#34;https://www.insynchq.com/&#34;&gt;InSync&lt;/a&gt;, and am really enjoying this new setup.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Another flawless Fedora upgrade experience</title>
       <link>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</link>
       <pubDate>Tue, 22 Nov 2016 22:04:10 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/11/22/another-flawless-fedora-upgrade-experience/</guid>
-      <description>Today is Fedora 25 official release day. There are a few notable new additions for this release, I’m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless upgrade experience. Job well done friends! My upgrade time was less than 30 minutes.</description>
+      <description>&lt;p&gt;Today is &lt;a href=&#34;https://fedoramagazine.org/fedora-25-released/&#34;&gt;Fedora 25 official release&lt;/a&gt; day. There are a few &lt;a href=&#34;https://fedoramagazine.org/whats-new-fedora-25-workstation/&#34;&gt;notable new additions for this release&lt;/a&gt;, I’m looking forward to trying out Wayland the most. I just wanted to pay a quick kudos to the Fedora team for another flawless &lt;a href=&#34;https://fedoramagazine.org/upgrading-fedora-24-fedora-25/&#34;&gt;upgrade&lt;/a&gt; experience. Job well done friends! My upgrade time was less than 30 minutes. As I play with the new features in the next coming days, I’ll throw some more content up here for review.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Upgrading from Fedora 23 to Fedora 24</title>
       <link>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
-      <description>For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+      <description>&lt;p&gt;For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production. Running CentOS previously worked well, but upgrading was always a bit of a risk for me. I made sure my backup-fu was strong, and spent a fair bit of time reinstalling display drivers and dealing with other upgrade nuances. During the dawn of the &lt;a href=&#34;https://fedoraproject.org/wiki/Fedora.next&#34;&gt;Fedora.next&lt;/a&gt; initiative, I made the switch to Fedora. I was thrilled, and honestly a little surprised, to be getting similar stability and predictability while being able to take advantage of the new developments in a more modern kernel. Way to go Fedora team! I’ve had a flawless experience with this distro, I can say I’m quite happy with it.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Monitor uptime with SmokePing</title>
       <link>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
       <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
-      <description>If you’re a linux enthusiast and you don’t currently read the LinuxJournal, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.</description>
+      <description>&lt;p&gt;If you’re a linux enthusiast and you don’t currently read the &lt;a href=&#34;http://www.linuxjournal.com/&#34;&gt;LinuxJournal&lt;/a&gt;, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They &lt;a href=&#34;http://www.linuxjournal.com/content/linux-journal-goes-100-digital&#34;&gt;publish digitally&lt;/a&gt; now over a &lt;a href=&#34;http://www.linuxjournal.com/digital-faq&#34;&gt;variety of formats&lt;/a&gt;, which makes reading very convenient on any device you may have.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

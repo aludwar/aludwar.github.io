@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>gluster on Calgary RHCE</title>
+    <title>Gluster on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/gluster/</link>
-    <description>Recent content in gluster on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Gluster on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Aug 2014 05:42:26 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/gluster/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Aug 2014 05:42:26 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/gluster/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reliable, resilient storage with GlusterFS</title>
       <link>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
-      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.</description>
+      <description>&lt;p&gt;A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres.  Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.  Typically we would purchase a SAN technology for this, but recently having some discussions on cost and business agility, we decided against that and opted to try a popular open source alternative that’s been gaining both momentum and adoption at the enterprise level.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

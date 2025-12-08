@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.101.0" />
+  <meta name="generator" content="Hugo 0.147.8">
 
   <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud &middot; Calgary RHCE</title>
 
@@ -18,7 +18,7 @@
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Automating Server Provisioning; the Transition to Private Hybrid Cloud"/>
-  <meta property="og:description" content="In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc."/>
+  <meta property="og:description" content="In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.). These systems or processes usually had been in place for more than a few years, and would be considered the “Traditional IT” method of provisioning servers."/>
   <meta property="og:url" content="https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2015-07-05T23:29:50Z"/>
@@ -55,7 +55,7 @@
     },
     "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "url": "https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/",
-    "description": "In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart\/jumpstart method, pre-provisioned storage\/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc."
+    "description": "\u003cp\u003eIn every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart\/jumpstart method, pre-provisioned storage\/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.). These systems or processes usually had been in place for more than a few years, and would be considered the “Traditional IT” method of provisioning servers.\u003c\/p\u003e"
   }
   </script>
   
@@ -181,13 +181,11 @@
 <p>We realised the traditional IT provisioning method was going to be around for quite some time for legacy systems. We also realised that we did have some workloads that would suit an IaaS method, and that we still had developers going to Amazon for bleeding edge development we couldn’t bring in house just yet. This left us with three different methods of server provisioning, so we decided upon Red Hat’s cloud management tool to orchestrate each provisioning workflow. This will allow us to perform consistent policy and process enforcement, as well as automate similar tasks, across all provisioning workflows. While we’re still working on integrating several of the automation components of each workflow, we soon will have sufficient ways to automate server provisioning for use-cases that need quick responses, while still satisfying the traditional IT legacy use-cases that our business will be running for quite some time. This will leave us in a private hybrid cloud state, with the agility to scale up or down any provisioning workflow we need as our business needs evolve.</p>
 
 </div>
-
-
   </main>
 
   <footer>
   <div class="copyright">
-    &copy;  2023 · 
+    &copy;  2025 · 
   </div>
 </footer>
 

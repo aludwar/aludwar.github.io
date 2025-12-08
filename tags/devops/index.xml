@@ -1,174 +1,138 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>devops on Calgary RHCE</title>
+    <title>Devops on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/devops/</link>
-    <description>Recent content in devops on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Devops on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 22:20:23 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jul 2019 22:20:23 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
-      <description>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself.</description>
+      <description>&lt;p&gt;As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself. What if we need to extract these from the eyes of others, or make them easily reused across the organization? Can I use Ansible Tower to manage and abstract custom credentials like it does for machine, github, or cloud account types? The answer is yes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>&lt;p&gt;As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level. Let me show you how this works.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Connecting Ansible Tower to Team Foundation Server</title>
       <link>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
       <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
-      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:</description>
+      <description>&lt;p&gt;Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible Workshop Materials</title>
       <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
       <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
-      <description>Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab.</description>
+      <description>&lt;p&gt;Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab. Teach a concept, do a lab. So attendees get to do immediate application of the knowledge they just gained, and they walk away with real skills they could use in their day-to-day work right away. Attendence and feedback for this event were excellent:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Azure VM with Ansible</title>
       <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
-      <description>With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.
-There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+      <description>&lt;p&gt;With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.&lt;/p&gt;&#xA;&lt;p&gt;There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense. I already know Ansible, why not leverage it to create my infrastructure as well as manage it post-creation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PCI-DSS Compliance with Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
-      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing ansible roles for security and compliance. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
+      <description>&lt;p&gt;Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing &lt;a href=&#34;https://galaxy.ansible.com/Ansible-Security-Compliance&#34;&gt;ansible roles for security and compliance&lt;/a&gt;. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting the most performance out of Openstack, and NFV</title>
       <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
-      <description>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “boring“.</description>
+      <description>&lt;p&gt;By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “&lt;a href=&#34;https://major.io/2017/02/24/openstack-isnt-dead-its-boring-thats-a-good-thing/&#34; target=&#34;_blank&#34;&gt;boring&lt;/a&gt;“. &lt;strong&gt;Don’t be fooled, all of these are good things.&lt;/strong&gt; They’re a product of fast-paced innovation seeing a settling of opinions and decision making. OpenStack has reached a maturity point that Linux also hit earlier on in its journey. As linux was (and still is) an incredibly capable and cost-effective option for an OS, OpenStack is also an incredibly capable and cost-effective option for private or public cloud. But now what? What’s next? The answer is deeper and more efficient capability, addressing more edge use-cases, and general polish and integration of all the development that’s happened to date. The low-hanging-fruit development is over, we’re deeper into the less exciting and less headline grabbing work; maximizing the assets as much as we can.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Calgary OpenStack and other Meetup.com groups</title>
       <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
-      <description>I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+      <description>&lt;p&gt;I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, &lt;a href=&#34;http://bit.ly/2n3UUpg&#34;&gt;see here&lt;/a&gt;. The group tries to keep it as vendor neutral as possible which is nice. There were a lot of questions and feedback, this is probably a topic worth going into in a little more detail, or perhaps doing some hackfest demo’ing!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Deploying an OpenStack cluster in a virtual lab environment</title>
       <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
       <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
-      <description>Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I’ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.</description>
+      <description>&lt;p&gt;Previously, I went through a couple OpenStack topics on &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/&#34;&gt;installers&lt;/a&gt;, and &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/&#34;&gt;deploying an undercloud&lt;/a&gt; as part of a virtual OpenStack deployment. Today I’ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well. There isn’t a ton of change in the deployment methods from Liberty to Mitaka, the templates here will apply to either.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible at the Calgary RHUG</title>
       <link>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
-      <description>Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today – we filled the room! Greg gave the group a high-level overview of Ansible’s feature set, along with what the open source community has been seeing for use-cases, and adoption.</description>
+      <description>&lt;p&gt;Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today – we filled the room! Greg gave the group a high-level overview of Ansible’s feature set, along with what the open source community has been seeing for use-cases, and adoption. Ansible usage has skyrocketed recently, and in one of the research polls Greg showed us, Ansible ranked second only to Kubernetes for anticipated container orchestration software usage in the next year. That just goes to show Ansible’s flexibility and interoperability, as container orchestration wasn’t its original design focus. That’s an interesting part about open source software – you never know what direction your user base is going to take the project. Innovation happens in leaps and bounds, with diverse perspectives doing the steering.&lt;figure id=&#34;attachment_452&#34; aria-describedby=&#34;caption-attachment-452&#34; style=&#34;width: 795px&#34; class=&#34;wp-caption alignnone&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing OpenStack – setting up a virtual lab environment</title>
       <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
       <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
-      <description>When talking TripleO, there’s two concepts introduced called the “undercloud”, and the “overcloud”. These are essentially the labels for each OpenStack environment when referring to “OpenStack on OpenStack” (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we’re after.</description>
+      <description>&lt;p&gt;When talking &lt;a href=&#34;http://tripleo.org/&#34;&gt;TripleO&lt;/a&gt;, there’s two concepts introduced called the “undercloud”, and the “overcloud”. These are essentially the labels for each OpenStack environment when referring to “OpenStack on OpenStack” (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we’re after. Confused yet? 🙂 &lt;span class=&#34;author-wrap&#34;&gt;&lt;span class=&#34;byline&#34;&gt;&lt;span class=&#34;author vcard&#34;&gt;Marcos Garcia &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;does a good job of illustrating this in a &lt;a href=&#34;http://redhatstackblog.redhat.com/2016/07/27/tripleo-director-components-in-detail/&#34;&gt;blog post&lt;/a&gt;:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Comparing OpenStack installers</title>
       <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
       <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
-      <description>Building on a previous post, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations.</description>
+      <description>&lt;p&gt;Building on a &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/&#34;&gt;previous post&lt;/a&gt;, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations. Here they are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting started with OpenStack</title>
       <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
       <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
-      <description>So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34;&gt;&lt;img class=&#34;wp-image-388 alignleft&#34; src=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34; alt=&#34;OpenStack logo&#34; width=&#34;301&#34; height=&#34;301&#34; srcset=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png 432w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-150x150.png 150w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-300x300.png 300w&#34; sizes=&#34;(max-width: 301px) 100vw, 301px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be. Lots of questions arise: Where to start? What to evaluate? Who to partner with? What gaps to address? What should the architecture look like? What is the project purpose? Is my staff well prepared? What training should we get? Is our infrastructure capable of supporting it? How to handle long term tasks like patching, scaling, or lifecycle management? These aren’t easy questions to answer, and the answers usually come from experience; which you don’t have. What do you do? I’m going to start the first in a series of posts addressing some of these questions and hopefully adding some clarity to OpenStack adoption. First, some of the basics.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
       <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
-      <description>Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O’Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
+      <description>&lt;p&gt;Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an &lt;a href=&#34;http://www.amazon.ca/Ansible-Up-Running-Lorin-Hochstein/dp/1491915323&#34;&gt;O’Reilly book&lt;/a&gt; published, and went through an &lt;a href=&#34;https://www.redhat.com/en/about/press-releases/red-hat-acquire-it-automation-and-devops-leader-ansible&#34;&gt;aquisition&lt;/a&gt;. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack. I bought the O’Reilly book, and had a playbook configuring a server in about 10 minutes… udderly quick. (Sorry, bad pun if you looked at the book cover). Most of my config management experience is with CFengine and Puppet, yet I found some interesting contrasts so far:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
       <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
-      <description>In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+      <description>&lt;p&gt;In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.). These systems or processes usually had been in place for more than a few years, and would be considered the “Traditional IT” method of provisioning servers.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Managing Configuration Management w/ Puppet</title>
       <link>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
       <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
-      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
+      <description>&lt;p&gt;Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.  Folks come away with many lessons learned and new ideas that they would implement if they had the chance to do it all over again.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Reliable, resilient storage with GlusterFS</title>
       <link>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
-      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.</description>
+      <description>&lt;p&gt;A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres.  Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.  Typically we would purchase a SAN technology for this, but recently having some discussions on cost and business agility, we decided against that and opted to try a popular open source alternative that’s been gaining both momentum and adoption at the enterprise level.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Integrating kickstart w/ CentOS 6 DVD ISO installation</title>
       <link>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
       <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
-      <description>In our DevOps environment, we’ve got a lot of developers who regularly build VMs. Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.</description>
+      <description>&lt;p&gt;In our DevOps environment, we’ve got a lot of developers who regularly build VMs.  Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code.  Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.  While this self-build method gets them their VM faster, they don’t always get IT’s supported “base image”.  This can lead into integration and support problems later on when they’re trying to move this code into production that was developed against a non-standard OS.  What to do?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

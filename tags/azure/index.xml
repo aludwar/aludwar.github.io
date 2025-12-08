@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>azure on Calgary RHCE</title>
+    <title>Azure on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/azure/</link>
-    <description>Recent content in azure on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Azure on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jan 2019 21:55:28 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jan 2019 21:55:28 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create Azure VM with Ansible</title>
       <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
-      <description>With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.
-There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+      <description>&lt;p&gt;With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.&lt;/p&gt;&#xA;&lt;p&gt;There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense. I already know Ansible, why not leverage it to create my infrastructure as well as manage it post-creation.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,29 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>smoke ping on Calgary RHCE</title>
+    <title>Smoke Ping on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/smoke-ping/</link>
-    <description>Recent content in smoke ping on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Smoke Ping on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Dec 2016 22:48:42 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/smoke-ping/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Dec 2016 22:48:42 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/smoke-ping/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grafana, InfluxDB, and collectd for systems monitoring and dashboarding</title>
       <link>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</link>
       <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</guid>
-      <description>I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.</description>
+      <description>&lt;p&gt;I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great &lt;a href=&#34;http://www.vishalbiyani.com/graphing-performance-with-collectd-influxdb-grafana/&#34;&gt;blog post&lt;/a&gt; on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service. Then I installed and enabled collectd on all the systems I wanted to collect data on. I enabled some of the basic plugins like smartd, libvirt, etc. and was up and collecting data quite easily. Collectd does a great job of basic data collection services, most of the data you’d typically want is gathered without any extra configuration or fuss. The plugins available seem vast. InfluxDB on the other hand took me a little time to understand how a time series database is intended to work.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Monitor uptime with SmokePing</title>
       <link>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
       <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
-      <description>If you’re a linux enthusiast and you don’t currently read the LinuxJournal, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They publish digitally now over a variety of formats, which makes reading very convenient on any device you may have.</description>
+      <description>&lt;p&gt;If you’re a linux enthusiast and you don’t currently read the &lt;a href=&#34;http://www.linuxjournal.com/&#34;&gt;LinuxJournal&lt;/a&gt;, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They &lt;a href=&#34;http://www.linuxjournal.com/content/linux-journal-goes-100-digital&#34;&gt;publish digitally&lt;/a&gt; now over a &lt;a href=&#34;http://www.linuxjournal.com/digital-faq&#34;&gt;variety of formats&lt;/a&gt;, which makes reading very convenient on any device you may have.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

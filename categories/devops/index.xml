@@ -1,256 +1,208 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>devops on Calgary RHCE</title>
+    <title>Devops on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/categories/devops/</link>
-    <description>Recent content in devops on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Devops on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2023 11:18:06 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Dec 2025 11:18:06 -0600</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Takeover of the MiniLab!</title>
+      <link>https://calgaryrhce.ca/posts/2025-12-08-minilab/</link>
+      <pubDate>Mon, 08 Dec 2025 11:18:06 -0600</pubDate>
+      <guid>https://calgaryrhce.ca/posts/2025-12-08-minilab/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been some time since I&amp;rsquo;ve reviewed my home lab (and blog&amp;hellip;) for updates. Since this latest update ended up being a complete overhaul of my home lab, I felt it significant to blog about (and document!). Over the last couple of months I&amp;rsquo;ve bought, sold, upgraded, streamlined, pretty much everything in my lab and I&amp;rsquo;ve jumped on the minilab bandwagon as a result.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Using Automation Controller API with OAUTH</title>
       <link>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</link>
       <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</guid>
-      <description>I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&amp;rsquo;t immediately suggest the answer. So it&amp;rsquo;s time for a Solution Architect to step in! These are the common questions we&amp;rsquo;ll answer in this post:</description>
+      <description>&lt;p&gt;I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&amp;rsquo;t immediately suggest the answer. So it&amp;rsquo;s time for a Solution Architect to step in! These are the common questions we&amp;rsquo;ll answer in this post:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Introduction to Automation Metrics</title>
       <link>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</link>
       <pubDate>Thu, 21 Sep 2023 15:28:04 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</guid>
-      <description>Another topic that&amp;rsquo;s come up a lot over the past year or more has been around metrics. I&amp;rsquo;m sure by now you&amp;rsquo;ve heard of the Four Keys developed by Google. Now, these metrics get a lot of coverage in the spotlight, but should everyone use them? Not everyone is at Google&amp;rsquo;s level.</description>
+      <description>&lt;p&gt;Another topic that&amp;rsquo;s come up a lot over the past year or more has been around metrics. I&amp;rsquo;m sure by now you&amp;rsquo;ve heard of the &lt;a href=&#34;https://github.com/dora-team/fourkeys&#34;&gt;Four Keys&lt;/a&gt; developed by Google. Now, these metrics get a &lt;strong&gt;lot&lt;/strong&gt; of coverage in the spotlight, but should everyone use them? Not everyone is at Google&amp;rsquo;s level. More commonly it sparks a conversation around:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Graduating with Automation Practices</title>
       <link>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</link>
       <pubDate>Thu, 21 Sep 2023 09:20:21 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</guid>
-      <description>Lately I&amp;rsquo;ve been engaged in a lot of automation discussions. Particularly around governance, standards, scale, workflows, best practices, and the list goes on. My impression is that folks are looking at establishing some of the common foundations to an automation practice and are getting farther down their DevOps &amp;amp; Automation journeys.</description>
+      <description>&lt;p&gt;Lately I&amp;rsquo;ve been engaged in a lot of automation discussions. Particularly around governance, standards, scale, workflows, best practices, and the list goes on. My impression is that folks are looking at establishing some of the common foundations to an automation practice and are getting farther down their DevOps &amp;amp; Automation journeys. Often we don&amp;rsquo;t get deep into sorting through these details until some operational concern or pain is felt with the current approach - and that&amp;rsquo;s fine. These are called journeys for a reason and the most important piece is to remember that they&amp;rsquo;re iterative and subject to continual refinement.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible Automation Platform Notifications for package reporting</title>
       <link>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</link>
       <pubDate>Wed, 26 Oct 2022 13:18:38 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</guid>
-      <description>I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&amp;rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc.</description>
+      <description>&lt;p&gt;I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&amp;rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn&amp;rsquo;t have much blog coverage on it. So here we go!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fully Autonomous Containerized Deployment, part 2</title>
       <link>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</guid>
-      <description>Building upon the previous article, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:
-Deployed a self-managing container OS based on Fedora CoreOS Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
+      <description>&lt;p&gt;Building upon the &lt;a href=&#34;https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/&#34;&gt;previous article&lt;/a&gt;, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Deployed a self-managing container OS based on Fedora CoreOS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Configured Fedora CoreOS to automatically update itself&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Setup intelligent health checks and automated rollbacks for any failed updates&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for &lt;a href=&#34;https://www.redhat.com/en/blog/automating-rhel-edge-image-rollback-greenboot&#34;&gt;RHEL for Edge by Brian Smith&lt;/a&gt; that covers this incredibly well. I&amp;rsquo;d encourage everyone to have a read of his article as well!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fully Autonomous Containerized Deployment, part 1</title>
       <link>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/</link>
       <pubDate>Thu, 07 Jul 2022 11:36:33 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/</guid>
-      <description>After a pandemic hiatus, I&amp;rsquo;m back with some renewed vigor to blogging. Over the past two years, I&amp;rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&amp;rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news.</description>
+      <description>&lt;p&gt;After a pandemic hiatus, I&amp;rsquo;m back with some renewed vigor to blogging. Over the past two years, I&amp;rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&amp;rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news. Either way, there should be some new and interesting content coming out of the backlog.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Moving from Fedora Atomic to Fedora CoreOS</title>
       <link>https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/</link>
       <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/</guid>
-      <description>Recently the merging of Fedora Atomic and CoreOS Container Linux into what is now known as Fedora CoreOS has moved out of preview and is ready for prime time use. I’ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS.</description>
+      <description>&lt;p&gt;Recently the merging of &lt;a href=&#34;https://www.projectatomic.io/&#34;&gt;Fedora Atomic&lt;/a&gt; and &lt;a href=&#34;https://coreos.com/os/docs/latest/&#34;&gt;CoreOS Container Linux&lt;/a&gt; into what is now known as &lt;a href=&#34;https://getfedora.org/coreos/&#34;&gt;Fedora CoreOS&lt;/a&gt; has &lt;a href=&#34;https://fedoramagazine.org/fedora-coreos-out-of-preview/&#34;&gt;moved out of preview&lt;/a&gt; and is ready for prime time use. I’ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS. Here’s how I did this.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
-      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
+      <description>&lt;p&gt;Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting &lt;a href=&#34;https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/&#34;&gt;demo of Ansible Tower&lt;/a&gt; connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
-      <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
+      <description>&lt;p&gt;Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments. I think this is a really valueable tool to take advantage of, not only because it’s no-cost to customers, but its like having a sysadmin audit your environment 24×7, and building automation to fix the things it finds. It’s a really easy way to get started with Ansible automation without having to build or write the automation yourself.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
-      <description>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself.</description>
+      <description>&lt;p&gt;As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself. What if we need to extract these from the eyes of others, or make them easily reused across the organization? Can I use Ansible Tower to manage and abstract custom credentials like it does for machine, github, or cloud account types? The answer is yes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>&lt;p&gt;As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level. Let me show you how this works.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Limiting Ansible Tower inventory with Satellite host groups</title>
       <link>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
-      <description>When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.</description>
+      <description>&lt;p&gt;When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Connecting Ansible Tower to Team Foundation Server</title>
       <link>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
       <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
-      <description>Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:</description>
+      <description>&lt;p&gt;Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible Workshop Materials</title>
       <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
       <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
-      <description>Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab.</description>
+      <description>&lt;p&gt;Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab. Teach a concept, do a lab. So attendees get to do immediate application of the knowledge they just gained, and they walk away with real skills they could use in their day-to-day work right away. Attendence and feedback for this event were excellent:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Azure VM with Ansible</title>
       <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
-      <description>With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.
-There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+      <description>&lt;p&gt;With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.&lt;/p&gt;&#xA;&lt;p&gt;There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense. I already know Ansible, why not leverage it to create my infrastructure as well as manage it post-creation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PCI-DSS Compliance with Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
-      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing ansible roles for security and compliance. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
+      <description>&lt;p&gt;Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing &lt;a href=&#34;https://galaxy.ansible.com/Ansible-Security-Compliance&#34;&gt;ansible roles for security and compliance&lt;/a&gt;. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using ansible to manage RHV/oVirt</title>
       <link>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
       <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
-      <description>A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows.</description>
+      <description>&lt;p&gt;A common task most virtualization administrators will perform is &lt;a href=&#34;https://access.redhat.com/solutions/261763&#34;&gt;installing the guest agent(s) among their guest VMs&lt;/a&gt;. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass &lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html/virtual_machine_management_guide/sect-updating_virtual_machine_guest_agents_and_drivers#Updating_the_Guest_Agents_and_Drivers_on_Windows&#34;&gt;installation of guest agents in windows&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting the most performance out of Openstack, and NFV</title>
       <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
-      <description>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “boring“.</description>
+      <description>&lt;p&gt;By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “&lt;a href=&#34;https://major.io/2017/02/24/openstack-isnt-dead-its-boring-thats-a-good-thing/&#34; target=&#34;_blank&#34;&gt;boring&lt;/a&gt;“. &lt;strong&gt;Don’t be fooled, all of these are good things.&lt;/strong&gt; They’re a product of fast-paced innovation seeing a settling of opinions and decision making. OpenStack has reached a maturity point that Linux also hit earlier on in its journey. As linux was (and still is) an incredibly capable and cost-effective option for an OS, OpenStack is also an incredibly capable and cost-effective option for private or public cloud. But now what? What’s next? The answer is deeper and more efficient capability, addressing more edge use-cases, and general polish and integration of all the development that’s happened to date. The low-hanging-fruit development is over, we’re deeper into the less exciting and less headline grabbing work; maximizing the assets as much as we can.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Calgary OpenStack and other Meetup.com groups</title>
       <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
-      <description>I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+      <description>&lt;p&gt;I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, &lt;a href=&#34;http://bit.ly/2n3UUpg&#34;&gt;see here&lt;/a&gt;. The group tries to keep it as vendor neutral as possible which is nice. There were a lot of questions and feedback, this is probably a topic worth going into in a little more detail, or perhaps doing some hackfest demo’ing!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Comparing OpenStack installers</title>
       <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
       <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
-      <description>Building on a previous post, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations.</description>
+      <description>&lt;p&gt;Building on a &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/&#34;&gt;previous post&lt;/a&gt;, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations. Here they are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting started with OpenStack</title>
       <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
       <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
-      <description>So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34;&gt;&lt;img class=&#34;wp-image-388 alignleft&#34; src=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34; alt=&#34;OpenStack logo&#34; width=&#34;301&#34; height=&#34;301&#34; srcset=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png 432w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-150x150.png 150w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-300x300.png 300w&#34; sizes=&#34;(max-width: 301px) 100vw, 301px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be. Lots of questions arise: Where to start? What to evaluate? Who to partner with? What gaps to address? What should the architecture look like? What is the project purpose? Is my staff well prepared? What training should we get? Is our infrastructure capable of supporting it? How to handle long term tasks like patching, scaling, or lifecycle management? These aren’t easy questions to answer, and the answers usually come from experience; which you don’t have. What do you do? I’m going to start the first in a series of posts addressing some of these questions and hopefully adding some clarity to OpenStack adoption. First, some of the basics.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
       <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
-      <description>Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O’Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
+      <description>&lt;p&gt;Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an &lt;a href=&#34;http://www.amazon.ca/Ansible-Up-Running-Lorin-Hochstein/dp/1491915323&#34;&gt;O’Reilly book&lt;/a&gt; published, and went through an &lt;a href=&#34;https://www.redhat.com/en/about/press-releases/red-hat-acquire-it-automation-and-devops-leader-ansible&#34;&gt;aquisition&lt;/a&gt;. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack. I bought the O’Reilly book, and had a playbook configuring a server in about 10 minutes… udderly quick. (Sorry, bad pun if you looked at the book cover). Most of my config management experience is with CFengine and Puppet, yet I found some interesting contrasts so far:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
       <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
-      <description>In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+      <description>&lt;p&gt;In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.). These systems or processes usually had been in place for more than a few years, and would be considered the “Traditional IT” method of provisioning servers.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Demystifying automation and Puppet</title>
       <link>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
-      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic.</description>
+      <description>&lt;p&gt;Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic. Oh how far we’ve come! What IT person or company isn’t looking at automation these days?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Managing Configuration Management w/ Puppet</title>
       <link>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
       <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
-      <description>Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.</description>
+      <description>&lt;p&gt;Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.  Folks come away with many lessons learned and new ideas that they would implement if they had the chance to do it all over again.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Reliable, resilient storage with GlusterFS</title>
       <link>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</link>
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/08/18/reliable-resilient-storage-with-glusterfs/</guid>
-      <description>A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres. Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.</description>
+      <description>&lt;p&gt;A need came up lately for some inexpensive resilient storage that was easily expandable, and that spanned multiple datacentres.  Having recently been playing with GlusterFS and Swift in our OpenStack trial, I was quick to point out that these were strong use-cases for a GlusterFS architecture. We needed something right away, and something that also wasn’t terribly expensive, which Gluster caters to quite well.  Typically we would purchase a SAN technology for this, but recently having some discussions on cost and business agility, we decided against that and opted to try a popular open source alternative that’s been gaining both momentum and adoption at the enterprise level.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Integrating kickstart w/ CentOS 6 DVD ISO installation</title>
       <link>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
       <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
-      <description>In our DevOps environment, we’ve got a lot of developers who regularly build VMs. Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code. Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.</description>
+      <description>&lt;p&gt;In our DevOps environment, we’ve got a lot of developers who regularly build VMs.  Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code.  Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.  While this self-build method gets them their VM faster, they don’t always get IT’s supported “base image”.  This can lead into integration and support problems later on when they’re trying to move this code into production that was developed against a non-standard OS.  What to do?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,31 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://calgaryrhce.ca/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/categories/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/categories/devops/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/categories/open-source/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/tags/open-source/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/posts/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/tags/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
+    <loc>https://calgaryrhce.ca/posts/2025-12-08-minilab/</loc>
+    <lastmod>2025-12-08T11:18:06-06:00</lastmod>
+  </url><url>
     <loc>https://calgaryrhce.ca/tags/ansible/</loc>
     <lastmod>2023-10-10T11:18:06-06:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/tags/automation/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/categories/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/categories/devops/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/tags/open-source/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/categories/open-source/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/posts/</loc>
-    <lastmod>2023-10-10T11:18:06-06:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/tags/</loc>
     <lastmod>2023-10-10T11:18:06-06:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</loc>
@@ -44,10 +47,10 @@
     <loc>https://calgaryrhce.ca/categories/cloud/</loc>
     <lastmod>2022-07-14T05:36:31-06:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/tags/containers/</loc>
+    <loc>https://calgaryrhce.ca/categories/containers/</loc>
     <lastmod>2022-07-14T05:36:31-06:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/categories/containers/</loc>
+    <loc>https://calgaryrhce.ca/tags/containers/</loc>
     <lastmod>2022-07-14T05:36:31-06:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/tags/fedora-coreos/</loc>
@@ -128,10 +131,10 @@
     <loc>https://calgaryrhce.ca/blog/2019/06/22/insync-google-drive-client-in-fedora-30/</loc>
     <lastmod>2019-06-22T16:09:45+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/tags/storage/</loc>
+    <loc>https://calgaryrhce.ca/categories/storage/</loc>
     <lastmod>2019-06-22T16:09:45+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/categories/storage/</loc>
+    <loc>https://calgaryrhce.ca/tags/storage/</loc>
     <lastmod>2019-06-22T16:09:45+00:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</loc>
@@ -212,13 +215,16 @@
     <loc>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</loc>
     <lastmod>2018-10-23T16:13:33+00:00</lastmod>
   </url><url>
+    <loc>https://calgaryrhce.ca/tags/i/o/</loc>
+    <lastmod>2018-10-20T17:43:07+00:00</lastmod>
+  </url><url>
     <loc>https://calgaryrhce.ca/categories/networking/</loc>
     <lastmod>2018-10-20T17:43:07+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/tags/performance-tuning/</loc>
+    <loc>https://calgaryrhce.ca/categories/performance-tuning/</loc>
     <lastmod>2018-10-20T17:43:07+00:00</lastmod>
   </url><url>
-    <loc>https://calgaryrhce.ca/categories/performance-tuning/</loc>
+    <loc>https://calgaryrhce.ca/tags/performance-tuning/</loc>
     <lastmod>2018-10-20T17:43:07+00:00</lastmod>
   </url><url>
     <loc>https://calgaryrhce.ca/tags/software-defined-storage/</loc>
@@ -448,7 +454,5 @@
   </url><url>
     <loc>https://calgaryrhce.ca/tags/resources/</loc>
     <lastmod>2014-05-04T22:29:33+00:00</lastmod>
-  </url><url>
-    <loc>https://calgaryrhce.ca/tags/i/o/</loc>
   </url>
 </urlset>

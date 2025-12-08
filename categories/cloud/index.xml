@@ -1,211 +1,166 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cloud on Calgary RHCE</title>
+    <title>Cloud on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/categories/cloud/</link>
-    <description>Recent content in cloud on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Cloud on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jul 2022 05:36:31 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Jul 2022 05:36:31 -0600</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/categories/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fully Autonomous Containerized Deployment, part 2</title>
       <link>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/</guid>
-      <description>Building upon the previous article, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:
-Deployed a self-managing container OS based on Fedora CoreOS Configured Fedora CoreOS to automatically update itself Setup intelligent health checks and automated rollbacks for any failed updates I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well.</description>
+      <description>&lt;p&gt;Building upon the &lt;a href=&#34;https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/&#34;&gt;previous article&lt;/a&gt;, let&amp;rsquo;s review what we&amp;rsquo;ve built so far:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Deployed a self-managing container OS based on Fedora CoreOS&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Configured Fedora CoreOS to automatically update itself&lt;/li&gt;&#xA;&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Setup intelligent health checks and automated rollbacks for any failed updates&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I&amp;rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&amp;rsquo;s an excellent article written on this same topic for &lt;a href=&#34;https://www.redhat.com/en/blog/automating-rhel-edge-image-rollback-greenboot&#34;&gt;RHEL for Edge by Brian Smith&lt;/a&gt; that covers this incredibly well. I&amp;rsquo;d encourage everyone to have a read of his article as well!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Fully Autonomous Containerized Deployment, part 1</title>
       <link>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/</link>
       <pubDate>Thu, 07 Jul 2022 11:36:33 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment/</guid>
-      <description>After a pandemic hiatus, I&amp;rsquo;m back with some renewed vigor to blogging. Over the past two years, I&amp;rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&amp;rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news.</description>
+      <description>&lt;p&gt;After a pandemic hiatus, I&amp;rsquo;m back with some renewed vigor to blogging. Over the past two years, I&amp;rsquo;ve built up several topics that have been stuck in my head and need to get put down to (digital) paper. I think I&amp;rsquo;m finally at a spot with either spare sanity or needing a purposeful distraction that keeps me from doomscrolling the news. Either way, there should be some new and interesting content coming out of the backlog.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Moving from Fedora Atomic to Fedora CoreOS</title>
       <link>https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/</link>
       <pubDate>Mon, 24 Feb 2020 23:52:59 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2020/02/24/moving-from-fedora-atomic-to-fedora-coreos/</guid>
-      <description>Recently the merging of Fedora Atomic and CoreOS Container Linux into what is now known as Fedora CoreOS has moved out of preview and is ready for prime time use. I’ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS.</description>
+      <description>&lt;p&gt;Recently the merging of &lt;a href=&#34;https://www.projectatomic.io/&#34;&gt;Fedora Atomic&lt;/a&gt; and &lt;a href=&#34;https://coreos.com/os/docs/latest/&#34;&gt;CoreOS Container Linux&lt;/a&gt; into what is now known as &lt;a href=&#34;https://getfedora.org/coreos/&#34;&gt;Fedora CoreOS&lt;/a&gt; has &lt;a href=&#34;https://fedoramagazine.org/fedora-coreos-out-of-preview/&#34;&gt;moved out of preview&lt;/a&gt; and is ready for prime time use. I’ve been running a few small container apps on a Fedora Atomic 28 VM, which is now ripe to be moved into the new replacement Fedora CoreOS. Here’s how I did this.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
-      <description>Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting demo of Ansible Tower connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins.</description>
+      <description>&lt;p&gt;Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting &lt;a href=&#34;https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/&#34;&gt;demo of Ansible Tower&lt;/a&gt; connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
-      <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
+      <description>&lt;p&gt;Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments. I think this is a really valueable tool to take advantage of, not only because it’s no-cost to customers, but its like having a sysadmin audit your environment 24×7, and building automation to fix the things it finds. It’s a really easy way to get started with Ansible automation without having to build or write the automation yourself.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
-      <description>As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself.</description>
+      <description>&lt;p&gt;As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself. What if we need to extract these from the eyes of others, or make them easily reused across the organization? Can I use Ansible Tower to manage and abstract custom credentials like it does for machine, github, or cloud account types? The answer is yes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
-      <description>As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level.</description>
+      <description>&lt;p&gt;As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level. Let me show you how this works.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Limiting Ansible Tower inventory with Satellite host groups</title>
       <link>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
-      <description>When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.</description>
+      <description>&lt;p&gt;When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Cloud is Just Another Sun</title>
       <link>https://calgaryrhce.ca/blog/2019/03/21/the-cloud-is-just-another-sun/</link>
       <pubDate>Thu, 21 Mar 2019 15:46:27 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/03/21/the-cloud-is-just-another-sun/</guid>
-      <description>I’ve enjoyed Kyle Rankin’s writing for the Linux Journal for several years now. Recently, he presented a topic at FOSDEM 2019 covering the current risk of cloud provider lock in where he draws comparison to the proprietary UNIX wars of the 90s and 00s. He highlights linux and open source software’s immense success during this time, and how everyone benefit from relief of costly proprietary vendor lock-in.</description>
+      <description>&lt;p&gt;I’ve enjoyed Kyle Rankin’s writing for the Linux Journal for several years now. Recently, he presented a topic at FOSDEM 2019 covering the current risk of cloud provider lock in where he draws comparison to the proprietary UNIX wars of the 90s and 00s. He highlights linux and open source software’s immense success during this time, and how everyone benefit from relief of costly proprietary vendor lock-in. What I think is especially relevant is how this same war hasn’t went away… it’s just moved to the cloud, and while linux and FOSS “won” in the past, there’s no guarantee the new cloud lock-in threat will turn out the same way.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Azure VM with Ansible</title>
       <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
-      <description>With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.
-There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense.</description>
+      <description>&lt;p&gt;With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.&lt;/p&gt;&#xA;&lt;p&gt;There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense. I already know Ansible, why not leverage it to create my infrastructure as well as manage it post-creation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PCI-DSS Compliance with Ansible Tower</title>
       <link>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/01/02/pci-dss-compliance-with-ansible-tower/</guid>
-      <description>Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing ansible roles for security and compliance. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.</description>
+      <description>&lt;p&gt;Compliance scanning and remediation with Ansible is a common question that comes up. How does Ansible do this? What are its capabilities? Within the Ansible Galaxy community, there’s been some significant investment in developing &lt;a href=&#34;https://galaxy.ansible.com/Ansible-Security-Compliance&#34;&gt;ansible roles for security and compliance&lt;/a&gt;. I’ll show you how to download this Ansible role and make use of it within Ansible Tower.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Importing VMs into RHV from KVM</title>
       <link>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</link>
       <pubDate>Tue, 23 Oct 2018 16:13:33 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</guid>
-      <description>To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you’re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:</description>
+      <description>&lt;p&gt;To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you’re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
       <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
-      <description>In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+      <description>&lt;p&gt;In setting up a local virtualization environment a little while back, I thought I’d try the &lt;a href=&#34;https://www.redhat.com/en/blog/look-vdo-new-linux-compression-layer&#34;&gt;recently GA’d VDO capabilities&lt;/a&gt; in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 . I was also curious to see what the extra overhead was like (if any), and understand the general performance characteristics of VDO.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Migrating RHEV storage domains</title>
       <link>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</link>
       <pubDate>Fri, 19 Oct 2018 21:20:50 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
-      <description>Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy.</description>
+      <description>&lt;p&gt;Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy. I quickly built an additional NFS server, added it into RHV, and migrated the VM disks to it with just a few clicks and some waiting for the copying to be complete. &lt;a href=&#34;https://access.redhat.com/solutions/736513&#34;&gt;This article&lt;/a&gt; was basic, but helpful.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting the most performance out of Openstack, and NFV</title>
       <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
-      <description>By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “boring“.</description>
+      <description>&lt;p&gt;By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “&lt;a href=&#34;https://major.io/2017/02/24/openstack-isnt-dead-its-boring-thats-a-good-thing/&#34; target=&#34;_blank&#34;&gt;boring&lt;/a&gt;“. &lt;strong&gt;Don’t be fooled, all of these are good things.&lt;/strong&gt; They’re a product of fast-paced innovation seeing a settling of opinions and decision making. OpenStack has reached a maturity point that Linux also hit earlier on in its journey. As linux was (and still is) an incredibly capable and cost-effective option for an OS, OpenStack is also an incredibly capable and cost-effective option for private or public cloud. But now what? What’s next? The answer is deeper and more efficient capability, addressing more edge use-cases, and general polish and integration of all the development that’s happened to date. The low-hanging-fruit development is over, we’re deeper into the less exciting and less headline grabbing work; maximizing the assets as much as we can.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Calgary OpenStack and other Meetup.com groups</title>
       <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
-      <description>I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, see here. The group tries to keep it as vendor neutral as possible which is nice.</description>
+      <description>&lt;p&gt;I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, &lt;a href=&#34;http://bit.ly/2n3UUpg&#34;&gt;see here&lt;/a&gt;. The group tries to keep it as vendor neutral as possible which is nice. There were a lot of questions and feedback, this is probably a topic worth going into in a little more detail, or perhaps doing some hackfest demo’ing!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Grafana, InfluxDB, and collectd for systems monitoring and dashboarding</title>
       <link>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</link>
       <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</guid>
-      <description>I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great blog post on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service.</description>
+      <description>&lt;p&gt;I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great &lt;a href=&#34;http://www.vishalbiyani.com/graphing-performance-with-collectd-influxdb-grafana/&#34;&gt;blog post&lt;/a&gt; on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service. Then I installed and enabled collectd on all the systems I wanted to collect data on. I enabled some of the basic plugins like smartd, libvirt, etc. and was up and collecting data quite easily. Collectd does a great job of basic data collection services, most of the data you’d typically want is gathered without any extra configuration or fuss. The plugins available seem vast. InfluxDB on the other hand took me a little time to understand how a time series database is intended to work.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>OpenStack deployment troubles? Enter a couple validation tools</title>
       <link>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
       <pubDate>Fri, 28 Oct 2016 00:34:47 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
-      <description>Whether you’re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.</description>
+      <description>&lt;p&gt;Whether you’re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Deploying an OpenStack cluster in a virtual lab environment</title>
       <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
       <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
-      <description>Previously, I went through a couple OpenStack topics on installers, and deploying an undercloud as part of a virtual OpenStack deployment. Today I’ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well.</description>
+      <description>&lt;p&gt;Previously, I went through a couple OpenStack topics on &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/&#34;&gt;installers&lt;/a&gt;, and &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/&#34;&gt;deploying an undercloud&lt;/a&gt; as part of a virtual OpenStack deployment. Today I’ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well. There isn’t a ton of change in the deployment methods from Liberty to Mitaka, the templates here will apply to either.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Comparing OpenStack installers</title>
       <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
       <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
-      <description>Building on a previous post, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations.</description>
+      <description>&lt;p&gt;Building on a &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/&#34;&gt;previous post&lt;/a&gt;, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations. Here they are:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting started with OpenStack</title>
       <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
       <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
-      <description>So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34;&gt;&lt;img class=&#34;wp-image-388 alignleft&#34; src=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34; alt=&#34;OpenStack logo&#34; width=&#34;301&#34; height=&#34;301&#34; srcset=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png 432w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-150x150.png 150w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-300x300.png 300w&#34; sizes=&#34;(max-width: 301px) 100vw, 301px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be. Lots of questions arise: Where to start? What to evaluate? Who to partner with? What gaps to address? What should the architecture look like? What is the project purpose? Is my staff well prepared? What training should we get? Is our infrastructure capable of supporting it? How to handle long term tasks like patching, scaling, or lifecycle management? These aren’t easy questions to answer, and the answers usually come from experience; which you don’t have. What do you do? I’m going to start the first in a series of posts addressing some of these questions and hopefully adding some clarity to OpenStack adoption. First, some of the basics.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Deploying ownCloud 9 on Fedora 23</title>
       <link>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</link>
       <pubDate>Wed, 16 Mar 2016 23:14:21 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/03/16/deploying-owncloud-9-on-fedora-23/</guid>
-      <description>I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try.</description>
+      <description>&lt;p&gt;I’ve been playing around with server/VM provisioning lately and have come across a need to store some basic deployment files in the cloud. For me, these are things like ansible code, a home directory .tar file, among a few other personal items. With ownCloud 9 being recently released, I thought I should give it a try. Digging further into its features I see that ownCloud can federate many external cloud storage solutions (Dropbox, GoogleDrive, etc.) – cool! Another useful feature is that ownCloud can enable encryption on any personal data in addition to the encryption methods used by Dropbox and Google. This will provide an additional layer of encryption in case that Dropbox or Google’s data is compromised and decrypted, my data will still be protected by my own encryption keys. That adds a nice layer of safety for my personal data, so lets do a deployment and connect ownCloud to GoogleDrive to start.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

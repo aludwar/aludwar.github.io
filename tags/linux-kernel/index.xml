@@ -1,49 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux kernel on Calgary RHCE</title>
+    <title>Linux Kernel on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/linux-kernel/</link>
-    <description>Recent content in linux kernel on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Linux Kernel on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>32-bit application support in RHEL7</title>
       <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</guid>
-      <description>I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
-https://access.redhat.com/solutions/509373 Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
-# yum install glibc.</description>
+      <description>&lt;p&gt;I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://access.redhat.com/solutions/509373&#34;&gt;https://access.redhat.com/solutions/509373&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;# yum install glibc.i686&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt; &lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
       <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
-      <description>In setting up a local virtualization environment a little while back, I thought I’d try the recently GA’d VDO capabilities in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 .</description>
+      <description>&lt;p&gt;In setting up a local virtualization environment a little while back, I thought I’d try the &lt;a href=&#34;https://www.redhat.com/en/blog/look-vdo-new-linux-compression-layer&#34;&gt;recently GA’d VDO capabilities&lt;/a&gt; in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 . I was also curious to see what the extra overhead was like (if any), and understand the general performance characteristics of VDO.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Upgrading from Fedora 23 to Fedora 24</title>
       <link>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</link>
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/10/15/upgrading-from-fedora-23-to-fedora-24/</guid>
-      <description>For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production.</description>
+      <description>&lt;p&gt;For my main workstation, I’ve been running linux for about 8 or 9 years now and specifically Fedora for the past 3. I’ve tried to keep my workstation kernel around about the same version as the systems I maintain in the datacentre, typically just slightly ahead. This helps relate my workstation experience to the datacentre, and also keeps me slightly ahead of the learning curve getting experience with the new tools that come in, or figuring out workarounds prior to needing to do them in production. Running CentOS previously worked well, but upgrading was always a bit of a risk for me. I made sure my backup-fu was strong, and spent a fair bit of time reinstalling display drivers and dealing with other upgrade nuances. During the dawn of the &lt;a href=&#34;https://fedoraproject.org/wiki/Fedora.next&#34;&gt;Fedora.next&lt;/a&gt; initiative, I made the switch to Fedora. I was thrilled, and honestly a little surprised, to be getting similar stability and predictability while being able to take advantage of the new developments in a more modern kernel. Way to go Fedora team! I’ve had a flawless experience with this distro, I can say I’m quite happy with it.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>How open source strikes the right balance between social and market norms</title>
       <link>https://calgaryrhce.ca/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</link>
       <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</guid>
-      <description>Lately, I’ve been knocking off a few books that have accumulated on my “must-read” list. One of my favourites came recommended by my technical sales professor at SAIT, “Predictably Irrational, by Dan Ariely. It’s a New York Times bestseller. It was recommended based on its insights around behavioural science, specifically what factors influence a buyer’s decision making.</description>
+      <description>&lt;p&gt;Lately, I’ve been knocking off a few books that have accumulated on my “must-read” list. One of my favourites came recommended by my technical sales professor at SAIT, &lt;a href=&#34;http://www.amazon.ca/Predictably-Irrational-Revised-Expanded-Edition/dp/0061353248&#34;&gt;“Predictably Irrational, by Dan Ariely.&lt;/a&gt; It’s a New York Times bestseller. It was recommended based on its insights around behavioural science, specifically what factors influence a buyer’s decision making. And it reads quite satisfactorily for that. However, as a linux enthusiast, there’s one particular chapter that stood out to me.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

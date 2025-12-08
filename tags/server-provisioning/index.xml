@@ -1,65 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>server provisioning on Calgary RHCE</title>
+    <title>Server Provisioning on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/server-provisioning/</link>
-    <description>Recent content in server provisioning on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Server Provisioning on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jul 2019 22:52:03 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/server-provisioning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Jul 2019 22:52:03 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/server-provisioning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Update cobbler signatures for RHEL8</title>
       <link>https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</link>
       <pubDate>Wed, 03 Jul 2019 22:52:03 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/07/03/update-cobbler-signatures-for-rhel8/</guid>
-      <description>Cobbler is a great tool for PXE booting, I’ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler’s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn’t able to pull the latest signatures on its own.</description>
+      <description>&lt;p&gt;Cobbler is a great tool for PXE booting, I’ve been using it for years in both my personal and professional lives. Occassionally when a new OS comes out, you may find yourself needing to update cobbler’s distro signatures so it can import a new OS distribution. Thankfully, with their distro signatures being hosted on GitHub, this is really easy to do if your cobbler server isn’t able to pull the latest signatures on its own.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible Workshop Materials</title>
       <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
       <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
-      <description>Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab.</description>
+      <description>&lt;p&gt;Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab. Teach a concept, do a lab. So attendees get to do immediate application of the knowledge they just gained, and they walk away with real skills they could use in their day-to-day work right away. Attendence and feedback for this event were excellent:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Using ansible to manage RHV/oVirt</title>
       <link>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
       <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
-      <description>A common task most virtualization administrators will perform is installing the guest agent(s) among their guest VMs. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass installation of guest agents in windows.</description>
+      <description>&lt;p&gt;A common task most virtualization administrators will perform is &lt;a href=&#34;https://access.redhat.com/solutions/261763&#34;&gt;installing the guest agent(s) among their guest VMs&lt;/a&gt;. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass &lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html/virtual_machine_management_guide/sect-updating_virtual_machine_guest_agents_and_drivers#Updating_the_Guest_Agents_and_Drivers_on_Windows&#34;&gt;installation of guest agents in windows&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Installing OpenStack – setting up a virtual lab environment</title>
       <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
       <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
-      <description>When talking TripleO, there’s two concepts introduced called the “undercloud”, and the “overcloud”. These are essentially the labels for each OpenStack environment when referring to “OpenStack on OpenStack” (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we’re after.</description>
+      <description>&lt;p&gt;When talking &lt;a href=&#34;http://tripleo.org/&#34;&gt;TripleO&lt;/a&gt;, there’s two concepts introduced called the “undercloud”, and the “overcloud”. These are essentially the labels for each OpenStack environment when referring to “OpenStack on OpenStack” (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we’re after. Confused yet? 🙂 &lt;span class=&#34;author-wrap&#34;&gt;&lt;span class=&#34;byline&#34;&gt;&lt;span class=&#34;author vcard&#34;&gt;Marcos Garcia &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;does a good job of illustrating this in a &lt;a href=&#34;http://redhatstackblog.redhat.com/2016/07/27/tripleo-director-components-in-detail/&#34;&gt;blog post&lt;/a&gt;:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible-pull and kickstart, for one-touch server provisioning</title>
       <link>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2016/02/03/ansible-pull-and-kickstart-for-one-touch-server-provisioning/</guid>
-      <description>Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an O’Reilly book published, and went through an aquisition. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack.</description>
+      <description>&lt;p&gt;Recently I’ve been learning and using Ansible as my configuration management tool. It came recommended by several colleagues, recently had an &lt;a href=&#34;http://www.amazon.ca/Ansible-Up-Running-Lorin-Hochstein/dp/1491915323&#34;&gt;O’Reilly book&lt;/a&gt; published, and went through an &lt;a href=&#34;https://www.redhat.com/en/about/press-releases/red-hat-acquire-it-automation-and-devops-leader-ansible&#34;&gt;aquisition&lt;/a&gt;. Safe to say its momentum and adoption is on a high… and so far, I’m loving using it. I find it vastly easier to setup and use than Puppet, Chef, CFengine, or SaltStack. I bought the O’Reilly book, and had a playbook configuring a server in about 10 minutes… udderly quick. (Sorry, bad pun if you looked at the book cover). Most of my config management experience is with CFengine and Puppet, yet I found some interesting contrasts so far:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
       <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
-      <description>In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.</description>
+      <description>&lt;p&gt;In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.). These systems or processes usually had been in place for more than a few years, and would be considered the “Traditional IT” method of provisioning servers.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

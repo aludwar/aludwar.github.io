@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>enterprise on Calgary RHCE</title>
+    <title>Enterprise on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/enterprise/</link>
-    <description>Recent content in enterprise on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Enterprise on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/enterprise/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 May 2019 16:17:02 +0000</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/enterprise/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>32-bit application support in RHEL7</title>
       <link>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/05/07/32-bit-application-support-in-rhel7/</guid>
-      <description>I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:
-https://access.redhat.com/solutions/509373 Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:
-# yum install glibc.</description>
+      <description>&lt;p&gt;I recently needed to check the supportability of 32-bit applications in Red Hat Enterprise Linux. RHEL can support 32-bit applications in a 64-bit environment in the following scenarios:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://access.redhat.com/solutions/509373&#34;&gt;https://access.redhat.com/solutions/509373&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Additionally, with the multilib toolchain, one can install the 32-bit packages by specifying the architecture in the yum install command:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;# yum install glibc.i686&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt; &lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Effective communication</title>
       <link>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</link>
       <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2014/06/19/effective-communication/</guid>
-      <description>As an IT professional, one of the most important job skills you can possess may not necessarily be technical. Excuse me, what? How is that so? We’re IT people! If we’re masters of anything, it’s the technical bits in the trade!
-Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others’ writing (source, source).</description>
+      <description>&lt;p&gt;As an IT professional, one of the most important job skills you can possess may not necessarily be technical.  Excuse me, what? How is that so? We’re IT people! If we’re masters of anything, it’s the technical bits in the trade!&lt;/p&gt;&#xA;&lt;p&gt;Typical studies show that we spend 70-80% of our day communicating with others, and 40% of our day interacting with others’ writing (&lt;a href=&#34;http://extension.missouri.edu/p/CM150&#34;&gt;source&lt;/a&gt;, &lt;a href=&#34;http://www.techsmartconsulting.ca/&#34;&gt;source&lt;/a&gt;).  That’s a big chunk of time!  If you think about it though, it makes quite a bit of sense.  Have you ever got stuck reading a giant email chain in order to get caught up on an issue?  Have you ever come across a co-worker or colleague who you’ve been listening to drone on and on and couldn’t help but think to yourself, “just get to the point already!”.  I think we’ve all been there.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

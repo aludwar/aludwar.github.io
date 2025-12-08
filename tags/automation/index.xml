@@ -1,65 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>automation on Calgary RHCE</title>
+    <title>Automation on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/tags/automation/</link>
-    <description>Recent content in automation on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Automation on Calgary RHCE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2023 11:18:06 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Oct 2023 11:18:06 -0600</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Automation Controller API with OAUTH</title>
       <link>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</link>
       <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</guid>
-      <description>I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&amp;rsquo;t immediately suggest the answer. So it&amp;rsquo;s time for a Solution Architect to step in! These are the common questions we&amp;rsquo;ll answer in this post:</description>
+      <description>&lt;p&gt;I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&amp;rsquo;t immediately suggest the answer. So it&amp;rsquo;s time for a Solution Architect to step in! These are the common questions we&amp;rsquo;ll answer in this post:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Introduction to Automation Metrics</title>
       <link>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</link>
       <pubDate>Thu, 21 Sep 2023 15:28:04 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</guid>
-      <description>Another topic that&amp;rsquo;s come up a lot over the past year or more has been around metrics. I&amp;rsquo;m sure by now you&amp;rsquo;ve heard of the Four Keys developed by Google. Now, these metrics get a lot of coverage in the spotlight, but should everyone use them? Not everyone is at Google&amp;rsquo;s level.</description>
+      <description>&lt;p&gt;Another topic that&amp;rsquo;s come up a lot over the past year or more has been around metrics. I&amp;rsquo;m sure by now you&amp;rsquo;ve heard of the &lt;a href=&#34;https://github.com/dora-team/fourkeys&#34;&gt;Four Keys&lt;/a&gt; developed by Google. Now, these metrics get a &lt;strong&gt;lot&lt;/strong&gt; of coverage in the spotlight, but should everyone use them? Not everyone is at Google&amp;rsquo;s level. More commonly it sparks a conversation around:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Graduating with Automation Practices</title>
       <link>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</link>
       <pubDate>Thu, 21 Sep 2023 09:20:21 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</guid>
-      <description>Lately I&amp;rsquo;ve been engaged in a lot of automation discussions. Particularly around governance, standards, scale, workflows, best practices, and the list goes on. My impression is that folks are looking at establishing some of the common foundations to an automation practice and are getting farther down their DevOps &amp;amp; Automation journeys.</description>
+      <description>&lt;p&gt;Lately I&amp;rsquo;ve been engaged in a lot of automation discussions. Particularly around governance, standards, scale, workflows, best practices, and the list goes on. My impression is that folks are looking at establishing some of the common foundations to an automation practice and are getting farther down their DevOps &amp;amp; Automation journeys. Often we don&amp;rsquo;t get deep into sorting through these details until some operational concern or pain is felt with the current approach - and that&amp;rsquo;s fine. These are called journeys for a reason and the most important piece is to remember that they&amp;rsquo;re iterative and subject to continual refinement.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Ansible Automation Platform Notifications for package reporting</title>
       <link>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</link>
       <pubDate>Wed, 26 Oct 2022 13:18:38 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</guid>
-      <description>I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&amp;rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc.</description>
+      <description>&lt;p&gt;I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&amp;rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn&amp;rsquo;t have much blog coverage on it. So here we go!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
       <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
-      <description>Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments.</description>
+      <description>&lt;p&gt;Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments. I think this is a really valueable tool to take advantage of, not only because it’s no-cost to customers, but its like having a sysadmin audit your environment 24×7, and building automation to fix the things it finds. It’s a really easy way to get started with Ansible automation without having to build or write the automation yourself.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Demystifying automation and Puppet</title>
       <link>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
-      <description>Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic.</description>
+      <description>&lt;p&gt;Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic. Oh how far we’ve come! What IT person or company isn’t looking at automation these days?&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -4,107 +4,86 @@
     <title>Categories on Calgary RHCE</title>
     <link>https://calgaryrhce.ca/categories/</link>
     <description>Recent content in Categories on Calgary RHCE</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Oct 2023 11:18:06 -0600</lastBuildDate><atom:link href="https://calgaryrhce.ca/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Dec 2025 11:18:06 -0600</lastBuildDate>
+    <atom:link href="https://calgaryrhce.ca/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>devops</title>
+      <title>Devops</title>
       <link>https://calgaryrhce.ca/categories/devops/</link>
-      <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      
+      <pubDate>Mon, 08 Dec 2025 11:18:06 -0600</pubDate>
       <guid>https://calgaryrhce.ca/categories/devops/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>open source</title>
+      <title>Open Source</title>
       <link>https://calgaryrhce.ca/categories/open-source/</link>
-      <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      
+      <pubDate>Mon, 08 Dec 2025 11:18:06 -0600</pubDate>
       <guid>https://calgaryrhce.ca/categories/open-source/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cloud</title>
+      <title>Cloud</title>
       <link>https://calgaryrhce.ca/categories/cloud/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/cloud/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>containers</title>
+      <title>Containers</title>
       <link>https://calgaryrhce.ca/categories/containers/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/containers/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>enterprise</title>
+      <title>Enterprise</title>
       <link>https://calgaryrhce.ca/categories/enterprise/</link>
       <pubDate>Fri, 08 Nov 2019 16:08:08 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/enterprise/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>automation</title>
+      <title>Automation</title>
       <link>https://calgaryrhce.ca/categories/automation/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/automation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>storage</title>
+      <title>Storage</title>
       <link>https://calgaryrhce.ca/categories/storage/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/storage/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>security</title>
+      <title>Security</title>
       <link>https://calgaryrhce.ca/categories/security/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/security/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>networking</title>
+      <title>Networking</title>
       <link>https://calgaryrhce.ca/categories/networking/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/networking/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>performance tuning</title>
+      <title>Performance Tuning</title>
       <link>https://calgaryrhce.ca/categories/performance-tuning/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/performance-tuning/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OpenStack</title>
       <link>https://calgaryrhce.ca/categories/openstack/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
-      
       <guid>https://calgaryrhce.ca/categories/openstack/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
