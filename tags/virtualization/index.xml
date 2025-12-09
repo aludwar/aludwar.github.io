@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Virtualization on Calgary RHCE</title>
-    <link>http://localhost:1313/tags/virtualization/</link>
+    <link>https://calgaryrhce.ca/tags/virtualization/</link>
     <description>Recent content in Virtualization on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Nov 2019 16:08:08 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://calgaryrhce.ca/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enabling nested virtualization with RHV 4.3</title>
-      <link>http://localhost:1313/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</link>
+      <link>https://calgaryrhce.ca/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</link>
       <pubDate>Fri, 08 Nov 2019 16:08:08 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/11/08/enabling-nested-virtualization-with-rhv-4-3/</guid>
       <description>&lt;p&gt;To enable nested virtualization within a Red Hat Virtualization 4.3 environment, you will need to do two things. First, make sure the “vdsm-hook-nestedvt” package is present on the host hypervisor. You’ll need to restart vdsmd as well after installing.&lt;/p&gt;&#xA;&lt;p&gt;Second, you’ll need to enable the Pass-Through Host CPU option in the virtual machine settings (under the host section). With both of these done, you should get the virtualization extensions passed into the guest OSs on that hypervisor.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Using ansible to manage RHV/oVirt</title>
-      <link>http://localhost:1313/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
+      <link>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</link>
       <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
+      <guid>https://calgaryrhce.ca/blog/2018/10/23/using-ansible-to-manage-rhv-ovirt/</guid>
       <description>&lt;p&gt;A common task most virtualization administrators will perform is &lt;a href=&#34;https://access.redhat.com/solutions/261763&#34;&gt;installing the guest agent(s) among their guest VMs&lt;/a&gt;. Ansible has a nice module that allows an administrator to automate these common tasks, such as attaching/detaching a CDROM device to a VM, rebooting several VMs, etc. Combining this with ansible’s management of Windows devices and it makes it fairly trivial to automate a mass &lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.2/html/virtual_machine_management_guide/sect-updating_virtual_machine_guest_agents_and_drivers#Updating_the_Guest_Agents_and_Drivers_on_Windows&#34;&gt;installation of guest agents in windows&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Importing VMs into RHV from KVM</title>
-      <link>http://localhost:1313/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</link>
+      <link>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</link>
       <pubDate>Tue, 23 Oct 2018 16:13:33 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</guid>
+      <guid>https://calgaryrhce.ca/blog/2018/10/23/importing-vms-into-rhv-from-kvm/</guid>
       <description>&lt;p&gt;To import virtual machines from a KVM/libvirt hypervisor into Red Hat Virtualization, is pretty easy. RHV will handle the v2v copying for you in the background, there are just a couple prerequisite steps to take prior to importing. On the RHV hypervisor host you’re proxying the import connection through, setup passwordless SSH from the vdsm user to the root user on the source hypervisor:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
-      <link>http://localhost:1313/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
+      <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
+      <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
       <description>&lt;p&gt;In setting up a local virtualization environment a little while back, I thought I’d try the &lt;a href=&#34;https://www.redhat.com/en/blog/look-vdo-new-linux-compression-layer&#34;&gt;recently GA’d VDO capabilities&lt;/a&gt; in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 . I was also curious to see what the extra overhead was like (if any), and understand the general performance characteristics of VDO.&lt;/p&gt;</description>
     </item>
   </channel>

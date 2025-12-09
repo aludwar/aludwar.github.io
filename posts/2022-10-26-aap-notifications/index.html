@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.147.8">
@@ -13,13 +13,13 @@
   <meta property="og:locale" content="en-us"/>
 
   
-  <meta property="og:image" content="http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+  <meta property="og:image" content="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
 
   
   <meta property="og:site_name" content="Calgary RHCE"/>
   <meta property="og:title" content="Ansible Automation Platform Notifications for package reporting"/>
   <meta property="og:description" content="I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn&rsquo;t have much blog coverage on it. So here we go!"/>
-  <meta property="og:url" content="http://localhost:1313/posts/2022-10-26-aap-notifications/"/>
+  <meta property="og:url" content="https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2022-10-26T13:18:38-0600"/>
   <meta property="article:modified_time" content="2022-10-26T13:18:38-0600"/>
@@ -33,8 +33,8 @@
     "@context" : "http://schema.org",
     "@type" : "Blog",
     "name": "Calgary RHCE",
-    "url" : "http://localhost:1313/",
-    "image": "http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url" : "https://calgaryrhce.ca/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "description": "A linux and open source technology blog."
   }
   </script>
@@ -51,10 +51,10 @@
     "author": {
       "@type": "Person",
       "name": "Andrew Ludwar",
-      "url": "http://localhost:1313/"
+      "url": "https://calgaryrhce.ca/"
     },
-    "image": "http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
-    "url": "http://localhost:1313/posts/2022-10-26-aap-notifications/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/",
     "description": "\u003cp\u003eI was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I\u0026rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn\u0026rsquo;t have much blog coverage on it. So here we go!\u003c\/p\u003e"
   }
   </script>
@@ -63,16 +63,16 @@
 
   <link type="text/css"
         rel="stylesheet"
-        href="http://localhost:1313/css/print.css"
+        href="https://calgaryrhce.ca/css/print.css"
         media="print">
 
   <link type="text/css"
         rel="stylesheet"
-        href="http://localhost:1313/css/poole.css">
+        href="https://calgaryrhce.ca/css/poole.css">
 
   <link type="text/css"
         rel="stylesheet"
-        href="http://localhost:1313/css/hyde.css">
+        href="https://calgaryrhce.ca/css/hyde.css">
 
   
 <style type="text/css">
@@ -118,7 +118,7 @@
       
         
         <div class="author-image">
-          <img src="http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+          <img src="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
         </div>
         
       
@@ -133,7 +133,7 @@
     <nav>
       <ul class="sidebar-nav">
         <li>
-          <a href="http://localhost:1313/">Home</a>
+          <a href="https://calgaryrhce.ca/">Home</a>
         </li>
         <li>
           <a href="/posts/"> Posts </a>

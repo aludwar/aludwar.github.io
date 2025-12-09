@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Remediation on Calgary RHCE</title>
-    <link>http://localhost:1313/tags/remediation/</link>
+    <link>https://calgaryrhce.ca/tags/remediation/</link>
     <description>Recent content in Remediation on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 15:35:51 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/remediation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://calgaryrhce.ca/tags/remediation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
-      <link>http://localhost:1313/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
       <description>&lt;p&gt;Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments. I think this is a really valueable tool to take advantage of, not only because it’s no-cost to customers, but its like having a sysadmin audit your environment 24×7, and building automation to fix the things it finds. It’s a really easy way to get started with Ansible automation without having to build or write the automation yourself.&lt;/p&gt;</description>
     </item>
   </channel>

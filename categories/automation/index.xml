@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automation on Calgary RHCE</title>
-    <link>http://localhost:1313/categories/automation/</link>
+    <link>https://calgaryrhce.ca/categories/automation/</link>
     <description>Recent content in Automation on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Sep 2019 15:54:42 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/automation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://calgaryrhce.ca/categories/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
-      <link>http://localhost:1313/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
       <description>&lt;p&gt;Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting &lt;a href=&#34;https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/&#34;&gt;demo of Ansible Tower&lt;/a&gt; connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
-      <link>http://localhost:1313/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
       <description>&lt;p&gt;Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments. I think this is a really valueable tool to take advantage of, not only because it’s no-cost to customers, but its like having a sysadmin audit your environment 24×7, and building automation to fix the things it finds. It’s a really easy way to get started with Ansible automation without having to build or write the automation yourself.&lt;/p&gt;</description>
     </item>
   </channel>

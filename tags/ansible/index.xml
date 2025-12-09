@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ansible on Calgary RHCE</title>
-    <link>http://localhost:1313/tags/ansible/</link>
+    <link>https://calgaryrhce.ca/tags/ansible/</link>
     <description>Recent content in Ansible on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Oct 2023 11:18:06 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://calgaryrhce.ca/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Automation Controller API with OAUTH</title>
-      <link>http://localhost:1313/posts/2023-10-10-oauth-controller-api/</link>
+      <link>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</link>
       <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      <guid>http://localhost:1313/posts/2023-10-10-oauth-controller-api/</guid>
+      <guid>https://calgaryrhce.ca/posts/2023-10-10-oauth-controller-api/</guid>
       <description>&lt;p&gt;I wanted to spend some time outlining how to query the Automation Controller API using OAUTH tokens. A few customers have reached out with these questions and I noticed the documentation on it doesn&amp;rsquo;t immediately suggest the answer. So it&amp;rsquo;s time for a Solution Architect to step in! These are the common questions we&amp;rsquo;ll answer in this post:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Introduction to Automation Metrics</title>
-      <link>http://localhost:1313/posts/2023-09-21-automation-metrics/</link>
+      <link>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</link>
       <pubDate>Thu, 21 Sep 2023 15:28:04 -0600</pubDate>
-      <guid>http://localhost:1313/posts/2023-09-21-automation-metrics/</guid>
+      <guid>https://calgaryrhce.ca/posts/2023-09-21-automation-metrics/</guid>
       <description>&lt;p&gt;Another topic that&amp;rsquo;s come up a lot over the past year or more has been around metrics. I&amp;rsquo;m sure by now you&amp;rsquo;ve heard of the &lt;a href=&#34;https://github.com/dora-team/fourkeys&#34;&gt;Four Keys&lt;/a&gt; developed by Google. Now, these metrics get a &lt;strong&gt;lot&lt;/strong&gt; of coverage in the spotlight, but should everyone use them? Not everyone is at Google&amp;rsquo;s level. More commonly it sparks a conversation around:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Graduating with Automation Practices</title>
-      <link>http://localhost:1313/posts/2023-09-21-graduating-automation/</link>
+      <link>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</link>
       <pubDate>Thu, 21 Sep 2023 09:20:21 -0600</pubDate>
-      <guid>http://localhost:1313/posts/2023-09-21-graduating-automation/</guid>
+      <guid>https://calgaryrhce.ca/posts/2023-09-21-graduating-automation/</guid>
       <description>&lt;p&gt;Lately I&amp;rsquo;ve been engaged in a lot of automation discussions. Particularly around governance, standards, scale, workflows, best practices, and the list goes on. My impression is that folks are looking at establishing some of the common foundations to an automation practice and are getting farther down their DevOps &amp;amp; Automation journeys. Often we don&amp;rsquo;t get deep into sorting through these details until some operational concern or pain is felt with the current approach - and that&amp;rsquo;s fine. These are called journeys for a reason and the most important piece is to remember that they&amp;rsquo;re iterative and subject to continual refinement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ansible Automation Platform Notifications for package reporting</title>
-      <link>http://localhost:1313/posts/2022-10-26-aap-notifications/</link>
+      <link>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</link>
       <pubDate>Wed, 26 Oct 2022 13:18:38 -0600</pubDate>
-      <guid>http://localhost:1313/posts/2022-10-26-aap-notifications/</guid>
+      <guid>https://calgaryrhce.ca/posts/2022-10-26-aap-notifications/</guid>
       <description>&lt;p&gt;I was recently asked to outline the options available to do package reporting after a patch cycle for RHEL. There was preference to try to do this in Ansible Automation Platform, consumed via an emailed report, so I&amp;rsquo;ll focus the bulk of the effort there. The specifics were to have view into what packages were installed, updated, removed, etc. as part of a patch cycle. From there, the intent is to list this out and respond to anything that may have failed or done something unexpected during the update. After outlining this I realised that this is a really common question that didn&amp;rsquo;t have much blog coverage on it. So here we go!&lt;/p&gt;</description>
     </item>
     <item>
       <title>CI/CD with Ansible Tower and GitHub</title>
-      <link>http://localhost:1313/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/ci-cd-with-ansible-tower-and-github/</guid>
       <description>&lt;p&gt;Every so often I come across an interesting use-case or a really creative way to integrate different technology that I haven’t seen before. I follow a few folks on social media and blogs that do this stuff on a regular basis, one of them being Keith Tenzer. He’s put together a really interesting &lt;a href=&#34;https://keithtenzer.com/2019/06/24/ci-cd-with-ansible-tower-and-github/&#34;&gt;demo of Ansible Tower&lt;/a&gt; connected with GitHub and a webhook that showcases how CI/CD can be accomplished using Ansible without the need for a formal CI/CD pipeline toolset like Jenkins. He sparked an idea for me to put together a similar environment as I think this makes for a great demo and showcase of what Ansible Tower is capable of.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Red Hat Insights – a predictive analytics engine in RHEL</title>
-      <link>http://localhost:1313/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
+      <link>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/09/20/red-hat-insights-a-predictive-analytics-engine-in-rhel/</guid>
       <description>&lt;p&gt;Something Engineering has been working hard on over the past couple of years is connecting Red Hat’s wealth of internal knowledge with items and issues customers face in the real world everyday. Born out of this effort was Red Hat Insights, a predictive analytics engine that analyzes, assesses, and builds automation to remediate issues found in customer environments. I think this is a really valueable tool to take advantage of, not only because it’s no-cost to customers, but its like having a sysadmin audit your environment 24×7, and building automation to fix the things it finds. It’s a really easy way to get started with Ansible automation without having to build or write the automation yourself.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Creating custom credentials in Ansible Tower</title>
-      <link>http://localhost:1313/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
+      <link>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/07/19/creating-custom-credentials-in-ansible-tower/</guid>
       <description>&lt;p&gt;As we go further in our efforts to automate all the things with ansible, you will likely come across a need to manage some cusom credentials that do not come with a predefined type in Ansible Tower. You might be currently setting these in an environment variable, in group_vars or host_vars, or perhaps hardcoded into a playbook itself. What if we need to extract these from the eyes of others, or make them easily reused across the organization? Can I use Ansible Tower to manage and abstract custom credentials like it does for machine, github, or cloud account types? The answer is yes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Adding python virtual environments (venvs) to Ansible Tower</title>
-      <link>http://localhost:1313/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
+      <link>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/07/19/adding-python-virtual-environments-venvs-to-ansible-tower/</guid>
       <description>&lt;p&gt;As you’re developing playbooks you may find that you need to add additional python capability in order to use some modules. These are easy enough to install on a regular linux client with pip, but how does this work for Ansible Tower? Fortunately this is not too different for Ansible Tower, we’re just going to instruct Tower to add another source directory for our new venvs, and then assign these in Tower at an Organization, Project, or Job Template level. Let me show you how this works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Limiting Ansible Tower inventory with Satellite host groups</title>
-      <link>http://localhost:1313/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
+      <link>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</link>
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/06/13/limiting-ansible-tower-inventory-with-satellite-host-groups/</guid>
       <description>&lt;p&gt;When thinking about ingesting systems into Ansible Tower’s inventory, a common use-case is to intelligently filter hosts into Ansible Tower such that we’re selectively adding only the hosts we want into Tower inventory. When pairing with Red Hat Satellite, we can use Satellite’s host grouping feature combined with Ansible Tower’s Satellite 6 dynamic inventory script to apply this filtering.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Connecting Ansible Tower to Team Foundation Server</title>
-      <link>http://localhost:1313/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
+      <link>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</link>
       <pubDate>Mon, 06 May 2019 18:35:32 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/05/06/connecting-ansible-tower-to-team-foundation-server/</guid>
       <description>&lt;p&gt;Recently I was investigating how to connect Ansible Tower to Microsoft Team Foundation Server to source a git repo. To document this for later, I discovered that the way to do this is with an SSH key, and by turning on the SSH service on TFS. Here’s how I got it working:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ansible Workshop Materials</title>
-      <link>http://localhost:1313/blog/2019/02/28/ansible-workshop-materials/</link>
+      <link>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</link>
       <pubDate>Thu, 28 Feb 2019 17:24:22 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/02/28/ansible-workshop-materials/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/02/28/ansible-workshop-materials/</guid>
       <description>&lt;p&gt;Recently we had one of the largest and most interesting meetups I think the Calgary market has seen in quite a while. We were able to run an Ansible Workshop, which is a mix of presentation and hands-on lab content. What makes these workshops different (and a reason people love them) is we get to teach a concept, then implement it in a lab. Teach a concept, do a lab. So attendees get to do immediate application of the knowledge they just gained, and they walk away with real skills they could use in their day-to-day work right away. Attendence and feedback for this event were excellent:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Create Azure VM with Ansible</title>
-      <link>http://localhost:1313/blog/2019/01/03/create-azure-vm-with-ansible/</link>
+      <link>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
+      <guid>https://calgaryrhce.ca/blog/2019/01/03/create-azure-vm-with-ansible/</guid>
       <description>&lt;p&gt;With a little googling this task isn’t very complex, however, for those wanting to consume this information easily – this post is for you.&lt;/p&gt;&#xA;&lt;p&gt;There’s a lot of cloud provisioning tools out there; if you’re like me and prefer to leverage your existing knowledge wherever possible you might come to the conclusion that using the same tool to provision your VMs as you do to manage them makes sense. I already know Ansible, why not leverage it to create my infrastructure as well as manage it post-creation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ansible at the Calgary RHUG</title>
-      <link>http://localhost:1313/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
+      <link>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</link>
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/09/15/ansible-at-the-calgary-rhug/</guid>
       <description>&lt;p&gt;Today we had a great presentation from Greg Dekoenigsberg, the Director of Global Open Source Community Relations at Ansible (by Red Hat). With configuration management being such a top topic lately, that sentiment sure was reinforced with the number of attendees we had today – we filled the room! Greg gave the group a high-level overview of Ansible’s feature set, along with what the open source community has been seeing for use-cases, and adoption. Ansible usage has skyrocketed recently, and in one of the research polls Greg showed us, Ansible ranked second only to Kubernetes for anticipated container orchestration software usage in the next year. That just goes to show Ansible’s flexibility and interoperability, as container orchestration wasn’t its original design focus. That’s an interesting part about open source software – you never know what direction your user base is going to take the project. Innovation happens in leaps and bounds, with diverse perspectives doing the steering.&lt;figure id=&#34;attachment_452&#34; aria-describedby=&#34;caption-attachment-452&#34; style=&#34;width: 795px&#34; class=&#34;wp-caption alignnone&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

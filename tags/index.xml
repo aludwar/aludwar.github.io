@@ -2,500 +2,500 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Calgary RHCE</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://calgaryrhce.ca/tags/</link>
     <description>Recent content in Tags on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 09 Dec 2025 09:38:59 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://calgaryrhce.ca/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Open Source</title>
-      <link>http://localhost:1313/tags/open-source/</link>
+      <link>https://calgaryrhce.ca/tags/open-source/</link>
       <pubDate>Tue, 09 Dec 2025 09:38:59 -0700</pubDate>
-      <guid>http://localhost:1313/tags/open-source/</guid>
+      <guid>https://calgaryrhce.ca/tags/open-source/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansible</title>
-      <link>http://localhost:1313/tags/ansible/</link>
+      <link>https://calgaryrhce.ca/tags/ansible/</link>
       <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      <guid>http://localhost:1313/tags/ansible/</guid>
+      <guid>https://calgaryrhce.ca/tags/ansible/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
+      <link>https://calgaryrhce.ca/tags/automation/</link>
       <pubDate>Tue, 10 Oct 2023 11:18:06 -0600</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
+      <guid>https://calgaryrhce.ca/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Containers</title>
-      <link>http://localhost:1313/tags/containers/</link>
+      <link>https://calgaryrhce.ca/tags/containers/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      <guid>http://localhost:1313/tags/containers/</guid>
+      <guid>https://calgaryrhce.ca/tags/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Fedora Coreos</title>
-      <link>http://localhost:1313/tags/fedora-coreos/</link>
+      <link>https://calgaryrhce.ca/tags/fedora-coreos/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      <guid>http://localhost:1313/tags/fedora-coreos/</guid>
+      <guid>https://calgaryrhce.ca/tags/fedora-coreos/</guid>
       <description></description>
     </item>
     <item>
       <title>Ignition</title>
-      <link>http://localhost:1313/tags/ignition/</link>
+      <link>https://calgaryrhce.ca/tags/ignition/</link>
       <pubDate>Thu, 14 Jul 2022 05:36:31 -0600</pubDate>
-      <guid>http://localhost:1313/tags/ignition/</guid>
+      <guid>https://calgaryrhce.ca/tags/ignition/</guid>
       <description></description>
     </item>
     <item>
       <title>Virtualization</title>
-      <link>http://localhost:1313/tags/virtualization/</link>
+      <link>https://calgaryrhce.ca/tags/virtualization/</link>
       <pubDate>Fri, 08 Nov 2019 16:08:08 +0000</pubDate>
-      <guid>http://localhost:1313/tags/virtualization/</guid>
+      <guid>https://calgaryrhce.ca/tags/virtualization/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansible Tower</title>
-      <link>http://localhost:1313/tags/ansible-tower/</link>
+      <link>https://calgaryrhce.ca/tags/ansible-tower/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ansible-tower/</guid>
+      <guid>https://calgaryrhce.ca/tags/ansible-tower/</guid>
       <description></description>
     </item>
     <item>
       <title>CICD</title>
-      <link>http://localhost:1313/tags/cicd/</link>
+      <link>https://calgaryrhce.ca/tags/cicd/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cicd/</guid>
+      <guid>https://calgaryrhce.ca/tags/cicd/</guid>
       <description></description>
     </item>
     <item>
       <title>Github</title>
-      <link>http://localhost:1313/tags/github/</link>
+      <link>https://calgaryrhce.ca/tags/github/</link>
       <pubDate>Fri, 20 Sep 2019 15:54:42 +0000</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
+      <guid>https://calgaryrhce.ca/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Insights</title>
-      <link>http://localhost:1313/tags/insights/</link>
+      <link>https://calgaryrhce.ca/tags/insights/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      <guid>http://localhost:1313/tags/insights/</guid>
+      <guid>https://calgaryrhce.ca/tags/insights/</guid>
       <description></description>
     </item>
     <item>
       <title>Remediation</title>
-      <link>http://localhost:1313/tags/remediation/</link>
+      <link>https://calgaryrhce.ca/tags/remediation/</link>
       <pubDate>Fri, 20 Sep 2019 15:35:51 +0000</pubDate>
-      <guid>http://localhost:1313/tags/remediation/</guid>
+      <guid>https://calgaryrhce.ca/tags/remediation/</guid>
       <description></description>
     </item>
     <item>
       <title>Configuration Management</title>
-      <link>http://localhost:1313/tags/configuration-management/</link>
+      <link>https://calgaryrhce.ca/tags/configuration-management/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
-      <guid>http://localhost:1313/tags/configuration-management/</guid>
+      <guid>https://calgaryrhce.ca/tags/configuration-management/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://calgaryrhce.ca/tags/devops/</link>
       <pubDate>Fri, 19 Jul 2019 22:20:23 +0000</pubDate>
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://calgaryrhce.ca/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://calgaryrhce.ca/tags/linux/</link>
       <pubDate>Fri, 19 Jul 2019 18:06:55 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://calgaryrhce.ca/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Server Provisioning</title>
-      <link>http://localhost:1313/tags/server-provisioning/</link>
+      <link>https://calgaryrhce.ca/tags/server-provisioning/</link>
       <pubDate>Wed, 03 Jul 2019 22:52:03 +0000</pubDate>
-      <guid>http://localhost:1313/tags/server-provisioning/</guid>
+      <guid>https://calgaryrhce.ca/tags/server-provisioning/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/tags/cloud/</link>
+      <link>https://calgaryrhce.ca/tags/cloud/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cloud/</guid>
+      <guid>https://calgaryrhce.ca/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Fedora</title>
-      <link>http://localhost:1313/tags/fedora/</link>
+      <link>https://calgaryrhce.ca/tags/fedora/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
-      <guid>http://localhost:1313/tags/fedora/</guid>
+      <guid>https://calgaryrhce.ca/tags/fedora/</guid>
       <description></description>
     </item>
     <item>
       <title>Storage</title>
-      <link>http://localhost:1313/tags/storage/</link>
+      <link>https://calgaryrhce.ca/tags/storage/</link>
       <pubDate>Sat, 22 Jun 2019 16:09:45 +0000</pubDate>
-      <guid>http://localhost:1313/tags/storage/</guid>
+      <guid>https://calgaryrhce.ca/tags/storage/</guid>
       <description></description>
     </item>
     <item>
       <title>Satellite 6</title>
-      <link>http://localhost:1313/tags/satellite-6/</link>
+      <link>https://calgaryrhce.ca/tags/satellite-6/</link>
       <pubDate>Thu, 13 Jun 2019 15:44:07 +0000</pubDate>
-      <guid>http://localhost:1313/tags/satellite-6/</guid>
+      <guid>https://calgaryrhce.ca/tags/satellite-6/</guid>
       <description></description>
     </item>
     <item>
       <title>Enterprise</title>
-      <link>http://localhost:1313/tags/enterprise/</link>
+      <link>https://calgaryrhce.ca/tags/enterprise/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      <guid>http://localhost:1313/tags/enterprise/</guid>
+      <guid>https://calgaryrhce.ca/tags/enterprise/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux Kernel</title>
-      <link>http://localhost:1313/tags/linux-kernel/</link>
+      <link>https://calgaryrhce.ca/tags/linux-kernel/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linux-kernel/</guid>
+      <guid>https://calgaryrhce.ca/tags/linux-kernel/</guid>
       <description></description>
     </item>
     <item>
       <title>Rhel5</title>
-      <link>http://localhost:1313/tags/rhel5/</link>
+      <link>https://calgaryrhce.ca/tags/rhel5/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rhel5/</guid>
+      <guid>https://calgaryrhce.ca/tags/rhel5/</guid>
       <description></description>
     </item>
     <item>
       <title>Rhel6</title>
-      <link>http://localhost:1313/tags/rhel6/</link>
+      <link>https://calgaryrhce.ca/tags/rhel6/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rhel6/</guid>
+      <guid>https://calgaryrhce.ca/tags/rhel6/</guid>
       <description></description>
     </item>
     <item>
       <title>Rhel7</title>
-      <link>http://localhost:1313/tags/rhel7/</link>
+      <link>https://calgaryrhce.ca/tags/rhel7/</link>
       <pubDate>Tue, 07 May 2019 16:17:02 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rhel7/</guid>
+      <guid>https://calgaryrhce.ca/tags/rhel7/</guid>
       <description></description>
     </item>
     <item>
       <title>Open Cloud</title>
-      <link>http://localhost:1313/tags/open-cloud/</link>
+      <link>https://calgaryrhce.ca/tags/open-cloud/</link>
       <pubDate>Thu, 21 Mar 2019 15:46:27 +0000</pubDate>
-      <guid>http://localhost:1313/tags/open-cloud/</guid>
+      <guid>https://calgaryrhce.ca/tags/open-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Hardware</title>
-      <link>http://localhost:1313/tags/hardware/</link>
+      <link>https://calgaryrhce.ca/tags/hardware/</link>
       <pubDate>Mon, 04 Feb 2019 22:59:18 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hardware/</guid>
+      <guid>https://calgaryrhce.ca/tags/hardware/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberri Pi</title>
-      <link>http://localhost:1313/tags/raspberri-pi/</link>
+      <link>https://calgaryrhce.ca/tags/raspberri-pi/</link>
       <pubDate>Thu, 03 Jan 2019 22:58:42 +0000</pubDate>
-      <guid>http://localhost:1313/tags/raspberri-pi/</guid>
+      <guid>https://calgaryrhce.ca/tags/raspberri-pi/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure</title>
-      <link>http://localhost:1313/tags/azure/</link>
+      <link>https://calgaryrhce.ca/tags/azure/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      <guid>http://localhost:1313/tags/azure/</guid>
+      <guid>https://calgaryrhce.ca/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Public Cloud</title>
-      <link>http://localhost:1313/tags/public-cloud/</link>
+      <link>https://calgaryrhce.ca/tags/public-cloud/</link>
       <pubDate>Thu, 03 Jan 2019 21:55:28 +0000</pubDate>
-      <guid>http://localhost:1313/tags/public-cloud/</guid>
+      <guid>https://calgaryrhce.ca/tags/public-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
+      <link>https://calgaryrhce.ca/tags/security/</link>
       <pubDate>Wed, 02 Jan 2019 17:14:25 +0000</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
+      <guid>https://calgaryrhce.ca/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>Private Cloud</title>
-      <link>http://localhost:1313/tags/private-cloud/</link>
+      <link>https://calgaryrhce.ca/tags/private-cloud/</link>
       <pubDate>Tue, 23 Oct 2018 21:09:32 +0000</pubDate>
-      <guid>http://localhost:1313/tags/private-cloud/</guid>
+      <guid>https://calgaryrhce.ca/tags/private-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>I/O</title>
-      <link>http://localhost:1313/tags/i/o/</link>
+      <link>https://calgaryrhce.ca/tags/i/o/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      <guid>http://localhost:1313/tags/i/o/</guid>
+      <guid>https://calgaryrhce.ca/tags/i/o/</guid>
       <description></description>
     </item>
     <item>
       <title>Performance Tuning</title>
-      <link>http://localhost:1313/tags/performance-tuning/</link>
+      <link>https://calgaryrhce.ca/tags/performance-tuning/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      <guid>http://localhost:1313/tags/performance-tuning/</guid>
+      <guid>https://calgaryrhce.ca/tags/performance-tuning/</guid>
       <description></description>
     </item>
     <item>
       <title>Software Defined Storage</title>
-      <link>http://localhost:1313/tags/software-defined-storage/</link>
+      <link>https://calgaryrhce.ca/tags/software-defined-storage/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      <guid>http://localhost:1313/tags/software-defined-storage/</guid>
+      <guid>https://calgaryrhce.ca/tags/software-defined-storage/</guid>
       <description></description>
     </item>
     <item>
       <title>SSD</title>
-      <link>http://localhost:1313/tags/ssd/</link>
+      <link>https://calgaryrhce.ca/tags/ssd/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ssd/</guid>
+      <guid>https://calgaryrhce.ca/tags/ssd/</guid>
       <description></description>
     </item>
     <item>
       <title>Openstack</title>
-      <link>http://localhost:1313/tags/openstack/</link>
+      <link>https://calgaryrhce.ca/tags/openstack/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
-      <guid>http://localhost:1313/tags/openstack/</guid>
+      <guid>https://calgaryrhce.ca/tags/openstack/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>http://localhost:1313/tags/homelab/</link>
+      <link>https://calgaryrhce.ca/tags/homelab/</link>
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
-      <guid>http://localhost:1313/tags/homelab/</guid>
+      <guid>https://calgaryrhce.ca/tags/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>http://localhost:1313/tags/networking/</link>
+      <link>https://calgaryrhce.ca/tags/networking/</link>
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
-      <guid>http://localhost:1313/tags/networking/</guid>
+      <guid>https://calgaryrhce.ca/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Hybrid Cloud</title>
-      <link>http://localhost:1313/tags/hybrid-cloud/</link>
+      <link>https://calgaryrhce.ca/tags/hybrid-cloud/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hybrid-cloud/</guid>
+      <guid>https://calgaryrhce.ca/tags/hybrid-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Environment Management</title>
-      <link>http://localhost:1313/tags/environment-management/</link>
+      <link>https://calgaryrhce.ca/tags/environment-management/</link>
       <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
-      <guid>http://localhost:1313/tags/environment-management/</guid>
+      <guid>https://calgaryrhce.ca/tags/environment-management/</guid>
       <description></description>
     </item>
     <item>
       <title>Smoke Ping</title>
-      <link>http://localhost:1313/tags/smoke-ping/</link>
+      <link>https://calgaryrhce.ca/tags/smoke-ping/</link>
       <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
-      <guid>http://localhost:1313/tags/smoke-ping/</guid>
+      <guid>https://calgaryrhce.ca/tags/smoke-ping/</guid>
       <description></description>
     </item>
     <item>
       <title>Release Upgrades</title>
-      <link>http://localhost:1313/tags/release-upgrades/</link>
+      <link>https://calgaryrhce.ca/tags/release-upgrades/</link>
       <pubDate>Sat, 15 Oct 2016 20:19:11 +0000</pubDate>
-      <guid>http://localhost:1313/tags/release-upgrades/</guid>
+      <guid>https://calgaryrhce.ca/tags/release-upgrades/</guid>
       <description></description>
     </item>
     <item>
       <title>Upgrade</title>
-      <link>http://localhost:1313/tags/upgrade/</link>
+      <link>https://calgaryrhce.ca/tags/upgrade/</link>
       <pubDate>Thu, 29 Sep 2016 01:54:01 +0000</pubDate>
-      <guid>http://localhost:1313/tags/upgrade/</guid>
+      <guid>https://calgaryrhce.ca/tags/upgrade/</guid>
       <description></description>
     </item>
     <item>
       <title>RHUG</title>
-      <link>http://localhost:1313/tags/rhug/</link>
+      <link>https://calgaryrhce.ca/tags/rhug/</link>
       <pubDate>Fri, 16 Sep 2016 00:17:49 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rhug/</guid>
+      <guid>https://calgaryrhce.ca/tags/rhug/</guid>
       <description></description>
     </item>
     <item>
       <title>Kickstart</title>
-      <link>http://localhost:1313/tags/kickstart/</link>
+      <link>https://calgaryrhce.ca/tags/kickstart/</link>
       <pubDate>Wed, 03 Feb 2016 20:55:56 +0000</pubDate>
-      <guid>http://localhost:1313/tags/kickstart/</guid>
+      <guid>https://calgaryrhce.ca/tags/kickstart/</guid>
       <description></description>
     </item>
     <item>
       <title>Market Norms</title>
-      <link>http://localhost:1313/tags/market-norms/</link>
+      <link>https://calgaryrhce.ca/tags/market-norms/</link>
       <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
-      <guid>http://localhost:1313/tags/market-norms/</guid>
+      <guid>https://calgaryrhce.ca/tags/market-norms/</guid>
       <description></description>
     </item>
     <item>
       <title>Social Motivation</title>
-      <link>http://localhost:1313/tags/social-motivation/</link>
+      <link>https://calgaryrhce.ca/tags/social-motivation/</link>
       <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
-      <guid>http://localhost:1313/tags/social-motivation/</guid>
+      <guid>https://calgaryrhce.ca/tags/social-motivation/</guid>
       <description></description>
     </item>
     <item>
       <title>Social Norms</title>
-      <link>http://localhost:1313/tags/social-norms/</link>
+      <link>https://calgaryrhce.ca/tags/social-norms/</link>
       <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
-      <guid>http://localhost:1313/tags/social-norms/</guid>
+      <guid>https://calgaryrhce.ca/tags/social-norms/</guid>
       <description></description>
     </item>
     <item>
       <title>Monitoring</title>
-      <link>http://localhost:1313/tags/monitoring/</link>
+      <link>https://calgaryrhce.ca/tags/monitoring/</link>
       <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
-      <guid>http://localhost:1313/tags/monitoring/</guid>
+      <guid>https://calgaryrhce.ca/tags/monitoring/</guid>
       <description></description>
     </item>
     <item>
       <title>Workplace Culture</title>
-      <link>http://localhost:1313/tags/workplace-culture/</link>
+      <link>https://calgaryrhce.ca/tags/workplace-culture/</link>
       <pubDate>Sun, 29 Nov 2015 22:20:05 +0000</pubDate>
-      <guid>http://localhost:1313/tags/workplace-culture/</guid>
+      <guid>https://calgaryrhce.ca/tags/workplace-culture/</guid>
       <description></description>
     </item>
     <item>
       <title>Android</title>
-      <link>http://localhost:1313/tags/android/</link>
+      <link>https://calgaryrhce.ca/tags/android/</link>
       <pubDate>Sun, 27 Sep 2015 16:29:27 +0000</pubDate>
-      <guid>http://localhost:1313/tags/android/</guid>
+      <guid>https://calgaryrhce.ca/tags/android/</guid>
       <description></description>
     </item>
     <item>
       <title>Tasker</title>
-      <link>http://localhost:1313/tags/tasker/</link>
+      <link>https://calgaryrhce.ca/tags/tasker/</link>
       <pubDate>Sun, 27 Sep 2015 16:29:27 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tasker/</guid>
+      <guid>https://calgaryrhce.ca/tags/tasker/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloudforms</title>
-      <link>http://localhost:1313/tags/cloudforms/</link>
+      <link>https://calgaryrhce.ca/tags/cloudforms/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cloudforms/</guid>
+      <guid>https://calgaryrhce.ca/tags/cloudforms/</guid>
       <description></description>
     </item>
     <item>
       <title>Iaas</title>
-      <link>http://localhost:1313/tags/iaas/</link>
+      <link>https://calgaryrhce.ca/tags/iaas/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
-      <guid>http://localhost:1313/tags/iaas/</guid>
+      <guid>https://calgaryrhce.ca/tags/iaas/</guid>
       <description></description>
     </item>
     <item>
       <title>Private Hybric Cloud</title>
-      <link>http://localhost:1313/tags/private-hybric-cloud/</link>
+      <link>https://calgaryrhce.ca/tags/private-hybric-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
-      <guid>http://localhost:1313/tags/private-hybric-cloud/</guid>
+      <guid>https://calgaryrhce.ca/tags/private-hybric-cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Puppet</title>
-      <link>http://localhost:1313/tags/puppet/</link>
+      <link>https://calgaryrhce.ca/tags/puppet/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
-      <guid>http://localhost:1313/tags/puppet/</guid>
+      <guid>https://calgaryrhce.ca/tags/puppet/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux Foundation</title>
-      <link>http://localhost:1313/tags/linux-foundation/</link>
+      <link>https://calgaryrhce.ca/tags/linux-foundation/</link>
       <pubDate>Thu, 19 Feb 2015 02:28:19 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linux-foundation/</guid>
+      <guid>https://calgaryrhce.ca/tags/linux-foundation/</guid>
       <description></description>
     </item>
     <item>
       <title>Lacp</title>
-      <link>http://localhost:1313/tags/lacp/</link>
+      <link>https://calgaryrhce.ca/tags/lacp/</link>
       <pubDate>Mon, 15 Sep 2014 19:14:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/lacp/</guid>
+      <guid>https://calgaryrhce.ca/tags/lacp/</guid>
       <description></description>
     </item>
     <item>
       <title>Redundancy</title>
-      <link>http://localhost:1313/tags/redundancy/</link>
+      <link>https://calgaryrhce.ca/tags/redundancy/</link>
       <pubDate>Mon, 15 Sep 2014 19:14:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/redundancy/</guid>
+      <guid>https://calgaryrhce.ca/tags/redundancy/</guid>
       <description></description>
     </item>
     <item>
       <title>Gluster</title>
-      <link>http://localhost:1313/tags/gluster/</link>
+      <link>https://calgaryrhce.ca/tags/gluster/</link>
       <pubDate>Tue, 19 Aug 2014 05:42:26 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gluster/</guid>
+      <guid>https://calgaryrhce.ca/tags/gluster/</guid>
       <description></description>
     </item>
     <item>
       <title>Custom Iso</title>
-      <link>http://localhost:1313/tags/custom-iso/</link>
+      <link>https://calgaryrhce.ca/tags/custom-iso/</link>
       <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
-      <guid>http://localhost:1313/tags/custom-iso/</guid>
+      <guid>https://calgaryrhce.ca/tags/custom-iso/</guid>
       <description></description>
     </item>
     <item>
       <title>Business</title>
-      <link>http://localhost:1313/tags/business/</link>
+      <link>https://calgaryrhce.ca/tags/business/</link>
       <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
-      <guid>http://localhost:1313/tags/business/</guid>
+      <guid>https://calgaryrhce.ca/tags/business/</guid>
       <description></description>
     </item>
     <item>
       <title>Communication</title>
-      <link>http://localhost:1313/tags/communication/</link>
+      <link>https://calgaryrhce.ca/tags/communication/</link>
       <pubDate>Fri, 20 Jun 2014 04:35:59 +0000</pubDate>
-      <guid>http://localhost:1313/tags/communication/</guid>
+      <guid>https://calgaryrhce.ca/tags/communication/</guid>
       <description></description>
     </item>
     <item>
       <title>Centos6</title>
-      <link>http://localhost:1313/tags/centos6/</link>
+      <link>https://calgaryrhce.ca/tags/centos6/</link>
       <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
-      <guid>http://localhost:1313/tags/centos6/</guid>
+      <guid>https://calgaryrhce.ca/tags/centos6/</guid>
       <description></description>
     </item>
     <item>
       <title>Chrome</title>
-      <link>http://localhost:1313/tags/chrome/</link>
+      <link>https://calgaryrhce.ca/tags/chrome/</link>
       <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
-      <guid>http://localhost:1313/tags/chrome/</guid>
+      <guid>https://calgaryrhce.ca/tags/chrome/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Browser</title>
-      <link>http://localhost:1313/tags/web-browser/</link>
+      <link>https://calgaryrhce.ca/tags/web-browser/</link>
       <pubDate>Mon, 02 Jun 2014 03:14:17 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web-browser/</guid>
+      <guid>https://calgaryrhce.ca/tags/web-browser/</guid>
       <description></description>
     </item>
     <item>
       <title>Collaboration</title>
-      <link>http://localhost:1313/tags/collaboration/</link>
+      <link>https://calgaryrhce.ca/tags/collaboration/</link>
       <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
-      <guid>http://localhost:1313/tags/collaboration/</guid>
+      <guid>https://calgaryrhce.ca/tags/collaboration/</guid>
       <description></description>
     </item>
     <item>
       <title>Contribute</title>
-      <link>http://localhost:1313/tags/contribute/</link>
+      <link>https://calgaryrhce.ca/tags/contribute/</link>
       <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
-      <guid>http://localhost:1313/tags/contribute/</guid>
+      <guid>https://calgaryrhce.ca/tags/contribute/</guid>
       <description></description>
     </item>
     <item>
       <title>Resources</title>
-      <link>http://localhost:1313/tags/resources/</link>
+      <link>https://calgaryrhce.ca/tags/resources/</link>
       <pubDate>Sun, 04 May 2014 22:29:33 +0000</pubDate>
-      <guid>http://localhost:1313/tags/resources/</guid>
+      <guid>https://calgaryrhce.ca/tags/resources/</guid>
       <description></description>
     </item>
   </channel>

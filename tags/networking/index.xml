@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networking on Calgary RHCE</title>
-    <link>http://localhost:1313/tags/networking/</link>
+    <link>https://calgaryrhce.ca/tags/networking/</link>
     <description>Recent content in Networking on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Sep 2017 18:05:48 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://calgaryrhce.ca/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home lab, CAT6 wiring, and rack</title>
-      <link>http://localhost:1313/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
+      <link>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
+      <guid>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
       <description>&lt;p&gt;Between being busy with home renovations, and writing articles for work, I haven’t made much time for blogging this summer. Since it’s raining today and hampering my home renos, I’m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement. I realise having a rack in your house is a little ridiculous, but for those folks who like to tinker or need more resources than a desktop PC or laptop, it is incredibly useful (and affordable) to have. Like others, my home lab serves up some basic components for my home network, and also allows a testing ground that gets quite a bit of usage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Network teaming in RHEL7</title>
-      <link>http://localhost:1313/blog/2016/11/24/network-teaming-in-rhel7/</link>
+      <link>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</link>
       <pubDate>Thu, 24 Nov 2016 22:32:26 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2016/11/24/network-teaming-in-rhel7/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/11/24/network-teaming-in-rhel7/</guid>
       <description>&lt;p&gt;If you’ve adopted or are just starting to read up on the new features included in Red Hat Enterprise Linux 7, you may have come across the new networking feature called teaming. It essentially is a replacement for bonding that offers more modularity, increased link monitoring features, higher network performance, and easier management of interfaces.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Home lab switch replacement</title>
-      <link>http://localhost:1313/blog/2016/10/30/home-lab-switch-replacement/</link>
+      <link>https://calgaryrhce.ca/blog/2016/10/30/home-lab-switch-replacement/</link>
       <pubDate>Sun, 30 Oct 2016 23:48:16 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2016/10/30/home-lab-switch-replacement/</guid>
+      <guid>https://calgaryrhce.ca/blog/2016/10/30/home-lab-switch-replacement/</guid>
       <description>&lt;p&gt;A few years back, I purged nearly all of my computer components that were kicking around the house, thus essentially abandoning my home lab. I had learned what I needed to with it, and had enough equipment at work to get done what I needed, so off it went. Old PCs, switches, cables, parts, etc. were all sold off, and it felt good to finally declutter. Fast forward a few years and I find myself with a different job, tackling different problems, new technology is out and the need to invest in a home lab has become important again. When I was looking at routers/switches, &lt;a href=&#34;https://routerboard.com/&#34;&gt;mikrotik&lt;/a&gt; came up and looked like a good option – pretty feature full and open source. I bought a couple of these, and later found out the LACP implementation had some &lt;a href=&#34;http://forum.mikrotik.com/viewtopic.php?t=86498&#34;&gt;limitations&lt;/a&gt;. This didn’t matter much until recently when I’ve began using 30+ VMs on a hypervisor. After some light research, and a helpful &lt;a href=&#34;https://www.reddit.com/r/homelab/&#34;&gt;/r/homelab&lt;/a&gt; community, I decided on a Dell PowerConnect 6224 from ebay.&lt;/p&gt;</description>
     </item>
   </channel>

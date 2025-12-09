@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.147.8">
@@ -13,7 +13,7 @@
   <meta property="og:locale" content="en-us"/>
 
   
-  <meta property="og:image" content="http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
+  <meta property="og:image" content="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg">
 
   
   <meta property="og:site_name" content="Calgary RHCE"/>
@@ -28,7 +28,7 @@
 
 
 I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there&rsquo;s an excellent article written on this same topic for RHEL for Edge by Brian Smith that covers this incredibly well. I&rsquo;d encourage everyone to have a read of his article as well!"/>
-  <meta property="og:url" content="http://localhost:1313/posts/2022-07-07-fully-autonomous-containerized-deployment-2/"/>
+  <meta property="og:url" content="https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2022-07-14T05:36:31-0600"/>
   <meta property="article:modified_time" content="2022-07-14T05:36:31-0600"/>
@@ -42,8 +42,8 @@ I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreO
     "@context" : "http://schema.org",
     "@type" : "Blog",
     "name": "Calgary RHCE",
-    "url" : "http://localhost:1313/",
-    "image": "http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url" : "https://calgaryrhce.ca/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
     "description": "A linux and open source technology blog."
   }
   </script>
@@ -60,10 +60,10 @@ I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreO
     "author": {
       "@type": "Person",
       "name": "Andrew Ludwar",
-      "url": "http://localhost:1313/"
+      "url": "https://calgaryrhce.ca/"
     },
-    "image": "http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
-    "url": "http://localhost:1313/posts/2022-07-07-fully-autonomous-containerized-deployment-2/",
+    "image": "https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg",
+    "url": "https://calgaryrhce.ca/posts/2022-07-07-fully-autonomous-containerized-deployment-2/",
     "description": "\u003cp\u003eBuilding upon the \u003ca href=\u0022https:\/\/calgaryrhce.ca\/posts\/2022-07-07-fully-autonomous-containerized-deployment\/\u0022\u003eprevious article\u003c\/a\u003e, let\u0026rsquo;s review what we\u0026rsquo;ve built so far:\u003c\/p\u003e\n\u003col\u003e\n\u003cli\u003e\u003cinput checked=\u0022\u0022 disabled=\u0022\u0022 type=\u0022checkbox\u0022\u003e Deployed a self-managing container OS based on Fedora CoreOS\n\u003cul\u003e\n\u003cli\u003e\u003cinput checked=\u0022\u0022 disabled=\u0022\u0022 type=\u0022checkbox\u0022\u003e Configured Fedora CoreOS to automatically update itself\u003c\/li\u003e\n\u003cli\u003e\u003cinput disabled=\u0022\u0022 type=\u0022checkbox\u0022\u003e Setup intelligent health checks and automated rollbacks for any failed updates\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/li\u003e\n\u003c\/ol\u003e\n\u003cp\u003eI\u0026rsquo;m going to tackle this first from an upstream approach with Fedora CoreOS, however there\u0026rsquo;s an excellent article written on this same topic for \u003ca href=\u0022https:\/\/www.redhat.com\/en\/blog\/automating-rhel-edge-image-rollback-greenboot\u0022\u003eRHEL for Edge by Brian Smith\u003c\/a\u003e that covers this incredibly well. I\u0026rsquo;d encourage everyone to have a read of his article as well!\u003c\/p\u003e"
   }
   </script>
@@ -72,16 +72,16 @@ I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreO
 
   <link type="text/css"
         rel="stylesheet"
-        href="http://localhost:1313/css/print.css"
+        href="https://calgaryrhce.ca/css/print.css"
         media="print">
 
   <link type="text/css"
         rel="stylesheet"
-        href="http://localhost:1313/css/poole.css">
+        href="https://calgaryrhce.ca/css/poole.css">
 
   <link type="text/css"
         rel="stylesheet"
-        href="http://localhost:1313/css/hyde.css">
+        href="https://calgaryrhce.ca/css/hyde.css">
 
   
 <style type="text/css">
@@ -127,7 +127,7 @@ I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreO
       
         
         <div class="author-image">
-          <img src="http://localhost:1313/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+          <img src="https://calgaryrhce.ca/wp-content/uploads/2016/08/cropped-1477782_10152102853181489_71278912_n.jpg" class="img-circle img-headshot center" alt="Profile Picture">
         </div>
         
       
@@ -142,7 +142,7 @@ I&rsquo;m going to tackle this first from an upstream approach with Fedora CoreO
     <nav>
       <ul class="sidebar-nav">
         <li>
-          <a href="http://localhost:1313/">Home</a>
+          <a href="https://calgaryrhce.ca/">Home</a>
         </li>
         <li>
           <a href="/posts/"> Posts </a>
