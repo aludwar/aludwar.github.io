@@ -13,7 +13,7 @@
       <link>https://calgaryrhce.ca/posts/2025-12-09-pihole-on-fedora/</link>
       <pubDate>Tue, 09 Dec 2025 09:38:59 -0700</pubDate>
       <guid>https://calgaryrhce.ca/posts/2025-12-09-pihole-on-fedora/</guid>
-      <description>&lt;p&gt;** How to install PiHole on Fedora Server **&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.fedoraproject.org/server/download&#34;&gt;Download the latest copy of Fedora Server&lt;/a&gt;. If installing on a Raspberry Pi, make sure you select the ARM archtiecture.&lt;/p&gt;&#xA;&lt;p&gt;You can also use Fedora Media Writer for both downloading and writing the image to the storage device used in your Raspberry Pi (sd card, SSD, etc.)&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;How to install PiHole on Fedora Server&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.fedoraproject.org/server/download&#34;&gt;Download the latest copy of Fedora Server&lt;/a&gt;. If installing on a Raspberry Pi, make sure you select the ARM archtiecture.&lt;/p&gt;&#xA;&lt;p&gt;You can also use Fedora Media Writer for both downloading and writing the image to the storage device used in your Raspberry Pi (sd card, SSD, etc.)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Takeover of the MiniLab!</title>
