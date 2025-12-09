@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Custom Iso on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/custom-iso/</link>
+    <link>http://localhost:1313/tags/custom-iso/</link>
     <description>Recent content in Custom Iso on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 21 Jun 2014 20:56:38 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/custom-iso/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/custom-iso/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Integrating kickstart w/ CentOS 6 DVD ISO installation</title>
-      <link>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
+      <link>http://localhost:1313/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</link>
       <pubDate>Sat, 21 Jun 2014 20:56:38 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
+      <guid>http://localhost:1313/blog/2014/06/21/integrating-kickstart-w-centos-6-dvd-iso-installation/</guid>
       <description>&lt;p&gt;In our DevOps environment, we’ve got a lot of developers who regularly build VMs.  Sometimes they’re built locally on their workstations, or sometimes in the data center when they’re ready to formally move code.  Admittedly, the IT VM provisioning process can be slow at times and we often see them get frustrated and take matters into their own hands.  While this self-build method gets them their VM faster, they don’t always get IT’s supported “base image”.  This can lead into integration and support problems later on when they’re trying to move this code into production that was developed against a non-standard OS.  What to do?&lt;/p&gt;</description>
     </item>
   </channel>

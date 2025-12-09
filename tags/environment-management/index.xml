@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Environment Management on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/environment-management/</link>
+    <link>http://localhost:1313/tags/environment-management/</link>
     <description>Recent content in Environment Management on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Dec 2016 22:48:42 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/environment-management/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/environment-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grafana, InfluxDB, and collectd for systems monitoring and dashboarding</title>
-      <link>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</link>
+      <link>http://localhost:1313/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</link>
       <pubDate>Sun, 11 Dec 2016 22:48:42 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</guid>
+      <guid>http://localhost:1313/blog/2016/12/11/grafana-influxdb-and-collectd-for-systems-monitoring-and-dashboarding/</guid>
       <description>&lt;p&gt;I’ve seen some pretty interesting Grafana graphs floating around the interwebs recently and finally made some time to investigate all the hype. I found a great &lt;a href=&#34;http://www.vishalbiyani.com/graphing-performance-with-collectd-influxdb-grafana/&#34;&gt;blog post&lt;/a&gt; on how this technology is laid out; that blog post should be all you need to get started. I started by creating a new VM to host both my InfluxDB database, and the Grafana dashboarding service. Then I installed and enabled collectd on all the systems I wanted to collect data on. I enabled some of the basic plugins like smartd, libvirt, etc. and was up and collecting data quite easily. Collectd does a great job of basic data collection services, most of the data you’d typically want is gathered without any extra configuration or fuss. The plugins available seem vast. InfluxDB on the other hand took me a little time to understand how a time series database is intended to work.&lt;/p&gt;</description>
     </item>
   </channel>

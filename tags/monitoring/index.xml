@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Monitoring on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/monitoring/</link>
+    <link>http://localhost:1313/tags/monitoring/</link>
     <description>Recent content in Monitoring on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Dec 2015 00:45:57 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Monitor uptime with SmokePing</title>
-      <link>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
+      <link>http://localhost:1313/blog/2015/11/30/monitor-uptime-with-smokeping/</link>
       <pubDate>Tue, 01 Dec 2015 00:45:57 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
+      <guid>http://localhost:1313/blog/2015/11/30/monitor-uptime-with-smokeping/</guid>
       <description>&lt;p&gt;If you’re a linux enthusiast and you don’t currently read the &lt;a href=&#34;http://www.linuxjournal.com/&#34;&gt;LinuxJournal&lt;/a&gt;, I suggest you have a look. They’re a great publication on everything linux, and they regularly provide useful content ranging from reviews, code snippets, how-tos, and tips &amp;amp; tricks. They &lt;a href=&#34;http://www.linuxjournal.com/content/linux-journal-goes-100-digital&#34;&gt;publish digitally&lt;/a&gt; now over a &lt;a href=&#34;http://www.linuxjournal.com/digital-faq&#34;&gt;variety of formats&lt;/a&gt;, which makes reading very convenient on any device you may have.&lt;/p&gt;</description>
     </item>
   </channel>

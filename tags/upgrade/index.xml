@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Upgrade on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/upgrade/</link>
+    <link>http://localhost:1313/tags/upgrade/</link>
     <description>Recent content in Upgrade on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Sep 2016 01:54:01 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adding RAM to an old macbook pro</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</link>
+      <link>http://localhost:1313/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</link>
       <pubDate>Thu, 29 Sep 2016 01:54:01 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</guid>
+      <guid>http://localhost:1313/blog/2016/09/28/adding-ram-to-an-old-macbook-pro/</guid>
       <description>&lt;p&gt;I’ve got an old 17″ Macbook Pro from late 2008 that’s still kicking. It’s served me a lot of good years filled with studying, scripting, exams, etc. and I’ve never had a problem with it. I mostly keep it around for testing OSX related things, and as a backup. Last year I replaced the aging 512GB HDD with a 256GB SSD which did wonders to speed it up. This year the battery has finally went on it, so I ebay’d a &lt;a href=&#34;http://www.ebay.ca/itm/112072784618?_trksid=p2057872.m2749.l2649&amp;amp;ssPageName=STRK%3AMEBIDX%3AIT&#34;&gt;replacement&lt;/a&gt; ($25) from &lt;a href=&#34;http://stores.ebay.ca/shopplus86/&#34;&gt;plus_86&lt;/a&gt;. They’re a 3rd party battery replacement shop that ships out of Quebec. I also decided to up the RAM from 2GB to 4GB. Looking back on it, I’m wondering how I ever managed just with 2GB. I had a couple VMs running on this at one time! I ordered a 4GB kit from &lt;a href=&#34;http://stores.ebay.ca/memoryfast/&#34;&gt;memoryfast&lt;/a&gt;, they’ve got a rebate program where I can ship them my old RAM for a small credit to my order, not bad!&lt;/p&gt;</description>
     </item>
   </channel>

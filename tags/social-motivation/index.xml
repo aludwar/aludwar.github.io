@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Social Motivation on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/social-motivation/</link>
+    <link>http://localhost:1313/tags/social-motivation/</link>
     <description>Recent content in Social Motivation on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Jan 2016 20:54:27 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/social-motivation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/social-motivation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How open source strikes the right balance between social and market norms</title>
-      <link>https://calgaryrhce.ca/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</link>
+      <link>http://localhost:1313/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</link>
       <pubDate>Thu, 07 Jan 2016 20:54:27 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</guid>
+      <guid>http://localhost:1313/blog/2016/01/07/how-open-source-strikes-the-right-balance-between-social-and-market-norms/</guid>
       <description>&lt;p&gt;Lately, I’ve been knocking off a few books that have accumulated on my “must-read” list. One of my favourites came recommended by my technical sales professor at SAIT, &lt;a href=&#34;http://www.amazon.ca/Predictably-Irrational-Revised-Expanded-Edition/dp/0061353248&#34;&gt;“Predictably Irrational, by Dan Ariely.&lt;/a&gt; It’s a New York Times bestseller. It was recommended based on its insights around behavioural science, specifically what factors influence a buyer’s decision making. And it reads quite satisfactorily for that. However, as a linux enthusiast, there’s one particular chapter that stood out to me.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Motivating Employees and Strategies of Influence</title>
-      <link>https://calgaryrhce.ca/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</link>
+      <link>http://localhost:1313/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</link>
       <pubDate>Sun, 29 Nov 2015 22:20:05 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</guid>
+      <guid>http://localhost:1313/blog/2015/11/29/motivating-employees-and-strategies-of-influence/</guid>
       <description>&lt;p&gt;I know, I know. Another management topic. Haven’t we heard enough leadership buzzwords? Seen enough trendy motivational topics? Like probably most of you, I &lt;em&gt;dread&lt;/em&gt; the elevator pitch of anyone about to give me a spiel on the latest and greatest industry buzzword topic. Especially if all they did was read an article on LinkedIn. And &lt;strong&gt;especially&lt;/strong&gt; if it’s about DevOps. But! Hear me out. This one resonated deeply for me, so I think (and hope!) you’ll relate to this one. This information is taken from a book on the subject, &lt;a href=&#34;http://www.amazon.com/Developing-Management-Skills-Student-Edition/dp/0132154935&#34;&gt;“Developing Management Skills”, by David A. Whetten, and Kim S. Cameron.&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Motivation – Autonomy, Mastery, Purpose; &amp; The Open Organization</title>
-      <link>https://calgaryrhce.ca/blog/2015/08/09/motivation-autonomy-mastery-purpose-the-open-organization/</link>
+      <link>http://localhost:1313/blog/2015/08/09/motivation-autonomy-mastery-purpose-the-open-organization/</link>
       <pubDate>Sun, 09 Aug 2015 19:57:26 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2015/08/09/motivation-autonomy-mastery-purpose-the-open-organization/</guid>
+      <guid>http://localhost:1313/blog/2015/08/09/motivation-autonomy-mastery-purpose-the-open-organization/</guid>
       <description>&lt;p&gt;If you’ve been paying attention to the open source community lately, or are keen to keeping abreast of the latest trends in corporate leadership or management, you may have heard of Jim Whitehurst’s new book titled &lt;a href=&#34;https://www.redhat.com/en/explore/the-open-organization-book&#34; target=&#34;_blank&#34;&gt;The Open Organization&lt;/a&gt;. The book compares and contrasts leadership styles and engagement strategies in the modern corporate world. It argues for distributed decision making, employee involvement, and a meritocracy over the traditional top-down, follow orders, military style of management. This book is a must-read for all management types, and employees. While your organization may not be as “open” as RedHat, there’s certainly insight (and employee engagement!) to be had by heeding some of the management tips from Jim.&lt;/p&gt;</description>
     </item>
   </channel>

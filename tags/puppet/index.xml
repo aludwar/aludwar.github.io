@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Puppet on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/puppet/</link>
+    <link>http://localhost:1313/tags/puppet/</link>
     <description>Recent content in Puppet on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 05 Jul 2015 19:46:06 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/puppet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demystifying automation and Puppet</title>
-      <link>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</link>
+      <link>http://localhost:1313/blog/2015/07/05/demystifying-automation-and-puppet/</link>
       <pubDate>Sun, 05 Jul 2015 19:46:06 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
+      <guid>http://localhost:1313/blog/2015/07/05/demystifying-automation-and-puppet/</guid>
       <description>&lt;p&gt;Automation has grown from its traditional roots of simple scripting into a critical cog of present day IT infrastructure. Today we have full fledged software suites based on automation. We have myriads of start-ups who base their entire business model on it. Every CIO is including it in their execution strategy, and you can’t seem to find a conference that doesn’t have a trendy buzzword filled keynote dedicated to the topic. Oh how far we’ve come! What IT person or company isn’t looking at automation these days?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Managing Configuration Management w/ Puppet</title>
-      <link>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
+      <link>http://localhost:1313/blog/2014/11/23/managing-configuration-management-w-puppet/</link>
       <pubDate>Sun, 23 Nov 2014 21:39:55 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
+      <guid>http://localhost:1313/blog/2014/11/23/managing-configuration-management-w-puppet/</guid>
       <description>&lt;p&gt;Over the course of the past year or so, Puppet has taken off in popularity amongst developers and administrators. It’s becoming the de-facto tool for repeatable state and drift management, and part of the reason for the uptake in popularity of the DevOps culture. As with most techology that grows quickly and organically, it often looks much different a year into implementation than it did day one.  Folks come away with many lessons learned and new ideas that they would implement if they had the chance to do it all over again.&lt;/p&gt;</description>
     </item>
   </channel>

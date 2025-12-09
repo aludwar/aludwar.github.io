@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSD on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/ssd/</link>
+    <link>http://localhost:1313/tags/ssd/</link>
     <description>Recent content in SSD on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Oct 2018 17:43:07 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ssd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Troubleshooting performance of VDO and NFS</title>
-      <link>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
+      <link>http://localhost:1313/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</link>
       <pubDate>Sat, 20 Oct 2018 17:43:07 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
+      <guid>http://localhost:1313/blog/2018/10/20/troubleshooting-performance-of-vdo-and-nfs/</guid>
       <description>&lt;p&gt;In setting up a local virtualization environment a little while back, I thought I’d try the &lt;a href=&#34;https://www.redhat.com/en/blog/look-vdo-new-linux-compression-layer&#34;&gt;recently GA’d VDO capabilities&lt;/a&gt; in the RHEL 7.5 kernel. These include data compression and de-duplication natively in the linux kernel (through a kernel module). This was Red Hat’s efforts behind the Permabit acquisition. Considering a virtualization data store is a prime candidate for a de-duplication use-case, I was anxious to reclaim some of my storage budget 🙂 . I was also curious to see what the extra overhead was like (if any), and understand the general performance characteristics of VDO.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Migrating RHEV storage domains</title>
-      <link>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</link>
+      <link>http://localhost:1313/blog/2018/10/19/migrating-rhev-storage-domains/</link>
       <pubDate>Fri, 19 Oct 2018 21:20:50 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
+      <guid>http://localhost:1313/blog/2018/10/19/migrating-rhev-storage-domains/</guid>
       <description>&lt;p&gt;Recently, I’ve been doing some troubleshooting in my virtualization environment, specifically with the NFS storage backing it. To isolate an issue I needed to migrate all the VM disks off the main data store to another one. I hadn’t performed this kind of activity before, but found it to be quite easy. I quickly built an additional NFS server, added it into RHV, and migrated the VM disks to it with just a few clicks and some waiting for the copying to be complete. &lt;a href=&#34;https://access.redhat.com/solutions/736513&#34;&gt;This article&lt;/a&gt; was basic, but helpful.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Filesystem benchmarking</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/</link>
+      <link>http://localhost:1313/blog/2016/09/11/filesystem-benchmarking/</link>
       <pubDate>Mon, 12 Sep 2016 02:51:38 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/09/11/filesystem-benchmarking/</guid>
+      <guid>http://localhost:1313/blog/2016/09/11/filesystem-benchmarking/</guid>
       <description>&lt;p&gt;Once in a while I need to do some I/O benchmarking. Either when creating a baseline for a before and after performance tuning comparison, or just because I want to see how fast my new SSD/M.2 really is. The tool I find myself going to over the years has been &lt;a href=&#34;http://iozone.org/&#34;&gt;iozone&lt;/a&gt;. I like it because it easily does a myriad of tests that I don’t need to create or think about how to simulate myself, and it’s easily installed on any linux distro. It also outputs the test data into a format that is easily imported into a spreadsheet. I recently added a &lt;a href=&#34;http://www.newegg.ca/Product/Product.aspx?Item=N82E16820147373&#34;&gt;couple SSD&lt;/a&gt;s to my workstation, and finally got around to benchmarking them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Performance Tweaking – SSDs, I/O Scheduler, Virtual Memory, Browser Cache</title>
-      <link>https://calgaryrhce.ca/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</link>
+      <link>http://localhost:1313/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</link>
       <pubDate>Sun, 13 Jul 2014 22:15:31 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</guid>
+      <guid>http://localhost:1313/blog/2014/07/13/performance-tweaking-ssds-io-scheduler-virtual-memory-browser-cache/</guid>
       <description>&lt;p&gt;Having recently been exposed to some SSD tweaking at work, I thought I’d do the same with my home PCs.  Prior to this weekend, I’ve just had four 1TB SATA drives in a RAID 5 configuration for a disk setup.  Performance has always been satisfactory, but with recent SSD prices coming down quite a bit, my late 2008 MacBook Pro feeling it’s age, it was time for an upgrade.  Also, it’s been a while since I’ve invested in some new gear for myself, so why not now? ;).&lt;/p&gt;</description>
     </item>
   </channel>

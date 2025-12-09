@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Openstack on Calgary RHCE</title>
-    <link>https://calgaryrhce.ca/tags/openstack/</link>
+    <link>http://localhost:1313/tags/openstack/</link>
     <description>Recent content in Openstack on Calgary RHCE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Oct 2017 17:33:55 +0000</lastBuildDate>
-    <atom:link href="https://calgaryrhce.ca/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting the most performance out of Openstack, and NFV</title>
-      <link>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
+      <link>http://localhost:1313/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</link>
       <pubDate>Sat, 14 Oct 2017 17:33:55 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
+      <guid>http://localhost:1313/blog/2017/10/14/getting-the-most-performance-out-of-openstack-and-nfv/</guid>
       <description>&lt;p&gt;By now, most IT staff has either had a chance to deploy OpenStack, or at least are familiar with what it is and what benefits it offers. We’ve moved past the installer race, the fragmentation of “as-a-service” components, and endless TCO calculators. The ecosystem and community has reached a maturity stage where the media and industry alike are calling OpenStack “&lt;a href=&#34;https://major.io/2017/02/24/openstack-isnt-dead-its-boring-thats-a-good-thing/&#34; target=&#34;_blank&#34;&gt;boring&lt;/a&gt;“. &lt;strong&gt;Don’t be fooled, all of these are good things.&lt;/strong&gt; They’re a product of fast-paced innovation seeing a settling of opinions and decision making. OpenStack has reached a maturity point that Linux also hit earlier on in its journey. As linux was (and still is) an incredibly capable and cost-effective option for an OS, OpenStack is also an incredibly capable and cost-effective option for private or public cloud. But now what? What’s next? The answer is deeper and more efficient capability, addressing more edge use-cases, and general polish and integration of all the development that’s happened to date. The low-hanging-fruit development is over, we’re deeper into the less exciting and less headline grabbing work; maximizing the assets as much as we can.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Home lab, CAT6 wiring, and rack</title>
-      <link>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
+      <link>http://localhost:1313/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</link>
       <pubDate>Wed, 13 Sep 2017 18:05:48 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
+      <guid>http://localhost:1313/blog/2017/09/13/home-lab-cat6-wiring-and-rack/</guid>
       <description>&lt;p&gt;Between being busy with home renovations, and writing articles for work, I haven’t made much time for blogging this summer. Since it’s raining today and hampering my home renos, I’m finally getting to a post on the work I did wiring my house with CAT 6, and setting up a home lab rack in the basement. I realise having a rack in your house is a little ridiculous, but for those folks who like to tinker or need more resources than a desktop PC or laptop, it is incredibly useful (and affordable) to have. Like others, my home lab serves up some basic components for my home network, and also allows a testing ground that gets quite a bit of usage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Calgary OpenStack and other Meetup.com groups</title>
-      <link>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
+      <link>http://localhost:1313/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</link>
       <pubDate>Tue, 21 Mar 2017 23:33:46 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
+      <guid>http://localhost:1313/blog/2017/03/21/calgary-openstack-and-other-meetup-com-groups/</guid>
       <description>&lt;p&gt;I’m a little late on this post, but last week we had an excellent presentation on OpenStack installers. Specifically, TripleO. Chris J from Red Hat gave us a good outline of TripleO’s capabilities, and kept it pretty upstream. For the presentation slide deck, &lt;a href=&#34;http://bit.ly/2n3UUpg&#34;&gt;see here&lt;/a&gt;. The group tries to keep it as vendor neutral as possible which is nice. There were a lot of questions and feedback, this is probably a topic worth going into in a little more detail, or perhaps doing some hackfest demo’ing!&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenStack deployment troubles? Enter a couple validation tools</title>
-      <link>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
+      <link>http://localhost:1313/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</link>
       <pubDate>Fri, 28 Oct 2016 00:34:47 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
+      <guid>http://localhost:1313/blog/2016/10/27/openstack-deployment-troubles-enter-a-couple-validation-tools/</guid>
       <description>&lt;p&gt;Whether you’re on your first or hundredth OpenStack deployment, any administrator will tell you that getting the initial deployment configuration correct is crucial. This gets easier with experience, but what can one do in the meantime to supplement that knowledge? Enter two tools: clapper, and the network isolation template generator.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deploying an OpenStack cluster in a virtual lab environment</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
+      <link>http://localhost:1313/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</link>
       <pubDate>Sat, 24 Sep 2016 21:20:21 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
+      <guid>http://localhost:1313/blog/2016/09/24/deploying-an-openstack-cluster-in-a-virtual-lab-environment/</guid>
       <description>&lt;p&gt;Previously, I went through a couple OpenStack topics on &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/&#34;&gt;installers&lt;/a&gt;, and &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/&#34;&gt;deploying an undercloud&lt;/a&gt; as part of a virtual OpenStack deployment. Today I’ll walk through the overcloud deployment, and hopefully by the end of this post you will have had enough details to get your own deployment up and running. This particular environment is for Red Hat OpenStack Platform 8 (Liberty), but the same steps will apply to Mitaka as well. There isn’t a ton of change in the deployment methods from Liberty to Mitaka, the templates here will apply to either.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Installing OpenStack – setting up a virtual lab environment</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
+      <link>http://localhost:1313/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</link>
       <pubDate>Sun, 11 Sep 2016 22:16:08 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
+      <guid>http://localhost:1313/blog/2016/09/11/installing-openstack-setting-up-a-virtual-lab-environment/</guid>
       <description>&lt;p&gt;When talking &lt;a href=&#34;http://tripleo.org/&#34;&gt;TripleO&lt;/a&gt;, there’s two concepts introduced called the “undercloud”, and the “overcloud”. These are essentially the labels for each OpenStack environment when referring to “OpenStack on OpenStack” (TripleO). The undercloud is the OpenStack server that manages and deploys the more publicly consumable overcloud servers that make up the OpenStack environment that we’re after. Confused yet? 🙂 &lt;span class=&#34;author-wrap&#34;&gt;&lt;span class=&#34;byline&#34;&gt;&lt;span class=&#34;author vcard&#34;&gt;Marcos Garcia &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;does a good job of illustrating this in a &lt;a href=&#34;http://redhatstackblog.redhat.com/2016/07/27/tripleo-director-components-in-detail/&#34;&gt;blog post&lt;/a&gt;:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Comparing OpenStack installers</title>
-      <link>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</link>
+      <link>http://localhost:1313/blog/2016/09/10/comparing-openstack-installers/</link>
       <pubDate>Sat, 10 Sep 2016 22:12:03 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/09/10/comparing-openstack-installers/</guid>
+      <guid>http://localhost:1313/blog/2016/09/10/comparing-openstack-installers/</guid>
       <description>&lt;p&gt;Building on a &lt;a href=&#34;https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/&#34;&gt;previous post&lt;/a&gt;, I promised I’d do a comparison of open source OpenStack installers. Choosing an installer requires more thought than most people think, as the choices are vast, and each installer offers different strengths, benefits, and trade-offs. Depending on your environment’s purpose and intended result, it would be wise to align your needs with the installers’ capabilities and limitations. Here they are:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Getting started with OpenStack</title>
-      <link>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</link>
+      <link>http://localhost:1313/blog/2016/08/21/getting-started-with-openstack/</link>
       <pubDate>Mon, 22 Aug 2016 01:03:42 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2016/08/21/getting-started-with-openstack/</guid>
+      <guid>http://localhost:1313/blog/2016/08/21/getting-started-with-openstack/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34;&gt;&lt;img class=&#34;wp-image-388 alignleft&#34; src=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png&#34; alt=&#34;OpenStack logo&#34; width=&#34;301&#34; height=&#34;301&#34; srcset=&#34;https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo.png 432w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-150x150.png 150w, https://calgaryrhce.ca/wp-content/uploads/2016/08/OpenStack-logo-300x300.png 300w&#34; sizes=&#34;(max-width: 301px) 100vw, 301px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;So you’d like to get started with OpenStack eh? (Sorry, that’s my Canadian coming through). You may have been thinking about it for a while, evaluating the landscape, the maturity, evaluating your tolerance for new technology, and waiting for the right time to adopt. Being on the verge of adopting a new and disruptive technology is an intimidating place to be. Lots of questions arise: Where to start? What to evaluate? Who to partner with? What gaps to address? What should the architecture look like? What is the project purpose? Is my staff well prepared? What training should we get? Is our infrastructure capable of supporting it? How to handle long term tasks like patching, scaling, or lifecycle management? These aren’t easy questions to answer, and the answers usually come from experience; which you don’t have. What do you do? I’m going to start the first in a series of posts addressing some of these questions and hopefully adding some clarity to OpenStack adoption. First, some of the basics.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automating Server Provisioning; the Transition to Private Hybrid Cloud</title>
-      <link>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
+      <link>http://localhost:1313/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</link>
       <pubDate>Sun, 05 Jul 2015 23:29:50 +0000</pubDate>
-      <guid>https://calgaryrhce.ca/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
+      <guid>http://localhost:1313/blog/2015/07/05/automating-server-provisioning-the-transition-to-private-hybrid-cloud/</guid>
       <description>&lt;p&gt;In every place I’ve worked, the server provisioning process was largely identical. There were of course subtle differences depending on vendor products, business processes, etc. but typically every customer’s server provisioning artifacts are made up of the same components. To provision a host, you’ll need IP information, DNS entry, VM container, a kickstart/jumpstart method, pre-provisioned storage/networks, and all of the various application level components on top of the OS (monitoring agents, backups, the application itself, etc.). These systems or processes usually had been in place for more than a few years, and would be considered the “Traditional IT” method of provisioning servers.&lt;/p&gt;</description>
     </item>
   </channel>
