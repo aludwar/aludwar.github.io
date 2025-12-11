@@ -189,8 +189,15 @@ You can also use Fedora Media Writer for both downloading and writing the image 
 <p>With your OS image written to storage device, attach the storage device to the Raspberry Pi. (ie insert the sdcard, or plugin USB to SATA cable of SSD). Boot the Raspberry Pi. You should now having a working default Fedora Server OS installed on your Raspberry Pi.</p>
 </li>
 <li>
-<p>Connect to your Pi from either SSH or keyboard/mouse and Pi browser. Use the <a href="https://docs.pi-hole.net/main/basic-install/">one-step automated install of PiHole</a> to install PiHole on the OS. The installer will finish after a few minutes and output the password/URL for you to login to PiHole on your device. It&rsquo;s a good idea to apply any OS updates and reboot.</p>
+<p>Connect to your Pi from either SSH or keyboard/mouse and Pi browser. Apply any OS configuration you may need. (Hostname, SSH keys, etc.). For a functioning PiHole, you will need to set SELinux to permissive, and allow some firewall ports. If you&rsquo;re using the DHCP/NTP portions of PiHole, account for those below. I just use DNS/HTTP/HTTPS:</p>
+<h1 id="sed--i-sselinuxenforcingselinuxpermissive-etcselinuxconfig">sed -i &rsquo;s/^SELINUX=enforcing/SELINUX=permissive/&rsquo; /etc/selinux/config</h1>
+<h1 id="firewall-cmd-permanent-add-servicehttp-add-servicehttps-add-servicedns">firewall-cmd &ndash;permanent &ndash;add-service=http &ndash;add-service=https &ndash;add-service=dns</h1>
+<h1 id="firewall-cmd-reload">firewall-cmd &ndash;reload</h1>
+<h1 id="reboot">reboot</h1>
 </li>
+</ol>
+<p>After a reboot, Use the <a href="https://docs.pi-hole.net/main/basic-install/">one-step automated install of PiHole</a> to install PiHole on the OS. The installer will finish after a few minutes and output the password/URL for you to login to PiHole on your device. It&rsquo;s also a good idea to apply any OS updates and reboot.</p>
+<ol start="5">
 <li>
 <p>Login to PiHole and make any necessary configurations. Personally, I like to add a second blocklist, <a href="https://github.com/hagezi/dns-blocklists#pro">Hagezi Multi Pro</a>, as well as deny some domains I feel are problematic. (TikTok, Roblox, etc.)</p>
 <p><img src="https://calgaryrhce.ca/wp-content/uploads/2025/12/pihole-dns-list.png" alt="DNS Block List"></p>
